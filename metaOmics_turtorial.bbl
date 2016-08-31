@@ -1,0 +1,22 @@
+\begin{thebibliography}{}
+
+\bibitem[Huo et~al., 2016]{huo2016meta}
+Huo, Z., Ding, Y., Liu, S., Oesterreich, S., and Tseng, G. (2016).
+\newblock Meta-analytic framework for sparse k-means to identify disease
+  subtypes in multiple transcriptomic studies.
+\newblock {\em Journal of the American Statistical Association},
+  111(513):27--42.
+
+\bibitem[Kang et~al., 2012]{kang2012metaqc}
+Kang, D.~D., Sibille, E., Kaminski, N., and Tseng, G.~C. (2012).
+\newblock Metaqc: objective quality control and inclusion/exclusion criteria
+  for genomic meta-analysis.
+\newblock {\em Nucleic acids research}, 40(2):e15--e15.
+
+\bibitem[Shen and Tseng, 2010]{shen2010meta}
+Shen, K. and Tseng, G.~C. (2010).
+\newblock Meta-analysis for pathway enrichment analysis when combining multiple
+  genomic studies.
+\newblock {\em Bioinformatics}, 26(10):1316--1323.
+
+\end{thebibliography}

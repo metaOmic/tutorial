@@ -2,10 +2,15 @@
 
 \usepackage[utf8]{inputenc}
 \usepackage{hyperref}
- 
+\usepackage{natbib}
+\usepackage{bibentry}
+\usepackage{color}
+\nobibliography*
+
 \title{A tutorial for metaOmic}
 \author{}
 \date{ }
+ 
  
 \begin{document}
  
@@ -20,6 +25,21 @@
 MetaOmics implements many meta-analytic methodology by their authors. 
 Please cite appropriate papers when you use result from MeteOmics suit,
 by which the authors will receive professional credit for their work.
+
+\begin{itemize}
+\item MetaOmics suit itself can be cited as:
+\item MetaQC: \bibentry{kang2012metaqc}.
+\item MetaDE: {\color{red}multiple?}
+\item MetaPath: \bibentry{shen2010meta}.
+\item MetaClust: \bibentry{huo2016meta}.
+\item MetaPCA: not published yet.
+\item MetaKTSP: not published yet.
+\item MetaDCN: not published yet.
+\item MetaLA: not published yet.
+\end{itemize}
+
+\subsection{Citing MetaOmics}
+
 
 \subsection{Installation}
 \subsection{Question and bug report}
@@ -43,5 +63,9 @@ by which the authors will receive professional credit for their work.
 \section{MetaDCN}
 
 \section{MetaLA}
+
+%%  for citation purpose
+\bibliographystyle{apalike}
+\bibliography{reference}
  
 \end{document}
