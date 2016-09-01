@@ -1,0 +1,7 @@
+*.aux
+*.blg
+*.log
+*.log
+*.out
+*.synctex.gz
+.gitignore~
