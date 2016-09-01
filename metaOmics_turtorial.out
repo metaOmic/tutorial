@@ -1,16 +1,17 @@
 \BOOKMARK [1][-]{section.1}{Introduction}{}% 1
 \BOOKMARK [1][-]{section.2}{Preliminaries}{}% 2
 \BOOKMARK [2][-]{subsection.2.1}{Citing MetaOmics}{section.2}% 3
-\BOOKMARK [2][-]{subsection.2.2}{Citing MetaOmics}{section.2}% 4
-\BOOKMARK [2][-]{subsection.2.3}{Installation}{section.2}% 5
-\BOOKMARK [2][-]{subsection.2.4}{Question and bug report}{section.2}% 6
-\BOOKMARK [1][-]{section.3}{Prepare data}{}% 7
-\BOOKMARK [1][-]{section.4}{Preprocessing}{}% 8
-\BOOKMARK [1][-]{section.5}{MetaQC}{}% 9
-\BOOKMARK [1][-]{section.6}{MetaDE}{}% 10
-\BOOKMARK [1][-]{section.7}{MetaPath}{}% 11
-\BOOKMARK [1][-]{section.8}{MetaClust}{}% 12
-\BOOKMARK [1][-]{section.9}{MetaPCA}{}% 13
-\BOOKMARK [1][-]{section.10}{MetaKTSP}{}% 14
-\BOOKMARK [1][-]{section.11}{MetaDCN}{}% 15
-\BOOKMARK [1][-]{section.12}{MetaLA}{}% 16
+\BOOKMARK [2][-]{subsection.2.2}{Installation}{section.2}% 4
+\BOOKMARK [2][-]{subsection.2.3}{Question and bug report}{section.2}% 5
+\BOOKMARK [1][-]{section.3}{Prepare data}{}% 6
+\BOOKMARK [2][-]{subsection.3.1}{Raw data}{section.3}% 7
+\BOOKMARK [2][-]{subsection.3.2}{Clinical data}{section.3}% 8
+\BOOKMARK [1][-]{section.4}{Preprocessing}{}% 9
+\BOOKMARK [1][-]{section.5}{MetaQC}{}% 10
+\BOOKMARK [1][-]{section.6}{MetaDE}{}% 11
+\BOOKMARK [1][-]{section.7}{MetaPath}{}% 12
+\BOOKMARK [1][-]{section.8}{MetaClust}{}% 13
+\BOOKMARK [1][-]{section.9}{MetaPCA}{}% 14
+\BOOKMARK [1][-]{section.10}{MetaKTSP}{}% 15
+\BOOKMARK [1][-]{section.11}{MetaDCN}{}% 16
+\BOOKMARK [1][-]{section.12}{MetaLA}{}% 17

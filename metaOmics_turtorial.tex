@@ -5,6 +5,8 @@
 \usepackage{natbib}
 \usepackage{bibentry}
 \usepackage{color}
+\usepackage{graphicx}
+
 \nobibliography*
 
 \title{A tutorial for metaOmic}
@@ -19,33 +21,41 @@
 \tableofcontents
  
 \input{content/intro.tex} 
+\input{content/prelim.tex} 
  
-\section{Preliminaries}
-\subsection{Citing MetaOmics}
-MetaOmics implements many meta-analytic methodology by their authors. 
-Please cite appropriate papers when you use result from MeteOmics suit,
-by which the authors will receive professional credit for their work.
-
-\begin{itemize}
-\item MetaOmics suit itself can be cited as:
-\item MetaQC: \bibentry{kang2012metaqc}.
-\item MetaDE: {\color{red}multiple?}
-\item MetaPath: \bibentry{shen2010meta}.
-\item MetaClust: \bibentry{huo2016meta}.
-\item MetaPCA: not published yet.
-\item MetaKTSP: not published yet.
-\item MetaDCN: not published yet.
-\item MetaLA: not published yet.
-\end{itemize}
-
-\subsection{Citing MetaOmics}
-
-
-\subsection{Installation}
-\subsection{Question and bug report}
  
 \section{Prepare data}
- 
+\subsection{Raw data}
+
+Data should be prepared as the example in Figure~\ref{fig:dataMicroarray}.
+First column should be feature ID (e.g. gene symbol) and the rest of the columns are samples.
+The first row is sample ID.
+Valid data type includes continuous, count.
+
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[scale=0.5]{./figure/dataMicroarray}
+\caption{A example data format}
+\label{fig:dataMicroarray}
+\end{center}
+\end{figure}
+
+\subsection{Clinical data}
+
+Clinical data should be prepared as the example in Figure~\ref{fig:clinical}.
+First column should be sample ID and each row represents a sample.
+The rest of the columns are clinical information.
+
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[scale=0.5]{./figure/clinicalData}
+\caption{A example clinical data format}
+\label{fig:clinical}
+\end{center}
+\end{figure}
+
+
+
 \section{Preprocessing}
 
 \section{MetaQC}
