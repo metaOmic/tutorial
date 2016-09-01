@@ -6,6 +6,7 @@
 \usepackage{bibentry}
 \usepackage{color}
 \usepackage{graphicx}
+\usepackage{float}
 
 \nobibliography*
 
@@ -25,6 +26,7 @@
  
  
 \section{Prepare data}
+\label{sec:dataPrepare}
 \subsection{Raw data}
 
 Data should be prepared as the example in Figure~\ref{fig:dataMicroarray}.
@@ -32,7 +34,7 @@ First column should be feature ID (e.g. gene symbol) and the rest of the columns
 The first row is sample ID.
 Valid data type includes continuous, count.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \begin{center}
 \includegraphics[scale=0.5]{./figure/dataMicroarray}
 \caption{A example data format}
@@ -46,7 +48,7 @@ Clinical data should be prepared as the example in Figure~\ref{fig:clinical}.
 First column should be sample ID and each row represents a sample.
 The rest of the columns are clinical information.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \begin{center}
 \includegraphics[scale=0.5]{./figure/clinicalData}
 \caption{A example clinical data format}
@@ -54,25 +56,129 @@ The rest of the columns are clinical information.
 \end{center}
 \end{figure}
 
+\section{MetaOmics suit GUI}
+\subsection{Setting}
+
+After starting metaOmics, 
+the first page is the metaOmics setting page in Figure~\ref{fig:GUIsetting}.  
+There are 4 tabs on top of the page: Setting, Preprocessing, Saved Data and Toolsets.
+Below the 4 tabs, 
+the first header is the session information.
+{
+\color{red}
+Why do we need session information?
+}
+The second header is Directory for Saving Output Files.
+By clicking $\ldots$,
+user can set default working directory, in which all the meta-analysis results will be saved.
+User can view their current working directory on the top right corner.
+The third header is Toolsets,
+here users can view if individual packages are installed.
+If the packages are installed, there is a checked installed status.
+Otherwise, users can install individual package by clicking install blue button.
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.35]{./figure/GUIsetting}
+\caption{GUI setting page}
+\label{fig:GUIsetting}
+\end{center}
+\end{figure}
+
+\subsection{Preprocessing}
+If users go to the Preprocessing page as Figure~\ref{fig:GUIpreprocessing},
+\begin{figure}[!htbp]
+\begin{center}
+\includegraphics[scale=0.35]{./figure/GUIpreprocessing}
+\caption{GUI Preprocessing page}
+\label{fig:GUIpreprocessing}
+\end{center}
+\end{figure}
+they are able to uploaded genomic data via the tab ``Choosing/Upload Expression Data".
+The data should be prepared according to Section~\ref{sec:dataPrepare}.
+Users may optionally upload Clinical Data, depending on purpose.
+{
+\color{red}
+Check data requirement table?.
+}
+After uploading is complete,
+users can preview their data on the right hand side of the page as Figure~\ref{fig:GUIpreview}.
+There are several Expression Data Parsing Option available on the left panel.
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.35]{./figure/GUIpreview}
+\caption{GUI Preprocessing page}
+\label{fig:GUIpreview}
+\end{center}
+\end{figure}
+The MetaOmics suit also provide handlers for feature annotation, missing value imputation and multiple probe same genes.
+Then users could specify type of data and study name.
+Then click ``save single study" button, single study will be saved.
+
+\subsection{Saved Data}
+After uploading multiple studies w/o clinical data,
+Users can turn to the Saved Data tab.
+Users should select multiple datasets as Figure~\ref{fig:GUImerge}.
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.35]{./figure/GUImerge}
+\caption{GUI Preprocessing page}
+\label{fig:GUImerge}
+\end{center}
+\end{figure}
+Users can select filtering criteria, enter merged study name and click on the Merge from Selected Datasets.
+A merged dataset will appear on the left ``List of saved data" panel.
+The last thing users need to do before using meta-analytic toolsets is select merged data and click on 
+``Make merged Active Dataset" - A big green button.
+Then the merged data becomes active study and shows up on the top right corner.
+
+\section{Toolsets}
 
 
-\section{Preprocessing}
+\subsection{MetaQC}
 
-\section{MetaQC}
+\subsection{MetaDE}
 
-\section{MetaDE}
+\subsection{MetaPath}
 
-\section{MetaPath}
+\subsection{MetaClust}
+By clicking toolsets and then metaClust,
+users are directed to metaClust home page as Figure~\ref{fig:metaClustHome}.
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.35]{./figure/metaClust/metaClustHome}
+\caption{GUI Preprocessing page}
+\label{fig:metaClustHome}
+\end{center}
+\end{figure}
+On the top left panel users can see data summary Table.
+Below there are 4 tabs.
+\subsubsection{About}
+About tab includes basic introduction of metaClust.
+Starting with multiple studies, 
+we could run MetaSparseKmeans with pre-specified number of clusters (K) and gene selection tuning parameter (Wbounds).
+If you are not sure about what are good K and Wbounds, please try Tune K and Tune Wbounds panel.
 
-\section{MetaClust}
+\subsubsection{Tune K}
+If the users are not sure what is number of clusters,
+they can start to use the Tune K panel as in Figure~\ref{fig:metaClusttuneK}.
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.35]{./figure/metaClust/tuneK}
+\caption{GUI Preprocessing page}
+\label{fig:metaClusttuneK}
+\end{center}
+\end{figure}
 
-\section{MetaPCA}
 
-\section{MetaKTSP}
 
-\section{MetaDCN}
+\subsection{MetaPCA}
 
-\section{MetaLA}
+\subsection{MetaKTSP}
+
+\subsection{MetaDCN}
+
+\subsection{MetaLA}
 
 %%  for citation purpose
 \bibliographystyle{apalike}
