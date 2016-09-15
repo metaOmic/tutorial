@@ -7,8 +7,18 @@ by which the authors will receive professional credit for their work.
 \begin{itemize}
 \item MetaOmics suit itself can be cited as:
 \item MetaQC: \bibentry{kang2012metaqc}.
-\item MetaDE: {\color{red}multiple?}
-\item MetaPath: \bibentry{shen2010meta}.
+\item MetaDE: 
+\begin{itemize}
+\item \bibentry{fisher1925statistical}.
+\item \bibentry{li2011adaptively}.
+\item \bibentry{choi2003combining}.
+\item and many more
+\end{itemize}
+\item MetaPath: 
+\begin{itemize}
+\item \bibentry{shen2010meta}.
+\item \bibentry{fang2016cpi}.
+\end{itemize}
 \item MetaClust: \bibentry{huo2016meta}.
 \item MetaPCA: not published yet.
 \item MetaKTSP: not published yet.
@@ -19,10 +29,47 @@ by which the authors will receive professional credit for their work.
 
 \subsection{Installation}
 The full instruction of how to install, start are available at \url{https://github.com/metaOmic/metaOmics}.
-{
-\color{red}
-Do we need to duplicate the description here?
-}
+\subsubsection{Requirement}
+\begin{itemize}
+\item R $>=$ 3.3.1
+\item Shiny $>=$ 0.13.2
+\end{itemize}
+
+\subsubsection{How to start the app}
+\begin{itemize}
+\item First, clone the project
+\item git clone https://github.com/metaOmic/metaOmics
+\item in R (suppose the application directory is metaOmics),
+
+$>$ install.packages($'$shiny$'$)
+
+$>$ shiny::runApp(`metaOmics', port=9987, launch.browser=T)
+\end{itemize}
+
+\subsubsection{How to start the documentation}
+\begin{itemize}
+\item Install rmarkdown for R
+\item Inside `doc' directory, start R console, and:
+\item in R
+\begin{lstlisting}[language=R]
+rmarkdown::run(shiny_args=list(port=9988, launch.browser=T))
+\end{lstlisting}
+
+\item or in command line
+\begin{lstlisting}[language=bash]
+R -e "rmarkdown::run(shiny_args=list(port=9988, launch.browser=T))"
+\end{lstlisting}
+
+If you run into an issue with something like `pandoc version 1.12.3 or higher is required and was not found.?, just install pandoc manually. For example, on Mac, it would be `brew install pandoc'. If you have Rstudio, you can also to get rstudio's pandoc environment. Go to rstudio console and find the system environment variable for `RSTUDIO\_PANDOC'
+
+In R: 
+
+\begin{lstlisting}[language=R]
+Sys.getenv("RSTUDIO_PANDOC")
+\end{lstlisting}
+
+\end{itemize}
+
 
 \subsection{Question and bug report}
 {

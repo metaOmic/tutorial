@@ -1,5 +1,16 @@
 \begin{thebibliography}{}
 
+\bibitem[Choi et~al., 2003]{choi2003combining}
+Choi, J.~K., Yu, U., Kim, S., and Yoo, O.~J. (2003).
+\newblock Combining multiple microarray studies and modeling interstudy
+  variation.
+\newblock {\em Bioinformatics}, 19(suppl 1):i84--i90.
+
+\bibitem[Fisher, 1925]{fisher1925statistical}
+Fisher, R.~A. (1925).
+\newblock {\em Statistical methods for research workers}.
+\newblock Genesis Publishing Pvt Ltd.
+
 \bibitem[Huo et~al., 2016]{huo2016meta}
 Huo, Z., Ding, Y., Liu, S., Oesterreich, S., and Tseng, G. (2016).
 \newblock Meta-analytic framework for sparse k-means to identify disease
@@ -12,6 +23,12 @@ Kang, D.~D., Sibille, E., Kaminski, N., and Tseng, G.~C. (2012).
 \newblock Metaqc: objective quality control and inclusion/exclusion criteria
   for genomic meta-analysis.
 \newblock {\em Nucleic acids research}, 40(2):e15--e15.
+
+\bibitem[Li et~al., 2011]{li2011adaptively}
+Li, J., Tseng, G.~C., et~al. (2011).
+\newblock An adaptively weighted statistic for detecting differential gene
+  expression when combining multiple transcriptomic studies.
+\newblock {\em The Annals of Applied Statistics}, 5(2A):994--1019.
 
 \bibitem[Shen and Tseng, 2010]{shen2010meta}
 Shen, K. and Tseng, G.~C. (2010).
