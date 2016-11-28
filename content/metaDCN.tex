@@ -1,0 +1,90 @@
+\subsection{MetaDCN}
+By clicking toolsets and then metaDCN,
+users are directed to metaDCN home page as Figure~\ref{fig:metaDCNHome}.
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.8]{./figure/metaDCN/metaDCNHome}
+\caption{MetaDCN homepage}
+\label{fig:metaDCNHome}
+\end{center}
+\end{figure}
+
+MetaDCN includes three steps to get differentially co-expressed networks: generate network, search for basic modules, and assemble supermodules. The left screen is the control panel of step 1. The control panel for next step will show up after the previous step is done.
+
+\subsubsection{Generate Network}
+The first step of MetaDCN is to generate network. In this step, the network for permuted data will also be generated. Users need to select case and control names, the number of permutations, and edge cut-off which determines the proportion of edges to be kept in the network. After clicking \textbf{Generate Network} button, screen will show message indicating the algorithm is running to generate network.
+
+After the generate network step is done, no output will show up in the screen. Instead, a message box indicating several Rdata files are saved in the Meta DCN folder, including:
+
+\begin{itemize}
+\item AdjacencyMatrices.Rdata is a list of adjacency matrices for case and control subjects in each study. The order is study1 case, study2 case, \dots, studyS case, study1 control, study2 control, \dots, studyS control.
+\item CorrelationMatrices.Rdata is a list of correlation matrices for case and control subjects in each study.
+\item AdjacencyMatricesPermutationP.Rdata is a list of adjacency matrices for permuted datasets in permutation P.
+\end{itemize}
+
+\subsubsection{Search for basic modules}
+After the generate network step is done, the control panel will be as Figure~\ref{fig:metaDCNstep2}. The next step is to search for basic modules. Users need to specify the number of repeats used for each initial seed modules (Number to repeat), the maximum Monte Carlo steps for simulated annealing algorithm (MC Steps), and the maximum pairwise Jaccard index allowed for basic modules (Jaccard Cutoff). After clicking \textbf{Search for basic modules} button, screen will show message indicating the algorithm is running to search for basic modules.
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.35]{./figure/metaDCN/metaDCNstep2}
+\caption{MetaDCN control panel for search for basic modules}
+\label{fig:metaDCNstep2}
+\end{center}
+\end{figure}
+
+Search for basic modules will take minutes, especially if a large number of genes are used. After this step is done, the screen will show a table of basic modules higher correlated in case and a table of basic modules higher correlated in control as Figure~\ref{fig:metaDCNBM}. Meanwhile, several files will be saved in the Meta DCN folder:
+
+\begin{itemize}
+ \item basic\_modules\_summary\_forward\_weight\_w1.csv is a summary table of basic modules that are higher correlated in case, detected using w1.
+ \item basic\_modules\_summary\_backward\_weight\_w1.csv is a summary table of basic modules that are higher correlated in control, detected using w1.
+\item threshold\_forward.csv is a table of number of basic modules higher correlated in case, detected under different w1 values and FDR cut-offs.
+\item threshold\_backward.csv is a table of number of basic modules higher correlated in control, detected under different w1 values and FDR cut-offs.
+ \item permutation\_energy\_forward\_P.Rdata is a list of energies for basic modules that higher correlated in case, detected from permutation P.
+  \item permutation\_energy\_backward\_P.Rdata is a list of energies for basic modules that higher correlated in control, detected from permutation P.
+\end{itemize}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.8]{./figure/metaDCN/metaDCNBM}
+\caption{MetaDCN output from search for basic modules step}
+\label{fig:metaDCNBM}
+\end{center}
+\end{figure}
+
+
+\subsubsection{Assemble supermodules}
+After search for basic modules step is done, the control panel will be Figure~\ref{fig:metaDCNstep3}. The last step is to assemble supermodules. Users can decide the FDR cut-off to select basic modules for supermodule assembly. After clicking \textbf{Assemble supermodules} button, screen will show message indicating the algorithm is running to assemble supermodules.
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.45]{./figure/metaDCN/metaDCNstep3}
+\caption{MetaDCN control panel for assemble supermodules step}
+\label{fig:metaDCNstep3}
+\end{center}
+\end{figure}
+
+After supermodule assembly is done, screen will show a table of supermodules (Figure~\ref{fig:metaDCNsuper}). Users can also select basic modules to plot (Figure~\ref{fig:metaDCNBMplot}). Meanwhile several files will be saved in the folder MetaDCN:
+\begin{itemize}
+\item module\_assembly\_summary\_weight\_w1.csv is summary table of supermodules using w1 weight.
+\item CytoscapeFiles folder contains the input files for Cytoscape to visualize supermodules.
+\end{itemize}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.45]{./figure/metaDCN/metaDCNsuper.png}
+\caption{MetaDCN supermodules table}
+\label{fig:metaDCNsuper}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.45]{./figure/metaDCN/metaDCNBMplot.png}
+\caption{MetaDCN select basic modules to plot}
+\label{fig:metaDCNBMplot}
+\end{center}
+\end{figure}
+
+
