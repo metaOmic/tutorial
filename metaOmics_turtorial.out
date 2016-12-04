@@ -23,10 +23,14 @@
 \BOOKMARK [3][-]{subsubsection.4.4.2}{Tune K}{subsection.4.4}% 23
 \BOOKMARK [3][-]{subsubsection.4.4.3}{Tune Wbounds}{subsection.4.4}% 24
 \BOOKMARK [3][-]{subsubsection.4.4.4}{Run Meta Sparse K-Means}{subsection.4.4}% 25
-\BOOKMARK [2][-]{subsection.4.5}{MetaPCA}{section.4}% 26
-\BOOKMARK [2][-]{subsection.4.6}{MetaKTSP}{section.4}% 27
-\BOOKMARK [2][-]{subsection.4.7}{MetaDCN}{section.4}% 28
-\BOOKMARK [3][-]{subsubsection.4.7.1}{Generate Network}{subsection.4.7}% 29
-\BOOKMARK [3][-]{subsubsection.4.7.2}{Search for basic modules}{subsection.4.7}% 30
-\BOOKMARK [3][-]{subsubsection.4.7.3}{Assemble supermodules}{subsection.4.7}% 31
-\BOOKMARK [2][-]{subsection.4.8}{MetaLA}{section.4}% 32
+\BOOKMARK [2][-]{subsection.4.5}{metaPCA}{section.4}% 26
+\BOOKMARK [3][-]{subsubsection.4.5.1}{Methods for MetaPCA}{subsection.4.5}% 27
+\BOOKMARK [3][-]{subsubsection.4.5.2}{Dimension of meta-eigenvector matrix}{subsection.4.5}% 28
+\BOOKMARK [3][-]{subsubsection.4.5.3}{Dimension determined by variance quantile}{subsection.4.5}% 29
+\BOOKMARK [3][-]{subsubsection.4.5.4}{Sparsity encouraged}{subsection.4.5}% 30
+\BOOKMARK [3][-]{subsubsection.4.5.5}{Run meta PCA}{subsection.4.5}% 31
+\BOOKMARK [2][-]{subsection.4.6}{MetaKTSP}{section.4}% 32
+\BOOKMARK [2][-]{subsection.4.7}{MetaDCN}{section.4}% 33
+\BOOKMARK [3][-]{subsubsection.4.7.1}{Generate Network}{subsection.4.7}% 34
+\BOOKMARK [3][-]{subsubsection.4.7.2}{Search for basic modules}{subsection.4.7}% 35
+\BOOKMARK [3][-]{subsubsection.4.7.3}{Assemble supermodules}{subsection.4.7}% 36
