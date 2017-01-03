@@ -30,7 +30,8 @@
 \BOOKMARK [3][-]{subsubsection.4.5.4}{Sparsity encouraged}{subsection.4.5}% 30
 \BOOKMARK [3][-]{subsubsection.4.5.5}{Run meta PCA}{subsection.4.5}% 31
 \BOOKMARK [2][-]{subsection.4.6}{MetaKTSP}{section.4}% 32
-\BOOKMARK [2][-]{subsection.4.7}{MetaDCN}{section.4}% 33
-\BOOKMARK [3][-]{subsubsection.4.7.1}{Generate Network}{subsection.4.7}% 34
-\BOOKMARK [3][-]{subsubsection.4.7.2}{Search for basic modules}{subsection.4.7}% 35
-\BOOKMARK [3][-]{subsubsection.4.7.3}{Assemble supermodules}{subsection.4.7}% 36
+\BOOKMARK [3][-]{subsubsection.4.6.1}{Building prediction model based on meta-analysis}{subsection.4.6}% 33
+\BOOKMARK [2][-]{subsection.4.7}{MetaDCN}{section.4}% 34
+\BOOKMARK [3][-]{subsubsection.4.7.1}{Generate Network}{subsection.4.7}% 35
+\BOOKMARK [3][-]{subsubsection.4.7.2}{Search for basic modules}{subsection.4.7}% 36
+\BOOKMARK [3][-]{subsubsection.4.7.3}{Assemble supermodules}{subsection.4.7}% 37

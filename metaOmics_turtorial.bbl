@@ -6,6 +6,13 @@ Choi, J.~K., Yu, U., Kim, S., and Yoo, O.~J. (2003).
   variation.
 \newblock {\em Bioinformatics}, 19(suppl 1):i84--i90.
 
+\bibitem[Fang et~al., 2016]{fang2016cpi}
+Fang, Z., Zeng, X., Lin, C.-W., Ma, T., and Tseng, G.~C. (2016).
+\newblock {\em Comparative Pathway Integrator: a framework of meta-analytic
+  integration of multiple transcriptomic studies for consensual and
+  differential pathway analysis}.
+\newblock PhD thesis, University of Pittsburgh.
+
 \bibitem[Fisher, 1925]{fisher1925statistical}
 Fisher, R.~A. (1925).
 \newblock {\em Statistical methods for research workers}.
@@ -23,6 +30,12 @@ Kang, D.~D., Sibille, E., Kaminski, N., and Tseng, G.~C. (2012).
 \newblock Metaqc: objective quality control and inclusion/exclusion criteria
   for genomic meta-analysis.
 \newblock {\em Nucleic acids research}, 40(2):e15--e15.
+
+\bibitem[Kim et~al., 2016]{Kim2016}
+Kim, S., Lin, C.-W., and Tseng, G.~C. (2016).
+\newblock {MetaKTSP: A Meta-Analytic Top Scoring Pair Method for Robust
+  Cross-Study Validation of Omics Prediction Analysis}.
+\newblock {\em Bioinformatics}, 32(March):btw115.
 
 \bibitem[Li et~al., 2011]{li2011adaptively}
 Li, J., Tseng, G.~C., et~al. (2011).

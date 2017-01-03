@@ -1,36 +1,37 @@
-\contentsline {section}{\numberline {1}Introduction}{1}{section.1}
-\contentsline {section}{\numberline {2}Preliminaries}{1}{section.2}
-\contentsline {subsection}{\numberline {2.1}Citing MetaOmics}{1}{subsection.2.1}
-\contentsline {subsection}{\numberline {2.2}Installation}{2}{subsection.2.2}
-\contentsline {subsubsection}{\numberline {2.2.1}Requirement}{2}{subsubsection.2.2.1}
-\contentsline {subsubsection}{\numberline {2.2.2}How to start the app}{2}{subsubsection.2.2.2}
-\contentsline {subsubsection}{\numberline {2.2.3}How to start the documentation}{3}{subsubsection.2.2.3}
-\contentsline {subsection}{\numberline {2.3}Question and bug report}{3}{subsection.2.3}
-\contentsline {section}{\numberline {3}Prepare data}{3}{section.3}
-\contentsline {subsection}{\numberline {3.1}Raw data}{3}{subsection.3.1}
-\contentsline {subsection}{\numberline {3.2}Clinical data}{4}{subsection.3.2}
-\contentsline {section}{\numberline {4}Toolsets}{5}{section.4}
-\contentsline {subsection}{\numberline {4.1}MetaQC}{5}{subsection.4.1}
-\contentsline {subsection}{\numberline {4.2}MetaDE}{5}{subsection.4.2}
-\contentsline {subsubsection}{\numberline {4.2.1}Meta analysis}{6}{subsubsection.4.2.1}
-\contentsline {subsubsection}{\numberline {4.2.2}Visualization}{10}{subsubsection.4.2.2}
-\contentsline {subsubsection}{\numberline {4.2.3}Downstream pathway analysis}{12}{subsubsection.4.2.3}
-\contentsline {subsection}{\numberline {4.3}MetaPath}{14}{subsection.4.3}
-\contentsline {subsubsection}{\numberline {4.3.1}Run pathway analysis}{14}{subsubsection.4.3.1}
-\contentsline {subsubsection}{\numberline {4.3.2}Pathway clustering}{20}{subsubsection.4.3.2}
-\contentsline {subsection}{\numberline {4.4}MetaClust}{20}{subsection.4.4}
-\contentsline {subsubsection}{\numberline {4.4.1}About}{21}{subsubsection.4.4.1}
-\contentsline {subsubsection}{\numberline {4.4.2}Tune K}{21}{subsubsection.4.4.2}
-\contentsline {subsubsection}{\numberline {4.4.3}Tune Wbounds}{22}{subsubsection.4.4.3}
-\contentsline {subsubsection}{\numberline {4.4.4}Run Meta Sparse K-Means}{23}{subsubsection.4.4.4}
-\contentsline {subsection}{\numberline {4.5}metaPCA}{24}{subsection.4.5}
-\contentsline {subsubsection}{\numberline {4.5.1}Methods for MetaPCA}{25}{subsubsection.4.5.1}
-\contentsline {subsubsection}{\numberline {4.5.2}Dimension of meta-eigenvector matrix}{26}{subsubsection.4.5.2}
-\contentsline {subsubsection}{\numberline {4.5.3}Dimension determined by variance quantile}{26}{subsubsection.4.5.3}
-\contentsline {subsubsection}{\numberline {4.5.4}Sparsity encouraged}{26}{subsubsection.4.5.4}
-\contentsline {subsubsection}{\numberline {4.5.5}Run meta PCA}{26}{subsubsection.4.5.5}
-\contentsline {subsection}{\numberline {4.6}MetaKTSP}{27}{subsection.4.6}
-\contentsline {subsection}{\numberline {4.7}MetaDCN}{27}{subsection.4.7}
-\contentsline {subsubsection}{\numberline {4.7.1}Generate Network}{28}{subsubsection.4.7.1}
-\contentsline {subsubsection}{\numberline {4.7.2}Search for basic modules}{28}{subsubsection.4.7.2}
-\contentsline {subsubsection}{\numberline {4.7.3}Assemble supermodules}{30}{subsubsection.4.7.3}
+\contentsline {section}{\numberline {1}Introduction}{2}{section.1}
+\contentsline {section}{\numberline {2}Preliminaries}{2}{section.2}
+\contentsline {subsection}{\numberline {2.1}Citing MetaOmics}{2}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Installation}{3}{subsection.2.2}
+\contentsline {subsubsection}{\numberline {2.2.1}Requirement}{3}{subsubsection.2.2.1}
+\contentsline {subsubsection}{\numberline {2.2.2}How to start the app}{3}{subsubsection.2.2.2}
+\contentsline {subsubsection}{\numberline {2.2.3}How to start the documentation}{4}{subsubsection.2.2.3}
+\contentsline {subsection}{\numberline {2.3}Question and bug report}{4}{subsection.2.3}
+\contentsline {section}{\numberline {3}Prepare data}{4}{section.3}
+\contentsline {subsection}{\numberline {3.1}Raw data}{4}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Clinical data}{5}{subsection.3.2}
+\contentsline {section}{\numberline {4}Toolsets}{6}{section.4}
+\contentsline {subsection}{\numberline {4.1}MetaQC}{6}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}MetaDE}{6}{subsection.4.2}
+\contentsline {subsubsection}{\numberline {4.2.1}Meta analysis}{7}{subsubsection.4.2.1}
+\contentsline {subsubsection}{\numberline {4.2.2}Visualization}{11}{subsubsection.4.2.2}
+\contentsline {subsubsection}{\numberline {4.2.3}Downstream pathway analysis}{13}{subsubsection.4.2.3}
+\contentsline {subsection}{\numberline {4.3}MetaPath}{15}{subsection.4.3}
+\contentsline {subsubsection}{\numberline {4.3.1}Run pathway analysis}{15}{subsubsection.4.3.1}
+\contentsline {subsubsection}{\numberline {4.3.2}Pathway clustering}{21}{subsubsection.4.3.2}
+\contentsline {subsection}{\numberline {4.4}MetaClust}{21}{subsection.4.4}
+\contentsline {subsubsection}{\numberline {4.4.1}About}{22}{subsubsection.4.4.1}
+\contentsline {subsubsection}{\numberline {4.4.2}Tune K}{22}{subsubsection.4.4.2}
+\contentsline {subsubsection}{\numberline {4.4.3}Tune Wbounds}{23}{subsubsection.4.4.3}
+\contentsline {subsubsection}{\numberline {4.4.4}Run Meta Sparse K-Means}{24}{subsubsection.4.4.4}
+\contentsline {subsection}{\numberline {4.5}metaPCA}{25}{subsection.4.5}
+\contentsline {subsubsection}{\numberline {4.5.1}Methods for MetaPCA}{26}{subsubsection.4.5.1}
+\contentsline {subsubsection}{\numberline {4.5.2}Dimension of meta-eigenvector matrix}{27}{subsubsection.4.5.2}
+\contentsline {subsubsection}{\numberline {4.5.3}Dimension determined by variance quantile}{27}{subsubsection.4.5.3}
+\contentsline {subsubsection}{\numberline {4.5.4}Sparsity encouraged}{27}{subsubsection.4.5.4}
+\contentsline {subsubsection}{\numberline {4.5.5}Run meta PCA}{27}{subsubsection.4.5.5}
+\contentsline {subsection}{\numberline {4.6}MetaKTSP}{28}{subsection.4.6}
+\contentsline {subsubsection}{\numberline {4.6.1}Building prediction model based on meta-analysis}{28}{subsubsection.4.6.1}
+\contentsline {subsection}{\numberline {4.7}MetaDCN}{37}{subsection.4.7}
+\contentsline {subsubsection}{\numberline {4.7.1}Generate Network}{38}{subsubsection.4.7.1}
+\contentsline {subsubsection}{\numberline {4.7.2}Search for basic modules}{39}{subsubsection.4.7.2}
+\contentsline {subsubsection}{\numberline {4.7.3}Assemble supermodules}{40}{subsubsection.4.7.3}
