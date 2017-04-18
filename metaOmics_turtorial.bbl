@@ -31,6 +31,11 @@ Kang, D.~D., Sibille, E., Kaminski, N., and Tseng, G.~C. (2012).
   for genomic meta-analysis.
 \newblock {\em Nucleic acids research}, 40(2):e15--e15.
 
+\bibitem[Kim et~al., tted]{kim2017metaPCA}
+Kim, S., Kang, D., Huo, Z., Park, Y., and Tseng, G.~C. (submitted).
+\newblock Meta-analytic principal component analysis in integrative omics
+  application.
+
 \bibitem[Kim et~al., 2016]{Kim2016}
 Kim, S., Lin, C.-W., and Tseng, G.~C. (2016).
 \newblock {MetaKTSP: A Meta-Analytic Top Scoring Pair Method for Robust
@@ -48,5 +53,12 @@ Shen, K. and Tseng, G.~C. (2010).
 \newblock Meta-analysis for pathway enrichment analysis when combining multiple
   genomic studies.
 \newblock {\em Bioinformatics}, 26(10):1316--1323.
+
+\bibitem[Zhu et~al., 2016]{zhu2016metadcn}
+Zhu, L., Ding, Y., Chen, C.-Y., Wang, L., Huo, Z., Kim, S., Sotiriou, C.,
+  Oesterreich, S., and Tseng, G.~C. (2016).
+\newblock Metadcn: meta-analysis framework for differential co-expression
+  network detection with an application in breast cancer.
+\newblock {\em Bioinformatics}, page btw788.
 
 \end{thebibliography}

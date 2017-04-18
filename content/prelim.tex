@@ -20,10 +20,9 @@ by which the authors will receive professional credit for their work.
 \item \bibentry{fang2016cpi}.
 \end{itemize}
 \item MetaClust: \bibentry{huo2016meta}.
-\item MetaPCA: not published yet.
+\item MetaPCA: \bibentry{kim2017metaPCA}.
 \item MetaKTSP: \bibentry{Kim2016}.
-\item MetaDCN: not published yet.
-\item MetaLA: not published yet.
+\item MetaDCN: \bibentry{zhu2016metadcn}.
 \end{itemize}
 
 
@@ -47,35 +46,12 @@ $>$ install.packages($'$shiny$'$)
 $>$ shiny::runApp(`metaOmics', port=9987, launch.browser=T)
 \end{itemize}
 
-\subsubsection{How to start the documentation}
-\begin{itemize}
-\item Install rmarkdown for R
-\item Inside `doc' directory, start R console, and:
-\item in R
-\begin{lstlisting}[language=R]
-rmarkdown::run(shiny_args=list(port=9988, launch.browser=T))
-\end{lstlisting}
-
-\item or in command line
-\begin{lstlisting}[language=bash]
-R -e "rmarkdown::run(shiny_args=list(port=9988, launch.browser=T))"
-\end{lstlisting}
-
-If you run into an issue with something like `pandoc version 1.12.3 or higher is required and was not found.?, just install pandoc manually. For example, on Mac, it would be `brew install pandoc'. If you have Rstudio, you can also to get rstudio's pandoc environment. Go to rstudio console and find the system environment variable for `RSTUDIO\_PANDOC'
-
-In R: 
-
-\begin{lstlisting}[language=R]
-Sys.getenv("RSTUDIO_PANDOC")
-\end{lstlisting}
-
-\end{itemize}
 
 
 \subsection{Question and bug report}
 {
 \color{red}
-Ask Anzhe what is the appropriate way to maintain the package?
+Who should be responsible for maintaining the software?
 }
 
  

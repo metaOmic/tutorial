@@ -1,142 +1,81 @@
 \subsection{MetaDE}
-MetaDE package implements 12 major meta-analysis methods for differential expression analysis, and now it allows the analysis of both microarray and RNA-seq data. In this tutorial, we will demonstrate the MetaDE pipeline step by step using two meta-analysis methods: Fisher's method and Adaptively weighted Fisher's method (AW-Fisher). Please refer to \cite{fisher1925statistical} and \cite{li2011adaptively} for details of these two methods. 
-Individual MetaDE package is also available on GitHub at \url{https://github.com/metaOmic/MetaDE}.
 
+\subsubsection{Procedure}
 
-\subsubsection{Meta analysis}
-
-After opening the MetaDE page, as shown in Figure \ref{fig:MetaDEmainpage}, there are 2 drop-down menus (``Meta Method Type" and ``Meta Method") and 4 tabs on the left of the page (``Response Type", ``Setting Individual Study Method", ``Advanced Options" and ``Run"). We generally suggest users not to change any parameter setting in the ``Advanced Options" unless users know the underlying methodology well. 
+MetaDE package implements 12 major meta-analysis methods for differential expression analysis falling into 3 main categories: combining p-values, combining effect sizes and others (e.g. combining ranks, etc.). Depending on the types of outcome, the package can perform two class comparison, multi-class comparison, association with continuous or survival outcome. The package allows the input of either microarray (continuous intensity) or RNA-seq data (count) for individual study analysis. There are two major steps to implement the package: meta differential analysis and pathway analysis. As shown in Figure \ref{fig:MetaDEoption}, there are 9 major options that need to be specified to implement the package: (1) - (6) are for the first step and (7) - (9) are for the second step. A detailed list of all options available for the package can be found at the end of this subsection. Individual MetaDE package is also available on GitHub at \url{https://github.com/metaOmic/MetaDE}. \\
+%In this tutorial, we will demonstrate the MetaDE pipeline step by step using two meta-analysis methods: Fisher's method and Adaptively weighted Fisher's method (AW-Fisher). Please refer to \cite{fisher1925statistical} and \cite{li2011adaptively} for details of these two methods. .
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=0.45]{./figure/metaDE/MetaDEmainpage}
-\caption{Homepage of MetaDE}
-\label{fig:MetaDEmainpage}
+\includegraphics[scale=0.45]{./figure/metaDE/metaDEoption.jpg}
+\caption{``MetaDE" options}
+\label{fig:MetaDEoption}
 \end{center}
 \end{figure}
 
-For Fisher's method, we will choose ``Combine P-value" and ``Fisher" (Figure \ref{fig:FisherSelect}); and for AW Fisher's method, we will choose ``Combine P-value" and ``AW Fisher" (Figure \ref{fig:AWFisherSelect}). 
+\textbf{Step 1. Meta differential analysis:} This step includes the core strategies of the ``MetaDE" package. Users first need to specify (1) ``Meta Method Type" and (2) ``Meta Method" correspondingly. There are three types to select from: combining p-value, combining effect size and others. ``Fisher" and ``AW-Fisher" meta methods are available for p-value combination, ``Fixed Effect Model (FEM)" and ``Random Effect Model (REM)" for effect size combination, and the other methods in the ``Others" type. More meta-analysis methods are available if ``complete option" is chosen from (5) ``Advanced Options" section. Next, we need to specify the outcome of interest in (3) ``Response Type". For example, for differential expression analysis, two-class comparison is usually chosen. For two-class comparison, users need to specify the class label, and the level corresponding to the experimental and the control groups. Other outcome types such as continuous or survival data can also be chosen. In (4) ``Individual study option", users can specify whether each of the study is a paired design, and for p-value combination method, one can select the differential analysis method to obtain p-values in each individual study (e.g. generally suggest LIMMA for microarray and edgeR for RNA-seq). ``Advanced Options" is optional and users are suggested not to modify the option setting in this section. Once all the above options are specified, users can click on (6) ``Run" to implement the first step. \\~\\
+
+\textbf{Step 2. Pathway analysis:} This step consists of a downstream pathway analysis for the meta differential analysis results from the first step. Users can select from 25 available pathway databases (7) to perform the pathway enrichment analysis. There are three main options for pathway analysis under (8) ``Pathway Analysis Option": the enrichment method including the Fisher's exact test and KS test, the minimum as well as the maximum pathway size. If ``Fisher's exact test" is chosen for the enrichment method, users need to further specify the criteria for selection of DE genes: either by p-value cutoff or by number of top ranked genes. Once these options are set, users can click on (9) ``Run Pathway Analysis" to implement the first step. \\~\\
+
+
+\textbf{Complete List of Options:} 
+
+\begin{enumerate}
+  \item Meta Method Type: Combining p-value, Combining effect size, Others.
+  \item Meta Method: Fisher, AW-Fisher, FEM, REM, Sum of Rank, Produce of Rank, multi-class correlation, Rank product. 
+  \item Response Type:
+   \begin{itemize}
+     \item Two class comparison, Multi-class comparison, Continuous outcome, Survival outcome.
+     \item Label Attribute: select the label name of the outcome.
+     \item Control Label \& Experimental Label: specify the case/control label for two-class comparison.
+    \end{itemize}
+   \item Individual Study Option:
+     \begin{itemize}
+     \item Setting individual study method
+     \item Setting individual study paired option
+    \end{itemize} 
+   \item Advanced Option (**Optional):
+     \begin{itemize}
+      \item Use complete options
+      \item Parametric
+      \item Covariate
+      \item Alternative hypothesis
+    \end{itemize} 
+    \item Run
+    \item Pathway Databases
+    \item Pathway Analysis Option:
+         \begin{itemize}
+      \item Pathway enrichment method
+      \item Pathway min gene size
+      \item Pathway max gene size
+    \end{itemize} 
+    \item Run Pathway Analysis
+\end{enumerate}
+
+
+\subsubsection{Results}
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=0.45]{./figure/metaDE/FisherSelect}
-\caption{Fisher's method setting}
-\label{fig:FisherSelect}
+\includegraphics[scale=0.45]{./figure/metaDE/metaDEresult1.jpg}
+\caption{``MetaDE" Results (1)}
+\label{fig:MetaDEresult1}
 \end{center}
 \end{figure}
+
+Two main outputs from the first ``meta differential analysis" step in the procedure are shown in Figure \ref{fig:MetaDEresult1}. The first is (2) a summary of meta analysis results, including information of individual test statistics, individual study p-value, meta-analysis p-value, FDR, etc. The second output is (1) a heatmap of DE genes drawn after specifying the FDR cutoff for selection of DE genes and clicking on ``Plot DE Genes Heatmap". The ``image size" can be adjusted by dragging the scroll bar. In the heatmap, rows refer to DE genes selected, columns refer to samples, solid white lines are used to sepate different studies and the dashed white lines are used to separate groups. Colors of the cells correspond to scaled expression level as indicated in the color key below. For the results generated by ``AW-Fisher", there is one additional column of cross-study weight distribution on the left end of the heatmap and the genes in the heatmap are sorted by their weight distribution.
+
+The (2) summary table might differ slightly for different meta-analysis methods, for example, AW-Fisher method will include additional columns of study-specific weights.  
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=0.45]{./figure/metaDE/AWFisherSelect}
-\caption{AW Fisher's method setting}
-\label{fig:AWFisherSelect}
+\includegraphics[scale=0.45]{./figure/metaDE/metaDEresult2.jpg}
+\caption{``MetaDE" Results (2)}
+\label{fig:MetaDEresult2}
 \end{center}
 \end{figure}
 
-Then, in the next step, we click on ``Response Type", for two-class DE analysis, choose ``Two Class Comparison", choose the group label name for the Label Attribute (from the column names of your clinical data). Then for the group label (a factor of at least two levels), choose a name for the ``Control Label" and ``Experimental Label", respectively (Figure \ref{fig:ResponseType}).
+For the second step ``pathway analysis", there is (3) a tabular summary outputted, as shown in Figure \ref{fig:MetaDEresult2}. The summary includes the pathway names, the corresponding enrichment p-value and FDR. 
 
-\begin{figure}[H]
-\begin{center}
-\includegraphics[scale=0.45]{./figure/metaDE/ResponseType}
-\caption{Response type setting}
-\label{fig:ResponseType}
-\end{center}
-\end{figure}
+In addition to the results shown in the Browser, users can download the two tabular results to the working directory by clicking on "Download Csv File" on the top left of the summary table. 
 
-Next, we click on ``Setting Individual Study Method" and choose ``LIMMA" to perform DE analysis in each individual study (Figure \ref{fig:IndDE}). Available options include ``LIMMA" and ``SAM" for continuous data (e.g. microarray), ``edgeR", ``DESeq2" and ``limmaVoom" for discrete data (e.g. RNA-seq count). Details of the above mentioned DE methods can be found in XXX (reference).
-
-\begin{figure}[H]
-\begin{center}
-\includegraphics[scale=0.45]{./figure/metaDE/IndDE}
-\caption{Individual study DE analysis method}
-\label{fig:IndDE}
-\end{center}
-\end{figure}
-
-** Optionally, we can click on ``Advanced Options", choose ``Parametric=yes" so parametric methods will be used for inference. We can choose whether to adjust for any important ``Covariates" (e.g. potential confounders) and we set the alternative hypothesis to be ``abs", i.e. two-sided test (Figure \ref{fig:AdvOptions}). 
-
-\begin{figure}[H]
-\begin{center}
-\includegraphics[scale=0.45]{./figure/metaDE/AdvOptions}
-\caption{Advanced Options}
-\label{fig:AdvOptions}
-\end{center}
-\end{figure}
-
-After we click on ``Run", we will see a summary table generated on the right of the page as shown in Figure \ref{fig:MetaSummary}. The ``Analysis Summary" includes the analysis results of all genes, including individual study statistics/p-value, meta-analysis statistics/p-value/FDR, etc. Users can search the gene name in the ``Search" bar, and download the full table as a csv file by clicking on ``Download Csv File".  
-
-\begin{figure}[H]
-\begin{center}
-\includegraphics[scale=0.45]{./figure/metaDE/MetaSummary}
-\caption{Summary table of Meta-analysis results}
-\label{fig:MetaSummary}
-\end{center}
-\end{figure}
-
-\subsubsection{Visualization}
-
-In addition to tabular output, for better visualization, users can also plot heatmap of DE genes at specified FDR cutoff. Users can enter the ``FDR Cutoff" (number of genes selected are shown interactively), then click on ``Plot DE Genes Hetamap" to draw the heatmap. The ``image size" can be adjusted by dragging the scroll bar (Figure \ref{fig:HeatmapSetting}).  
-
-\begin{figure}[H]
-\begin{center}
-\includegraphics[scale=0.4]{./figure/metaDE/HeatmapSetting.png}
-\caption{Plot heatmap setting}
-\label{fig:HeatmapSetting}
-\end{center}
-\end{figure}
-
-Shown in Figure \ref{fig:FisherHeatmap} and Figure \ref{fig:AWFisherHeatmap} are two heatmaps generated from Fisher and AW Fisher results. Note that one additional column of weight distribution across studies is added in the heatmap of AW-Fisher, and all genes in the heatmap are sorted based on their weight distribution.
-
-\begin{figure}[H]
-\begin{center}
-\includegraphics[scale=0.4]{./figure/metaDE/FisherHeatmap}
-\caption{Heatmap based on Fisher results}
-\label{fig:FisherHeatmap}
-\end{center}
-\end{figure}
-
-\begin{figure}[H]
-\begin{center}
-\includegraphics[scale=0.45]{./figure/metaDE/AWFisherHeatmap}
-\caption{Heatmap based on AW Fisher results}
-\label{fig:AWFisherHeatmap}
-\end{center}
-\end{figure}
-
-\subsubsection{Downstream pathway analysis}
-
-Upon getting the meta differential analysis results (users have to perform meta DE analysis first before pathway analysis), we will further perform downstream pathway analysis. As shown in Figure \ref{fig:PathwayDB}, we first need to choose the Pathway databases to be used as shown in the highlighted box. Next we will choose the pathway enrichment method, the default is the Kolmogorov-Smirnov test (KS test, Figure \ref{fig:KStest}). Alternatively, one can choose to use Fisher's exact test, once this method is selected, you need to pick a DE gene set using a hard threshold, either by p-value cutoff or the number of top ranked genes (Figure \ref{fig:FisherExact}). Lastly, we will specify the minimum/maximum pathway size of pathways we wish to include for functional analysis, then click ``Run Pathway Analysis".     
-
-\begin{figure}[H]
-\begin{center}
-\includegraphics[scale=0.45]{./figure/metaDE/PathwayDB}
-\caption{Selection of pathway database}
-\label{fig:PathwayDB}
-\end{center}
-\end{figure}
-
-\begin{figure}[H]
-\begin{center}
-\includegraphics[scale=0.45]{./figure/metaDE/KStest}
-\caption{KS test setting}
-\label{fig:KStest}
-\end{center}
-\end{figure}
-
-\begin{figure}[H]
-\begin{center}
-\includegraphics[scale=0.45]{./figure/metaDE/FisherExact}
-\caption{Fisher's exact test setting}
-\label{fig:FisherExact}
-\end{center}
-\end{figure}
-
-We will then see a summary table of pathway analysis results generated on the right of the page as shown in Figure \ref{fig:PathResult}. Users can search the pathway name in the ``Search" bar, and download the full table as a csv file by clicking on ``Download Csv File of Pathway Result" as highlighted. 
-
-\begin{figure}[H]
-\begin{center}
-\includegraphics[scale=0.45]{./figure/metaDE/PathResult}
-\caption{Summary of pathway analysis result}
-\label{fig:PathResult}
-\end{center}
-\end{figure}

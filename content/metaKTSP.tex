@@ -47,35 +47,35 @@ First, we need to decide a method to select K top scoring gene pairs from multip
 
 After the model training is finished, on the top right it will show up a ``Gene pair table" which present the top $K$ gene pairs statistics (Figure \ref{fig:PairTable}). As shown in Figure \ref{fig:DiagnosticPlot}, a diagnostic plot is output to assist users decide which $K$ to use in the final prediction model. The suggested value is shown in the plot as green line, which is decided by VO method we introduced in the original paper. Users may also decide $K$ on their own to predict the class label of testing data. After deciding $K$, then hit the tab ``Predict'' (Figure \ref{fig:Predict}). Finally, a confusion matrix is output to show the prediction results (Figure \ref{fig:Confusion}).
 
-\begin{figure}[H]
-\begin{center}
-\includegraphics[scale=0.7]{./figure/MetaKTSP/Figure9.pdf}
-\caption{Gene pair table presents the statistics for $K$ top scoring pairs.}
-\label{fig:PairTable}
-\end{center}
-\end{figure}
+%\begin{figure}[H]
+%\begin{center}
+%\includegraphics[scale=0.7]{./figure/MetaKTSP/Figure9.pdf}
+%\caption{Gene pair table presents the statistics for $K$ top scoring pairs.}
+%\label{fig:PairTable}
+%\end{center}
+%\end{figure}
 
-\begin{figure}[H]
-\begin{center}
-\includegraphics[scale=0.7]{./figure/MetaKTSP/Figure10.pdf}
-\caption{Diagnostic plot for choosing optimal $K$ from training model. It will be used for predicting the class labels for testing dataset.}
-\label{fig:DiagnosticPlot}
-\end{center}
-\end{figure}
+%\begin{figure}[H]
+%\begin{center}
+%\includegraphics[scale=0.7]{./figure/MetaKTSP/Figure10.pdf}
+%\caption{Diagnostic plot for choosing optimal $K$ from training model. It will be used for predicting the class labels for testing dataset.}
+%\label{fig:DiagnosticPlot}
+%\end{center}
+%\end{figure}
 
 
-\begin{figure}[H]
-\begin{center}
-\includegraphics[scale=0.7]{./figure/MetaKTSP/Figure11.pdf}
-\caption{Choose the optimal $K$ for prediction model. Hit tab ``Predict" to perform prediction for testing dataset.}
-\label{fig:Predict}
-\end{center}
-\end{figure}
+%\begin{figure}[H]
+%\begin{center}
+%\includegraphics[scale=0.7]{./figure/MetaKTSP/Figure11.pdf}
+%\caption{Choose the optimal $K$ for prediction model. Hit tab ``Predict" to perform prediction for testing dataset.}
+%\label{fig:Predict}
+%\end{center}
+%\end{figure}
 
-\begin{figure}[H]
-\begin{center}
-\includegraphics[scale=0.7]{./figure/MetaKTSP/Figure12.pdf}
-\caption{Prediction result based on testing data using 7 top scoring pairs derived from MetaKTSP model. The column of the confusion matrix is the given class label and the row is the prediction result.}
-\label{fig:Confusion}
-\end{center}
-\end{figure}
+%\begin{figure}[H]
+%\begin{center}
+%\includegraphics[scale=0.7]{./figure/MetaKTSP/Figure12.pdf}
+%\caption{Prediction result based on testing data using 7 top scoring pairs derived from MetaKTSP model. The column of the confusion matrix is the given class label and the row is the prediction result.}
+%\label{fig:Confusion}
+%\end{center}
+%\end{figure}

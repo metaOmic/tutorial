@@ -1,106 +1,85 @@
 \subsection{MetaPath}
-\subsubsection{Run pathway analysis}
+\subsubsection{Procedure}
 
-After opening the MetaPath page, as shown in Figure \ref{fig:MetaPathmainpage}, there are 3 main steps to implement MetaPath. We generally suggest users not to change any parameter setting in ``Advanced"  and ``Advanced Options" unless users know the underlying methodology well. 
-
-\begin{figure}[H]
-\begin{center}
-\includegraphics[scale=0.35]{./figure/metaPath/MetaPathmainpage}
-\caption{Homepage of MetaPath}
-\label{fig:MetaPathmainpage}
-\end{center}
-\end{figure}
-
-To start, we need to perform DE (association) analysis in each individual study before performing pathway analysis for functional annotation. We click on ``Response Type", for two-class DE analysis, choose ``Two Class Comparison", choose the group label name for the Label Attribute (from the column names of your clinical data). Then for the group label (a factor of at least two levels), choose a name for the ``Control Label" and ``Experimental Label", respectively (Figure \ref{fig:ResponseType}).
+Following the detection of biomarkers, pathway analysis (a.k.a. gene set enrichment analysis) is usually performed for functional annotation and biological interpretation. When there are multiple studies available on a related hypothesis, meta-analysis methods are necessary for joint pathway analysis. Two major approaches have been included in the MetaPath package to serve for this purpose: Comparative Pathway Integrator (CPI) and Meta-Analysis for Pathway Enrichment (MAPE) (Shen et al., 2010; Fang et al., 2017). Pathway clustering with statistically valid text mining is included in the package to reduce pathway redundancy to condense knowledge and increase interpretability of clustering results. The MetaPath package requires the input of raw expression data as in MetaDE. There are three major steps to implement the package: pathway analysis, pathway clustering diagnostics and pathway clustering with text mining. As shown in Figure \ref{fig:MetaPathoption}, there are 8 major options that need to be specified to implement the package: (1) - (6) are for the first step, (7) for the second step and (8) for the third step. A detailed list of all options available for the package can be found at the end of this subsection. Individual MetaPath package is also available on GitHub at \url{https://github.com/metaOmic/MetaPath}.
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=0.4]{./figure/metaPath/ResponseType}
-\caption{Response type setting}
-\label{fig:ResponseType}
+\includegraphics[scale=0.45]{./figure/metaPath/metaPathoption.jpg}
+\caption{``MetaPath" options}
+\label{fig:MetaPathoption}
 \end{center}
 \end{figure}
 
-Then we click on ``Setting Individual Study Method" and choose ``LIMMA" to perform DE analysis in each individual study (Figure \ref{fig:IndDE}). Available options include ``LIMMA" and ``SAM" for continuous data (e.g. microarray), ``edgeR", ``DESeq2" and ``limmaVoom" for discrete data (e.g. RNA-seq count). Details of the above mentioned DE methods can be found in XXX (reference).
+\textbf{Step 1. Pathway analysis:} This step consists of a meta pathway analysis. Users need to specify (1) ``Response type", (2) ``Individual study option" and (3) ``Advanced" as in MetaDE to perform the pathway enrichment analysis in the presence of multiple studies. Users can select from 25 available pathway databases (4) for the enrichment analysis. (5) ``Advanced Options" is optional and users are suggested not to modify the option setting in this section. By default, the ``CPI" approach is used, otherwise ``MAPE" approach can also be used. Other options include pathway enrichment method (the Fisher's exact test or KS test), the minimum as well as the maximum pathway size. If ``Fisher's exact test" is chosen for the enrichment method, users need to further specify the criteria for selection of DE genes, e.g. the number of top ranked genes. On the other hand, if ``KS test" is chosen, one needs to further specify whether to use permutation to obtain enrichment p-value. Once these options are set, users can click on (6) ``Run Pathway Analysis" to implement the first step. \\~\\
+
+\textbf{Step 2. Pathway clustering diagnostics:} From the first step, users can choose the top enriched pathways for further clustering. One can expand the drop-down menu and use FDR cutoff to choose top pathways and click on (7) ``Pathway clustering diagnostics" to implement the second step. \\~\\
+
+\textbf{Step 3. Pathway clustering with text mining:} From the second step, users can determine the optimal number of clusters in the pool of pathways selected. Now, one can specify the number of clusters and click on (8) ``Get clustering result" to implement the third step. Note that you may not want to select too large a K since you wish to have a certain amount of pathways in each cluster for the validity of text mining algorithm. We generally suggest users to specify K no larger than 7 for fewer than 100 pathways.   \\~\\
+
+\textbf{Complete List of Options:} 
+
+\begin{enumerate}
+  \item Response Type:
+   \begin{itemize}
+     \item Two class comparison, Multi-class comparison, Continuous outcome, Survival outcome.
+     \item Label Attribute: select the label name of the outcome.
+     \item Control Label \& Experimental Label: specify the case/control label for two-class comparison.
+    \end{itemize}
+   \item Individual Study Option:
+     \begin{itemize}
+     \item Setting individual study method
+     \item Setting individual study paired option
+    \end{itemize} 
+   \item Advanced Option (**Optional):
+     \begin{itemize}
+      \item Covariate
+      \item Alternative hypothesis
+    \end{itemize} 
+    \item Pathway Databases
+    \item Pathway Analysis Option:
+         \begin{itemize}
+       \item Software
+      \item Pathway enrichment method
+      \item Pathway min gene size
+      \item Pathway max gene size
+    \end{itemize} 
+    \item Step1: Run Pathway Analysis
+    \item Step2: Pathway Clustering Diagnostics
+    \item Step3: Get Clustering Result
+\end{enumerate}
+
+
+\subsubsection{Results}
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=0.4]{./figure/metaPath/IndDE}
-\caption{Individual study DE analysis method}
-\label{fig:IndDE}
+\includegraphics[scale=0.45]{./figure/metaPath/metaPathresult1.jpg}
+\caption{``MetaPath" Results (1)}
+\label{fig:MetaPathresult1}
 \end{center}
 \end{figure}
 
-Optionally, we can click on ``Advanced" and choose whether to adjust for any important ``Covariates" (e.g. potential confounders) and we set the alternative hypothesis to be ``abs", i.e. two-sided test (Figure \ref{fig:Adv}). 
+After the first step is finished, (1) a summary table was generated as shown in Figure \ref{fig:MetaPathresult1} (based on the default CPI method). The ``Analysis Summary" includes the analysis results of all pathways, including individual study association analysis p-value, meta pathway analysis p-value/FDR, etc. Users can search the gene name in the ``Search" bar, and the full table is automatically saved in the working directory specified before.  
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=0.4]{./figure/metaPath/Adv}
-\caption{Advanced Options for single study association analysis}
-\label{fig:Adv}
+\includegraphics[scale=0.45]{./figure/metaPath/metaPathresult2.jpg}
+\caption{``MetaPath" Results (2)}
+\label{fig:MetaPathresult2}
 \end{center}
 \end{figure}
 
-Next, we need to specify the parameters for pathway analysis. As shown in Figure \ref{fig:PathwayDB}, we first need to choose the Pathway databases to be used as shown in the highlighted box. Then optionally, we can click on the ``Advanced Options" tab and choose the software to be used: CPI or MAPE. For CPI, we can use the Kolmogorov-Smirnov test (Figure \ref{fig:CPI}).CPI implements AW Fisher's method for meta p-value method in order to see both consensus and differential enrichment patterns. Alternatively, one can choose to use Fisher's exact test, once this method is selected, we need to pick the number of top ranked genes as the DE gene set for pathway analysis (Figure \ref{fig:FisherExact}). For MAPE, the two tests are also available. There is one additional option of meta p-value method, available options include Fisher's method, maxP, minP, rOP and AW Fisher' method (Figure \ref{fig:MAPE}). When rOP is selected, additional option for order statistic of p-value (rth ordered p-value) will be available. Instead of closed-form distributions, users can use permutation of gene labels to get pathway p-value forthe Kolmogorov-Smirnov test (Figure \ref{fig:MAPE}). When ``Permutation to get p-value" is choosen to be ``YES", additional option for number of permutations will be available. However, we generally suggest users not to run permutation because it may take up to hours to compute. Lastly, we will specify the minimum/maximum pathway size of pathways we wish to include for functional analysis, then click ``Step 1: Run Pathway Analysis".     
+After the ``Pathway Cluster Diagnostics" step is finished, we will see (2) two plots generated on the right panel (Figure \ref{fig:MetaPathresult2}): consensus CDF and Delta area plots, both from the ``ConsensusClusterPlus" package. The CDF of the consensus matrix for each K (indicated by colors) is estimated by a histogram of 100 bins. The CDF
+reaches an approximate maximum, thus consensus and cluster confidence is at a maximum at this K. The delta area shows the relative change in area under the CDF curve comparing K and K ? 1, thus allows users to determine the determine K at which there is no appreciable increase in CDF. Both plots assist users in finding the optimal number of clusters ``K" and you may refer to (Monti et al., 2003) for more detailed interpretation of the two plots. In the demo example, $K=5$ have large enough CDF, is thus chosen (though $K=7$ captures more, we only have 43 pathways here). 
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=0.45]{./figure/metaPath/PathwayDB}
-\caption{Selection of pathway database}
-\label{fig:PathwayDB}
+\includegraphics[scale=0.45]{./figure/metaPath/metaPathresult3.jpg}
+\caption{``MetaPath" Results (3)}
+\label{fig:MetaPathresult3}
 \end{center}
 \end{figure}
 
-\begin{figure}[H]
-\begin{center}
-\includegraphics[scale=0.45]{./figure/metaPath/CPI}
-\caption{CPI setting}
-\label{fig:CPI}
-\end{center}
-\end{figure}
+The heatmap in (3) shows the -log10 transformed p-value of enrichment analysis in each study from step 1. Studies are on columns and the selected pathways are on rows, red means more enriched. The pathways are sorted by the pathway cluster as indicated by the colors on the left side of the heatmap. In addition, one file named ``Clustering\textunderscore Summary.csv" is saved to the working directory and shows (4) a summary of the text mining algorithm. The most frequently appearing and enriched keywords of each cluster is highlighted in (4). All the results shown in the Browser is also automatically saved to the working directory.
 
-\begin{figure}[H]
-\begin{center}
-\includegraphics[scale=0.45]{./figure/metaPath/FisherExact}
-\caption{Fisher's Exact Test}
-\label{fig:FisherExact}
-\end{center}
-\end{figure}
-
-\begin{figure}[H]
-\begin{center}
-\includegraphics[scale=0.45]{./figure/metaPath/MAPE}
-\caption{MAPE setting}
-\label{fig:MAPE}
-\end{center}
-\end{figure}
-
-We will see a summary table generated on the right of the page as shown in Figure \ref{fig:CPISummary} (based on the default CPI method). The ``Analysis Summary" includes the analysis results of all pathways, including individual study association analysis p-value, meta pathway analysis p-value/FDR, etc. Users can search the gene name in the ``Search" bar, and the full table is automatically saved in the working directory specified before.  
-
-\begin{figure}[H]
-\begin{center}
-\includegraphics[scale=0.45]{./figure/metaPath/CPISummary}
-\caption{Summary table of CPI analysis results}
-\label{fig:CPISummary}
-\end{center}
-\end{figure}
-
-\subsubsection{Pathway clustering}
-
-In the next step, we performed clustering diagnostics of pathways at specified FDR cutoff (Figure \ref{fig:ClustDiag}). After clicking on ``Pathway Cluster Diagnostics", we will see two plots generated on the right panel: consensus CDF and Delta area plots (Figure \ref{fig:DiagPlots}), we can use these two plots to determine the optimal number of clusters, to be used in the third clustering step.  
-
-\begin{figure}[H]
-\begin{center}
-\includegraphics[scale=0.45]{./figure/metaPath/ClustDiag}
-\caption{Pathway clustering diagnostics}
-\label{fig:ClustDiag}
-\end{center}
-\end{figure}
-
-\begin{figure}[H]
-\begin{center}
-\includegraphics[scale=0.45]{./figure/metaPath/DiagPlots}
-\caption{Diagnostic plots}
-\label{fig:DiagPlots}
-\end{center}
-\end{figure}

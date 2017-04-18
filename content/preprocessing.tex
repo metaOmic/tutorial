@@ -1,5 +1,3 @@
-\section{MetaOmics suit GUI}
-\subsection{Setting}
 
 After starting metaOmics, 
 the first page is the metaOmics setting page in Figure~\ref{fig:GUIsetting}.  
@@ -21,34 +19,33 @@ Otherwise, users can install individual package by clicking install blue button.
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=0.35]{./figure/GUIsetting}
+\includegraphics[scale=0.35]{./figure/preprocessing/GUIsetting}
 \caption{GUI setting page}
 \label{fig:GUIsetting}
 \end{center}
 \end{figure}
 
 \subsection{Preprocessing}
+\subsubsection{Uploading data}
 If users go to the Preprocessing page as Figure~\ref{fig:GUIpreprocessing},
 \begin{figure}[!htbp]
 \begin{center}
-\includegraphics[scale=0.35]{./figure/GUIpreprocessing}
+\includegraphics[scale=0.35]{./figure/preprocessing/GUIpreprocessing}
 \caption{GUI Preprocessing page}
 \label{fig:GUIpreprocessing}
 \end{center}
 \end{figure}
 they are able to uploaded genomic data via the tab ``Choosing/Upload Expression Data".
 The data should be prepared according to Section~\ref{sec:dataPrepare}.
-Users may optionally upload Clinical Data, depending on purpose.
-{
-\color{red}
-Check data requirement table?.
-}
+Users may optionally upload Clinical Data, depending on biological purpose.
 After uploading is complete,
 users can preview their data on the right hand side of the page as Figure~\ref{fig:GUIpreview}.
-There are several Expression Data Parsing Option available on the left panel.
+
+\subsubsection{Preprocessing}
+There are several expression data parsing option available on the left panel.
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=0.35]{./figure/GUIpreview}
+\includegraphics[scale=0.35]{./figure/preprocessing/GUIpreview}
 \caption{GUI Preprocessing page}
 \label{fig:GUIpreview}
 \end{center}
@@ -57,13 +54,13 @@ The MetaOmics suit also provide handlers for feature annotation, missing value i
 Then users could specify type of data and study name.
 Then click ``save single study" button, single study will be saved.
 
-\subsection{Saved Data}
+\subsubsection{Saved Data}
 After uploading multiple studies w/o clinical data,
 Users can turn to the Saved Data tab.
 Users should select multiple datasets as Figure~\ref{fig:GUImerge}.
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=0.35]{./figure/GUImerge}
+\includegraphics[scale=0.35]{./figure/preprocessing/GUImerge}
 \caption{GUI Preprocessing page}
 \label{fig:GUImerge}
 \end{center}
@@ -73,3 +70,4 @@ A merged dataset will appear on the left ``List of saved data" panel.
 The last thing users need to do before using meta-analytic toolsets is select merged data and click on 
 ``Make merged Active Dataset" - A big green button.
 Then the merged data becomes active study and shows up on the top right corner.
+The active dataset serves as the input for all other MetaOmics modules.
