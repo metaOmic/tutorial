@@ -25,8 +25,4 @@
 \contentsline {subsubsection}{\numberline {4.5.2}Results}{25}{subsubsection.4.5.2}
 \contentsline {subsection}{\numberline {4.6}metaPCA}{25}{subsection.4.6}
 \contentsline {subsubsection}{\numberline {4.6.1}Procedure}{26}{subsubsection.4.6.1}
-\contentsline {subsubsection}{\numberline {4.6.2}Methods for MetaPCA}{26}{subsubsection.4.6.2}
-\contentsline {subsubsection}{\numberline {4.6.3}Dimension of meta-eigenvector matrix}{27}{subsubsection.4.6.3}
-\contentsline {subsubsection}{\numberline {4.6.4}Dimension determined by variance quantile}{27}{subsubsection.4.6.4}
-\contentsline {subsubsection}{\numberline {4.6.5}Sparsity encouraged}{27}{subsubsection.4.6.5}
-\contentsline {subsubsection}{\numberline {4.6.6}Run meta PCA}{27}{subsubsection.4.6.6}
+\contentsline {subsubsection}{\numberline {4.6.2}Results}{27}{subsubsection.4.6.2}

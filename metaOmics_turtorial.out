@@ -25,8 +25,4 @@
 \BOOKMARK [3][-]{subsubsection.4.5.2}{Results}{subsection.4.5}% 25
 \BOOKMARK [2][-]{subsection.4.6}{metaPCA}{section.4}% 26
 \BOOKMARK [3][-]{subsubsection.4.6.1}{Procedure}{subsection.4.6}% 27
-\BOOKMARK [3][-]{subsubsection.4.6.2}{Methods for MetaPCA}{subsection.4.6}% 28
-\BOOKMARK [3][-]{subsubsection.4.6.3}{Dimension of meta-eigenvector matrix}{subsection.4.6}% 29
-\BOOKMARK [3][-]{subsubsection.4.6.4}{Dimension determined by variance quantile}{subsection.4.6}% 30
-\BOOKMARK [3][-]{subsubsection.4.6.5}{Sparsity encouraged}{subsection.4.6}% 31
-\BOOKMARK [3][-]{subsubsection.4.6.6}{Run meta PCA}{subsection.4.6}% 32
+\BOOKMARK [3][-]{subsubsection.4.6.2}{Results}{subsection.4.6}% 28

@@ -7,8 +7,8 @@ users are directed to metaPCA home page as Figure~\ref{fig:metaPCAHome}.
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=0.4]{./figure/metaPCA/metaPCAHome}
-\caption{GUI Preprocessing page}
+\includegraphics[scale=0.5]{./figure/metaPCA/metaPCAHome}
+\caption{MetaPCA settings}
 \label{fig:metaPCAHome}
 \end{center}
 \end{figure}
@@ -18,60 +18,63 @@ users are directed to metaPCA home page as Figure~\ref{fig:metaPCAHome}.
 \begin{steps}
 
 \item \textbf{Specify parameters} 
-There are very few parameter to be specify in metaPCA.
 
-\end{steps}
-
-\subsubsection{Methods for MetaPCA}
-
-\begin{itemize}
-\item MetaPCA via sum of variance decomposition (SV)
-
-Let $X^{(m)}$ be an observed $p\times n^{(m)}$ data matrix of sample size $n^{(m)}$ and $p$ features for study $m$ 
-($1 \leq m\leq M$). 
-Denote by $S^{(m)}$ the maximum likelihood (ML) estimate of the $p \times p$ covariance matrix $\Omega^{(m)}$ of $X^{(m)}$. 
-MetaPCA via sum of variance decomposition (SV) aims to solve the following eigen-value decomposition problem.
-\begin{equation}\label{eq:eq2}
-T^{SV}=\sum_{m=1}^M w^{(m)} S^{(m)},
-\end{equation}
-where $w^{(m)}$ is the reciprocal of the largest eigenvalue of $S^{(m)}$.
-%{\color{red} (Do we need to explain scree plot here or later in SSC?} {\color{blue} SungHwan's answer: I believe either way should be fine. Here I add the scree plot strategy in the following section.)}
-The common principal components $L$ are calculated from the eigen-decomposition of $T^{SV}: L^T(T^{SV})L = \Lambda$ and $K$ top common PCs should be retained for down-stream analysis. Selection of the optimal $K$ will be described later in the the section of Parameter selection. 
-
-\item MetaPCA via sum of squared cosine (SSC) maximization.
-
-the second MetaPCA framework motived by SSC criterion proceeds as below.
-The top $j^{(m)}$ eigenvectors are calculated from study $m$ to form eigenvector matrix $V^{(m)}$.
-We then perform eigen-decomposition on $T^{\mbox{SSC}} = \sum_{m=1}^M V^{(m)} V^{(m)^T}$ and select the top $K$ eigenvectors to form the meta-analytic common eigen-space:
-
-\begin{equation}
-\Big (\sum_{m=1}^M V^{(m)} V^{(m)^T} \Big ) B^{SSC} = \Lambda^* B^{SSC}
-\end{equation}
-where $V^{(m)}$ is a matrix consisting of $j^{(m)}$ leading eigenvectors,
-$\Lambda^*$ is a diagonal eigenvalue matrix, and $B^{\mbox{SSC}} = (\beta_1^{\mbox{SSC}}, \dots, \beta_K^{\mbox{SSC}})$ contains the top $K$ eigenvectors.
-
-\end{itemize}
-
-\subsubsection{Dimension of meta-eigenvector matrix}
-Dimension of meta-eigenvector matrix option allows user to specify dimension of the output meta-eigenvector matrix.
-
-\subsubsection{Dimension determined by variance quantile}
-Logical value whether dimension size of each study's eigenvector matrix (SSC) is determined  by the pre-defined level of variance quantile 80\%.
-
-\subsubsection{Sparsity encouraged}
-If the Sparsity encouraged checkbox is selected, 
+There are very few parameter to be specify in metaPCA, as in Figure~\ref{fig:metaPCAHome}.
+There are two methods for MetaPCA (at position {\color{red} (1)}). 
+SSC represent MetaPCA via sum of squared cosine (SSC) maximization.
+SV represent MetaPCA via sum of variance decomposition (SV).
+Details of SSC and SV can be found in metaPCA manuscript.
+SSC has better performance and is suggested.
+User also need to specify dimension of meta-eigenvector matrix as , 
+Dimension of meta-eigenvector matrix option (at position {\color{red} (2)}) allows user to specify dimension of the output meta-eigenvector matrix.
+The checkbox of ``dimension determined by variance quantile" is suggested to be selected (at position {\color{red} (3)}),
+If it is selected, the dimension size of each study's eigenvector matrix (SSC) is determined  by the pre-defined level of variance quantile 80\%.
+If the checkbox of ``sparsity encouraged" is selected (at position {\color{red} (4)}),
 we are able to tune the best tuning parameter $\lambda$ and perform sparse metaPCA.
 After clicking on search for optimal tuning parameter button, the optimum tuning parameter will be returned to the box ``tuning parameter for sparsity"
 
-\subsubsection{Run meta PCA}
-If Sparsity encouraged checkbox is selected, sparse meta PCA will be performed. 
-Otherwise, meta PCA will be performed.
-The result is shown in the following figures.
+\item \textbf{Perform metaPCA} 
+
+By clicking the ``Run meta PCA" button, MetaPCA will be performed.
+
+
+\end{steps}
+
+\textbf{Complete List of Options:} 
+\begin{enumerate}
+\item Common metaPCA parameters: 
+
+\begin{itemize}
+\item Methods for metaPCA:
+SSC represent MetaPCA via sum of squared cosine (SSC) maximization.
+SV represent MetaPCA via sum of variance decomposition (SV).
+\item Dimension of meta-eigenvector matrix: dimension of the output meta-eigenvector matrix.
+\item dimension determined by variance quantile:
+the dimension size of each study's eigenvector matrix (SSC) is determined  by the pre-defined level of variance quantile 80\%.
+\end{itemize}
+
+\item If sparsity encouraged is selected, there are extra tuning parameter ($\lambda$) that may need to be tuned.
+
+\begin{itemize}
+\item  Min $\lambda$: lower bound of the searching space of $\lambda$.
+\item Max $\lambda$: upper bound of the searching space of $\lambda$.
+\item Step of of $\lambda$: stepsize of the searching space of $\lambda$.
+\item Tuning parameter for sparsity: Tuning parameter for sparsity that will be used for sparse metaPCA.
+\end{itemize}
+
+
+\end{enumerate}
+
+
+\subsubsection{Results}
+The result of metaPCA is shown in Figure~\ref{fig:metaPCAresult}.
+For each study, only first two studies are visualized.
+These figures and eigenvectors from metaPCA are saved.
 
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=0.4]{./figure/metaPCA/metaPCA}
-\caption{GUI Preprocessing page}
+\caption{MetaPCA result}
 \label{fig:metaPCAresult}
 \end{center}
 \end{figure}
