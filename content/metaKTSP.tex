@@ -1,48 +1,48 @@
-\subsection{MetaKTSP}
+\subsection{MetaPredict}
 
 Top scoring pairs is a robust algorithm for predicting gene expression profiles,
 which adopts nonparametric rank-based prediction rule.
-The MetaKTSP is a meta-analysis version of the TSP algorithm that combines multiple transcriptomic studies to build a prediction model and shows improved 
+The MetaPredict is a meta-analysis version of the TSP algorithm that combines multiple transcriptomic studies to build a prediction model and shows improved 
 prediction accuracy as compared to single study analysis.
-The R package for MetaKTSP module can be found \url{https://github.com/metaOmic/MetaKTSP}.
+The R package for MetaPredict module can be found \url{https://github.com/metaOmic/MetaPredict}.
 
-After opening the MetaKTSP page, as shown in Figure \ref{fig:MetaKTSPmainpage}, there are 1 drop-down menu (``Methods for Meta KTSP") {\color{red} (1)}, three number entries (``Max number of top scoring pairs (K)" {\color{red} (2)}, ``Number of cores for parallel computing" {\color{red} (3)} and ``Number of top scoring pairs (K)" {\color{red} (7)}), three character entries (``Please select TWO labels to cluster" {\color{red} (4)}, ``Please select studies for training" {\color{red} (5)}, and ``Please select studies for testing") {\color{red} (6)} , and two excuting tabs ("Train model" and "Predict"). 
+After opening the MetaPredict page, as shown in Figure \ref{fig:MetaPredictmainpage}, there are 1 drop-down menu (``Methods for MetaPredict") {\color{red} (1)}, three number entries (``Max number of top scoring pairs (K)" {\color{red} (2)}, ``Number of cores for parallel computing" {\color{red} (3)} and ``Number of top scoring pairs (K)" {\color{red} (7)}), three character entries (``Please select TWO labels to cluster" {\color{red} (4)}, ``Please select studies for training" {\color{red} (5)}, and ``Please select studies for testing") {\color{red} (6)} , and two excuting tabs ("Train model" and "Predict"). 
 
 \subsubsection{Procedure}
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=0.4]{./figure/MetaKTSP/metaKTSPprocedure}
-\caption{Homepage of MetaKTSP}
-\label{fig:MetaKTSPmainpage}
+\includegraphics[scale=0.4]{./figure/MetaPredict/MetaPredictprocedure}
+\caption{Homepage of MetaPredict}
+\label{fig:MetaPredictmainpage}
 \end{center}
 \end{figure}
 
 \begin{steps}
 \item \textbf{Building prediction model based on meta-analysis}
 
-First, we need to decide a method to select K top scoring gene pairs from multiple studies (Figure \ref{fig:MetaKTSPmainpage}). 
+First, we need to decide a method to select K top scoring gene pairs from multiple studies (Figure \ref{fig:MetaPredictmainpage}). 
 Second, we need to provide the maximum number of top scoring pairs $K$ (algorithm will search from 1 up to $K$) and the number of cores for parallel computing. 
 Next, we need to select only TWO labels to build the classification model. 
 In other words, if there exists more than two kinds of labels, we need to choose two from them. 
 Our interface will pop up all labels that are available. 
 Then, select the dataset as training data and testing respectively, 
-and click the "Train model" tab to run the MetaKTSP program. 
+and click the "Train model" tab to run the MetaPredict program. 
 It may take a while to run the model.
 
-\item \textbf{MetaKTSP prediction}
+\item \textbf{MetaPredict prediction}
 
-After the model training is finished, on the top right it will show up a ``Gene pair table" ({\color{red} (1)} in Figure \ref{fig:MetaKTSPresult}) which present the top $K$ gene pairs statistics. 
-A diagnostic plot ({\color{red} (2)} in Figure \ref{fig:MetaKTSPresult}) is output to assist users decide which $K$ to use in the final prediction model. 
+After the model training is finished, on the top right it will show up a ``Gene pair table" ({\color{red} (1)} in Figure \ref{fig:MetaPredictresult}) which present the top $K$ gene pairs statistics. 
+A diagnostic plot ({\color{red} (2)} in Figure \ref{fig:MetaPredictresult}) is output to assist users decide which $K$ to use in the final prediction model. 
 The suggested value is shown in the plot as green line, which is decided by VO method we introduced in the original paper. Users may also decide $K$ on their own to predict the class label of testing data. 
-After deciding $K$, then hit the tab ``Predict'' (Figure \ref{fig:MetaKTSPresult}). 
-Finally, a confusion matrix is output to show the prediction results ({\color{red} (1)} in Figure \ref{fig:MetaKTSPresult}).
+After deciding $K$, then hit the tab ``Predict'' (Figure \ref{fig:MetaPredictresult}). 
+Finally, a confusion matrix is output to show the prediction results ({\color{red} (1)} in Figure \ref{fig:MetaPredictresult}).
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=0.7]{./figure/MetaKTSP/MetaKTSPresult.pdf}
-\caption{Results for metaKTSP.}
-\label{fig:MetaKTSPresult}
+\includegraphics[scale=0.7]{./figure/MetaPredict/MetaPredictresult.pdf}
+\caption{Results for MetaPredict.}
+\label{fig:MetaPredictresult}
 \end{center}
 \end{figure}
 
@@ -52,10 +52,10 @@ Finally, a confusion matrix is output to show the prediction results ({\color{re
 \begin{enumerate}
 \item Model trainings: 
 \begin{itemize}
-\item Methods for Meta KTSP: include Mean score, Fisher, Stouffer.
+\item Methods for MetaPredict: include Mean score, Fisher, Stouffer.
 \item Max number of top scoring pairs (K)
 \item Number of cores for parallel computing
-\item TWO labels to cluster: labels for metaKTSP
+\item TWO labels to cluster: labels for MetaPredict
 \item Please select studies for training
 \item Please select studies for testing
 \item Number of top scoring pairs (K): Number of top scoring pairs (K) for prediction.
@@ -65,6 +65,6 @@ Finally, a confusion matrix is output to show the prediction results ({\color{re
 
 \subsubsection{Results}
 
-A confusion matrix is output to show the prediction results ({\color{red} (1)} in Figure \ref{fig:MetaKTSPresult}).
+A confusion matrix is output to show the prediction results ({\color{red} (1)} in Figure \ref{fig:MetaPredictresult}).
 The prediction results are also saved in the folder.
 
