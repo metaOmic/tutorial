@@ -1,6 +1,7 @@
 \subsection{MetaDCN}
 By clicking toolsets and then metaDCN,
 users are directed to metaDCN home page as Figure~\ref{fig:metaDCNHome}.
+The R package for MetaDCN module can be found \url{https://github.com/metaOmic/MetaDCN}.
 
 \begin{figure}[H]
 \begin{center}
@@ -12,18 +13,15 @@ users are directed to metaDCN home page as Figure~\ref{fig:metaDCNHome}.
 
 MetaDCN includes three steps to get differentially co-expressed networks: generate network, search for basic modules, and assemble supermodules. The left screen is the control panel of step 1. The control panel for next step will show up after the previous step is done.
 
-\subsubsection{Generate Network}
+\subsubsection{Procedure}
+
+\begin{steps}
+\item \textbf{Generate Network}
 The first step of MetaDCN is to generate network. In this step, the network for permuted data will also be generated. Users need to select case and control names, the number of permutations, and edge cut-off which determines the proportion of edges to be kept in the network. After clicking \textbf{Generate Network} button, screen will show message indicating the algorithm is running to generate network.
 
-After the generate network step is done, no output will show up in the screen. Instead, a message box indicating several Rdata files are saved in the Meta DCN folder, including:
 
-\begin{itemize}
-\item AdjacencyMatrices.Rdata is a list of adjacency matrices for case and control subjects in each study. The order is study1 case, study2 case, \dots, studyS case, study1 control, study2 control, \dots, studyS control.
-\item CorrelationMatrices.Rdata is a list of correlation matrices for case and control subjects in each study.
-\item AdjacencyMatricesPermutationP.Rdata is a list of adjacency matrices for permuted datasets in permutation P.
-\end{itemize}
+\item \textbf{Search for basic modules}
 
-\subsubsection{Search for basic modules}
 After the generate network step is done, the control panel will be as Figure~\ref{fig:metaDCNstep2}. The next step is to search for basic modules. Users need to specify the number of repeats used for each initial seed modules (Number to repeat), the maximum Monte Carlo steps for simulated annealing algorithm (MC Steps), and the maximum pairwise Jaccard index allowed for basic modules (Jaccard Cutoff). After clicking \textbf{Search for basic modules} button, screen will show message indicating the algorithm is running to search for basic modules.
 
 \begin{figure}[H]
@@ -34,7 +32,71 @@ After the generate network step is done, the control panel will be as Figure~\re
 \end{center}
 \end{figure}
 
-Search for basic modules will take minutes, especially if a large number of genes are used. After this step is done, the screen will show a table of basic modules higher correlated in case and a table of basic modules higher correlated in control as Figure~\ref{fig:metaDCNBM}. Meanwhile, several files will be saved in the Meta DCN folder:
+Search for basic modules will take minutes, especially if a large number of genes are used. After this step is done, the screen will show a table of basic modules higher correlated in case and a table of basic modules higher correlated in control as Figure~\ref{fig:metaDCNBM}. 
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.8]{./figure/metaDCN/metaDCNBM}
+\caption{MetaDCN output from search for basic modules step}
+\label{fig:metaDCNBM}
+\end{center}
+\end{figure}
+
+\item \textbf{Assemble supermodules}
+
+After search for basic modules step is done, the control panel will be Figure~\ref{fig:metaDCNstep3}. The last step is to assemble supermodules. Users can decide the FDR cut-off to select basic modules for supermodule assembly. After clicking \textbf{Assemble supermodules} button, screen will show message indicating the algorithm is running to assemble supermodules.
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.45]{./figure/metaDCN/metaDCNstep3}
+\caption{MetaDCN control panel for assemble supermodules step}
+\label{fig:metaDCNstep3}
+\end{center}
+\end{figure}
+
+
+
+\end{steps}
+
+\textbf{Complete List of Options:} 
+\begin{enumerate}
+\item Generate Network:
+\begin{itemize}
+\item Case Name: specify case group label.
+\item Control Name: specify control group label.
+\item Number of Permutations: the number of permutations used for generating network.
+\item Edge Cutoff: edge cut-off  determines the proportion of edges to be kept in the network.
+\end{itemize}
+
+\item Search for basic modules:
+\begin{itemize}
+\item Number to repeat:  the number of repeats used for each initial seed modules.
+\item MC steps:  the maximum Monte Carlo steps for simulated annealing algorithm.
+\item Jaccard cutoff: maximum pairwise Jaccard index allowed for basic modules.
+\end{itemize}
+\item Assemble supermodules:
+
+\begin{itemize}
+\item FDR cutoff:  FDR cut-off to select basic modules for supermodule assembly.
+\end{itemize}
+
+\end{enumerate}
+
+\subsubsection{Results}
+
+\textbf{Generate Network}
+
+After the generate network step is done, no output will show up in the screen. Instead, a message box indicating several Rdata files are saved in the Meta DCN folder, including:
+
+\begin{itemize}
+\item AdjacencyMatrices.Rdata is a list of adjacency matrices for case and control subjects in each study. The order is study1 case, study2 case, \dots, studyS case, study1 control, study2 control, \dots, studyS control.
+\item CorrelationMatrices.Rdata is a list of correlation matrices for case and control subjects in each study.
+\item AdjacencyMatricesPermutationP.Rdata is a list of adjacency matrices for permuted datasets in permutation P.
+\end{itemize}
+
+\textbf{Search for basic modules}
+
+After this step is done, the screen will show a table of basic modules higher correlated in case and a table of basic modules higher correlated in control as Figure~\ref{fig:metaDCNBM}. Meanwhile, several files will be saved in the Meta DCN folder:
 
 \begin{itemize}
  \item basic\_modules\_summary\_forward\_weight\_w1.csv is a summary table of basic modules that are higher correlated in case, detected using w1.
@@ -45,25 +107,8 @@ Search for basic modules will take minutes, especially if a large number of gene
   \item permutation\_energy\_backward\_P.Rdata is a list of energies for basic modules that higher correlated in control, detected from permutation P.
 \end{itemize}
 
-\begin{figure}[H]
-\begin{center}
-\includegraphics[scale=0.8]{./figure/metaDCN/metaDCNBM}
-\caption{MetaDCN output from search for basic modules step}
-\label{fig:metaDCNBM}
-\end{center}
-\end{figure}
 
-
-\subsubsection{Assemble supermodules}
-After search for basic modules step is done, the control panel will be Figure~\ref{fig:metaDCNstep3}. The last step is to assemble supermodules. Users can decide the FDR cut-off to select basic modules for supermodule assembly. After clicking \textbf{Assemble supermodules} button, screen will show message indicating the algorithm is running to assemble supermodules.
-
-\begin{figure}[H]
-\begin{center}
-\includegraphics[scale=0.45]{./figure/metaDCN/metaDCNstep3}
-\caption{MetaDCN control panel for assemble supermodules step}
-\label{fig:metaDCNstep3}
-\end{center}
-\end{figure}
+\textbf{Assemble supermodules}
 
 After supermodule assembly is done, screen will show a table of supermodules (Figure~\ref{fig:metaDCNsuper}). Users can also select basic modules to plot (Figure~\ref{fig:metaDCNBMplot}). Meanwhile several files will be saved in the folder MetaDCN:
 \begin{itemize}
@@ -86,5 +131,3 @@ After supermodule assembly is done, screen will show a table of supermodules (Fi
 \label{fig:metaDCNBMplot}
 \end{center}
 \end{figure}
-
-

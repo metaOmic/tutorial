@@ -1,10 +1,11 @@
 \subsection{MetaDE}
 
 MetaDE package implements 12 major meta-analysis methods for differential expression analysis falling into 3 main categories: combining p-values, combining effect sizes and others (e.g. combining ranks, etc.). Depending on the types of outcome, the package can perform two class comparison, multi-class comparison, association with continuous or survival outcome. The package allows the input of either microarray (continuous intensity) or RNA-seq data (count) for individual study analysis. 
+The R package for MetaDE module can be found \url{https://github.com/metaOmic/MetaDE}.
 
 \subsubsection{Procedure}
 
-There are two major steps to implement the package: meta differential analysis and pathway analysis. As shown in Figure \ref{fig:MetaDEoption}, there are 9 major options that need to be specified to implement the package: (1) - (6) are for the first step and (7) - (9) are for the second step. A detailed list of all options available for the package can be found at the end of this subsection. Individual MetaDE package is also available on GitHub at \url{https://github.com/metaOmic/MetaDE}. \\
+There are two major steps to implement the package: meta differential analysis and pathway analysis. As shown in Figure \ref{fig:MetaDEoption}, there are 9 major options that need to be specified to implement the package: (1) - (6) are for the first step and (7) - (9) are for the second step. A detailed list of all options available for the package can be found at the end of this subsection. 
 %In this tutorial, we will demonstrate the MetaDE pipeline step by step using two meta-analysis methods: Fisher's method and Adaptively weighted Fisher's method (AW-Fisher). Please refer to \cite{fisher1925statistical} and \cite{li2011adaptively} for details of these two methods. .
 
 \begin{figure}[H]
@@ -78,6 +79,5 @@ The (2) summary table might differ slightly for different meta-analysis methods,
 \end{figure}
 
 For the second step ``pathway analysis", there is (3) a tabular summary outputted, as shown in Figure \ref{fig:MetaDEresult2}. The summary includes the pathway names, the corresponding enrichment p-value and FDR. 
-
 In addition to the results shown in the Browser, users can download the two tabular results to the working directory by clicking on "Download Csv File" on the top left of the summary table. 
 

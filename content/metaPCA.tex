@@ -1,9 +1,10 @@
-\subsection{metaPCA}
+\subsection{MetaPCA}
 Dimension reduction is a popular data mining approach for transcriptomic analysis.
 MetaPCA aims to combine multiple omics datasets of identical or similar biological hypothesis and perform simultaneous dimensional reduction in all studies.
 The results show improved accuracy, robustness and better interpretation among all studies.
 By clicking toolsets and then metaPCA,
 users are directed to metaPCA home page as Figure~\ref{fig:metaPCAHome}.
+The R package for MetaPCA module can be found \url{https://github.com/metaOmic/metaPCA}.
 
 \begin{figure}[H]
 \begin{center}
@@ -25,13 +26,12 @@ SSC represent MetaPCA via sum of squared cosine (SSC) maximization.
 SV represent MetaPCA via sum of variance decomposition (SV).
 Details of SSC and SV can be found in metaPCA manuscript.
 SSC has better performance and is suggested.
-User also need to specify dimension of meta-eigenvector matrix as , 
 Dimension of meta-eigenvector matrix option (at position {\color{red} (2)}) allows user to specify dimension of the output meta-eigenvector matrix.
 The checkbox of ``dimension determined by variance quantile" is suggested to be selected (at position {\color{red} (3)}),
 If it is selected, the dimension size of each study's eigenvector matrix (SSC) is determined  by the pre-defined level of variance quantile 80\%.
-If the checkbox of ``sparsity encouraged" is selected (at position {\color{red} (4)}),
-we are able to tune the best tuning parameter $\lambda$ and perform sparse metaPCA.
-After clicking on search for optimal tuning parameter button, the optimum tuning parameter will be returned to the box ``tuning parameter for sparsity"
+If the checkbox of ``sparsity encouraged" is selected (at position {\color{red} (4)}), users can perform metaPCA.
+After clicking on search for optimal tuning parameter button, the optimum tuning parameter will be returned to the box ``tuning parameter for sparsity", 
+which may be time consuming.
 
 \item \textbf{Perform metaPCA} 
 

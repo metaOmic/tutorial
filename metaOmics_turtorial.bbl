@@ -1,5 +1,15 @@
 \begin{thebibliography}{}
 
+\bibitem[Balgobind et~al., 2010]{balgobind2011evaluation}
+Balgobind, B.~V., den Heuvel-Eibrink, M. M.~V., Menezes, R. X.~D., Reinhardt,
+  D., Hollink, I. H. I.~M., Arentsen-Peters, S. T. J. C.~M., van Wering, E.~R.,
+  Kaspers, G. J.~L., Cloos, J., de~Bont, E. S. J.~M., Cayuela, J.-M., Baruchel,
+  A., Meyer, C., Marschalek, R., Trka, J., Stary, J., Beverloo, H.~B., Pieters,
+  R., Zwaan, C.~M., and den Boer, M.~L. (2010).
+\newblock Evaluation of gene expression signatures predictive of cytogenetic
+  and molecular subtypes of pediatric acute myeloid leukemia.
+\newblock {\em Haematologica}, 96(2):221--230.
+
 \bibitem[Choi et~al., 2003]{choi2003combining}
 Choi, J.~K., Yu, U., Kim, S., and Yoo, O.~J. (2003).
 \newblock Combining multiple microarray studies and modeling interstudy
@@ -42,6 +52,17 @@ Kim, S., Lin, C.-W., and Tseng, G.~C. (2016).
   Cross-Study Validation of Omics Prediction Analysis}.
 \newblock {\em Bioinformatics}, 32(March):btw115.
 
+\bibitem[Kohlmann et~al., 2008]{kohlmann2008international}
+Kohlmann, A., Kipps, T.~J., Rassenti, L.~Z., Downing, J.~R., Shurtleff, S.~A.,
+  Mills, K.~I., Gilkes, A.~F., Hofmann, W.-K., Basso, G., Dell'Orto, M.~C.,
+  Fo{\`{a}}, R., Chiaretti, S., Vos, J.~D., Rauhut, S., Papenhausen, P.~R.,
+  Hern{\'{a}}ndez, J.~M., Lumbreras, E., Yeoh, A.~E., Koay, E.~S., Li, R., min
+  Liu, W., Williams, P.~M., Wieczorek, L., and Haferlach, T. (2008).
+\newblock An international standardization programme towards the application of
+  gene expression profiling in routine leukaemia diagnostics: the microarray
+  innovations in {LEukemia} study prephase.
+\newblock {\em British Journal of Haematology}, 142(5):802--807.
+
 \bibitem[Li et~al., 2011]{li2011adaptively}
 Li, J., Tseng, G.~C., et~al. (2011).
 \newblock An adaptively weighted statistic for detecting differential gene
@@ -53,6 +74,13 @@ Shen, K. and Tseng, G.~C. (2010).
 \newblock Meta-analysis for pathway enrichment analysis when combining multiple
   genomic studies.
 \newblock {\em Bioinformatics}, 26(10):1316--1323.
+
+\bibitem[Verhaak et~al., 2009]{verhaak2009prediction}
+Verhaak, R.~G., Wouters, B.~J., Erpelinck, C.~A., Abbas, S., Beverloo, H.~B.,
+  Lugthart, S., L{\"o}wenberg, B., Delwel, R., and Valk, P.~J. (2009).
+\newblock Prediction of molecular subtypes in acute myeloid leukemia based on
+  gene expression profiling.
+\newblock {\em haematologica}, 94(1):131--134.
 
 \bibitem[Zhu et~al., 2016]{zhu2016metadcn}
 Zhu, L., Ding, Y., Chen, C.-Y., Wang, L., Huo, Z., Kim, S., Sotiriou, C.,

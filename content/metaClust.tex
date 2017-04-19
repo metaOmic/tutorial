@@ -6,6 +6,7 @@ By integrate information from multiple studies of similar biological purposes,
 MetaClust can identify an unified intrinsic gene sets among all studies, perform weighted clustering analysis using these common intrinsic gene sets,
 match the clustering pattern across studies to define disease subtype/cluster type.
 The resulting clustering from meta-analysis is more robust and accurate than single study analysis.
+The R package for MetaClust module can be found \url{https://github.com/metaOmic/MetaSparseKmeans}.
 
 
 \begin{figure}[H]
@@ -88,8 +89,8 @@ as in Figure~\ref{fig:mskmRes}.
 There are three clustering matching methods (at position {\color{red} (3)}): Exhaustive, linear, MCMC.
 Exhaustive is suggested if the data is not large.
 Linear will perform smart search and get solution much faster than Exhaustive, 
-but it may yield less accuracy.
-MCMC might by very time consuming.
+but it may yield less accuracy with very low probability.
+MCMC is suitable if many studies and clusters are provided.
 Adjust sample size checkbox (at position {\color{red} (5)}) allows users to adjust sample size effect.
 After number of clusters and Wbounds are specified,
 users can click on Run meta sparse K means and obtain results as Figure~\ref{fig:mskmRes}.

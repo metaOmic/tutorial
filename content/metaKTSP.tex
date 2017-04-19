@@ -4,6 +4,7 @@ Top scoring pairs is a robust algorithm for predicting gene expression profiles,
 which adopts nonparametric rank-based prediction rule.
 The MetaKTSP is a meta-analysis version of the TSP algorithm that combines multiple transcriptomic studies to build a prediction model and shows improved 
 prediction accuracy as compared to single study analysis.
+The R package for MetaKTSP module can be found \url{https://github.com/metaOmic/MetaKTSP}.
 
 After opening the MetaKTSP page, as shown in Figure \ref{fig:MetaKTSPmainpage}, there are 1 drop-down menu (``Methods for Meta KTSP") {\color{red} (1)}, three number entries (``Max number of top scoring pairs (K)" {\color{red} (2)}, ``Number of cores for parallel computing" {\color{red} (3)} and ``Number of top scoring pairs (K)" {\color{red} (7)}), three character entries (``Please select TWO labels to cluster" {\color{red} (4)}, ``Please select studies for training" {\color{red} (5)}, and ``Please select studies for testing") {\color{red} (6)} , and two excuting tabs ("Train model" and "Predict"). 
 
@@ -23,7 +24,7 @@ After opening the MetaKTSP page, as shown in Figure \ref{fig:MetaKTSPmainpage}, 
 First, we need to decide a method to select K top scoring gene pairs from multiple studies (Figure \ref{fig:MetaKTSPmainpage}). 
 Second, we need to provide the maximum number of top scoring pairs $K$ (algorithm will search from 1 up to $K$) and the number of cores for parallel computing. 
 Next, we need to select only TWO labels to build the classification model. 
-In other words, if the data exits over two kinds of labels, we need to choose two from them. 
+In other words, if there exists more than two kinds of labels, we need to choose two from them. 
 Our interface will pop up all labels that are available. 
 Then, select the dataset as training data and testing respectively, 
 and click the "Train model" tab to run the MetaKTSP program. 
@@ -57,13 +58,12 @@ Finally, a confusion matrix is output to show the prediction results ({\color{re
 \item TWO labels to cluster: labels for metaKTSP
 \item Please select studies for training
 \item Please select studies for testing
-\item Please select studies for testing
 \item Number of top scoring pairs (K): Number of top scoring pairs (K) for prediction.
 \end{itemize}
 
 \end{enumerate}
 
-\subsubsection{Result}
+\subsubsection{Results}
 
 A confusion matrix is output to show the prediction results ({\color{red} (1)} in Figure \ref{fig:MetaKTSPresult}).
 The prediction results are also saved in the folder.
