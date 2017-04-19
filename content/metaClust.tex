@@ -10,76 +10,139 @@ The resulting clustering from meta-analysis is more robust and accurate than sin
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=0.35]{./figure/metaClust/metaClustHome}
-\caption{GUI Preprocessing page}
+\includegraphics[scale=0.4]{./figure/metaClust/metaClustHome}
+\caption{MetaClust home page}
 \label{fig:metaClustHome}
 \end{center}
 \end{figure}
-On the top left panel users can see data summary Table.
-Below there are 4 tabs.
-\subsubsection{About}
-About tab includes basic introduction of metaClust.
-Starting with multiple studies, 
-we could run MetaSparseKmeans with pre-specified number of clusters (K) and gene selection tuning parameter (Wbounds).
-If you are not sure about what are good K and Wbounds, please try Tune K and Tune Wbounds panel.
 
-\subsubsection{Tune K}
-If the users are not sure what is number of clusters,
-they can start to use the Tune K panel as in Figure~\ref{fig:metaClusttuneK}.
+\subsubsection{Procedure}
+
+Figure~\ref{fig:metaClustHome} shows the home page of MetaClust.
+On the top left panel users can see data summary Table (at position {\color{red} (1)}).
+Below there are 4 tabs. 
+About tab (at position {\color{red} (2)}) includes basic introduction of metaClust.
+Starting with multiple studies, 
+we could run MetaSparseKmeans (at position {\color{red} (5)}) with pre-specified number of clusters (K) and gene selection tuning parameter (Wbounds).
+If you are not sure about what are good K and Wbounds, please try Tune K (at position {\color{red} (3)}) and Tune Wbounds (at position {\color{red} (4)}) panel.
+
+\begin{steps}
+
+\item \textbf{Tune K:} 
+
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=0.35]{./figure/metaClust/tuneK}
-\caption{GUI Preprocessing page}
+\includegraphics[scale=0.4]{./figure/metaClust/tuneK}
+\caption{Tuning parameter selection for number of clusters}
 \label{fig:metaClusttuneK}
 \end{center}
 \end{figure}
-Users will use gap statistics to get optimal K for each individual study.
-Users need to specify maximum number of K, which the algorithm will search number of studies from 1 to K.
-Top percentage p\% by larger variance means that we will use top p\% larger variance genes to perform gap statistics.
-Number of permutation is number of bootstrap samples for gap statistics.
-After selecting studies to be tuned and clicking button ``Tune K",
-we will obtain gap statistics plat as in Figure~\ref{fig:metaClusttuneK}.
-A good K is selected such that the $\mbox{Gap}_k$ is maximized or stablized.
-From the figure, K=3 is prefered.
 
+If the users are not sure what is number of clusters,
+they can start to use the Tune K panel as in Figure~\ref{fig:metaClusttuneK}.
+Gap statistics will be used to get optimal K for each individual study.
+Users need to specify maximum number of K (at position {\color{red} (1)}), which the algorithm will search number of studies from 1 to K.
+Top percentage p\% by larger variance means that we will use top p\% larger variance genes to perform gap statistics (at position {\color{red} (2)}).
+Number of permutation is number of bootstrap samples for gap statistics (at position {\color{red} (3)}).
+At least 50 bootstrap samples are suggested for a stable result of number of clusters.
+Studies to be tuned can be selected (at position {\color{red} (4)}).
+By clicking button ``Tune K",
+we will obtain gap statistics as in Figure~\ref{fig:metaClusttuneK}.
+A good K is selected such that the $\mbox{Gap}_k$ is maximized or stabilized across all studies.
+From the figure, K=3 is preferred.
 
-\subsubsection{Tune Wbounds}
+\item \textbf{Tune Wbounds:} 
+
 Wbounds directly control number of features selected by metaClust.
 If the users are not sure what is a good Wbound,
 they can start to use the Tune Wbounds panel as in Figure~\ref{fig:metaClusttuneW}.
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=0.35]{./figure/metaClust/tuneW}
-\caption{GUI Preprocessing page}
+\includegraphics[scale=0.4]{./figure/metaClust/tuneW}
+\caption{Wbound selection}
 \label{fig:metaClusttuneW}
 \end{center}
 \end{figure}
 Again,
 gap statistics will be used for tuning Wbounds.
-Users will specify number of clusters for tuning Wbounds, which could be obtained from the previous step.
-Iterations is the same thing as number of bootstrap samples for gap statistics.
-Users also need to specify the searching space of Wbounds by minimum of Wbounds, maximum of Wbounds and Step of Wbounds.
+Users will specify number of clusters for tuning Wbounds (at position {\color{red} (1)}), which could be obtained from the previous step.
+Iterations (at position {\color{red} (2)}) is the same thing as number of bootstrap samples for gap statistics.
+Users also need to specify the searching space of Wbounds by minimum of Wbounds, maximum of Wbounds and Step of Wbounds (at position {\color{red} (3)}).
 After all these steps are set,
-user can click on ``Tune Wbounds" button.
-The results will be shown in Figure~\ref{fig:metaClusttuneW}.
-Wbound=12 is preferred since the corresponding gap statistics is maximized.
+user can click on ``Tune Wbounds" button (at position {\color{red} (4)}).
+The results will be shown in Figure~\ref{fig:metaClusttuneW}  position {\color{red} (5)}.
+Wbound=12 is preferred since the corresponding gap statistics is maximized (where the red arrow indicates).
 
-\subsubsection{Run Meta Sparse K-Means}
+\item \textbf{Run Meta Sparse K-Means:} 
+
 Under Run Meta Sparse K-Means panel,
-user can specify number of clusters, Wbounds and run meta sparse K means, 
+user can specify number of clusters (at position {\color{red} (1)}), Wbounds (at position {\color{red} (2)}) and run meta sparse K means (at position {\color{red} (5)}), 
 as in Figure~\ref{fig:mskmRes}.
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=0.35]{./figure/metaClust/mskmRes}
-\caption{GUI Preprocessing page}
+\includegraphics[scale=0.4]{./figure/metaClust/mskmRes}
+\caption{Result for MetaClust}
 \label{fig:mskmRes}
 \end{center}
 \end{figure}
-There are three clustering matching methods: Exhaustive, linear, MCMC.
+There are three clustering matching methods (at position {\color{red} (3)}): Exhaustive, linear, MCMC.
 Exhaustive is suggested if the data is not large.
 Linear will perform smart search and get solution much faster than Exhaustive, 
 but it may yield less accuracy.
 MCMC might by very time consuming.
-Adjust sample size checkbox allows users to adjust sample size effect.
+Adjust sample size checkbox (at position {\color{red} (5)}) allows users to adjust sample size effect.
 After number of clusters and Wbounds are specified,
 users can click on Run meta sparse K means and obtain results as Figure~\ref{fig:mskmRes}.
+
+\end{steps}
+
+\textbf{Complete List of Options:} 
+\begin{enumerate}
+\item Tune K (** optional)
+\begin{itemize}
+\item Maximum of K: the maximum number of K that gap statistics will step through.
+\item Top percentage by larger variance: Top percentage p\% by larger variance means that we will use top p\% larger variance genes to perform gap statistics.
+\item Number of permutaitons: Number of permutation is number of bootstrap samples for gap statistics.
+\item Select studies to be tuned: Studies to be tuned.
+\item Tune K: start tuning K.
+\end{itemize}
+\item Tune Wbounds (** optional)
+\begin{itemize}
+\item Number of clusters for tuning wbounds: number of clusters for tuning Wbounds.
+\item Iterations: Iterations are number of bootstrap samples for gap statistics.
+\item Minimum of wbounds: lower bound of the searching space of Wbounds.
+\item Maximum of wbounds: upper bound of the searching space of Wbounds.
+\item Step of of wbounds: stepsize of the searching space of Wbounds.
+\item Tune wbounds: start tuning wbounds.
+\end{itemize}
+\item Run Meta Sparse $K$-means: 
+\begin{itemize}
+\item Number of clusters: number of clusters. Can be tuned from Tune K option.
+\item Wbounds: control numbers of selected features. Can be tuned from Tune Wbounds option.
+\item Methods for meta sparse Kmeans: Exhaustive is suggested if the data is not large.
+Linear will perform smart search and get solution much faster than Exhaustive, 
+but it may yield less accuracy.
+MCMC might by very time consuming.
+\item Adjust sample size: adjust sample size effect.
+\item Run meta sparse Kmeans: start tuning wbounds.
+\end{itemize}
+
+\end{enumerate}
+
+
+\subsubsection{Results}
+
+The result is shown in Figure~\ref{fig:mskmRes} at position {\color{red} (5)}.
+We obtained unified feature selection across all studies.
+The clusters are well separated in each study and the cluster patterns are consistent across all studies.
+The clustering heatmaps and labels are saved in the metaOmics folder.
+
+
+
+
+
+
+
+
+
+

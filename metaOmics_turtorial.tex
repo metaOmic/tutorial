@@ -9,6 +9,10 @@
 \usepackage{float}
 \usepackage{listings}
 \usepackage{xcolor}
+\usepackage{enumitem}
+\newlist{steps}{enumerate}{1}
+\setlist[steps, 1]{label = \textbf{Step \arabic*:}}
+
 \lstset{ %
   language=R,                     % the language of the code
   basicstyle=\footnotesize,       % the size of the fonts that are used for the code
@@ -60,8 +64,8 @@
 \input{content/metaPath.tex} 
 \input{content/metaClust.tex} 
 \input{content/metaPCA.tex} 
-\input{content/metaKTSP.tex} 
-\input{content/metaDCN.tex} 
+%\input{content/metaKTSP.tex} 
+%\input{content/metaDCN.tex} 
 
 %%  for citation purpose
 \bibliographystyle{apalike}
