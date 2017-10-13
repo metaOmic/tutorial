@@ -10,28 +10,29 @@
 \contentsline {subsection}{\numberline {3.2}Clinical data}{5}{subsection.3.2}
 \contentsline {subsection}{\numberline {3.3}Example data with the MetaOmics software}{6}{subsection.3.3}
 \contentsline {subsubsection}{\numberline {3.3.1}Leukemia datasets}{6}{subsubsection.3.3.1}
-\contentsline {subsubsection}{\numberline {3.3.2}Prostate cancer datasets}{7}{subsubsection.3.3.2}
-\contentsline {section}{\numberline {4}Toolsets}{7}{section.4}
+\contentsline {subsubsection}{\numberline {3.3.2}Prostate cancer datasets}{8}{subsubsection.3.3.2}
+\contentsline {subsubsection}{\numberline {3.3.3}Prostate cancer datasets}{8}{subsubsection.3.3.3}
+\contentsline {section}{\numberline {4}Toolsets}{8}{section.4}
 \contentsline {subsection}{\numberline {4.1}Preprocessing}{8}{subsection.4.1}
 \contentsline {subsubsection}{\numberline {4.1.1}Procedure}{8}{subsubsection.4.1.1}
-\contentsline {subsection}{\numberline {4.2}MetaQC}{11}{subsection.4.2}
-\contentsline {subsubsection}{\numberline {4.2.1}Procedure}{12}{subsubsection.4.2.1}
-\contentsline {subsubsection}{\numberline {4.2.2}Results}{13}{subsubsection.4.2.2}
-\contentsline {subsection}{\numberline {4.3}MetaDE}{13}{subsection.4.3}
-\contentsline {subsubsection}{\numberline {4.3.1}Procedure}{14}{subsubsection.4.3.1}
-\contentsline {subsubsection}{\numberline {4.3.2}Results}{16}{subsubsection.4.3.2}
-\contentsline {subsection}{\numberline {4.4}MetaPath}{17}{subsection.4.4}
-\contentsline {subsubsection}{\numberline {4.4.1}Procedure}{18}{subsubsection.4.4.1}
-\contentsline {subsubsection}{\numberline {4.4.2}Results}{20}{subsubsection.4.4.2}
-\contentsline {subsection}{\numberline {4.5}MetaClust}{22}{subsection.4.5}
-\contentsline {subsubsection}{\numberline {4.5.1}Procedure}{23}{subsubsection.4.5.1}
-\contentsline {subsubsection}{\numberline {4.5.2}Results}{27}{subsubsection.4.5.2}
-\contentsline {subsection}{\numberline {4.6}MetaPCA}{27}{subsection.4.6}
-\contentsline {subsubsection}{\numberline {4.6.1}Procedure}{28}{subsubsection.4.6.1}
-\contentsline {subsubsection}{\numberline {4.6.2}Results}{29}{subsubsection.4.6.2}
-\contentsline {subsection}{\numberline {4.7}MetaPredict}{29}{subsection.4.7}
-\contentsline {subsubsection}{\numberline {4.7.1}Procedure}{30}{subsubsection.4.7.1}
-\contentsline {subsubsection}{\numberline {4.7.2}Results}{33}{subsubsection.4.7.2}
-\contentsline {subsection}{\numberline {4.8}MetaNetwork}{33}{subsection.4.8}
-\contentsline {subsubsection}{\numberline {4.8.1}Procedure}{33}{subsubsection.4.8.1}
-\contentsline {subsubsection}{\numberline {4.8.2}Results}{37}{subsubsection.4.8.2}
+\contentsline {subsection}{\numberline {4.2}MetaQC}{12}{subsection.4.2}
+\contentsline {subsubsection}{\numberline {4.2.1}Procedure}{13}{subsubsection.4.2.1}
+\contentsline {subsubsection}{\numberline {4.2.2}Results}{14}{subsubsection.4.2.2}
+\contentsline {subsection}{\numberline {4.3}MetaDE}{14}{subsection.4.3}
+\contentsline {subsubsection}{\numberline {4.3.1}Procedure}{15}{subsubsection.4.3.1}
+\contentsline {subsubsection}{\numberline {4.3.2}Results}{17}{subsubsection.4.3.2}
+\contentsline {subsection}{\numberline {4.4}MetaPath}{18}{subsection.4.4}
+\contentsline {subsubsection}{\numberline {4.4.1}Procedure}{19}{subsubsection.4.4.1}
+\contentsline {subsubsection}{\numberline {4.4.2}Results}{21}{subsubsection.4.4.2}
+\contentsline {subsection}{\numberline {4.5}MetaNetwork}{23}{subsection.4.5}
+\contentsline {subsubsection}{\numberline {4.5.1}Procedure}{24}{subsubsection.4.5.1}
+\contentsline {subsubsection}{\numberline {4.5.2}Results}{28}{subsubsection.4.5.2}
+\contentsline {subsection}{\numberline {4.6}MetaPredict}{30}{subsection.4.6}
+\contentsline {subsubsection}{\numberline {4.6.1}Procedure}{31}{subsubsection.4.6.1}
+\contentsline {subsubsection}{\numberline {4.6.2}Results}{33}{subsubsection.4.6.2}
+\contentsline {subsection}{\numberline {4.7}MetaClust}{33}{subsection.4.7}
+\contentsline {subsubsection}{\numberline {4.7.1}Procedure}{33}{subsubsection.4.7.1}
+\contentsline {subsubsection}{\numberline {4.7.2}Results}{37}{subsubsection.4.7.2}
+\contentsline {subsection}{\numberline {4.8}MetaPCA}{37}{subsection.4.8}
+\contentsline {subsubsection}{\numberline {4.8.1}Procedure}{38}{subsubsection.4.8.1}
+\contentsline {subsubsection}{\numberline {4.8.2}Results}{39}{subsubsection.4.8.2}

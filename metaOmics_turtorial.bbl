@@ -16,6 +16,14 @@ Choi, J.~K., Yu, U., Kim, S., and Yoo, O.~J. (2003).
   variation.
 \newblock {\em Bioinformatics}, 19(suppl 1):i84--i90.
 
+\bibitem[Desmedt et~al., 2007]{desmedt2007strong}
+Desmedt, C., Piette, F., Loi, S., Wang, Y., Lallemand, F., Haibe-Kains, B.,
+  Viale, G., Delorenzi, M., Zhang, Y., d'Assignies, M.~S., et~al. (2007).
+\newblock Strong time dependence of the 76-gene prognostic signature for
+  node-negative breast cancer patients in the transbig multicenter independent
+  validation series.
+\newblock {\em Clinical cancer research}, 13(11):3207--3214.
+
 \bibitem[Fang et~al., 2016]{fang2016cpi}
 Fang, Z., Zeng, X., Lin, C.-W., Ma, T., and Tseng, G.~C. (2016).
 \newblock {\em Comparative Pathway Integrator: a framework of meta-analytic
@@ -34,6 +42,13 @@ Huo, Z., Ding, Y., Liu, S., Oesterreich, S., and Tseng, G. (2016).
   subtypes in multiple transcriptomic studies.
 \newblock {\em Journal of the American Statistical Association},
   111(513):27--42.
+
+\bibitem[Ivshina et~al., 2006]{ivshina2006genetic}
+Ivshina, A.~V., George, J., Senko, O., Mow, B., Putti, T.~C., Smeds, J.,
+  Lindahl, T., Pawitan, Y., Hall, P., Nordgren, H., et~al. (2006).
+\newblock Genetic reclassification of histologic grade delineates new clinical
+  subtypes of breast cancer.
+\newblock {\em Cancer research}, 66(21):10292--10301.
 
 \bibitem[Kang et~al., 2012]{kang2012metaqc}
 Kang, D.~D., Sibille, E., Kaminski, N., and Tseng, G.~C. (2012).
@@ -63,11 +78,27 @@ Kohlmann, A., Kipps, T.~J., Rassenti, L.~Z., Downing, J.~R., Shurtleff, S.~A.,
   innovations in {LEukemia} study prephase.
 \newblock {\em British Journal of Haematology}, 142(5):802--807.
 
+\bibitem[Lapointe et~al., 2004]{lapointe2004gene}
+Lapointe, J., Li, C., Higgins, J.~P., Van De~Rijn, M., Bair, E., Montgomery,
+  K., Ferrari, M., Egevad, L., Rayford, W., Bergerheim, U., et~al. (2004).
+\newblock Gene expression profiling identifies clinically relevant subtypes of
+  prostate cancer.
+\newblock {\em Proceedings of the National Academy of Sciences of the United
+  States of America}, 101(3):811--816.
+
 \bibitem[Li et~al., 2011]{li2011adaptively}
 Li, J., Tseng, G.~C., et~al. (2011).
 \newblock An adaptively weighted statistic for detecting differential gene
   expression when combining multiple transcriptomic studies.
 \newblock {\em The Annals of Applied Statistics}, 5(2A):994--1019.
+
+\bibitem[Nanni et~al., 2006]{nanni2006epithelial}
+Nanni, S., Priolo, C., Grasselli, A., D'Eletto, M., Merola, R., Moretti, F.,
+  Gallucci, M., De~Carli, P., Sentinelli, S., Cianciulli, A.~M., et~al. (2006).
+\newblock Epithelial-restricted gene profile of primary cultures from human
+  prostate tumors: a molecular approach to predict clinical behavior of
+  prostate cancer.
+\newblock {\em Molecular cancer research}, 4(2):79--92.
 
 \bibitem[Shen and Tseng, 2010]{shen2010meta}
 Shen, K. and Tseng, G.~C. (2010).
@@ -75,12 +106,69 @@ Shen, K. and Tseng, G.~C. (2010).
   genomic studies.
 \newblock {\em Bioinformatics}, 26(10):1316--1323.
 
+\bibitem[Singh et~al., 2002]{singh2002gene}
+Singh, D., Febbo, P.~G., Ross, K., Jackson, D.~G., Manola, J., Ladd, C.,
+  Tamayo, P., Renshaw, A.~A., D'Amico, A.~V., Richie, J.~P., et~al. (2002).
+\newblock Gene expression correlates of clinical prostate cancer behavior.
+\newblock {\em Cancer cell}, 1(2):203--209.
+
+\bibitem[Tomlins et~al., 2006]{tomlins2006tmprss2}
+Tomlins, S.~A., Mehra, R., Rhodes, D.~R., Smith, L.~R., Roulston, D., Helgeson,
+  B.~E., Cao, X., Wei, J.~T., Rubin, M.~A., Shah, R.~B., et~al. (2006).
+\newblock Tmprss2: Etv4 gene fusions define a third molecular subtype of
+  prostate cancer.
+\newblock {\em Cancer research}, 66(7):3396--3400.
+
+\bibitem[Varambally et~al., 2005]{varambally2005integrative}
+Varambally, S., Yu, J., Laxman, B., Rhodes, D.~R., Mehra, R., Tomlins, S.~A.,
+  Shah, R.~B., Chandran, U., Monzon, F.~A., Becich, M.~J., et~al. (2005).
+\newblock Integrative genomic and proteomic analysis of prostate cancer reveals
+  signatures of metastatic progression.
+\newblock {\em Cancer cell}, 8(5):393--406.
+
 \bibitem[Verhaak et~al., 2009]{verhaak2009prediction}
 Verhaak, R.~G., Wouters, B.~J., Erpelinck, C.~A., Abbas, S., Beverloo, H.~B.,
   Lugthart, S., L{\"o}wenberg, B., Delwel, R., and Valk, P.~J. (2009).
 \newblock Prediction of molecular subtypes in acute myeloid leukemia based on
   gene expression profiling.
 \newblock {\em haematologica}, 94(1):131--134.
+
+\bibitem[Wallace et~al., 2008]{wallace2008tumor}
+Wallace, T.~A., Prueitt, R.~L., Yi, M., Howe, T.~M., Gillespie, J.~W., Yfantis,
+  H.~G., Stephens, R.~M., Caporaso, N.~E., Loffredo, C.~A., and Ambs, S.
+  (2008).
+\newblock Tumor immunobiological differences in prostate cancer between
+  african-american and european-american men.
+\newblock {\em Cancer research}, 68(3):927--936.
+
+\bibitem[Wang et~al., 2005]{wang2005gene}
+Wang, Y., Klijn, J.~G., Zhang, Y., Sieuwerts, A.~M., Look, M.~P., Yang, F.,
+  Talantov, D., Timmermans, M., Meijer-van Gelder, M.~E., Yu, J., et~al.
+  (2005).
+\newblock Gene-expression profiles to predict distant metastasis of
+  lymph-node-negative primary breast cancer.
+\newblock {\em The Lancet}, 365(9460):671--679.
+
+\bibitem[Weinstein et~al., 2013]{weinstein2013cancer}
+Weinstein, J.~N., Collisson, E.~A., Mills, G.~B., Shaw, K. R.~M., Ozenberger,
+  B.~A., Ellrott, K., Shmulevich, I., Sander, C., Stuart, J.~M., Network, C. G.
+  A.~R., et~al. (2013).
+\newblock The cancer genome atlas pan-cancer analysis project.
+\newblock {\em Nature genetics}, 45(10):1113--1120.
+
+\bibitem[Welsh et~al., 2001]{welsh2001analysis}
+Welsh, J.~B., Sapinoso, L.~M., Su, A.~I., Kern, S.~G., Wang-Rodriguez, J.,
+  Moskaluk, C.~A., Frierson, H.~F., and Hampton, G.~M. (2001).
+\newblock Analysis of gene expression identifies candidate markers and
+  pharmacological targets in prostate cancer.
+\newblock {\em Cancer research}, 61(16):5974--5978.
+
+\bibitem[Yu et~al., 2004]{yu2004gene}
+Yu, Y.~P., Landsittel, D., Jing, L., Nelson, J., Ren, B., Liu, L., McDonald,
+  C., Thomas, R., Dhir, R., Finkelstein, S., et~al. (2004).
+\newblock Gene expression alterations in prostate cancer predicting tumor
+  aggression and preceding development of malignancy.
+\newblock {\em Journal of clinical oncology}, 22(14):2790--2799.
 
 \bibitem[Zhu et~al., 2016]{zhu2016metadcn}
 Zhu, L., Ding, Y., Chen, C.-Y., Wang, L., Huo, Z., Kim, S., Sotiriou, C.,

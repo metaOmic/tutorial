@@ -46,22 +46,76 @@ This this example we  considered samples from acute myeloid leukemia (AML) with 
 	
 
 			\begin{table}	
-			\caption{Leukemia dataset information}						
+			\caption{Multi-study leukemia gene expression profiles. All three studies are from Affymetrix Human Genome U133plus2 with 5,135 genes.
+		Three subtypes of leukemia are defined as the chromosomal translocation,
+		including inversion of chromosome 16 - inv(16), translocation of chromosome 15 and 17 - t(15:17) and 
+		translocation of chromosome 8 and 21 - t(8:21).}						
 			\centering
-			\begin{tabular}{  c | c  c  c }
-				 \hline
-				 \hline
-				Study Name &  Study 1 & Study 2 & Study 3 \\ 
-				\hline
-				Source &  Verhaak at el. & Balgobind at el. & Kohlmann at el. \\ 
-				Number of genes  & 5,135 & 5,135 & 5,135 \\ 
-				Number of patients   & 89 & 74 & 105 \\ 
-				\hline
-				 Platform & \multicolumn{3}{ c }{Affymetrix human genome u133 plus 2.0 array }\\ 
-				 \hline
-				 \hline
-			\end{tabular}
+\begin{tabular}{c  c  c   c   }
+  \hline 
+  \hline 
+\multirow{2}*{Study}   & \multirow{2}*{source}   & \multirow{2}*{\# samples}  & \# samples by subtypes \\
+ & & & inv(16)/t(15:17)/t(8,21)  \\
+  \hline 
+Study 1 & \cite{verhaak2009prediction} & 89 & 33/21/35\\
+Study 2 & \cite{balgobind2011evaluation} & 74 & 27/19/28\\
+Study 3 & \cite{kohlmann2008international} & 105 & 28/37/40\\
+  \hline 
+  \hline 
+\end{tabular}
 			\label{tab:realDataLeukemia}
+		\end{table}
+		
+			\begin{table}	
+			\caption{Multi-study breast cancer gene expression profiles. 
+			Each gene expression profiles of all four studies contain 10,330 genes.
+			Study 1 contains both count data and fpkm (continuous) data so user should {\bf select only one of them}. 
+			The other three studies contain only continuous data.
+			The phenotype of interest is estrogen-receptor (comparing ER+ vs ER-).}						
+			\centering
+			\begin{tabular}{c  c  c   c  c  }
+			  \hline 
+			  \hline 
+			\multirow{2}*{Study}   & \multirow{2}*{source}   & \multirow{2}*{scale}  & \multirow{2}*{\# samples}  & \# samples by ER \\
+ & & & & ER+/ER-  \\
+  \hline 
+\multirow{2}*{Study 1}  & \multirow{2}*{\cite{weinstein2013cancer}}  & count & \multirow{2}*{406} & \multirow{2}*{319/87}\\
+&& continuous && \\
+Study 2 & \cite{desmedt2007strong} & continuous &  198 & 134/64\\
+Study 3 & \cite{wang2005gene} & continuous & 286 & 209/77\\
+Study 4 & \cite{ivshina2006genetic} & continuous & 245 & 211/34\\
+  \hline 
+  \hline 
+\end{tabular}
+			\label{tab:realDataLeukemia1}
 		\end{table}
 
 \subsubsection{Prostate cancer datasets}
+
+			\begin{table}	
+			\caption{Prostate cancer dataset information. Eight prostate cancer gene expression profiles were measured by different microarray platforms.}						
+			\centering
+	\begin{tabular}{c c c c c}
+	\hline
+	\hline
+\multirow{2}*{Study}   & \multirow{2}*{source}   & \multirow{2}*{\# samples}  & \# samples by label  & \multirow{2}*{\# genes}\\
+& & & Normal/Primary& \\
+	\hline
+	Study 1 & \cite{welsh2001analysis} &  34 & 9/25 & 8798 \\
+	Study 2 & \cite{yu2004gene} &  146 & 81/65 & 8799 \\
+	Study 3 & \cite{lapointe2004gene} &  103 & 41/62 & 13579 \\
+	Study 4 & \cite{varambally2005integrative} &  13 & 6/7 & 19738 \\
+	Study 5 & \cite{singh2002gene}  &  102 & 50/52  & 8799 \\
+	Study 6 & \cite{wallace2008tumor} &  89 & 20/69 & 12689  \\
+	Study 7 & \cite{nanni2006epithelial} &  30 & 7/23  & 12689 \\
+	Study 8 & \cite{tomlins2006tmprss2} &  57 & 27/30 & 9703   \\
+	\hline
+	\hline
+	\label{tab:prostate}
+	\end{tabular}
+			\label{tab:realDataLeukemia2}
+		\end{table}
+
+\subsubsection{Prostate cancer datasets}
+
+
