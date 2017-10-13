@@ -1,20 +1,82 @@
 \subsection{MetaDE}
 
-MetaDE package implements 12 major meta-analysis methods for differential expression analysis falling into 3 main categories: combining p-values, combining effect sizes and others (e.g. combining ranks, etc.). Depending on the types of outcome, the package can perform two class comparison, multi-class comparison, association with continuous or survival outcome. The package allows the input of either microarray (continuous intensity) or RNA-seq data (count) for individual study analysis. 
+MetaDE package implements 12 major meta-analysis methods for differential expression analysis falling into 3 main categories: combining p-values, combining effect sizes and others (e.g. combining ranks, etc.). Depending on the types of outcome, the package can perform two class comparison, multi-class comparison, association with continuous or survival outcome. The package allows the input of either microarray (continuous intensity) and/or RNA-seq data (count) for individual study analysis. 
 The R package for MetaDE module can be found \url{https://github.com/metaOmics/MetaDE}.
+After obtaining DE genes from meta-analysis, 
+users can further perform pathway enrichment analysis based on the declared DE genes.
+In the two subsections below we will go over how to perform (1) meta-analysis and (2) pathway enrichment analysis based on (1).
 
-\subsubsection{Procedure}
 
-There are two major steps to implement the package: meta differential analysis and pathway analysis. As shown in Figure \ref{fig:MetaDEoption}, there are 9 major options that need to be specified to implement the package: (1) - (6) are for the first step and (7) - (9) are for the second step. A detailed list of all options available for the package can be found at the end of this subsection. 
-%In this tutorial, we will demonstrate the MetaDE pipeline step by step using two meta-analysis methods: Fisher's method and Adaptively weighted Fisher's method (AW-Fisher). Please refer to \cite{fisher1925statistical} and \cite{li2011adaptively} for details of these two methods. .
+\subsection{Meta-analysis for differential expression}
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=0.45]{./figure/metaDE/metaDEoption.jpg}
+\includegraphics[scale=0.5]{./figure/metaDE/metaDEoption.pdf}
 \caption{``MetaDE" options}
 \label{fig:MetaDEoption}
 \end{center}
 \end{figure}
+
+\subsubsection{Procedure}
+In Figure~\ref{fig:MetaDEoption},
+{\color{red} (1) - (6)} are the steps to tuning parameters and run meta-analysis.
+A detailed list of all options available for the package can be found at the end of this subsection. 
+
+\begin{steps}
+\item \textbf{Choose the type of meta-analysis methods:}
+There are three types of meta-analysis to choose:
+combining p-values, combining effect size and others.
+
+\item \textbf{Choose a meta-analysis method:}
+\begin{itemize}
+\item For ``combining p-values" category,
+users can choose from ``Fisher", ``AW-Fisher", ``maxP", ``minP", ``roP" and ``Stouffer",
+where some of them have the one-sided corrected versions.
+
+\item For ``combining effect size" category,
+users can choose from ``FEM" and ``REM",
+where ``REM" has choice of six analytical algorithms for implementation.
+
+\item For ``others",
+there are three rank-based method (PR, SR and rankProd) and minMCC for multi-class meta-analysis.
+To choose from the overwhelmingly many meta-analysis methods,
+we follow \cite{chang2013meta} and mark * for top performing methods AW-Fisher, REM (HO option) and roP as recommendation for users.
+\end{itemize}
+
+\item \textbf{Mixed data type:}
+If this option is selected,
+MetaDE will allow partial studies with count data from RNA-seq and remaining studies with continuous intensities from microarray.
+
+\item \textbf{Choose the response type:}
+Under the drop-down menu,
+users can specify types of outcome (response) variable to be two-class, continuous, multi-class or survival.
+By choosing ``two class comparison",
+users can specify the group label name for the Label Attribute (from the column names of your clinical data).
+Then for group label (a factor of at least two levels),
+specify the name for the ``Control Label" and ``Experimental Label", respectively.
+For the other types, only group label name is needed.
+
+\item \textbf{Choose Study Design for individual study:}
+\begin{itemize}
+\item Individual data type can be either discrete (count) or continuous.
+\item Under drop-down menu ``Setting Individual Study method", user can specify  individual study method according to individual data type.
+For continuous data (e.g. microarray), available options include LIMMA (default method) and SAM.
+For discrete data (e.g. RNA-seq count), available options include edgeR, DESeq2 and voom.
+\item The users can also specify whether each study is paired design or not.
+\end{itemize}
+
+\item \textbf{Advanced Options}
+\begin{itemize}
+\item Use complete options: other uncommonly used options will become available. Again, this is not suggested if you are not familiar with the method.
+\item Parametric: if No is selected, permutation will be performed instead of parametric closed form solution.
+\item Covariate: indicate if any covariate will be adjusted.
+\item Alternative Hypothesis: two-sided or one-sided.
+\end{itemize}
+
+
+\end{steps}
+
+
 
 \textbf{Step 1. Meta differential analysis:} This step includes the core strategies of the ``MetaDE" package. Users first need to specify (1) ``Meta Method Type" and (2) ``Meta Method" correspondingly. There are three types to select from: combining p-value, combining effect size and others. ``Fisher" and ``AW-Fisher" meta methods are available for p-value combination, ``Fixed Effect Model (FEM)" and ``Random Effect Model (REM)" for effect size combination, and the other methods in the ``Others" type. More meta-analysis methods are available if ``complete option" is chosen from (5) ``Advanced Options" section. Next, we need to specify the outcome of interest in (3) ``Response Type". For example, for differential expression analysis, two-class comparison is usually chosen. For two-class comparison, users need to specify the class label, and the level corresponding to the experimental and the control groups. Other outcome types such as continuous or survival data can also be chosen. In (4) ``Individual study option", users can specify whether each of the study is a paired design, and for p-value combination method, one can select the differential analysis method to obtain p-values in each individual study (e.g. generally suggest LIMMA for microarray and edgeR for RNA-seq). ``Advanced Options" is optional and users are suggested not to modify the option setting in this section. Once all the above options are specified, users can click on (6) ``Run" to implement the first step. \\~\\
 
