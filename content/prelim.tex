@@ -1,11 +1,11 @@
 \section{Preliminaries}
 \subsection{Citing MetaOmics}
-MetaOmics implements many meta-analytic methodologies by their authors. 
-Please cite appropriate papers when you use result from MeteOmics suit,
+MetaOmics implements many meta-analytic methodologies by many different authors. 
+Please cite appropriate papers if you used MeteOmics suit,
 by which the authors will receive professional credits for their work.
 
 \begin{itemize}
-\item MetaOmics suit itself can be cited as:
+\item MetaOmics suit itself can be cited as: Ma et al. MetaOmics: Comprehensive Analysis Pipeline and Browser-based Software Suite for Transcriptomic Meta-Analysis.
 \item MetaQC: \bibentry{kang2012metaqc}.
 \item MetaDE: 
 \begin{itemize}
@@ -27,25 +27,34 @@ by which the authors will receive professional credits for their work.
 
 
 
-\subsection{Installation}
-The full instruction of how to install, start are available at \url{https://github.com/metaOmic/metaOmics}.
+\subsection{How to start MetaOmics}
+
+The full instruction of how to install, start MetaOmics software suit is available at \url{https://github.com/metaOmics/metaOmics}.
+
+
 \subsubsection{Requirement}
 \begin{itemize}
 \item R $>=$ 3.3.1
 \item Shiny $>=$ 0.13.2
 \end{itemize}
 
-\subsubsection{How to start the metaOmics software}
+\subsubsection{How to install the metaOmics software}
 \begin{itemize}
-\item First, clone the project
-\item git clone https://github.com/metaOmic/metaOmics
-\item in R (suppose the application directory is metaOmics),
+\item First, clone the project by
+clicking on ``Clone or download" and extract to a working directory, 
+or type in the following in command line
 
-$>$ install.packages($'$shiny$'$)
-
-$>$ shiny::runApp(`metaOmics', port=9987, launch.browser=T)
+\textit{git clone} \url{https://github.com/metaOmic/metaOmics}
 \end{itemize}
 
+\subsubsection{How to start the metaOmics software}
+\begin{itemize}
+\item In R (suppose the application directory is metaOmics),
+
+\textit{install.packages(`shiny')}
+
+\textit{shiny::runApp(`metaOmics', port=9987, launch.browser=T)}
+\end{itemize}
 
 
 \subsection{Question and bug report}

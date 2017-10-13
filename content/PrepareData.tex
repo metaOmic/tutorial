@@ -21,7 +21,7 @@ Valid data type includes continuous data and count data.
 
 Clinical data should be prepared as the example in Figure~\ref{fig:clinical}.
 First column should be sample ID and each row represents a sample.
-The rest of the columns are clinical information.
+The rest of the columns are clinical information (e.g. case/control labels).
 
 \begin{figure}[H]
 \begin{center}
@@ -33,20 +33,16 @@ The rest of the columns are clinical information.
 
 \subsection{Example data with the MetaOmics software}
 
-\subsubsection{Leukemia datasets}
 
-We collected three studies from NCBI GEO website.   
-The original datasets are due by \cite{verhaak2009prediction}, \cite{balgobind2011evaluation} and \cite{kohlmann2008international}.	
-This this example we  considered samples from acute myeloid leukemia (AML) with subtype 
-	inv(16)(inversions in chromosome 16), 
-	t(15;17)(translocations between chromosome 15 and 17), 
-	t(8;21)(translocations between chromosome 8 and 21).
-	These AML subtypes have been well-studied with different survival, 
-	treatment response and prognosis outcomes.
-	
+We collected three multi-study examples as testing datasets for the MetaOmics software.
+Table~\ref{tab:realDataLeukemia} shows three acute myeloid leukemia (AML) gene expression profiles.
+Table~\ref{tab:realDataBreastCancer} shows four breast cancer gene expression profiles, in which the first study contains both count data and fpkm data.
+Table~\ref{tab:realDataProstate} shows gene expression profiles from eight prostate cancer datasets.
+The leukemia datasets are used to demonstrate MetaProcess, MetaDE, MetaPath, MetaNetwork, MetaPredict, MetaClust and MetaPCA.
+The prostate cancer datasets are used to demonstrate MetaQC.
 
-			\begin{table}	
-			\caption{Multi-study leukemia gene expression profiles. All three studies are from Affymetrix Human Genome U133plus2 with 5,135 genes.
+			\begin{table}[h]
+			\caption{Multi-study acute myeloid leukemia (AML) gene expression profiles. All three studies are from Affymetrix Human Genome U133plus2 with 5,135 genes.
 		Three subtypes of leukemia are defined as the chromosomal translocation,
 		including inversion of chromosome 16 - inv(16), translocation of chromosome 15 and 17 - t(15:17) and 
 		translocation of chromosome 8 and 21 - t(8:21).}						
@@ -66,7 +62,7 @@ Study 3 & \cite{kohlmann2008international} & 105 & 28/37/40\\
 			\label{tab:realDataLeukemia}
 		\end{table}
 		
-			\begin{table}	
+			\begin{table}[h]
 			\caption{Multi-study breast cancer gene expression profiles. 
 			Each gene expression profiles of all four studies contain 10,330 genes.
 			Study 1 contains both count data and fpkm (continuous) data so user should {\bf select only one of them}. 
@@ -87,13 +83,12 @@ Study 4 & \cite{ivshina2006genetic} & continuous & 245 & 211/34\\
   \hline 
   \hline 
 \end{tabular}
-			\label{tab:realDataLeukemia1}
+			\label{tab:realDataBreastCancer}
 		\end{table}
 
-\subsubsection{Prostate cancer datasets}
 
-			\begin{table}	
-			\caption{Prostate cancer dataset information. Eight prostate cancer gene expression profiles were measured by different microarray platforms.}						
+			\begin{table}[h]
+			\caption{Multi-study prostate cancer dataset information. Eight prostate cancer gene expression profiles were measured by different microarray platforms.}						
 			\centering
 	\begin{tabular}{c c c c c}
 	\hline
@@ -113,9 +108,8 @@ Study 4 & \cite{ivshina2006genetic} & continuous & 245 & 211/34\\
 	\hline
 	\label{tab:prostate}
 	\end{tabular}
-			\label{tab:realDataLeukemia2}
+			\label{tab:realDataProstate}
 		\end{table}
 
-\subsubsection{Prostate cancer datasets}
 
 

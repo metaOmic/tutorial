@@ -1,9 +1,9 @@
 
-After starting metaOmics, 
-the first page is the metaOmics setting page as shown in Figure~\ref{fig:GUIsetting}.  
+After starting MetaOmics, 
+the first page is the MetaOmics setting page as shown in Figure~\ref{fig:GUIsetting}.  
 There are 4 tabs on top of the page (at position {\color{red} (1)}): Setting, Preprocessing, Saved Data and Toolsets.
-Below the 4 tabs, 
-the first header is the session information.
+The welcome page is below the 4 tabs.
+Further below, the first header is the session information.
 {
 \color{blue}
 Why do we need session information?
@@ -13,25 +13,28 @@ By clicking ``$\ldots$",
 user can set default working directory, in which all the meta-analysis results will be saved.
 Users can view their current working directory on the top right corner (at position {\color{red} (3)}).
 The third header is Toolsets (at position {\color{red} (4)}),
-here users can view if individual packages are installed.
+where user can click to install desired modules if the ``status" shows ``not installed".
 If the packages are installed, there is a checked installed status.
 Otherwise, users can install individual package by clicking install blue button.
+The installation progress may take a few minutes for each module.
+There will be a notification icon after the installation. 
+After the modules are installed to R, restart the MetaOmics software suit so that the shiny application interface is updated with installed modules.
 Position {\color{red} (5)} shows the current active dataset, which will be introduced in Section~\ref{sec:procedure}~\ref{sec:active}. 
  
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=0.4]{./figure/preprocessing/GUIsetting}
-\caption{GUI setting page}
+\includegraphics[scale=0.8]{./figure/preprocessing/GUIsetting}
+\caption{MetaOmics software suite GUI setting page}
 \label{fig:GUIsetting}
 \end{center}
 \end{figure}
 
-\subsection{Preprocessing}
+\section{MetaPreprocess}
 
-In this subsection, we will introduce how to upload your dataset into the MetaOmics suit such that the functional modules can be utilized.
-The R package for preprocessing module can be found \url{https://github.com/metaOmic/preproc}.
+In this subsection, we introduce how to upload your dataset into the MetaOmics suit such that each functional modules can be utilized.
+The R package for MetaPreprocess module can be found \url{https://github.com/metaOmics/preproc}.
 
-\subsubsection{Procedure}
+\subsection{Procedure}
 \label{sec:procedure}
 
 \begin{steps}
@@ -39,33 +42,41 @@ The R package for preprocessing module can be found \url{https://github.com/meta
 
 \begin{figure}[!htbp]
 \begin{center}
-\includegraphics[scale=0.4]{./figure/preprocessing/GUIpreprocessing}
+\includegraphics[scale=0.6]{./figure/preprocessing/GUIpreprocessing}
 \caption{GUI Preprocessing page}
 \label{fig:GUIpreprocessing}
 \end{center}
 \end{figure}
 
 After clicking the Preprocessing tab as in Figure~\ref{fig:GUIpreprocessing},
-users are able to upload their datasets via the tab ``Choosing/Upload Expression Data" as in Figure~\ref{fig:GUIpreview} (at position {\color{red} (1)}).
+users can click on ``Choosing/Upload Expression Data" tab to upload individual expression data files or choose the existing saved data file as in Figure~\ref{fig:GUIpreview} (at position {\color{red} (1)}).
 The data should be prepared according to Section~\ref{sec:dataPrepare}.
-Users may optionally upload Clinical Data (at position {\color{red} (2)}), depending on biological purpose.
+Users may optionally upload Clinical Data (at position {\color{red} (2)}), depending on their biological purposes.
 All MetaOmics modules except for MetaClust  require external clinical labels.
-An example data can be found within MetaOmics folder ``metaOmcis/data/example/leukedia".
-The MetaOmics suit also provides handlers (at position {\color{red} (3)}) for feature annotation, missing value imputation and multiple probe same genes.
-After uploading is complete,
-users can preview their data on the right hand side of the page as Figure~\ref{fig:GUIpreview}.
+Three example datasets are available within MetaOmics folder ``metaOmics/data/example/",
+but we will focus on the leukemia dataset (``metaOmics/data/example/") throughout this tutorial.
 
 \item \textbf{Preprocessing:}
 
+The MetaOmics suit also provides handlers (at position {\color{red} (3)} of Figure~\ref{fig:GUIpreprocessing}) for feature annotation, missing value imputation and multiple probe same genes.
+After the csv file for gene expression profile is specified, 
+users can preview their data on the right hand side of the page as Figure~\ref{fig:GUIpreview}.
+Several expression data parsing options (e.g. header, column separator, etc) are available on the left panel of Figure~\ref{fig:GUIpreview}.
+For preprocessing, 
+click on ``Annotate/Impute/Replicate" to 
+\begin{enumerate}
+\item annotate the probe ID/reference sequence ID/Entrez ID of individual dataset (choose Gene Symbol if the input data rows are already annotated).
+\item impute missing value using knn method.
+\item handle the multiple probes matching to the same gene issue.
+\end{enumerate}
 
-There are several expression data parsing options available on the left panel of Figure~\ref{fig:GUIpreview}.
 A complete introduction of these options is available at the end of this subsection.
 The right hand side of Figure~\ref{fig:GUIpreview} shows the summary statistics of uploaded data and preview of the data matrix.
-There is a search box such that the user can search their favorite genes.
+There is a search box such that the users can search their favorite genes.
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=0.4]{./figure/preprocessing/GUIpreview}
+\includegraphics[scale=0.6]{./figure/preprocessing/GUIpreview}
 \caption{Uploading individual studies}
 \label{fig:GUIpreview}
 \end{center}
@@ -73,30 +84,63 @@ There is a search box such that the user can search their favorite genes.
 After users upload clinical data (e.g. case control labels) and specify type of data and study name.
 They can click ``save single study" button, single study will be saved.
 
-\item \textbf{Saved Data:}
+\item \textbf{Save single study:}
+In the next step,
+specify the data type (``microarray" or ``RNA-seq", continuous or discreate) and study name,
+click ``save single study".
+To upload RNA-seq data, the count data file and FPKM/TPM
+ data should be uploaded separately and saved using different names.
 
-After uploading multiple studies w/o clinical data,
+\item \textbf{Upload datasets for all studies:}
+Repeat the steps above for all studies for meta-analysis.
+All uploaded studies are now available in the ``Saved Data" tab. 
+ 
+\end{steps}
+
+\subsection{Saved Data tab}
+\label{sec:saved}
+
+After uploading multiple studies with or without clinical data,
 users can turn to the Saved Data tab.
-Users should select multiple datasets as Figure~\ref{fig:GUImerge} (at position {\color{red} (2)}).
-After specifying filtering criteria, enter merged study name and click on the ``Merge from Selected Datasets" (at position {\color{red} (1)}).
-A merged dataset will appear on the  ``List of saved data" panel (at position {\color{red} (2)}).
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=0.4]{./figure/preprocessing/GUImerge}
+\includegraphics[scale=0.8]{./figure/preprocessing/GUImerge.pdf}
 \caption{Merge from selected datasets}
 \label{fig:GUImerge}
 \end{center}
 \end{figure}
 
-\item \textbf{Make merged Dataset Active:}
 
-\label{sec:active}
+\begin{steps}
+\item \textbf{Merging and Filtering:}
+All saved datasets from the previous step will be found in  Figure~\ref{fig:GUImerge} (at position {\color{red} (2)}).
+Users should select multiple datasets for further meta-analysis purpose.
+Users can filter out genes with low expression level (by default, mean expression lower than $30^{th}$ percentile 
+or low variance (by default, variance lower than $30^{th}$ percentile)).
+Low expression genes can be non-expressed genes and low variance genes can be non-informative genes thus including them may contribute false positives.
+After specifying filtering criteria, enter Project Name and click on the ``Merge from Selected Datasets" (at position {\color{red} (1)}).
+A merged dataset (study type = ``multiple") will appear on the  ``List of saved data" panel (at position {\color{red} (3)}).
+Creating multiple projects to include different sets of studies and genes from varying preprocessing criteria is useful.
+For example, the user can start from a project with harsh filtering criteria (maintain 500-1000 genes) and give a test run through all modules to save time.
+If successful, a larger project can be created and implemented.
+If users want to delete any dataset, they can click the red danger zone button and delete selected dataset.
+
+\item \textbf{Make active dataset:}
+
 The last thing to do before using meta-analytic toolsets is to select merged data and click on 
 ``Make your dataset Active Dataset" - A big green button in Figure~\ref{fig:active}.
 Then the merged data becomes active study and shows up on the top right corner.
 The active dataset serves as the input for all other MetaOmics modules.
-If users want to delete a dataset, just click ``Delete Selected Data" button after selecting the dataset.
+
+
+\end{steps}
+
+
+
+
+
+
 
 \begin{figure}[H]
 \begin{center}
@@ -108,7 +152,6 @@ If users want to delete a dataset, just click ``Delete Selected Data" button aft
 
 
 
-\end{steps}
 
 \textbf{Complete List of Options:} 
 \begin{enumerate}
