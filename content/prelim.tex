@@ -1,11 +1,11 @@
 \section{Preliminaries}
 \subsection{Citing MetaOmics}
-MetaOmics implements many meta-analytic methodologies by many different authors. 
-Please cite appropriate papers if you used MeteOmics suit,
+MetaOmics software suite implements many meta-analytic methodologies by many different authors. 
+Please cite appropriate papers if you used MeteOmics,
 by which the authors will receive professional credits for their work.
 
 \begin{itemize}
-\item MetaOmics suit itself can be cited as: Ma et al. MetaOmics: Comprehensive Analysis Pipeline and Browser-based Software Suite for Transcriptomic Meta-Analysis.
+\item MetaOmics software suite  itself can be cited as: Ma et al. MetaOmics: Comprehensive Analysis Pipeline and Browser-based Software Suite for Transcriptomic Meta-Analysis.
 \item MetaQC: \bibentry{kang2012metaqc}.
 \item MetaDE: 
 \begin{itemize}
@@ -29,7 +29,7 @@ by which the authors will receive professional credits for their work.
 
 \subsection{How to start MetaOmics}
 
-The full instruction of how to install, start MetaOmics software suit is available at \url{https://github.com/metaOmics/metaOmics}.
+The full instruction of how to install, start MetaOmics software suite is also available at \url{https://github.com/metaOmics/metaOmics}.
 
 
 \subsubsection{Requirement}
@@ -40,7 +40,7 @@ The full instruction of how to install, start MetaOmics software suit is availab
 
 \subsubsection{How to install the metaOmics software}
 \begin{itemize}
-\item First, clone the project by
+\item At MetaOmics home page at \url{https://github.com/metaOmics/metaOmics}, clone the project by
 clicking on ``Clone or download" and extract to a working directory, 
 or type in the following in command line
 
@@ -55,6 +55,38 @@ or type in the following in command line
 
 \textit{shiny::runApp(`metaOmics', port=9987, launch.browser=T)}
 \end{itemize}
+
+\subsection{MetaOmics setting page}
+\label{sec:setting}
+After starting MetaOmics, 
+the first page is the MetaOmics setting page as shown in Figure~\ref{fig:GUIsetting}.  
+There are 4 tabs on top of the page (at position {\color{red} (1)}): Setting, Preprocessing, Saved Data and Toolsets.
+The welcome page is below the 4 tabs.
+Further below, the first header is the session information.
+{
+\color{blue}
+Why do we need session information?
+}
+The second header is Directory for Saving Output Files (at position {\color{red} (2)}).
+By clicking ``$\ldots$",
+user can set default working directory, in which all the meta-analysis results will be saved.
+Users can view their current working directory on the top right corner (at position {\color{red} (3)}).
+The third header is Toolsets (at position {\color{red} (4)}),
+where user can click to install desired modules if the ``status" shows ``not installed".
+If the packages are installed, there is a checked installed status.
+Otherwise, users can install individual package by clicking install blue button.
+The installation progress may take a few minutes for each module.
+There will be a notification icon at the bottom right corner after the installation. 
+After the modules are installed to R, restart the MetaOmics software suit so that the shiny application interface is updated with installed modules.
+Position {\color{red} (5)} shows the current active dataset, which will be introduced in Section~\ref{sec:procedure}~\ref{sec:active}. 
+ 
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.8]{./figure/preprocessing/GUIsetting}
+\caption{MetaOmics software suite GUI setting page}
+\label{fig:GUIsetting}
+\end{center}
+\end{figure}
 
 
 \subsection{Question and bug report}

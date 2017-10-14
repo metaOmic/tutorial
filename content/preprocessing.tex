@@ -1,33 +1,4 @@
 
-After starting MetaOmics, 
-the first page is the MetaOmics setting page as shown in Figure~\ref{fig:GUIsetting}.  
-There are 4 tabs on top of the page (at position {\color{red} (1)}): Setting, Preprocessing, Saved Data and Toolsets.
-The welcome page is below the 4 tabs.
-Further below, the first header is the session information.
-{
-\color{blue}
-Why do we need session information?
-}
-The second header is Directory for Saving Output Files (at position {\color{red} (2)}).
-By clicking ``$\ldots$",
-user can set default working directory, in which all the meta-analysis results will be saved.
-Users can view their current working directory on the top right corner (at position {\color{red} (3)}).
-The third header is Toolsets (at position {\color{red} (4)}),
-where user can click to install desired modules if the ``status" shows ``not installed".
-If the packages are installed, there is a checked installed status.
-Otherwise, users can install individual package by clicking install blue button.
-The installation progress may take a few minutes for each module.
-There will be a notification icon after the installation. 
-After the modules are installed to R, restart the MetaOmics software suit so that the shiny application interface is updated with installed modules.
-Position {\color{red} (5)} shows the current active dataset, which will be introduced in Section~\ref{sec:procedure}~\ref{sec:active}. 
- 
-\begin{figure}[H]
-\begin{center}
-\includegraphics[scale=0.8]{./figure/preprocessing/GUIsetting}
-\caption{MetaOmics software suite GUI setting page}
-\label{fig:GUIsetting}
-\end{center}
-\end{figure}
 
 \section{MetaPreprocess}
 
@@ -116,12 +87,12 @@ users can turn to the Saved Data tab.
 \item \textbf{Merging and Filtering:}
 All saved datasets from the previous step will be found in  Figure~\ref{fig:GUImerge} (at position {\color{red} (2)}).
 Users should select multiple datasets for further meta-analysis purpose.
-Users can filter out genes with low expression level (by default, mean expression lower than $30^{th}$ percentile 
-or low variance (by default, variance lower than $30^{th}$ percentile)).
+Users can filter out genes with low expression level (by default, mean expression lower than $30^{th}$ percentile)
+or low variance (by default, variance lower than $30^{th}$ percentile).
 Low expression genes can be non-expressed genes and low variance genes can be non-informative genes thus including them may contribute false positives.
 After specifying filtering criteria, enter Project Name and click on the ``Merge from Selected Datasets" (at position {\color{red} (1)}).
 A merged dataset (study type = ``multiple") will appear on the  ``List of saved data" panel (at position {\color{red} (3)}).
-Creating multiple projects to include different sets of studies and genes from varying preprocessing criteria is useful.
+Creating multiple projects with varying preprocessing criteria is useful.
 For example, the user can start from a project with harsh filtering criteria (maintain 500-1000 genes) and give a test run through all modules to save time.
 If successful, a larger project can be created and implemented.
 If users want to delete any dataset, they can click the red danger zone button and delete selected dataset.

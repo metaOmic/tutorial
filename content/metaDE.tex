@@ -1,6 +1,6 @@
 \subsection{MetaDE}
 
-MetaDE package implements 12 major meta-analysis methods for differential expression analysis falling into 3 main categories: combining p-values, combining effect sizes and others (e.g. combining ranks, etc.). Depending on the types of outcome, the package can perform two class comparison, multi-class comparison, association with continuous or survival outcome. The package allows the input of either microarray (continuous intensity) and/or RNA-seq data (count) for individual study analysis. 
+MetaDE package implements 12 major meta-analysis methods for differential expression analysis falling into 3 main categories: combining p-values, combining effect sizes and others (e.g. combining ranks, etc.). Depending on the types of outcome, the package can perform two class comparisons, multi-class comparison, association with continuous or survival outcome. The package allows the input of either microarray (continuous intensity) and/or RNA-seq data (count) for individual study analysis. 
 The R package for MetaDE module can be found \url{https://github.com/metaOmics/MetaDE}.
 After obtaining DE genes from meta-analysis, 
 users can further perform pathway enrichment analysis based on the declared DE genes.
@@ -80,6 +80,9 @@ Once all the above options are specified, users can click on ``Run" button to pe
 
 \subsubsection{Results of Meta-analysis for differential expression}
 
+For the MetaDE model, we used multi-study leukemia gene expression data as example.
+After performing merging of the three datasets and filter 50\% genes by mean and 50\% by variance, 1283 genes remained.
+In this example we only compare two phenotypes: inv(16) and t(15;17).
 Two main outputs from the first ``meta differential analysis" step in the procedure are shown in Figure \ref{fig:MetaDEresult1}. 
 Heatmap of DE genes is drawn on top after specifying the FDR cutoff for selection of DE genes and clicking on ``Plot DE Genes Heatmap". 
 The ``image size" can be adjusted by dragging the scroll bar. 
@@ -100,7 +103,7 @@ including information of individual test statistics, individual study p-value, m
 
 \subsubsection{Procedure of downstream pathway analysis}
 Users can then perform pathway enrichment analysis on the declared DE genes from the previous step, 
-which can be achieved in {\color{red} Red boxes (8) - (10)}.
+which can be achieved in {\color{red} Red boxes (8) - (10)} in Figure~\ref{fig:MetaDEoption}.
 Procedure is ruled out as below.
 
 \begin{steps}
@@ -108,9 +111,9 @@ Procedure is ruled out as below.
 Users can select from 25 available pathway databases to perform the pathway enrichment analysis. 
 
 \item \textbf{Choose the pathway enrichment method and the pathway size range:}
-In this step users can choose pathway enrichment options with Kolmogorov-Smirnov (KS) test as default option.
-Alternatively, one can choose to use Fisher's exact test by specifying number of input genes for pathway analysis.
-The input genes can be obtained by either specifying a MetaDE p-value cutoff, or specifying number of top DE genes.
+In this step users can choose pathway enrichment options with Kolmogorov-Smirnov (KS) test as default option,
+or Fisher's exact test by specifying number of input genes for pathway analysis.
+For Fisher's exact test, the input genes can be obtained by either specifying a MetaDE p-value cutoff, or specifying number of top DE genes.
 Users can also specify the minimum/maximum gene size of pathways to be included for pathway enrichment analysis.
 
 \item \textbf{Run:}

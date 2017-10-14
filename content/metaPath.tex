@@ -1,28 +1,62 @@
 \subsection{MetaPath}
 
-Following the detection of biomarkers, pathway analysis (a.k.a. gene set enrichment analysis) is usually performed for functional annotation and biological interpretation. When there are multiple studies available on a related hypothesis, meta-analysis methods are necessary for joint pathway analysis. Two major approaches have been included in the MetaPath package to serve for this purpose: Comparative Pathway Integrator (CPI) and Meta-Analysis for Pathway Enrichment (MAPE) (Shen et al., 2010; Fang et al., 2017). Pathway clustering with statistically valid text mining is included in the package to reduce pathway redundancy to condense knowledge and increase interpretability of clustering results. 
+In MetaDE package,
+following the detection of biomarkers, pathway analysis (a.k.a. gene set enrichment analysis) is usually performed for functional annotation and biological interpretation. 
+Beyond that, the MetaPath module provides two advanced meta-analytic pathway analysis tools: 
+Comparative Pathway Integrator (CPI) and Meta-Analysis for Pathway Enrichment (MAPE) (Shen et al., 2010; Fang et al., 2017). 
+Pathway clustering with statistically valid text mining is included in the package to reduce pathway redundancy to condense knowledge and increase interpretability of clustering results. 
 The R package for MetaPath module can be found \url{https://github.com/metaOmic/MetaPath}.
 
 \subsubsection{Procedure}
-The MetaPath package requires the input of raw expression data as in MetaDE. There are three major steps to implement the package: pathway analysis, pathway clustering diagnostics and pathway clustering with text mining. As shown in Figure \ref{fig:MetaPathoption}, there are 8 major options that need to be specified to implement the package: (1) - (6) are for the first step, (7) for the second step and (8) for the third step. A detailed list of all options available for the package can be found at the end of this subsection. 
+The MetaPath package requires the input of raw expression data as in MetaDE. 
+There are three major steps to implement the package: pathway analysis, pathway clustering diagnostics and pathway clustering with text mining. 
+As shown in Figure \ref{fig:MetaPathoption}, there are 9 major options that need to be specified to implement the package.
+ detailed list of all options available for the package can be found at the end of this subsection. 
+
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=0.45]{./figure/metaPath/metaPathoption.jpg}
+\includegraphics[scale=0.45]{./figure/metaPath/metaPathoption.pdf}
 \caption{``MetaPath" options}
 \label{fig:MetaPathoption}
 \end{center}
 \end{figure}
 
-\textbf{Step 1. Pathway analysis:} This step consists of a meta pathway analysis. Users need to specify (1) ``Response type", (2) ``Individual study option" and (3) ``Advanced" as in MetaDE to perform the pathway enrichment analysis in the presence of multiple studies. Users can select from 25 available pathway databases (4) for the enrichment analysis. (5) ``Advanced Options" is optional and users are suggested not to modify the option setting in this section. By default, the ``CPI" approach is used, otherwise ``MAPE" approach can also be used. Other options include pathway enrichment method (the Fisher's exact test or KS test), the minimum as well as the maximum pathway size. If ``Fisher's exact test" is chosen for the enrichment method, users need to further specify the criteria for selection of DE genes, e.g. the number of top ranked genes. On the other hand, if ``KS test" is chosen, one needs to further specify whether to use permutation to obtain enrichment p-value. Once these options are set, users can click on (6) ``Run Pathway Analysis" to implement the first step. \\~\\
+\begin{steps}
+\item \textbf{Setup pathway analysis parameters:}
+Users need to specify {\color{red}(1) } whether the input gene expression profile is mixed of continuous data and discrete data;
+{\color{red}(2)} response type, case/control labels (similar to MetaDE);
+{\color{red}(3)} individual study option (similar to MetaDE);
+{\color{red}(4)} advanced options including whether to adjust for covariates or the direction of hypothesis testing;.
+In {\color{red}(5)}, users can select from 25 available pathway databases for the enrichment analysis.
+In {\color{red}(6)}, users can select MetaPath method (either CPI or MAPE).
+By default, the ``CPI" approach is used, otherwise ``MAPE" approach can also be used. Other options include pathway enrichment method (the Fisher's exact test or KS test), the minimum as well as the maximum pathway size. If ``Fisher's exact test" is chosen for the enrichment method, users need to further specify the criteria for selection of DE genes, e.g. the number of top ranked genes. On the other hand, if ``KS test" is chosen, one needs to further specify whether to use permutation to obtain enrichment p-value. 
 
-\textbf{Step 2. Pathway clustering diagnostics:} From the first step, users can choose the top enriched pathways for further clustering. One can expand the drop-down menu and use FDR cutoff to choose top pathways and click on (7) ``Pathway clustering diagnostics" to implement the second step. \\~\\
+\item \textbf{Run Pathway Analysis:}
+\label{step:metaPath1}
+Once the above options are specified, users can click on {\color{red}(7)}, ``Run Pathway Analysis".
 
-\textbf{Step 3. Pathway clustering with text mining:} From the second step, users can determine the optimal number of clusters in the pool of pathways selected. Now, one can specify the number of clusters and click on (8) ``Get clustering result" to implement the third step. Note that you may not want to select too large a K since you wish to have a certain amount of pathways in each cluster for the validity of text mining algorithm. We generally suggest users to specify K no larger than 7 for fewer than 100 pathways.   \\~\\
+\textbf{Pathway clustering diagnostics:} 
+\label{step:metaPath2}
+From the previous step (Step~\ref{step:metaPath2}), users can choose the top enriched pathways for further clustering. 
+One can expand the drop-down menu and use FDR cutoff to choose top pathways and click on {\color{red}(8)}, ``Pathway clustering diagnostics" to implement the second step.
+
+\textbf{Pathway clustering with text mining:} 
+\label{step:metaPath3}
+From the previous step (Step~\ref{step:metaPath3}), users can determine the optimal number of clusters in the pool of pathways selected. 
+Now, one can specify the number of clusters and click on {\color{red}(9)} ``Get clustering result" to implement the third step. 
+Note that you may not want to select too large a K since you wish to have a certain amount of pathways in each cluster for the validity of text mining algorithm. 
+We generally suggest users to specify K no larger than 7 for fewer than 100 pathways. 
+\end{steps}
+
+
+
+
 
 \textbf{Complete List of Options:} 
 
 \begin{enumerate}
+  \item mixed data types:
   \item Response Type:
    \begin{itemize}
      \item Two class comparison, Multi-class comparison, Continuous outcome, Survival outcome.
@@ -57,32 +91,43 @@ The MetaPath package requires the input of raw expression data as in MetaDE. The
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=0.45]{./figure/metaPath/metaPathresult1.jpg}
+\includegraphics[scale=0.3]{./figure/metaPath/metaPathresult1.png}
 \caption{``MetaPath" Results (1)}
 \label{fig:MetaPathresult1}
 \end{center}
 \end{figure}
 
-After the first step is finished, (1) a summary table was generated as shown in Figure \ref{fig:MetaPathresult1} (based on the default CPI method). The ``Analysis Summary" includes the analysis results of all pathways, including individual study association analysis p-value, meta pathway analysis p-value/FDR, etc. Users can search the gene name in the ``Search" bar, and the full table is automatically saved in the working directory specified before.  
+The input dataset is same as the input for MetaDE module.
+We used multi-study leukemia gene expression data as example.
+After performing merging of the three datasets and filter 50\% genes by mean and 50\% by variance, 1283 genes remained.
+In this example we only compare two phenotypes: inv(16) and t(15;17).
+
+After the Step~\ref{step:metaPath1} is finished, a summary table was generated as shown in Figure~\ref{fig:MetaPathresult1} (based on the default CPI method). The ``Analysis Summary" includes the analysis results of all pathways, including individual study association analysis p-value, meta pathway analysis p-value/FDR, etc. Users can search the gene name in the ``Search" bar, and the full table is automatically saved in the working directory specified before.  
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=0.45]{./figure/metaPath/metaPathresult2.jpg}
+\includegraphics[scale=0.45]{./figure/metaPath/metaPathresult2.png}
 \caption{``MetaPath" Results (2)}
 \label{fig:MetaPathresult2}
 \end{center}
 \end{figure}
 
-After the ``Pathway Cluster Diagnostics" step is finished, we will see (2) two plots generated on the right panel (Figure \ref{fig:MetaPathresult2}): consensus CDF and Delta area plots, both from the ``ConsensusClusterPlus" package. The CDF of the consensus matrix for each K (indicated by colors) is estimated by a histogram of 100 bins. The CDF
-reaches an approximate maximum, thus consensus and cluster confidence is at a maximum at this K. The delta area shows the relative change in area under the CDF curve comparing K and K ? 1, thus allows users to determine the determine K at which there is no appreciable increase in CDF. Both plots assist users in finding the optimal number of clusters ``K" and you may refer to (Monti et al., 2003) for more detailed interpretation of the two plots. In the demo example, $K=5$ have large enough CDF, is thus chosen (though $K=7$ captures more, we only have 43 pathways here). 
+After the ``Pathway Cluster Diagnostics" step is finished, we will see two plots generated on the right panel (Figure \ref{fig:MetaPathresult2}): consensus CDF and Delta area plots, both from the ``ConsensusClusterPlus" package. The CDF of the consensus matrix for each K (indicated by colors) is estimated by a histogram of 100 bins. The CDF
+reaches an approximate maximum, thus consensus and cluster confidence is at a maximum at this K. The delta area shows the relative change in area under the CDF curve comparing K and K - 1, thus allows users to determine the determine K at which there is no appreciable increase in CDF. Both plots assist users in finding the optimal number of clusters ``K" and you may refer to (Monti et al., 2003) for more detailed interpretation of the two plots. In the demo example, $K=6$ have large enough CDF, is thus chosen (though $K=7$ captures more, we only have 38 pathways here). 
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=0.45]{./figure/metaPath/metaPathresult3.jpg}
+\includegraphics[scale=0.45]{./figure/metaPath/Heatmap_clusters_all.pdf}
 \caption{``MetaPath" Results (3)}
 \label{fig:MetaPathresult3}
 \end{center}
 \end{figure}
 
-The heatmap in (3) shows the -log10 transformed p-value of enrichment analysis in each study from step 1. Studies are on columns and the selected pathways are on rows, red means more enriched. The pathways are sorted by the pathway cluster as indicated by the colors on the left side of the heatmap. In addition, one file named ``Clustering\textunderscore Summary.csv" is saved to the working directory and shows (4) a summary of the text mining algorithm. The most frequently appearing and enriched keywords of each cluster is highlighted in (4). All the results shown in the Browser is also automatically saved to the working directory.
+
+The heatmap in Figure~\ref{fig:MetaPathresult3} shows the -log10 transformed p-value of enrichment analysis in each study from \ref{step:metaPath1}. 
+Studies are on columns and the selected pathways are on rows, red means more enriched. The pathways are sorted by the pathway cluster as indicated by the colors on the left side of the heatmap. 
+In addition, 
+the key words of each cluster of pathways are extracted and analyzed by a built-in text mining algorithm and one file named ``Clustering\textunderscore Summary.csv" is saved to the working directory which shows a summary of the text mining result. 
+
+
 
