@@ -6,12 +6,12 @@ By integrate information from multiple studies of similar biological purposes,
 MetaClust can identify an unified intrinsic gene sets among all studies, perform weighted clustering analysis using these common intrinsic gene sets,
 match the clustering pattern across studies to define disease subtype/cluster type.
 The resulting clustering from meta-analysis is more robust and accurate than single study analysis.
-The R package for MetaClust module can be found \url{https://github.com/metaOmic/MetaSparseKmeans}.
+The R package for MetaClust module can be found \url{https://github.com/metaOmics/MetaSparseKmeans}.
 
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=0.4]{./figure/metaClust/metaClustHome}
+\includegraphics[scale=0.4]{./figure/metaClust/metaClustHome.pdf}
 \caption{MetaClust home page}
 \label{fig:metaClustHome}
 \end{center}
@@ -22,7 +22,7 @@ The R package for MetaClust module can be found \url{https://github.com/metaOmic
 Figure~\ref{fig:metaClustHome} shows the home page of MetaClust.
 On the top left panel users can see data summary Table (at position {\color{red} (1)}).
 Below there are 4 tabs. 
-About tab (at position {\color{red} (2)}) includes basic introduction of metaClust.
+About tab (at position {\color{red} (2)}) includes basic introduction of MetaClust.
 Starting with multiple studies, 
 we could run MetaSparseKmeans (at position {\color{red} (5)}) with pre-specified number of clusters (K) and gene selection tuning parameter (Wbounds).
 If you are not sure about what are good K and Wbounds, please try Tune K (at position {\color{red} (3)}) and Tune Wbounds (at position {\color{red} (4)}) panel.
@@ -33,7 +33,7 @@ If you are not sure about what are good K and Wbounds, please try Tune K (at pos
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=0.4]{./figure/metaClust/tuneK}
+\includegraphics[scale=0.5]{./figure/metaClust/tuneK.pdf}
 \caption{Tuning parameter selection for number of clusters}
 \label{fig:metaClusttuneK}
 \end{center}
@@ -43,14 +43,16 @@ If the users are not sure what is number of clusters,
 they can start to use the Tune K panel as in Figure~\ref{fig:metaClusttuneK}.
 Gap statistics will be used to get optimal K for each individual study.
 Users need to specify maximum number of K (at position {\color{red} (1)}), which the algorithm will search number of studies from 1 to K.
-Top percentage p\% by larger variance means that we will use top p\% larger variance genes to perform gap statistics (at position {\color{red} (2)}).
-Number of permutation is number of bootstrap samples for gap statistics (at position {\color{red} (3)}).
-At least 50 bootstrap samples are suggested for a stable result of number of clusters.
 Studies to be tuned can be selected (at position {\color{red} (4)}).
+In advanced options, users can further specify number of top variance genes to be included and number of permutations.
+But if users don't know the algorithm, please leave them as default.
+Top percentage p\% by larger variance means that we will use top p\% larger variance genes to perform gap statistics (at position {\color{red} (3)}).
+Number of permutation is number of bootstrap samples for gap statistics (at position {\color{red} (4)}).
+At least 50 bootstrap samples are suggested for a stable result of number of clusters.
 By clicking button ``Tune K",
 we will obtain gap statistics as in Figure~\ref{fig:metaClusttuneK}.
 A good K is selected such that the $\mbox{Gap}_k$ is maximized or stabilized across all studies.
-From the figure, K=3 is preferred.
+From the figure, K=3 is preferred since the gap statistics from all three studies become flat (at position {\color{red} (5)}).
 
 \item \textbf{Tune Wbounds:} 
 
@@ -59,7 +61,7 @@ If the users are not sure what is a good Wbound,
 they can start to use the Tune Wbounds panel as in Figure~\ref{fig:metaClusttuneW}.
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=0.4]{./figure/metaClust/tuneW}
+\includegraphics[scale=0.5]{./figure/metaClust/tuneW.pdf}
 \caption{Wbound selection}
 \label{fig:metaClusttuneW}
 \end{center}
@@ -67,6 +69,8 @@ they can start to use the Tune Wbounds panel as in Figure~\ref{fig:metaClusttune
 Again,
 gap statistics will be used for tuning Wbounds.
 Users will specify number of clusters for tuning Wbounds (at position {\color{red} (1)}), which could be obtained from the previous step.
+In advanced options, users can further specify number of iterations and the range of candidate Wbounds.
+But if users don't know the algorithm, please leave them as default.
 Iterations (at position {\color{red} (2)}) is the same thing as number of bootstrap samples for gap statistics.
 Users also need to specify the searching space of Wbounds by minimum of Wbounds, maximum of Wbounds and Step of Wbounds (at position {\color{red} (3)}).
 After all these steps are set,
@@ -81,11 +85,12 @@ user can specify number of clusters (at position {\color{red} (1)}), Wbounds (at
 as in Figure~\ref{fig:mskmRes}.
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=0.4]{./figure/metaClust/mskmRes}
+\includegraphics[scale=0.5]{./figure/metaClust/mskmRes.pdf}
 \caption{Result for MetaClust}
 \label{fig:mskmRes}
 \end{center}
 \end{figure}
+In advanced options (for which users are not suggested to change if they are not familiar with the algorithm), 
 There are three clustering matching methods (at position {\color{red} (3)}): Exhaustive, linear, MCMC.
 Exhaustive is suggested if the data is not large.
 Linear will perform smart search and get solution much faster than Exhaustive, 
@@ -133,6 +138,9 @@ MCMC might by very time consuming.
 
 \subsubsection{Results}
 
+We used multi-study leukemia gene expression data as example.
+After performing merging of the three datasets, we didn't filter by mean or variance (filter 0\% genes by mean and 0\% by variance) and 5133 genes remained.
+In this example actually do not need extra label information.
 The result is shown in Figure~\ref{fig:mskmRes} at position {\color{red} (5)}.
 We obtained unified feature selection across all studies.
 The clusters are well separated in each study and the cluster patterns are consistent across all studies.

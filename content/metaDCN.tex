@@ -1,11 +1,11 @@
 \subsection{MetaNetwork}
 By clicking toolsets and then MetaNetwork,
 users are directed to MetaNetwork home page as Figure~\ref{fig:MetaNetworkHome}.
-The R package for MetaNetwork module can be found \url{https://github.com/metaOmic/MetaNetwork}.
+The R package for MetaNetwork module can be found \url{https://github.com/metaOmics/MetaNetwork}.
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=0.8]{./figure/MetaNetwork/MetaNetworkHome}
+\includegraphics[scale=0.9]{./figure/MetaNetwork/MetaNetworkHome}
 \caption{MetaNetwork homepage}
 \label{fig:MetaNetworkHome}
 \end{center}
@@ -17,16 +17,26 @@ MetaNetwork includes three steps to get differentially co-expressed networks: ge
 
 \begin{steps}
 \item \textbf{Generate Network}
-The first step of MetaNetwork is to generate network. In this step, the network for permuted data will also be generated. Users need to select case and control names, the number of permutations, and edge cut-off which determines the proportion of edges to be kept in the network. After clicking \textbf{Generate Network} button, screen will show message indicating the algorithm is running to generate network.
+The first step of MetaNetwork is to generate co-expression network. 
+In this step, the network for permuted data will also be generated. 
+Users need to select case and control names, the number of permutations, and edge cut-off which determines the proportion of edges to be kept in the network. 
+After clicking \textbf{Generate Network} button, screen will show message indicating the algorithm is running to generate network.
 
 
 \item \textbf{Search for basic modules}
 
-After the generate network step is done, the control panel will be as Figure~\ref{fig:MetaNetworkstep2}. The next step is to search for basic modules. Users need to specify the number of repeats used for each initial seed modules (Number to repeat), the maximum Monte Carlo steps for simulated annealing algorithm (MC Steps), and the maximum pairwise Jaccard index allowed for basic modules (Jaccard Cutoff). After clicking \textbf{Search for basic modules} button, screen will show message indicating the algorithm is running to search for basic modules.
+The next step is to search basic modules.
+Advanced options (recommended not to change) include the number of repeats used for each initial seed modules (``Number of repeat"),
+the maximim Monte Carlo steps for simulated annealing algorithm (MC Steps),
+and the maximum pairwise Jaccard index allowed for basic modules (Jaccard Cutoff), as shown in Figure~\ref{fig:MetaNetworkstep2}.
+After clicking \textbf{Search for basic modules} button, screen will show message indicating the algorithm is running to search for basic modules.
+This step is computationally demanding depending on gene size.
+After this step is done,
+the screen will show a table of basic modules highly connected in cases but lose connections in control and vice versa.
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=0.35]{./figure/MetaNetwork/MetaNetworkstep2}
+\includegraphics[scale=0.4]{./figure/MetaNetwork/MetaNetworkstep2}
 \caption{MetaNetwork control panel for search for basic modules}
 \label{fig:MetaNetworkstep2}
 \end{center}
@@ -36,7 +46,7 @@ Search for basic modules will take minutes, especially if a large number of gene
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=0.8]{./figure/MetaNetwork/MetaNetworkBM}
+\includegraphics[scale=0.9]{./figure/MetaNetwork/MetaNetworkBM}
 \caption{MetaNetwork output from search for basic modules step}
 \label{fig:MetaNetworkBM}
 \end{center}
@@ -44,11 +54,15 @@ Search for basic modules will take minutes, especially if a large number of gene
 
 \item \textbf{Assemble supermodules}
 
-After search for basic modules step is done, the control panel will be Figure~\ref{fig:MetaNetworkstep3}. The last step is to assemble supermodules. Users can decide the FDR cut-off to select basic modules for supermodule assembly. After clicking \textbf{Assemble supermodules} button, screen will show message indicating the algorithm is running to assemble supermodules.
+After search for basic modules step is done, the control panel will be Figure~\ref{fig:MetaNetworkstep3}. The last step is to assemble supermodules. Users can decide the FDR cut-off to select basic modules for supermodule assembly. 
+After clicking \textbf{Assemble supermodules} button, screen will show message indicating the algorithm is running to assemble supermodules.
+A table for basic modules, supermodules and their network visualization will be shown on the right panel of screen.
+MetaNetwork automatically creates files for top supermodules designed to input to a Cytoscape plug-in ``MetaDCNExplorer"
+(\url{http://tsenglab.biostat.pitt.edu/software.htm}) for improved visualization and dynamic exploration.
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=0.45]{./figure/MetaNetwork/MetaNetworkstep3}
+\includegraphics[scale=0.5]{./figure/MetaNetwork/MetaNetworkstep3}
 \caption{MetaNetwork control panel for assemble supermodules step}
 \label{fig:MetaNetworkstep3}
 \end{center}
@@ -84,6 +98,14 @@ After search for basic modules step is done, the control panel will be Figure~\r
 
 \subsubsection{Results}
 
+We used multi-study leukemia gene expression data as example.
+After performing merging of the three datasets and filter 80\% genes by mean and 80\% by variance, 206 genes remained.
+In this example we only compare two phenotypes: inv(16) and t(15;17).
+In general, the MetaNetwork tool is time consuming for large datasets (for both network generation and search for basic modules steps).
+We generally suggest users to carefully restrict the number of genes (e.g. less than a thousand) for a test run before implementing large gene set.
+By default, all outputs and several interim RData files will be automatically saved to the folder named ``MetaNetwork" under the working directory specified in Section~\ref{sec:setting}.
+
+
 \textbf{Generate Network}
 
 After the generate network step is done, no output will show up in the screen. Instead, a message box indicating several Rdata files are saved in the MetaNetwork folder, including:
@@ -118,7 +140,7 @@ After supermodule assembly is done, screen will show a table of supermodules (Fi
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=0.45]{./figure/MetaNetwork/MetaNetworksuper.png}
+\includegraphics[scale=0.7]{./figure/MetaNetwork/MetaNetworksuper.png}
 \caption{MetaNetwork supermodules table}
 \label{fig:MetaNetworksuper}
 \end{center}
@@ -126,7 +148,7 @@ After supermodule assembly is done, screen will show a table of supermodules (Fi
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=0.45]{./figure/MetaNetwork/MetaNetworkBMplot.png}
+\includegraphics[scale=0.7]{./figure/MetaNetwork/MetaNetworkBMplot.png}
 \caption{MetaNetwork select basic modules to plot}
 \label{fig:MetaNetworkBMplot}
 \end{center}
