@@ -11,7 +11,7 @@ The R package for MetaPath module can be found \url{https://github.com/metaOmics
 The MetaPath package requires the input of raw expression data as in MetaDE. 
 There are three major steps to implement the package: pathway analysis, pathway clustering diagnostics and pathway clustering with text mining. 
 As shown in Figure \ref{fig:MetaPathoption}, there are 9 major options that need to be specified to implement the package.
- detailed list of all options available for the package can be found at the end of this subsection. 
+Detailed list of all options available for the package can be found at the end of this subsection. 
 
 
 \begin{figure}[H]
@@ -30,7 +30,7 @@ Users need to specify {\color{red}(1) } whether the input gene expression profil
 {\color{red}(4)} advanced options including whether to adjust for covariates or the direction of hypothesis testing;.
 In {\color{red}(5)}, users can select from 25 available pathway databases for the enrichment analysis.
 In {\color{red}(6)}, users can select MetaPath method (either CPI or MAPE).
-By default, the ``CPI" approach is used, otherwise ``MAPE" approach can also be used. Other options include pathway enrichment method (the Fisher's exact test or KS test), the minimum as well as the maximum pathway size. If ``Fisher's exact test" is chosen for the enrichment method, users need to further specify the criteria for selection of DE genes, e.g. the number of top ranked genes. On the other hand, if ``KS test" is chosen, one needs to further specify whether to use permutation to obtain enrichment p-value. 
+By default, the ``CPI" approach is used, otherwise ``MAPE" approach can also be used. Other options include pathway enrichment method (the Fisher's exact test or KS test), the minimum and maximum pathway size. If ``Fisher's exact test" is chosen for the enrichment method, users need to further specify the criteria for selection of DE genes, e.g. the number of top ranked genes. On the other hand, if ``KS test" is chosen, one needs to further specify whether to use permutation to obtain enrichment p-value. 
 
 \item \textbf{Run Pathway Analysis:}
 \label{step:metaPath1}
@@ -45,8 +45,8 @@ One can expand the drop-down menu and use FDR cutoff to choose top pathways and 
 \label{step:metaPath3}
 From the previous step (Step~\ref{step:metaPath3}), users can determine the optimal number of clusters in the pool of pathways selected. 
 Now, one can specify the number of clusters and click on {\color{red}(9)} ``Get clustering result" to implement the third step. 
-Note that you may not want to select too large a K since you wish to have a certain amount of pathways in each cluster for the validity of text mining algorithm. 
-We generally suggest users to specify K no larger than 7 for fewer than 100 pathways. 
+Note that you may not want to select too large $K$ since you wish to have a certain amount of pathways in each cluster for the validity of text mining algorithm. 
+We generally suggest users to specify $K$ no larger than 7 for fewer than 100 pathways. 
 \end{steps}
 
 
@@ -56,7 +56,7 @@ We generally suggest users to specify K no larger than 7 for fewer than 100 path
 \textbf{Complete List of Options:} 
 
 \begin{enumerate}
-  \item mixed data types:
+  \item mixed data types: whether the input data is a mixture of count data and continuous data.
   \item Response Type:
    \begin{itemize}
      \item Two class comparison, Multi-class comparison, Continuous outcome, Survival outcome.
@@ -81,9 +81,9 @@ We generally suggest users to specify K no larger than 7 for fewer than 100 path
       \item Pathway min gene size
       \item Pathway max gene size
     \end{itemize} 
-    \item Step1: Run Pathway Analysis
-    \item Step2: Pathway Clustering Diagnostics
-    \item Step3: Get Clustering Result
+    \item Run Pathway Analysis
+    \item Pathway Clustering Diagnostics
+    \item Get Clustering Result
 \end{enumerate}
 
 
@@ -112,8 +112,8 @@ After the Step~\ref{step:metaPath1} is finished, a summary table was generated a
 \end{center}
 \end{figure}
 
-After the ``Pathway Cluster Diagnostics" step is finished, we will see two plots generated on the right panel (Figure \ref{fig:MetaPathresult2}): consensus CDF and Delta area plots, both from the ``ConsensusClusterPlus" package. The CDF of the consensus matrix for each K (indicated by colors) is estimated by a histogram of 100 bins. The CDF
-reaches an approximate maximum, thus consensus and cluster confidence is at a maximum at this K. The delta area shows the relative change in area under the CDF curve comparing K and K - 1, thus allows users to determine the determine K at which there is no appreciable increase in CDF. Both plots assist users in finding the optimal number of clusters ``K" and you may refer to (Monti et al., 2003) for more detailed interpretation of the two plots. In the demo example, $K=6$ have large enough CDF, is thus chosen (though $K=7$ captures more, we only have 38 pathways here). 
+After the ``Pathway Cluster Diagnostics" step is finished, we will see two plots generated on the right panel (Figure \ref{fig:MetaPathresult2}): consensus CDF and Delta area plots, both from the ``ConsensusClusterPlus" package. The CDF of the consensus matrix for each $K$ (indicated by colors) is estimated by a histogram of 100 bins. The CDF
+reaches an approximate maximum, thus consensus and cluster confidence is at a maximum at this $K$. The delta area shows the relative change in area under the CDF curve comparing $K$ and $K - 1$, thus allows users to determine the determine $K$ at which there is no appreciable increase in CDF. Both plots assist users in finding the optimal number of clusters $K$ and you may refer to (Monti et al., 2003) for more detailed interpretation of the two plots. In the demo example, $K=6$ have large enough CDF, is thus chosen (though $K=7$ captures more, we only have 38 pathways here). 
 
 \begin{figure}[H]
 \begin{center}

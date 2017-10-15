@@ -49,6 +49,12 @@ Huo, Z., Ding, Y., Liu, S., Oesterreich, S., and Tseng, G. (2016).
 \newblock {\em Journal of the American Statistical Association},
   111(513):27--42.
 
+\bibitem[Huo et~al., 2017]{huo2017p}
+Huo, Z., Tang, S., Park, Y., and Tseng, G. (2017).
+\newblock P-value evaluation, variability index and biomarker categorization
+  for adaptively weighted fisher's meta-analysis method in omics applications.
+\newblock {\em arXiv preprint arXiv:1708.05084}.
+
 \bibitem[Ivshina et~al., 2006]{ivshina2006genetic}
 Ivshina, A.~V., George, J., Senko, O., Mow, B., Putti, T.~C., Smeds, J.,
   Lindahl, T., Pawitan, Y., Hall, P., Nordgren, H., et~al. (2006).
@@ -117,6 +123,12 @@ Singh, D., Febbo, P.~G., Ross, K., Jackson, D.~G., Manola, J., Ladd, C.,
   Tamayo, P., Renshaw, A.~A., D'Amico, A.~V., Richie, J.~P., et~al. (2002).
 \newblock Gene expression correlates of clinical prostate cancer behavior.
 \newblock {\em Cancer cell}, 1(2):203--209.
+
+\bibitem[Song and Tseng, 2014]{song2014hypothesis}
+Song, C. and Tseng, G.~C. (2014).
+\newblock Hypothesis setting and order statistic for robust genomic
+  meta-analysis.
+\newblock {\em The annals of applied statistics}, 8(2):777.
 
 \bibitem[Tomlins et~al., 2006]{tomlins2006tmprss2}
 Tomlins, S.~A., Mehra, R., Rhodes, D.~R., Smith, L.~R., Roulston, D., Helgeson,

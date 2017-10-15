@@ -24,12 +24,12 @@ On the top left panel users can see data summary Table (at position {\color{red}
 Below there are 4 tabs. 
 About tab (at position {\color{red} (2)}) includes basic introduction of MetaClust.
 Starting with multiple studies, 
-we could run MetaSparseKmeans (at position {\color{red} (5)}) with pre-specified number of clusters (K) and gene selection tuning parameter (Wbounds).
-If you are not sure about what are good K and Wbounds, please try Tune K (at position {\color{red} (3)}) and Tune Wbounds (at position {\color{red} (4)}) panel.
+we could run MetaSparseKmeans (at position {\color{red} (5)}) with pre-specified number of clusters ($K$) and gene selection tuning parameter (Wbounds).
+If you are not sure about what are good $K$ and Wbounds, please try Tune $K$ (at position {\color{red} (3)}) and Tune Wbounds (at position {\color{red} (4)}) panel.
 
 \begin{steps}
 
-\item \textbf{Tune K:} 
+\item \textbf{Tune $K$:} 
 
 \begin{figure}[H]
 \begin{center}
@@ -40,19 +40,19 @@ If you are not sure about what are good K and Wbounds, please try Tune K (at pos
 \end{figure}
 
 If the users are not sure what is number of clusters,
-they can start to use the Tune K panel as in Figure~\ref{fig:metaClusttuneK}.
-Gap statistics will be used to get optimal K for each individual study.
-Users need to specify maximum number of K (at position {\color{red} (1)}), which the algorithm will search number of studies from 1 to K.
+they can start to use the Tune $K$ panel as in Figure~\ref{fig:metaClusttuneK}.
+Gap statistics will be used to get optimal $K$ for each individual study.
+Users need to specify maximum number of $K$ (at position {\color{red} (1)}), which the algorithm will search number of studies from 1 to $K$.
 Studies to be tuned can be selected (at position {\color{red} (4)}).
 In advanced options, users can further specify number of top variance genes to be included and number of permutations.
 But if users don't know the algorithm, please leave them as default.
 Top percentage p\% by larger variance means that we will use top p\% larger variance genes to perform gap statistics (at position {\color{red} (3)}).
 Number of permutation is number of bootstrap samples for gap statistics (at position {\color{red} (4)}).
 At least 50 bootstrap samples are suggested for a stable result of number of clusters.
-By clicking button ``Tune K",
+By clicking button ``Tune $K$",
 we will obtain gap statistics as in Figure~\ref{fig:metaClusttuneK}.
-A good K is selected such that the $\mbox{Gap}_k$ is maximized or stabilized across all studies.
-From the figure, K=3 is preferred since the gap statistics from all three studies become flat (at position {\color{red} (5)}).
+A good $K$ is selected such that the $\mbox{Gap}_k$ is maximized or stabilized across all studies.
+From the figure, $K=3$ is preferred since the gap statistics from all three studies become flat (at position {\color{red} (5)}).
 
 \item \textbf{Tune Wbounds:} 
 
@@ -78,10 +78,10 @@ user can click on ``Tune Wbounds" button (at position {\color{red} (4)}).
 The results will be shown in Figure~\ref{fig:metaClusttuneW}  position {\color{red} (5)}.
 Wbound=12 is preferred since the corresponding gap statistics is maximized (where the red arrow indicates).
 
-\item \textbf{Run Meta Sparse K-Means:} 
+\item \textbf{Run MetaClust:} 
 
 Under Run Meta Sparse K-Means panel,
-user can specify number of clusters (at position {\color{red} (1)}), Wbounds (at position {\color{red} (2)}) and run meta sparse K means (at position {\color{red} (5)}), 
+user can specify number of clusters (at position {\color{red} (1)}), Wbounds (at position {\color{red} (2)}) and run MetaClust (at position {\color{red} (5)}), 
 as in Figure~\ref{fig:mskmRes}.
 \begin{figure}[H]
 \begin{center}
@@ -98,19 +98,19 @@ but it may yield less accuracy with very low probability.
 MCMC is suitable if many studies and clusters are provided.
 Adjust sample size checkbox (at position {\color{red} (5)}) allows users to adjust sample size effect.
 After number of clusters and Wbounds are specified,
-users can click on Run meta sparse K means and obtain results as Figure~\ref{fig:mskmRes}.
+users can click on Run meta sparse $K$ means and obtain results as Figure~\ref{fig:mskmRes}.
 
 \end{steps}
 
 \textbf{Complete List of Options:} 
 \begin{enumerate}
-\item Tune K (** optional)
+\item Tune $K$ (** optional)
 \begin{itemize}
-\item Maximum of K: the maximum number of K that gap statistics will step through.
+\item Maximum of $K$: the maximum number of $K$ that gap statistics will step through.
 \item Top percentage by larger variance: Top percentage p\% by larger variance means that we will use top p\% larger variance genes to perform gap statistics.
 \item Number of permutaitons: Number of permutation is number of bootstrap samples for gap statistics.
 \item Select studies to be tuned: Studies to be tuned.
-\item Tune K: start tuning K.
+\item Tune $K$: start tuning $K$.
 \end{itemize}
 \item Tune Wbounds (** optional)
 \begin{itemize}
@@ -123,9 +123,9 @@ users can click on Run meta sparse K means and obtain results as Figure~\ref{fig
 \end{itemize}
 \item Run Meta Sparse $K$-means: 
 \begin{itemize}
-\item Number of clusters: number of clusters. Can be tuned from Tune K option.
+\item Number of clusters: number of clusters. Can be tuned from Tune $K$ option.
 \item Wbounds: control numbers of selected features. Can be tuned from Tune Wbounds option.
-\item Methods for meta sparse Kmeans: Exhaustive is suggested if the data is not large.
+\item Methods for MetaClust: Exhaustive is suggested if the data is not large.
 Linear will perform smart search and get solution much faster than Exhaustive, 
 but it may yield less accuracy.
 MCMC might by very time consuming.

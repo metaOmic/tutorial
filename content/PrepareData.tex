@@ -1,9 +1,11 @@
 
 \section{Prepare data}
 \label{sec:dataPrepare}
+In this section, we will introduce how to prepare gene expression data matrix as well as the clinical file so that they are acceptable by the metaOmics software suite.
+
 \subsection{Raw data}
 
-Data should be prepared as the example in Figure~\ref{fig:dataMicroarray}.
+Gene expression matrix should be prepared as the example in Figure~\ref{fig:dataMicroarray}.
 First column should be feature ID (e.g. gene symbol) and the rest of the columns are samples.
 Note that the first column can also be other feature type (i.e. probe id, entrez ID).
 The first row is sample ID.
@@ -41,7 +43,7 @@ Table~\ref{tab:realDataProstate} shows gene expression profiles from eight prost
 The leukemia datasets are used to demonstrate MetaProcess, MetaDE, MetaPath, MetaNetwork, MetaPredict, MetaClust and MetaPCA.
 The prostate cancer datasets are used to demonstrate MetaQC.
 
-			\begin{table}[h]
+			\begin{table}[H]
 			\caption{Multi-study acute myeloid leukemia (AML) gene expression profiles. All three studies are from Affymetrix Human Genome U133plus2 with 5,135 genes.
 		Three subtypes of leukemia are defined as the chromosomal translocation,
 		including inversion of chromosome 16 - inv(16), translocation of chromosome 15 and 17 - t(15:17) and 
@@ -62,7 +64,7 @@ Study 3 & \cite{kohlmann2008international} & 105 & 28/37/40\\
 			\label{tab:realDataLeukemia}
 		\end{table}
 		
-			\begin{table}[h]
+			\begin{table}[H]
 			\caption{Multi-study breast cancer gene expression profiles. 
 			Each gene expression profiles of all four studies contain 10,330 genes.
 			Study 1 contains both count data and fpkm (continuous) data so user should {\bf select only one of them}. 
@@ -87,7 +89,7 @@ Study 4 & \cite{ivshina2006genetic} & continuous & 245 & 211/34\\
 		\end{table}
 
 
-			\begin{table}[h]
+			\begin{table}[H]
 			\caption{Multi-study prostate cancer dataset information. Eight prostate cancer gene expression profiles were measured by different microarray platforms.}						
 			\centering
 	\begin{tabular}{c c c c c}
@@ -112,4 +114,4 @@ Study 4 & \cite{ivshina2006genetic} & continuous & 245 & 211/34\\
 		\end{table}
 
 
-
+\newpage

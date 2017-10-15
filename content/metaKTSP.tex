@@ -4,7 +4,7 @@ Top scoring pairs is a robust algorithm for predicting gene expression profiles,
 which adopts nonparametric rank-based prediction rule.
 The MetaPredict is a meta-analysis version of the TSP algorithm that combines multiple transcriptomic studies to build a prediction model and shows improved 
 prediction accuracy as compared to single study analysis.
-The R package for MetaPredict module can be found \url{https://github.com/metaOmic/MetaPredict}.
+The R package for MetaPredict module can be found \url{https://github.com/metaOmics/MetaPredict}.
 
 The homepage for MetaPredict is shown in Figure \ref{fig:MetaPredictmainpage}.
 Under advanced options,  there are 1 drop-down menu (``Methods for MetaPredict") {\color{red} (1)}, three number entries (``Max number of top scoring pairs (K)" {\color{red} (2)}, ``Number of cores for parallel computing" {\color{red} (3)}.
@@ -24,7 +24,7 @@ The necessay parameters include ``Number of top scoring pairs (K)" {\color{red} 
 \begin{steps}
 \item \textbf{Building prediction model based on meta-analysis}
 
-First, we need to decide a method to select K top scoring gene pairs from multiple studies (Figure \ref{fig:MetaPredictmainpage}). 
+First, we need to decide a method to select $K$ top scoring gene pairs from multiple studies (Figure \ref{fig:MetaPredictmainpage}). 
 Second, we need to provide the maximum number of top scoring pairs $K$ (algorithm will search from 1 up to $K$) and the number of cores for parallel computing. 
 Next, we need to select only TWO labels to build the classification model. 
 In other words, if there exists more than two kinds of labels, we need to choose two from them. 
@@ -70,7 +70,7 @@ Finally, a confusion matrix is output to show the prediction results ({\color{re
 
 We used multi-study leukemia gene expression data as example.
 After performing merging of the three datasets and filter 50\% genes by mean and 50\% by variance, 1283 genes remained.
-In this example we only compare two phenotypes: inv(16) and t(8;21). d
+In this example we only compare two phenotypes: inv(16) and t(8;21). 
 A confusion matrix is output to show the prediction results ({\color{red} (1)} in Figure \ref{fig:MetaPredictresult}).
 The prediction results are also saved in the folder.
 
