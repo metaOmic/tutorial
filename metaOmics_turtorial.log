@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  14 OCT 2017 15:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  15 OCT 2017 09:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1053,54 +1053,54 @@ ut line 151.
                                                   \fi \fi 
 l.1 \subsection
                {MetaPredict} <./figure/MetaNetwork/MetaNetworksuper.png>]
-<./figure/MetaPredict/MetaPredictprocedure.pdf, id=774, 722.7pt x 542.025pt>
+<./figure/MetaPredict/MetaPredictprocedure.pdf, id=774, 399.4925pt x 542.025pt>
 File: ./figure/MetaPredict/MetaPredictprocedure.pdf Graphic file (type pdf)
-
 <use ./figure/MetaPredict/MetaPredictprocedure.pdf>
 Package pdftex.def Info: ./figure/MetaPredict/MetaPredictprocedure.pdf used on 
-input line 15.
-(pdftex.def)             Requested size: 505.88655pt x 379.4149pt.
-
-Overfull \hbox (34.41406pt too wide) in paragraph at lines 15--16
- [] 
- []
-
-[28pdfTeX warning (ext4): destination with the same identifier (name{figure.22}
-) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.20 
-      <./figure/MetaNetwork/MetaNetworkBMplot.png>]
-<./figure/MetaPredict/MetaPredictresult.pdf, id=787, 490.83376pt x 512.91624pt>
-File: ./figure/MetaPredict/MetaPredictresult.pdf Graphic file (type pdf)
-<use ./figure/MetaPredict/MetaPredictresult.pdf>
-Package pdftex.def Info: ./figure/MetaPredict/MetaPredictresult.pdf used on inp
-ut line 43.
-(pdftex.def)             Requested size: 392.66753pt x 410.33356pt.
- [29pdfTeX warning (ext4): destination with the same identifier (name{figure.23
+input line 18.
+(pdftex.def)             Requested size: 199.74576pt x 271.01183pt.
+ [28pdfTeX warning (ext4): destination with the same identifier (name{figure.22
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.48 
-      <./figure/MetaPredict/MetaPredictprocedure.pdf>])
-(./content/metaClust.tex [30pdfTeX warning (ext4): destination with the same id
-entifier (name{figure.24}) has been already used, duplicate ignored
+l.23 
+      <./figure/MetaNetwork/MetaNetworkBMplot.png>]
+<./figure/MetaPredict/MetaPredictresult.pdf, id=787, 963.6pt x 505.89pt>
+File: ./figure/MetaPredict/MetaPredictresult.pdf Graphic file (type pdf)
+
+<use ./figure/MetaPredict/MetaPredictresult.pdf>
+Package pdftex.def Info: ./figure/MetaPredict/MetaPredictresult.pdf used on inp
+ut line 46.
+(pdftex.def)             Requested size: 481.79883pt x 252.94437pt.
+
+Overfull \hbox (10.32634pt too wide) in paragraph at lines 46--47
+ [] 
+ []
+
+[29pdfTeX warning (ext4): destination with the same identifier (name{figure.23}
+) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.10 
-      <./figure/MetaPredict/MetaPredictresult.pdf>]
-<./figure/metaClust/metaClustHome.pdf, id=924, 628.3475pt x 454.69875pt>
+l.51 
+      <./figure/MetaPredict/MetaPredictprocedure.pdf>])
+(./content/metaClust.tex
+<./figure/metaClust/metaClustHome.pdf, id=820, 628.3475pt x 454.69875pt>
 File: ./figure/metaClust/metaClustHome.pdf Graphic file (type pdf)
 
 <use ./figure/metaClust/metaClustHome.pdf>
 Package pdftex.def Info: ./figure/metaClust/metaClustHome.pdf used on input lin
 e 14.
 (pdftex.def)             Requested size: 251.33455pt x 181.87627pt.
+ [30pdfTeX warning (ext4): destination with the same identifier (name{figure.24
+}) has been already used, duplicate ignored
 
-<./figure/metaClust/tuneK.pdf, id=926, 975.645pt x 468.75125pt>
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.19 
+      <./figure/MetaPredict/MetaPredictresult.pdf>]
+<./figure/metaClust/tuneK.pdf, id=849, 975.645pt x 468.75125pt>
 File: ./figure/metaClust/tuneK.pdf Graphic file (type pdf)
 
 <use ./figure/metaClust/tuneK.pdf>
@@ -1116,9 +1116,15 @@ Overfull \hbox (16.34882pt too wide) in paragraph at lines 36--37
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.41 
-      <./figure/metaClust/metaClustHome.pdf>]
-<./figure/metaClust/tuneW.pdf, id=957, 975.645pt x 300.12125pt>
+l.56 
+     pdfTeX warning (ext4): destination with the same identifier (name{figure.2
+6}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.56 
+      <./figure/metaClust/metaClustHome.pdf> <./figure/metaClust/tuneK.pdf>]
+<./figure/metaClust/tuneW.pdf, id=900, 975.645pt x 300.12125pt>
 File: ./figure/metaClust/tuneW.pdf Graphic file (type pdf)
 
 <use ./figure/metaClust/tuneW.pdf>
@@ -1129,14 +1135,7 @@ Overfull \hbox (16.34882pt too wide) in paragraph at lines 64--65
  [] 
  []
 
-[32pdfTeX warning (ext4): destination with the same identifier (name{figure.26}
-) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.69 A
-      gain, <./figure/metaClust/tuneK.pdf>]
-<./figure/metaClust/mskmRes.pdf, id=988, 974.64125pt x 382.42876pt>
+<./figure/metaClust/mskmRes.pdf, id=903, 974.64125pt x 382.42876pt>
 File: ./figure/metaClust/mskmRes.pdf Graphic file (type pdf)
 
 <use ./figure/metaClust/mskmRes.pdf>
@@ -1147,41 +1146,40 @@ Overfull \hbox (15.84694pt too wide) in paragraph at lines 88--89
  [] 
  []
 
-[33pdfTeX warning (ext4): destination with the same identifier (name{figure.27}
+[32pdfTeX warning (ext4): destination with the same identifier (name{figure.27}
 ) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.102 
-      pdfTeX warning (ext4): destination with the same identifier (name{figure.
-28}) has been already used, duplicate ignored
+l.93 I
+      n advanced options (for which users are not suggested to change if the...
+ <./figure/metaClust/tuneW.pdf>] [33pdfTeX warning (ext4): destination with the
+ same identifier (name{figure.28}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.102 
-       <./figure/metaClust/tuneW.pdf> <./figure/metaClust/mskmRes.pdf>])
-(./content/metaPCA.tex
-<./figure/metaPCA/metaPCAHome.pdf, id=1039, 633.36626pt x 482.80376pt>
+l.134 \end{itemize}
+                    <./figure/metaClust/mskmRes.pdf>]) (./content/metaPCA.tex
+<./figure/metaPCA/metaPCAHome.pdf, id=964, 633.36626pt x 482.80376pt>
 File: ./figure/metaPCA/metaPCAHome.pdf Graphic file (type pdf)
 
 <use ./figure/metaPCA/metaPCAHome.pdf>
 Package pdftex.def Info: ./figure/metaPCA/metaPCAHome.pdf used on input line 11
 .
 (pdftex.def)             Requested size: 253.34201pt x 193.11807pt.
- [34]
+ [34pdfTeX warning (ext4): destination with the same identifier (name{figure.29
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.36 
+      <./figure/metaPCA/metaPCAHome.pdf>]
 Overfull \hbox (2.16718pt too wide) in paragraph at lines 63--64
 []\OT1/cmr/m/n/10 Tuning pa-ram-e-ter for spar-sity: Tun-ing pa-ram-e-ter for s
 par-sity that will be used for sparse metaPCA. 
  []
 
-[35pdfTeX warning (ext4): destination with the same identifier (name{figure.29}
-) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.74 
-      <./figure/metaPCA/metaPCAHome.pdf>]
-<./figure/metaPCA/metaPCA.png, id=1078, 1401.235pt x 501.875pt>
+<./figure/metaPCA/metaPCA.png, id=993, 1401.235pt x 501.875pt>
 File: ./figure/metaPCA/metaPCA.png Graphic file (type png)
 
 <use ./figure/metaPCA/metaPCA.png>
@@ -1193,9 +1191,16 @@ d
 <to be read again> 
                    \relax 
 l.19 ...item[Choi et~al., 2003]{choi2003combining}
-                                                  pdfTeX warning (ext4): destin
-ation with the same identifier (name{cite.fang2016cpi}) has been already used, 
-duplicate ignored
+                                                   [35pdfTeX warning (ext4): de
+stination with the same identifier (name{figure.30}) has been already used, dup
+licate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.24 
+      <./figure/metaPCA/metaPCA.png>]pdfTeX warning (ext4): destination with th
+e same identifier (name{cite.fang2016cpi}) has been already used, duplicate ign
+ored
 <to be read again> 
                    \relax 
 l.33 \bibitem[Fang et~al., 2016]{fang2016cpi}
@@ -1223,16 +1228,9 @@ ion with the same identifier (name{cite.kim2017metaPCA}) has been already used,
 <to be read again> 
                    \relax 
 l.65 \bibitem[Kim et~al., tted]{kim2017metaPCA}
-                                                [36pdfTeX warning (ext4): desti
-nation with the same identifier (name{figure.30}) has been already used, duplic
-ate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.69 
-      <./figure/metaPCA/metaPCA.png>]pdfTeX warning (ext4): destination with th
-e same identifier (name{cite.Kim2016}) has been already used, duplicate ignored
-
+                                               pdfTeX warning (ext4): destinati
+on with the same identifier (name{cite.Kim2016}) has been already used, duplica
+te ignored
 <to be read again> 
                    \relax 
 l.70 \bibitem[Kim et~al., 2016]{Kim2016}
@@ -1248,7 +1246,7 @@ uplicate ignored
 <to be read again> 
                    \relax 
 l.109 \bibitem[Shen and Tseng, 2010]{shen2010meta}
-                                                   [37]pdfTeX warning (ext4): d
+                                                   [36]pdfTeX warning (ext4): d
 estination with the same identifier (name{cite.zhu2016metadcn}) has been alread
 y used, duplicate ignored
 <to be read again> 
@@ -1256,7 +1254,7 @@ y used, duplicate ignored
 l.179 \bibitem[Zhu et~al., 2016]{zhu2016metadcn}
                                                 )
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 57.
- [38]
+ [37]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 57.
 
 (./metaOmics_turtorial.aux)
@@ -1271,9 +1269,9 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 57.
  ) 
 Here is how much of TeX's memory you used:
- 8513 strings out of 492995
- 125908 string characters out of 6132704
- 228946 words of memory out of 5000000
+ 8512 strings out of 492995
+ 125901 string characters out of 6132704
+ 227946 words of memory out of 5000000
  11704 multiletter control sequences out of 15000+600000
  8409 words of font info for 30 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1287,10 +1285,10 @@ sr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
 ocal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/lo
 cal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/loc
 al/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on metaOmics_turtorial.pdf (38 pages, 4354564 bytes).
+Output written on metaOmics_turtorial.pdf (37 pages, 3830106 bytes).
 PDF statistics:
- 1173 PDF objects out of 1200 (max. 8388607)
- 936 compressed objects within 10 object streams
- 209 named destinations out of 1000 (max. 500000)
+ 1090 PDF objects out of 1200 (max. 8388607)
+ 887 compressed objects within 9 object streams
+ 208 named destinations out of 1000 (max. 500000)
  471 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -6,13 +6,16 @@ The MetaPredict is a meta-analysis version of the TSP algorithm that combines mu
 prediction accuracy as compared to single study analysis.
 The R package for MetaPredict module can be found \url{https://github.com/metaOmic/MetaPredict}.
 
-After opening the MetaPredict page, as shown in Figure \ref{fig:MetaPredictmainpage}, there are 1 drop-down menu (``Methods for MetaPredict") {\color{red} (1)}, three number entries (``Max number of top scoring pairs (K)" {\color{red} (2)}, ``Number of cores for parallel computing" {\color{red} (3)} and ``Number of top scoring pairs (K)" {\color{red} (7)}), three character entries (``Please select TWO labels to cluster" {\color{red} (4)}, ``Please select studies for training" {\color{red} (5)}, and ``Please select studies for testing") {\color{red} (6)} , and two excuting tabs ("Train model" and "Predict"). 
+The homepage for MetaPredict is shown in Figure \ref{fig:MetaPredictmainpage}.
+Under advanced options,  there are 1 drop-down menu (``Methods for MetaPredict") {\color{red} (1)}, three number entries (``Max number of top scoring pairs (K)" {\color{red} (2)}, ``Number of cores for parallel computing" {\color{red} (3)}.
+These will be introduced shortly but the users are not suggested to change them unless they know about the algorithm.
+The necessay parameters include ``Number of top scoring pairs (K)" {\color{red} (7)}), three character entries (``Please select TWO labels to cluster" {\color{red} (4)}, ``Please select studies for training" {\color{red} (5)}, and ``Please select studies for testing") {\color{red} (6)} , and two excuting tabs ("Train model" and "Predict"). 
 
 \subsubsection{Procedure}
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=0.7]{./figure/MetaPredict/MetaPredictprocedure}
+\includegraphics[scale=0.5]{./figure/MetaPredict/MetaPredictprocedure.pdf}
 \caption{Homepage of MetaPredict}
 \label{fig:MetaPredictmainpage}
 \end{center}
@@ -40,7 +43,7 @@ Finally, a confusion matrix is output to show the prediction results ({\color{re
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=0.8]{./figure/MetaPredict/MetaPredictresult.pdf}
+\includegraphics[scale=0.5]{./figure/MetaPredict/MetaPredictresult.pdf}
 \caption{Results for MetaPredict.}
 \label{fig:MetaPredictresult}
 \end{center}
@@ -65,6 +68,9 @@ Finally, a confusion matrix is output to show the prediction results ({\color{re
 
 \subsubsection{Results}
 
+We used multi-study leukemia gene expression data as example.
+After performing merging of the three datasets and filter 50\% genes by mean and 50\% by variance, 1283 genes remained.
+In this example we only compare two phenotypes: inv(16) and t(8;21). d
 A confusion matrix is output to show the prediction results ({\color{red} (1)} in Figure \ref{fig:MetaPredictresult}).
 The prediction results are also saved in the folder.
 
