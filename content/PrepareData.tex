@@ -37,11 +37,12 @@ The rest of the columns are clinical information (e.g. case/control labels).
 
 
 We collected three multi-study examples as testing datasets for the MetaOmics software.
-Table~\ref{tab:realDataLeukemia} shows three acute myeloid leukemia (AML) gene expression profiles.
+Table~\ref{tab:realDataLeukemia} shows three gene expression profiles of acute myeloid leukemia (AML).
 Table~\ref{tab:realDataBreastCancer} shows four breast cancer gene expression profiles, in which the first study contains both count data and FPKM data.
 Table~\ref{tab:realDataProstate} shows gene expression profiles from eight prostate cancer datasets.
 The leukemia datasets are used to demonstrate MetaProcess, MetaDE, MetaPath, MetaNetwork, MetaPredict, MetaClust and MetaPCA.
 The prostate cancer datasets are used to demonstrate MetaQC.
+
 
 			\begin{table}[H]
 			\caption{Multi-study acute myeloid leukemia (AML) gene expression profiles. All three studies are from Affymetrix Human Genome U133plus2 with 5,135 genes.
@@ -67,7 +68,7 @@ Study 3 & \cite{kohlmann2008international} & 105 & 28/37/40\\
 			\begin{table}[H]
 			\caption{Multi-study breast cancer gene expression profiles. 
 			Each gene expression profiles of all four studies contain 10,330 genes.
-			Study 1 contains both count data and fpkm (continuous) data so user should {\bf select only one of them}. 
+			Study 1 contains both count data and FPKM (continuous) data so user should {\bf select only one of them}. 
 			The other three studies contain only continuous data.
 			The phenotype of interest is estrogen-receptor (comparing ER+ vs ER-).}						
 			\centering

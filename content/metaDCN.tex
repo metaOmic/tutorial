@@ -42,7 +42,9 @@ the screen will show a table of basic modules highly connected in cases but lose
 \end{center}
 \end{figure}
 
-Search for basic modules will take minutes, especially if a large number of genes are used. After this step is done, the screen will show a table of basic modules higher correlated in case and a table of basic modules higher correlated in control as Figure~\ref{fig:MetaNetworkBM}. 
+Search for basic modules can be time consuming, 
+especially if a large number of genes are used. 
+After this step is done, the screen will show a table of basic modules higher correlated in case and a table of basic modules higher correlated in control as Figure~\ref{fig:MetaNetworkBM}. 
 
 \begin{figure}[H]
 \begin{center}
@@ -101,6 +103,7 @@ MetaNetwork automatically creates files for top supermodules designed to input t
 We used multi-study leukemia gene expression data as example.
 After performing merging of the three datasets and filter 80\% genes by mean and 80\% by variance, 206 genes remained.
 In this example we only compare two phenotypes: inv(16) and t(8;21).
+Detailed descriptions of these studies can be found in Table~\ref{tab:realDataLeukemia}. 
 In general, the MetaNetwork tool is time consuming for large datasets (for both network generation and search for basic modules steps).
 We generally suggest users to carefully restrict the number of genes (e.g. less than a thousand) for a test run before implementing large gene set.
 By default, all outputs and several interim RData files will be automatically saved to the folder named ``MetaNetwork" under the working directory specified in Section~\ref{sec:setting}.

@@ -44,7 +44,7 @@ One can expand the drop-down menu and use FDR cutoff to choose top pathways and 
 \textbf{Pathway clustering with text mining:} 
 \label{step:metaPath3}
 From the previous step (Step~\ref{step:metaPath3}), users can determine the optimal number of clusters in the pool of pathways selected. 
-Now, one can specify the number of clusters and click on {\color{red}(9)} ``Get clustering result" to implement the third step. 
+Now, one can specify the number of clusters and click on {\color{red}(9)} ``Get clustering result". 
 Note that you may not want to select too large $K$ since you wish to have a certain amount of pathways in each cluster for the validity of text mining algorithm. 
 We generally suggest users to specify $K$ no larger than 7 for fewer than 100 pathways. 
 \end{steps}
@@ -101,7 +101,7 @@ The input dataset is same as the input for MetaDE module.
 We used multi-study leukemia gene expression data as example.
 After performing merging of the three datasets and filter 50\% genes by mean and 50\% by variance, 1283 genes remained.
 In this example we only compare two phenotypes: inv(16) and t(15;17).
-
+Detailed descriptions of these studies can be found in Table~\ref{tab:realDataLeukemia}. 
 After the Step~\ref{step:metaPath1} is finished, a summary table was generated as shown in Figure~\ref{fig:MetaPathresult1} (based on the default CPI method). The ``Analysis Summary" includes the analysis results of all pathways, including individual study association analysis p-value, meta pathway analysis p-value/FDR, etc. Users can search the gene name in the ``Search" bar, and the full table is automatically saved in the working directory specified before.  
 
 \begin{figure}[H]
@@ -113,7 +113,7 @@ After the Step~\ref{step:metaPath1} is finished, a summary table was generated a
 \end{figure}
 
 After the ``Pathway Cluster Diagnostics" step is finished, we will see two plots generated on the right panel (Figure \ref{fig:MetaPathresult2}): consensus CDF and Delta area plots, both from the ``ConsensusClusterPlus" package. The CDF of the consensus matrix for each $K$ (indicated by colors) is estimated by a histogram of 100 bins. The CDF
-reaches an approximate maximum, thus consensus and cluster confidence is at a maximum at this $K$. The delta area shows the relative change in area under the CDF curve comparing $K$ and $K - 1$, thus allows users to determine the determine $K$ at which there is no appreciable increase in CDF. Both plots assist users in finding the optimal number of clusters $K$ and you may refer to (Monti et al., 2003) for more detailed interpretation of the two plots. In the demo example, $K=6$ have large enough CDF, is thus chosen (though $K=7$ captures more, we only have 38 pathways here). 
+reaches an approximate maximum, thus consensus and cluster confidence is at a maximum at this $K$. The delta area shows the relative change in area under the CDF curve comparing $K$ and $K - 1$, thus allows users to determine the determine $K$ at which there is no appreciable increase in CDF. Both plots assist users in finding the optimal number of clusters $K$ and you may refer to (Monti et al., 2003) for more detailed interpretation of the two plots. In the demo example, $K=6$ has large enough CDF, is thus chosen (though $K=7$ captures more, we only have 38 pathways here). 
 
 \begin{figure}[H]
 \begin{center}

@@ -71,7 +71,7 @@ gap statistics will be used for tuning Wbounds.
 Users will specify number of clusters for tuning Wbounds (at position {\color{red} (1)}), which could be obtained from the previous step.
 In advanced options, users can further specify number of iterations and the range of candidate Wbounds.
 But if users don't know the algorithm, please leave them as default.
-Iterations (at position {\color{red} (2)}) is the same thing as number of bootstrap samples for gap statistics.
+Iterations (at position {\color{red} (2)}) specify number of bootstrap samples for gap statistics.
 Users also need to specify the searching space of Wbounds by minimum of Wbounds, maximum of Wbounds and Step of Wbounds (at position {\color{red} (3)}).
 After all these steps are set,
 user can click on ``Tune Wbounds" button (at position {\color{red} (4)}).
@@ -140,6 +140,7 @@ MCMC might by very time consuming.
 
 We used multi-study leukemia gene expression data as example.
 After performing merging of the three datasets, we didn't filter by mean or variance (filter 0\% genes by mean and 0\% by variance) and 5133 genes remained.
+Detailed descriptions of these studies can be found in Table~\ref{tab:realDataLeukemia}. 
 In this example actually do not need extra label information.
 The result is shown in Figure~\ref{fig:mskmRes} at position {\color{red} (5)}.
 We obtained unified feature selection across all studies.

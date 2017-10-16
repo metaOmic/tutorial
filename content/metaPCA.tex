@@ -21,14 +21,14 @@ The R package for MetaPCA module can be found \url{https://github.com/metaOmics/
 \item \textbf{Specify parameters} 
 
 There are very few parameter to be specify in metaPCA, as in Figure~\ref{fig:metaPCAHome}.
-Advanced options are not suggested to change unless the users are confident.
+Advanced options are not suggested to change unless the users are familiar with the algorithm.
 There are two methods for MetaPCA (at position {\color{red} (1)}). 
 SSC represent MetaPCA via sum of squared cosine (SSC) maximization.
 SV represent MetaPCA via sum of variance decomposition (SV).
 Details of SSC and SV can be found in metaPCA manuscript.
 SSC has better performance and is suggested.
 Dimension of meta-eigenvector matrix option (at position {\color{red} (2)}) allows user to specify dimension of the output meta-eigenvector matrix.
-The checkbox of ``dimension determined by variance quantile" is suggested to be selected (at position {\color{red} (3)}),
+The checkbox of ``dimension determined by variance quantile" is suggested to be selected (at position {\color{red} (3)}).
 If it is selected, the dimension size of each study's eigenvector matrix (SSC) is determined  by the pre-defined level of variance quantile 80\%.
 If the checkbox of ``sparsity encouraged" is selected (at position {\color{red} (4)}), users can perform metaPCA.
 After clicking on search for optimal tuning parameter button, the optimum tuning parameter will be returned to the box ``tuning parameter for sparsity", 
@@ -71,6 +71,7 @@ the dimension size of each study's eigenvector matrix (SSC) is determined  by th
 The input dataset is same as the input for MetaDE module.
 We used multi-study leukemia gene expression data as example.
 After performing merging of the three datasets and filter 50\% genes by mean and 50\% by variance, 1283 genes remained.
+Detailed descriptions of these studies can be found in Table~\ref{tab:realDataLeukemia}. 
 
 The result of metaPCA is shown in Figure~\ref{fig:metaPCAresult}.
 For each study, only first two studies are visualized.

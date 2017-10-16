@@ -76,6 +76,42 @@ For discrete data (e.g. RNA-seq count), available options include edgeR, DESeq2 
 Once all the above options are specified, users can click on ``Run" button to perform MetaDE analysis
 
 \end{steps}
+\textbf{Complete List of Options:} 
+
+\begin{enumerate}
+  \item Meta Method Type: Combining p-value, Combining effect size, Others.
+  \item Meta Method: Fisher, AW-Fisher, FEM, REM, Sum of Rank, Produce of Rank, multi-class correlation, Rank product. 
+  \item Mixed data type: selected if both count data and continuous data exist.
+  \item Response Type:
+   \begin{itemize}
+     \item Two class comparison, Multi-class comparison, Continuous outcome, Survival outcome.
+     \item Label Attribute: select the label name of the outcome.
+     \item Control Label \& Experimental Label: specify the case/control label for two-class comparison.
+    \end{itemize}
+   \item Individual Study Option:
+     \begin{itemize}
+     \item Setting individual study method
+     \item Setting individual study paired option
+    \end{itemize} 
+   \item Advanced Option (**Optional):
+     \begin{itemize}
+      \item Use complete options
+      \item Parametric
+      \item Covariate
+      \item Alternative hypothesis
+    \end{itemize} 
+    \item Run
+    \item Pathway Databases
+    \item Pathway Analysis Option:
+         \begin{itemize}
+      \item Pathway enrichment method
+      \item Pathway min gene size
+      \item Pathway max gene size
+    \end{itemize} 
+    \item Run Pathway Analysis
+\end{enumerate}
+
+
 
 
 \subsubsection{Results of Meta-analysis for differential expression}
@@ -83,6 +119,7 @@ Once all the above options are specified, users can click on ``Run" button to pe
 For the MetaDE model, we used multi-study leukemia gene expression data as example.
 After performing merging of the three datasets and filter 50\% genes by mean and 50\% by variance, 1283 genes remained.
 In this example we only compare two phenotypes: inv(16) and t(15;17).
+Detailed descriptions of these studies can be found in Table~\ref{tab:realDataLeukemia}. 
 Two main outputs from the first ``meta differential analysis" step in the procedure are shown in Figure \ref{fig:MetaDEresult1}. 
 Heatmap of DE genes is drawn on top after specifying the FDR cutoff for selection of DE genes and clicking on ``Plot DE Genes Heatmap". 
 The ``image size" can be adjusted by dragging the scroll bar. 
@@ -136,42 +173,6 @@ users can download the result by clicking on "Download Csv File" on the top left
 \label{fig:MetaDEresult2}
 \end{center}
 \end{figure}
-
-
-\textbf{Complete List of Options:} 
-
-\begin{enumerate}
-  \item Meta Method Type: Combining p-value, Combining effect size, Others.
-  \item Meta Method: Fisher, AW-Fisher, FEM, REM, Sum of Rank, Produce of Rank, multi-class correlation, Rank product. 
-  \item Mixed data type: selected if both count data and continuous data exist.
-  \item Response Type:
-   \begin{itemize}
-     \item Two class comparison, Multi-class comparison, Continuous outcome, Survival outcome.
-     \item Label Attribute: select the label name of the outcome.
-     \item Control Label \& Experimental Label: specify the case/control label for two-class comparison.
-    \end{itemize}
-   \item Individual Study Option:
-     \begin{itemize}
-     \item Setting individual study method
-     \item Setting individual study paired option
-    \end{itemize} 
-   \item Advanced Option (**Optional):
-     \begin{itemize}
-      \item Use complete options
-      \item Parametric
-      \item Covariate
-      \item Alternative hypothesis
-    \end{itemize} 
-    \item Run
-    \item Pathway Databases
-    \item Pathway Analysis Option:
-         \begin{itemize}
-      \item Pathway enrichment method
-      \item Pathway min gene size
-      \item Pathway max gene size
-    \end{itemize} 
-    \item Run Pathway Analysis
-\end{enumerate}
 
 
 

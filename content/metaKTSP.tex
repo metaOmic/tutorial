@@ -25,10 +25,10 @@ The necessay parameters include ``Number of top scoring pairs (K)" {\color{red} 
 \item \textbf{Building prediction model based on meta-analysis}
 
 First, we need to decide a method to select $K$ top scoring gene pairs from multiple studies (Figure \ref{fig:MetaPredictmainpage}). 
-Second, we need to provide the maximum number of top scoring pairs $K$ (algorithm will search from 1 up to $K$) and the number of cores for parallel computing. 
+Second, we need to provide the maximum number of top scoring pairs $K$ (algorithm will search from 1 up to $K$ with default $K = 29$) and the number of cores for parallel computing. 
 Next, we need to select only TWO labels to build the classification model. 
 In other words, if there exists more than two kinds of labels, we need to choose two from them. 
-Our interface will pop up all labels that are available. 
+If you click on {\color{red} (4)}, all available labels will pop up.
 Then, select the dataset as training data and testing respectively, 
 and click the "Train model" tab to run the MetaPredict program. 
 It may take a while to run the model.
@@ -40,6 +40,7 @@ A diagnostic plot ({\color{red} (2)} in Figure \ref{fig:MetaPredictresult}) is o
 The suggested value is shown in the plot as green line, which is decided by VO method we introduced in the original paper. Users may also decide $K$ on their own to predict the class label of testing data. 
 After deciding $K$, then hit the tab ``Predict'' (Figure \ref{fig:MetaPredictresult}). 
 Finally, a confusion matrix is output to show the prediction results ({\color{red} (1)} in Figure \ref{fig:MetaPredictresult}).
+The prediction results are also saved in the working direction.
 
 \begin{figure}[H]
 \begin{center}
@@ -71,6 +72,7 @@ Finally, a confusion matrix is output to show the prediction results ({\color{re
 We used multi-study leukemia gene expression data as example.
 After performing merging of the three datasets and filter 50\% genes by mean and 50\% by variance, 1283 genes remained.
 In this example we only compare two phenotypes: inv(16) and t(8;21). 
+Detailed descriptions of these studies can be found in Table~\ref{tab:realDataLeukemia}. 
 A confusion matrix is output to show the prediction results ({\color{red} (1)} in Figure \ref{fig:MetaPredictresult}).
-The prediction results are also saved in the folder.
+The prediction results are also saved in the working direction.
 
