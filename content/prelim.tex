@@ -69,6 +69,30 @@ The full instruction of how to install, start MetaOmics software suite is also a
 \item Shiny $>=$ 0.13.2
 \end{itemize}
 
+
+
+{\bf Note:}
+\begin{itemize}
+\item We recommend users to use R 3.3 to implement our tool. If you are using R 3.4 (newly released), you may encounter errors in installing dependencies of the modules. You can manually install the dependencies by running the following commands in R:
+
+\textit{install.packages(c(\textquotesingle GSA\textquotesingle, \textquotesingle combinat\textquotesingle, \textquotesingle   samr\textquotesingle   , \textquotesingle   survival\textquotesingle   , \textquotesingle   cluster\textquotesingle   , \textquotesingle   gplots\textquotesingle   , 
+  \textquotesingle   ggplot\textquotesingle   , \textquotesingle   irr\textquotesingle   , \textquotesingle   shape\textquotesingle   , \textquotesingle   snow\textquotesingle   , \textquotesingle   snowfall\textquotesingle   , \textquotesingle   graphics\textquotesingle   , \textquotesingle   doMC\textquotesingle   , \textquotesingle   PMA\textquotesingle   ))
+  }
+
+\textit{source(\textquotesingle   https://bioconductor.org/biocLite.R\textquotesingle   )  }
+
+\textit{biocLite(c(\textquotesingle   multtest\textquotesingle   , \textquotesingle   Biobase\textquotesingle   , \textquotesingle   edgeR\textquotesingle   , \textquotesingle   DESeq2\textquotesingle   , \textquotesingle   impute\textquotesingle   , 
+  \textquotesingle   limma\textquotesingle   , \textquotesingle   AnnotationDbi\textquotesingle   , \textquotesingle   ConsensusClusterPlus\textquotesingle   , \textquotesingle   genefilter\textquotesingle   , \textquotesingle   GSEABase\textquotesingle   , \textquotesingle   Rgraphviz\textquotesingle   ))
+  }
+
+\item For Windows, users need to run the following command in R to install the package \textquotesingle doMC\textquotesingle:
+
+\textit{install.packages(\textquotesingle doMC\textquotesingle, repos=\textquotesingle http://R-Forge.R-project.org\textquotesingle)}
+
+\end{itemize}
+
+ 
+
 \subsubsection{How to install the metaOmics software}
 \begin{itemize}
 \item At MetaOmics home page at \url{https://github.com/metaOmics/metaOmics}, clone the project by
@@ -82,9 +106,9 @@ or type in the following in command line:
 \begin{itemize}
 \item In R (suppose the application directory is metaOmics),
 
-\textit{install.packages(`shiny')}
+\textit{install.packages(\textquotesingle shiny\textquotesingle)}
 
-\textit{shiny::runApp(`metaOmics', port=9987, launch.browser=T)}
+\textit{shiny::runApp(\textquotesingle metaOmics\textquotesingle, port=9987, launch.browser=T)}
 \end{itemize}
 
 \subsection{MetaOmics setting page}
