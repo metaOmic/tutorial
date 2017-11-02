@@ -9,7 +9,7 @@
 \contentsline {subsection}{\numberline {2.3}MetaOmics setting page}{4}{subsection.2.3}
 \contentsline {subsection}{\numberline {2.4}Question and bug report}{5}{subsection.2.4}
 \contentsline {section}{\numberline {3}Prepare data}{5}{section.3}
-\contentsline {subsection}{\numberline {3.1}Raw data}{6}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.1}Raw data}{5}{subsection.3.1}
 \contentsline {subsection}{\numberline {3.2}Clinical data}{6}{subsection.3.2}
 \contentsline {subsection}{\numberline {3.3}Example data in the MetaOmics software}{6}{subsection.3.3}
 \contentsline {section}{\numberline {4}MetaPreprocess}{8}{section.4}
