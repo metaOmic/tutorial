@@ -30,17 +30,24 @@ Desmedt, C., Piette, F., Loi, S., Wang, Y., Lallemand, F., Haibe-Kains, B.,
   validation series.
 \newblock {\em Clinical cancer research}, 13(11):3207--3214.
 
-\bibitem[Fang et~al., 2016]{fang2016cpi}
-Fang, Z., Zeng, X., Lin, C.-W., Ma, T., and Tseng, G.~C. (2016).
-\newblock {\em Comparative Pathway Integrator: a framework of meta-analytic
+\bibitem[Fang et~al., 2017]{fang2016cpi}
+Fang, Z., Zeng, X., Lin, C.-W., Ma, T., and Tseng, G.~C. (2017).
+\newblock Comparative pathway integrator: a framework of meta-analytic
   integration of multiple transcriptomic studies for consensual and
-  differential pathway analysis}.
-\newblock PhD thesis, University of Pittsburgh.
+  differential pathway analysis.
+\newblock {\em In preparation}.
 
 \bibitem[Fisher, 1925]{fisher1925statistical}
 Fisher, R.~A. (1925).
 \newblock {\em Statistical methods for research workers}.
 \newblock Genesis Publishing Pvt Ltd.
+
+\bibitem[Hong et~al., 2006]{hong2006rankprod}
+Hong, F., Breitling, R., McEntee, C.~W., Wittner, B.~S., Nemhauser, J.~L., and
+  Chory, J. (2006).
+\newblock Rankprod: a bioconductor package for detecting differentially
+  expressed genes in meta-analysis.
+\newblock {\em Bioinformatics}, 22(22):2825--2827.
 
 \bibitem[Huo et~al., 2016]{huo2016meta}
 Huo, Z., Ding, Y., Liu, S., Oesterreich, S., and Tseng, G. (2016).
@@ -68,16 +75,17 @@ Kang, D.~D., Sibille, E., Kaminski, N., and Tseng, G.~C. (2012).
   for genomic meta-analysis.
 \newblock {\em Nucleic acids research}, 40(2):e15--e15.
 
-\bibitem[Kim et~al., tted]{kim2017metaPCA}
-Kim, S., Kang, D., Huo, Z., Park, Y., and Tseng, G.~C. (submitted).
+\bibitem[Kim et~al., 2017]{kim2017metaPCA}
+Kim, S., Kang, D., Huo, Z., Park, Y., and Tseng, G.~C. (2017).
 \newblock Meta-analytic principal component analysis in integrative omics
   application.
+\newblock {\em Bioinformatics. Accepted}.
 
 \bibitem[Kim et~al., 2016]{Kim2016}
 Kim, S., Lin, C.-W., and Tseng, G.~C. (2016).
 \newblock {MetaKTSP: A Meta-Analytic Top Scoring Pair Method for Robust
   Cross-Study Validation of Omics Prediction Analysis}.
-\newblock {\em Bioinformatics}, 32(March):btw115.
+\newblock {\em Bioinformatics}, 32(13):1966--73.
 
 \bibitem[Kohlmann et~al., 2008]{kohlmann2008international}
 Kohlmann, A., Kipps, T.~J., Rassenti, L.~Z., Downing, J.~R., Shurtleff, S.~A.,
@@ -98,8 +106,8 @@ Lapointe, J., Li, C., Higgins, J.~P., Van De~Rijn, M., Bair, E., Montgomery,
 \newblock {\em Proceedings of the National Academy of Sciences of the United
   States of America}, 101(3):811--816.
 
-\bibitem[Li et~al., 2011]{li2011adaptively}
-Li, J., Tseng, G.~C., et~al. (2011).
+\bibitem[Li and Tseng, 2011]{li2011adaptively}
+Li, J. and Tseng, G.~C. (2011).
 \newblock An adaptively weighted statistic for detecting differential gene
   expression when combining multiple transcriptomic studies.
 \newblock {\em The Annals of Applied Statistics}, 5(2A):994--1019.
@@ -136,12 +144,24 @@ Song, C. and Tseng, G.~C. (2014).
   meta-analysis.
 \newblock {\em The annals of applied statistics}, 8(2):777.
 
+\bibitem[Stouffer et~al., 1949]{stouffer1949american}
+Stouffer, S.~A., Suchman, E.~A., DeVinney, L.~C., Star, S.~A., and Williams~Jr,
+  R.~M. (1949).
+\newblock The american soldier: adjustment during army life.(studies in social
+  psychology in world war ii, vol. 1.).
+
 \bibitem[Tomlins et~al., 2006]{tomlins2006tmprss2}
 Tomlins, S.~A., Mehra, R., Rhodes, D.~R., Smith, L.~R., Roulston, D., Helgeson,
   B.~E., Cao, X., Wei, J.~T., Rubin, M.~A., Shah, R.~B., et~al. (2006).
 \newblock Tmprss2: Etv4 gene fusions define a third molecular subtype of
   prostate cancer.
 \newblock {\em Cancer research}, 66(7):3396--3400.
+
+\bibitem[Tseng et~al., 2012]{tseng2012comprehensive}
+Tseng, G.~C., Ghosh, D., and Feingold, E. (2012).
+\newblock Comprehensive literature review and statistical considerations for
+  microarray meta-analysis.
+\newblock {\em Nucleic acids research}, 40(9):3785--3799.
 
 \bibitem[Varambally et~al., 2005]{varambally2005integrative}
 Varambally, S., Yu, J., Laxman, B., Rhodes, D.~R., Mehra, R., Tomlins, S.~A.,
@@ -164,6 +184,14 @@ Wallace, T.~A., Prueitt, R.~L., Yi, M., Howe, T.~M., Gillespie, J.~W., Yfantis,
 \newblock Tumor immunobiological differences in prostate cancer between
   african-american and european-american men.
 \newblock {\em Cancer research}, 68(3):927--936.
+
+\bibitem[Wang et~al., 2012]{wang2012r}
+Wang, X., Kang, D.~D., Shen, K., Song, C., Lu, S., Chang, L.-C., Liao, S.~G.,
+  Huo, Z., Tang, S., Ding, Y., Kaminski, N., Sibille, E., Lin, Y., Li, J., and
+  Tseng, G.~C. (2012).
+\newblock An r package suite for microarray meta-analysis in quality control,
+  differentially expressed gene analysis and pathway enrichment detection.
+\newblock {\em Bioinformatics}, 28(19):2534--2536.
 
 \bibitem[Wang et~al., 2005]{wang2005gene}
 Wang, Y., Klijn, J.~G., Zhang, Y., Sieuwerts, A.~M., Look, M.~P., Yang, F.,
@@ -199,6 +227,6 @@ Zhu, L., Ding, Y., Chen, C.-Y., Wang, L., Huo, Z., Kim, S., Sotiriou, C.,
   Oesterreich, S., and Tseng, G.~C. (2016).
 \newblock Metadcn: meta-analysis framework for differential co-expression
   network detection with an application in breast cancer.
-\newblock {\em Bioinformatics}, page btw788.
+\newblock {\em Bioinformatics}, 33(8):1121--1129.
 
 \end{thebibliography}

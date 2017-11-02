@@ -11,7 +11,7 @@ The R package for MetaNetwork module can be found \url{https://github.com/metaOm
 \end{center}
 \end{figure}
 
-MetaNetwork includes three steps to get differentially co-expressed networks: generate network, search for basic modules, and assemble supermodules. The left screen is the control panel of step 1. The control panel for next step will show up after the previous step is done.
+MetaNetwork includes three steps to get differentially co-expressed networks: generate network, search for basic modules, and assemble supermodules. The left side is the control panel of step 1. The control panel for next step will show up after the previous step is done.
 
 \subsubsection{Procedure}
 
@@ -44,7 +44,7 @@ the screen will show a table of basic modules highly connected in cases but lose
 
 Search for basic modules can be time consuming, 
 especially if a large number of genes are used. 
-After this step is done, the screen will show a table of basic modules higher correlated in case and a table of basic modules higher correlated in control as Figure~\ref{fig:MetaNetworkBM}. 
+After this step is done, the screen will show a table of basic modules higher correlated in case and a table of basic modules higher correlated in control as in Figure~\ref{fig:MetaNetworkBM}. 
 
 \begin{figure}[H]
 \begin{center}
@@ -56,10 +56,10 @@ After this step is done, the screen will show a table of basic modules higher co
 
 \item \textbf{Assemble supermodules}
 
-After search for basic modules step is done, the control panel will be Figure~\ref{fig:MetaNetworkstep3}. The last step is to assemble supermodules. Users can decide the FDR cut-off to select basic modules for supermodule assembly. 
+After search for basic modules step is done, the control panel becomes that in Figure~\ref{fig:MetaNetworkstep3}. The last step is to assemble supermodules. Users can decide the FDR cut-off to select basic modules for supermodule assembly. 
 After clicking \textbf{Assemble supermodules} button, screen will show message indicating the algorithm is running to assemble supermodules.
-A table for basic modules, supermodules and their network visualization will be shown on the right panel of screen.
-MetaNetwork automatically creates files for top supermodules designed to input to a Cytoscape plug-in ``MetaDCNExplorer"
+A table for basic modules, supermodules and their network visualization will be shown on the right panel of the screen.
+MetaNetwork automatically creates files of top supermodules designed to input to a Cytoscape plug-in ``MetaDCNExplorer"
 (\url{http://tsenglab.biostat.pitt.edu/software.htm}) for improved visualization and dynamic exploration.
 
 \begin{figure}[H]
@@ -100,8 +100,8 @@ MetaNetwork automatically creates files for top supermodules designed to input t
 
 \subsubsection{Results}
 
-We used multi-study leukemia gene expression data as example.
-After performing merging of the three datasets and filter 80\% genes by mean and 80\% by variance, 206 genes remained.
+We used the leukemia data to demonstrate the MetaNetwork module.
+After merging the three datasets by filtering out 80\% of genes by mean and 80\% by variance, 206 genes remained.
 In this example we only compare two phenotypes: inv(16) and t(8;21).
 Detailed descriptions of these studies can be found in Table~\ref{tab:realDataLeukemia}. 
 In general, the MetaNetwork tool is time consuming for large datasets (for both network generation and search for basic modules steps).

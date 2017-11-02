@@ -1,57 +1,66 @@
 \section{Preliminaries}
 \subsection{Citing MetaOmics}
-MetaOmics software suite implements many meta-analytic methodologies from different authors. 
-Please cite appropriate papers if you use MeteOmics,
+MetaOmics software suite implements many meta-analysis methods from different authors. 
+Please cite appropriate papers if you use MetaOmics,
 by which the authors will receive professional credits for their work.
 
 \begin{itemize}
 
-\item MetaOmics software suite  itself can be cited as: 
+\item MetaOmics software suite itself can be cited as: 
 
 \begin{itemize}
-\item Ma et al. MetaOmics: Comprehensive Analysis Pipeline and Browser-based Software Suite for Transcriptomic Meta-Analysis.
+\item Ma, T., Huo, Z., Kuo, A., Zhu, L., Fang, Z., Zeng, X., Lin, C.-W., Liu, S., Wang, L., Rahman, T., Chang, L.-C., Kim, S., Li, J., Park, Y., Song, C., Oesterreich, S., Sibille, E. and Tseng, G. C. MetaOmics: Comprehensive Analysis Pipeline and Browser-based Software Suite for Transcriptomic Meta-Analysis.
+\end{itemize}
+
+\item Review, comparative papers and published R packages:
+\begin{itemize}
+\item \bibentry{tseng2012comprehensive}.
+\item \bibentry{chang2013meta}.
+\item \bibentry{wang2012r}.
 \end{itemize}
 
 \item MetaQC: 
 \begin{itemize}
-\item \bibentry{kang2012metaqc}.
+\item (MetaQC) \bibentry{kang2012metaqc}.
 \end{itemize}
 
 \item MetaDE: 
 \begin{itemize}
-\item \bibentry{fisher1925statistical}.
-\item \bibentry{li2011adaptively}.
-\item \bibentry{huo2017p}.
-\item \bibentry{choi2003combining}.
-\item \bibentry{song2014hypothesis}.
-\item \bibentry{lu2009biomarker}.
+\item (Fisher) \bibentry{fisher1925statistical}.
+\item (AW-Fisher) \bibentry{li2011adaptively}.
+\item (AW-Fisher) \bibentry{huo2017p}.
+\item (REM/FEM) \bibentry{choi2003combining}.
+\item (rOP) \bibentry{song2014hypothesis}.
+\item (minMCC) \bibentry{lu2009biomarker}.
+\item (Stouffer) \bibentry{stouffer1949american}
+\item (RankProd) \bibentry{hong2006rankprod} 
 \end{itemize}
 
 \item MetaPath: 
 \begin{itemize}
-\item \bibentry{shen2010meta}.
-\item \bibentry{fang2016cpi}.
+\item (MAPE) \bibentry{shen2010meta}.
+\item (CPI) \bibentry{fang2016cpi}.
 \end{itemize}
 
 \item MetaNetwork: 
 \begin{itemize}
-\item \bibentry{zhu2016metadcn}.
+\item (MetaDCN) \bibentry{zhu2016metadcn}.
 \end{itemize}
 
 \item MetaPredict: 
 \begin{itemize}
-\item \bibentry{Kim2016}.
+\item (MetaKTSP) \bibentry{Kim2016}.
 \end{itemize}
 
 \item MetaClust: 
 \begin{itemize}
-\item \bibentry{huo2016meta}.
+\item (MetaSparseKmeans) \bibentry{huo2016meta}.
 \end{itemize}
 
 \item MetaPCA: 
 
 \begin{itemize}
-\item \bibentry{kim2017metaPCA}.
+\item (MetaPCA) \bibentry{kim2017metaPCA}.
 \end{itemize}
 
 \end{itemize}
@@ -60,7 +69,7 @@ by which the authors will receive professional credits for their work.
 
 \subsection{How to start MetaOmics}
 
-The full instruction of how to install, start MetaOmics software suite is also available at \url{https://github.com/metaOmics/metaOmics}.
+The full instruction of how to install and start MetaOmics software suite is also available at \url{https://github.com/metaOmics/metaOmics}.
 
 
 \subsubsection{Requirement}
@@ -73,7 +82,7 @@ The full instruction of how to install, start MetaOmics software suite is also a
 
 {\bf Note:}
 \begin{itemize}
-\item We recommend users to use R 3.3 to implement our tool. If you are using R 3.4 (newly released), you may encounter errors in installing dependencies of the modules. You can manually install the dependencies by running the following commands in R:
+\item We recommend users to use R 3.3 to implement our tool. If you are using R 3.4 (released on 4/24/2017), you may encounter errors in installing dependencies of the modules. You can manually install the dependencies by running the following commands in R:
 
 \textit{install.packages(c(\textquotesingle GSA\textquotesingle, \textquotesingle combinat\textquotesingle, \textquotesingle   samr\textquotesingle   , \textquotesingle   survival\textquotesingle   , \textquotesingle   cluster\textquotesingle   , \textquotesingle   gplots\textquotesingle   , 
   \textquotesingle   ggplot2\textquotesingle   , \textquotesingle   irr\textquotesingle   , \textquotesingle   shape\textquotesingle   , \textquotesingle   snow\textquotesingle   , \textquotesingle   snowfall\textquotesingle   , \textquotesingle   igraph\textquotesingle   , \textquotesingle   doMC\textquotesingle   , \textquotesingle   PMA\textquotesingle   ))
@@ -93,7 +102,7 @@ The full instruction of how to install, start MetaOmics software suite is also a
 
  
 
-\subsubsection{How to install the metaOmics software}
+\subsubsection{How to install the software}
 \begin{itemize}
 \item At MetaOmics home page at \url{https://github.com/metaOmics/metaOmics}, clone the project by
 clicking on ``Clone or download" and extract to a working directory, 
@@ -102,7 +111,7 @@ or type in the following in command line:
 \textit{git clone} \url{https://github.com/metaOmic/metaOmics}
 \end{itemize}
 
-\subsubsection{How to start the metaOmics software}
+\subsubsection{How to start the software}
 \begin{itemize}
 \item In R (suppose the application directory is metaOmics),
 
@@ -115,25 +124,24 @@ or type in the following in command line:
 \label{sec:setting}
 After starting MetaOmics, 
 the first page is the MetaOmics setting page as shown in Figure~\ref{fig:GUIsetting}.  
-There are 4 tabs on top of the page (at position {\color{red} (1)}): Setting, Preprocessing, Saved Data and Toolsets.
-The welcome page is below the 4 tabs, where contains authors' information.
-Further below, the first header is the session information.
-The second header is Directory for Saving Output Files (at position {\color{red} (2)}).
+There are four tabs on the top of the page {\color{red} (1)} that will direct users to different pages of the software: Setting, Preprocessing, Saved Data and Toolsets.
+Below the tabs, there is a brief introduction of the software with additional information on the authors and maintainers.
+Further below, there are two headers: Session Information and Directory for Saving Output Files {\color{red} (2)}.
 By clicking ``$\ldots$",
-user can set default working directory, in which all the meta-analysis results will be saved.
-Users can view their current working directory on the top right corner (at position {\color{red} (3)}).
-The third header is Toolsets (at position {\color{red} (4)}),
-where user can click to install desired modules if the ``status" shows ``not installed".
-If the packages are installed, there is a checked installed status.
-Otherwise, users can install individual package by clicking install blue button.
-The installation progress may take a few minutes for each module.
+users can set default working directory, in which all the meta-analysis results will be saved.
+Users can view their current working directory on the top right corner {\color{red} (3)}.
+There is one more section with the header Toolsets {\color{red} (4)},
+where users can click the blue button to install the desired modules if the ``Status" shows ``not installed".
+If the packages are already installed, an icon of ``checked installed" will show up in ``Status".
+%Otherwise, users can install individual package by clicking install blue button.
+The installation progress may take up to a few minutes for each module.
 There will be a notification icon at the bottom right corner after the installation. 
-After the modules are installed to R, restart the MetaOmics software suite so that the Shiny application interface is updated with installed modules.
-Position {\color{red} (5)} shows the current active dataset, which will be introduced in Section~\ref{sec:procedure}~\ref{sec:active}. 
+After the modules are installed, restart the MetaOmics software suite so that the Shiny application interface is updated with installed modules.
+{\color{red} (5)} shows the current active dataset, which will be introduced in Section~\ref{sec:procedure}~\ref{sec:active}. 
  
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=1]{./figure/preprocessing/GUIsetting}
+\includegraphics[scale=0.9]{./figure/preprocessing/GUIsetting}
 \caption{MetaOmics software suite GUI setting page}
 \label{fig:GUIsetting}
 \end{center}
@@ -142,7 +150,7 @@ Position {\color{red} (5)} shows the current active dataset, which will be intro
 
 \subsection{Question and bug report}
 
-If you encounter errors or bugs, please report to maintainer Tianzhou Ma \url{tim28@pitt.edu}.
+If you encounter errors or bugs, please report to maintainer Tianzhou Ma $<$\url{tim28@pitt.edu}$>$.
 
 
  

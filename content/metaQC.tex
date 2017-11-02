@@ -15,13 +15,13 @@ There are three main options available for the ``MetaQC" package as shown in Fig
 
 \begin{steps}
 \item \textbf{Options:}
-Under the drop-down menu ``options" ({\color{red}(2)} in Figure~\ref{fig:MetaQCoption}),
+Under the drop-down menu ``options" {\color{red}(2)},
 users can specify whether to 
 
 \begin{itemize}
 \item perform gene filtering. Gene filtering is suggested to reduce computational cost. Once ``Yes" is chosen for gene filtering, users are further asked to specify the filtering cutoffs by mean or by variance like in merging step. In the demo example, the merged data have already had gene filtering, no further filtering is performed. 
-\item users need to specify the approach (either by raw p-value or FDR) and cutoff to select potentially DE genes needed in the computation of IQC, EQC, AQCg and CQCg.
-\item users need to specify the approach (either by raw p-value or FDR) and cutoff to select potentially enriched pathways needed in the computation of AQCp and CQCp.
+\item users need to specify the approach (either by raw p-value or adjusted p-value) and cutoff to select potentially DE genes needed in the computation of IQC, EQC, AQCg and CQCg.
+\item users need to specify the approach (either by raw p-value or adjusted p-value) and cutoff to select potentially enriched pathways needed in the computation of AQCp and CQCp.
 \end{itemize}
 
 \item \textbf{Advanced options:}
@@ -63,13 +63,13 @@ Once all the above options are specified, users can click on {\color{red}(4)} ``
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=0.7]{./figure/metaQC/metaQCresult.pdf}
+\includegraphics[scale=0.65]{./figure/metaQC/metaQCresult.pdf}
 \caption{``MetaQC" Results}
 \label{fig:MetaQCresult}
 \end{center}
 \end{figure}
 
-The test data used to demo the ``MetaQC" package here is merged from eight prostate cancer studies and 50\% mean filtering and 50\% variance filtering (1060 genes remained for the MetaQC analysis). 
+The test data used to demo the ``MetaQC" package here is merged from eight prostate cancer studies with 30\% of genes filtered out by mean and 30\% filtered out by variance (2077 genes remained for the MetaQC analysis). 
 Detailed descriptions of these studies can be found in Table~\ref{tab:realDataProstate}. 
 As shown in Figure \ref{fig:MetaQCresult}, there are {\color{red} (1)} a summary table of MetaQC results as well as {\color{red} (2)} a PCA biplot generated. The table includes seven columns, with the first six columns corresponding to the six quantitative quality control measures of all studies (a larger value indicates a better quality) and the seventh column is the rank summary statistics of all the six quality measures (a lower rank indicates a better quality). Users can download the full table as a csv file by clicking on ``Download Csv File". In addition to the tabular results, ``MetaQC" also generated a PCA biplot based on the six quality control measures, where the circled number is the study index and arrows indicate different measures. Generally, studies with larger SMR values, and studies more off from the other studies and a majority of the measures are considered lower quality. In this case, the 7th and the 8th studies have relatively poorer quality. Both tabular summary and biplot are automatically saved to the working directory. 
 

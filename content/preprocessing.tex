@@ -2,10 +2,10 @@
 
 \section{MetaPreprocess}
 
-In this section, we introduce how to upload your datasets into the MetaOmics software suite such that each functional modules can be utilized.
-The R package for MetaPreprocess module can be found \url{https://github.com/metaOmics/preproc}.
+In this section, we introduce how to upload the datasets into the MetaOmics software suite to run any of the analytical modules.
+The R package for MetaPreprocess module can be found at \url{https://github.com/metaOmics/preproc}.
 
-\subsection{Procedure}
+\subsection{Preprocessing page}
 \label{sec:procedure}
 
 \begin{steps}
@@ -19,19 +19,19 @@ The R package for MetaPreprocess module can be found \url{https://github.com/met
 \end{center}
 \end{figure}
 
-After clicking the Preprocessing tab as on top of Figure~\ref{fig:GUIpreprocessing},
-users can click on ``Choosing/Upload Expression Data" tab to upload individual expression data files or choose the existing saved data file as in Figure~\ref{fig:GUIpreview} (at position {\color{red} (1)}).
+In the Preprocessing page,
+users can click on ``Choosing/Upload Expression Data" tab to upload individual expression data file (i.e. data file from each study) or choose the existing saved data file as in Figure~\ref{fig:GUIpreprocessing} {\color{red} (1)}.
 The data should be prepared according to Section~\ref{sec:dataPrepare}.
-Users may optionally upload Clinical Data (at position {\color{red} (2)}), depending on their biological purposes.
-All MetaOmics modules except for MetaClust  require external clinical labels.
-Three example datasets are available within MetaOmics folder ``metaOmics/data/example/",
-but we will focus on the leukemia dataset (``metaOmics/data/example/") throughout this tutorial.
+Users may optionally upload Clinical Data {\color{red} (2)}, depending on their biological purposes.
+All MetaOmics modules except for MetaClust require external clinical labels.
+The three example datasets are available under MetaOmics folder ``metaOmics/data/example/",
+and we will mainly focus on the leukemia dataset (``metaOmics/data/example/") throughout this tutorial.
 
 \item \textbf{Preprocessing:}
 
-The MetaOmics software suite also provides handlers (at position {\color{red} (3)} of Figure~\ref{fig:GUIpreprocessing}) for feature annotation, missing value imputation and multiple probe same genes.
+The MetaOmics software suite also provides handlers {\color{red} (3)} for feature annotation, missing value imputation and multiple probe same genes.
 After the csv file for gene expression profile is specified, 
-users can preview their data on the right hand side of the page as Figure~\ref{fig:GUIpreview}.
+users can preview their data on the right side of the page.
 Several expression data parsing options (e.g. header, column separator, etc) are available on the left panel of Figure~\ref{fig:GUIpreview}.
 For preprocessing, 
 click on ``Annotate/Impute/Replicate" to 
@@ -42,8 +42,8 @@ click on ``Annotate/Impute/Replicate" to
 \end{enumerate}
 
 A complete introduction of these options is available at the end of this subsection.
-The right hand side of Figure~\ref{fig:GUIpreview} shows the summary statistics of uploaded data and preview of the data matrix.
-There is a search box such that the users can search their favorite genes.
+The right side of Figure~\ref{fig:GUIpreview} will show the summary statistics of uploaded data and preview of the data matrix.
+There is a search box where users can search for their interested genes.
 
 \begin{figure}[H]
 \begin{center}
@@ -55,22 +55,22 @@ There is a search box such that the users can search their favorite genes.
 
 \item \textbf{Save single study:}
 In the next step,
-specify the data type (``microarray" or ``RNA-seq", continuous or discreate) and study name,
+specify the data type (``microarray" or ``RNA-seq", continuous or discrete) and study name,
 click ``save single study".
-To upload RNA-seq data, the count data file and FPKM/TPM
+To upload RNA-seq data, the count data and FPKM/TPM
  data should be uploaded separately and saved using different names.
 
 \item \textbf{Upload datasets for all studies:}
-Repeat the steps above for all studies for meta-analysis.
-All uploaded studies are now available in the ``Saved Data" tab. 
+Repeat the steps above for all studies in the meta-analysis.
+All uploaded studies are now available in the ``Saved Data" page. 
  
 \end{steps}
 
-\subsection{Saved Data tab}
+\subsection{Saved Data page}
 \label{sec:saved}
 
 After uploading multiple studies with or without clinical data,
-users can turn to the Saved Data tab.
+users can turn to the Saved Data page.
 
 \begin{figure}[H]
 \begin{center}
@@ -83,25 +83,24 @@ users can turn to the Saved Data tab.
 
 \begin{steps}
 \item \textbf{Merging and Filtering:}
-All saved datasets from the previous step will be found in  Figure~\ref{fig:GUImerge} (at position {\color{red} (2)}).
+All saved datasets from the previous step will be found in  Figure~\ref{fig:GUImerge} {\color{red} (2)}.
 Users should select multiple datasets for further meta-analysis purpose.
 Users can filter out genes with low expression level (by default, mean expression lower than $30^{th}$ percentile)
 or low variance (by default, variance lower than $30^{th}$ percentile).
-Low expression genes can be non-expressed genes and low variance genes can be non-informative genes thus including them may contribute false positives.
-After specifying filtering criteria, enter Project Name and click on the ``Merge from Selected Datasets" (at position {\color{red} (1)}).
-A merged dataset (study type = ``multiple") will appear on the  ``List of saved data" panel (at position {\color{red} (3)}).
+Low expression genes can be non-expressed genes and low variance genes can be non-informative genes thus including them may contribute to false positives.
+After specifying filtering criteria, enter Project Name and click on the ``Merge from Selected Datasets" {\color{red} (1)}.
+A merged dataset (study type = ``multiple") will appear on the ``List of saved data" panel {\color{red} (3)}.
 Creating multiple projects with varying preprocessing criteria is useful.
 For example, the user can start from a project with harsh filtering criteria (maintain 500-1000 genes) and give a test run through all modules to save time.
 If successful, a larger project can be created and implemented.
-If users want to delete any dataset, they can click the red danger zone button and delete selected dataset.
+If users want to delete any dataset, they can click the red danger zone button and delete the selected datasets.
 
 \item \textbf{Make active dataset:}
 \label{sec:active}
-The last thing to do before using meta-analytic toolsets is to select merged data and click on 
+The last thing to do before using any of the meta-analytic modules is to select the merged data and click on 
 ``Make your dataset Active Dataset" - A big green button in Figure~\ref{fig:active}.
-Then the merged data becomes active study and shows up on the top right corner.
-The active dataset serves as the input for all other MetaOmics modules.
-
+Then the merged data will become the active study that shows up on the top right corner of the page.
+The active dataset serves as the input for all the analytical modules in MetaOmics.
 
 \end{steps}
 
@@ -136,19 +135,19 @@ The active dataset serves as the input for all other MetaOmics modules.
 \begin{itemize}
 \item Annotation: possible ID type can be Gene Symbol (default), Probe ID, reference sequence ID, entrez ID.
 \item Impute: if selected, missing value imputation will be performed by k-nearest neighbor algorithm.
-\item Replicate Handling: if selected, if the same gene symbol maps to multiple probes, the probe with the largest inner quantile range (IQR) will be selected
+\item Replicate Handling: if selected and if the same gene symbol maps to multiple probes, the probe with the largest interquartile range (IQR) will be selected
 as a representative for this gene.
 \end{itemize}
 \item Saved Data, Merging and Filtering Datasets:
 \begin{itemize}
-\item Mean: the criteria such that how many percent of genes will be filtered out based on sum of mean ranks (e.g. 0.3 represent 30\%).
-\item Variance: after the Mean filtering, the criteria such that how many percent of genes will be filtered out based on sum of variance ranks (e.g. 0.3 represent 30\%).
+\item Mean: the percentage of genes being filtered out based on the mean expression levels (e.g. 0.3 represent 30\%).
+\item Variance: the percentage of genes being filtered out based on the variance of expression (e.g. 0.3 represent 30\%).
 \item Study Name: dataset name after merging. This name will appear in the list of saved data table.
 \item Merge from Selected Datasets: perform filtering and merging.
 \end{itemize}
 \item Danger zone:
 \begin{itemize}
-\item Delete Selected Data: the selected data will be delete permanently if clicked, so please be cautious.
+\item Delete Selected Data: the selected data will be deleted permanently if clicked, so please be cautious.
 \end{itemize}
 
 \end{enumerate}

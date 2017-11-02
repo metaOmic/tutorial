@@ -2,9 +2,9 @@
 Dimension reduction is a popular data mining approach for transcriptomic analysis.
 MetaPCA aims to combine multiple omics datasets of identical or similar biological hypothesis and perform simultaneous dimensional reduction in all studies.
 The results show improved accuracy, robustness and better interpretation among all studies.
-By clicking toolsets and then metaPCA,
-users are directed to metaPCA home page as Figure~\ref{fig:metaPCAHome}.
-The R package for MetaPCA module can be found \url{https://github.com/metaOmics/metaPCA}.
+By clicking on Toolsets tab and then choose MetaPCA,
+users are directed to MetaPCA home page as Figure~\ref{fig:metaPCAHome}.
+The R package for MetaPCA module can be found at \url{https://github.com/metaOmics/metaPCA}.
 
 \begin{figure}[H]
 \begin{center}
@@ -20,33 +20,33 @@ The R package for MetaPCA module can be found \url{https://github.com/metaOmics/
 
 \item \textbf{Specify parameters} 
 
-There are very few parameter to be specify in metaPCA, as in Figure~\ref{fig:metaPCAHome}.
-Advanced options are not suggested to change unless the users are familiar with the algorithm.
+There are very few parameters need to be specified for MetaPCA, as in Figure~\ref{fig:metaPCAHome}.
+Advanced options are not suggested to be changed unless the users are familiar with the algorithm.
 There are two methods for MetaPCA (at position {\color{red} (1)}). 
 SSC represent MetaPCA via sum of squared cosine (SSC) maximization.
 SV represent MetaPCA via sum of variance decomposition (SV).
 Details of SSC and SV can be found in metaPCA manuscript.
 SSC has better performance and is suggested.
-Dimension of meta-eigenvector matrix option (at position {\color{red} (2)}) allows user to specify dimension of the output meta-eigenvector matrix.
-The checkbox of ``dimension determined by variance quantile" is suggested to be selected (at position {\color{red} (3)}).
-If it is selected, the dimension size of each study's eigenvector matrix (SSC) is determined  by the pre-defined level of variance quantile 80\%.
-If the checkbox of ``sparsity encouraged" is selected (at position {\color{red} (4)}), users can perform metaPCA.
+Dimension of meta-eigenvector matrix option {\color{red} (2)} allows users to specify dimension of the output meta-eigenvector matrix.
+The checkbox of ``dimension determined by variance quantile" is suggested to be checked {\color{red} (3)}.
+When checked, the dimension size of each study's eigenvector matrix (SSC) is determined  by the pre-defined level of variance quantile 80\%.
+If the checkbox of ``sparsity encouraged" is checked (at position {\color{red} (4)}), users can perform MetaPCA.
 After clicking on search for optimal tuning parameter button, the optimum tuning parameter will be returned to the box ``tuning parameter for sparsity", 
 which may be time consuming.
 
 \item \textbf{Perform metaPCA} 
 
-By clicking the ``Run meta PCA" button, MetaPCA will be performed.
+By clicking the ``Run meta PCA" button, the MetaPCA module will be performed.
 
 
 \end{steps}
 
 \textbf{Complete List of Options:} 
 \begin{enumerate}
-\item Common metaPCA parameters: 
+\item Common MetaPCA parameters: 
 
 \begin{itemize}
-\item Methods for metaPCA:
+\item Methods for MetaPCA:
 SSC represent MetaPCA via sum of squared cosine (SSC) maximization.
 SV represent MetaPCA via sum of variance decomposition (SV).
 \item Dimension of meta-eigenvector matrix: dimension of the output meta-eigenvector matrix.
@@ -60,7 +60,7 @@ the dimension size of each study's eigenvector matrix (SSC) is determined  by th
 \item  Min $\lambda$: lower bound of the searching space of $\lambda$.
 \item Max $\lambda$: upper bound of the searching space of $\lambda$.
 \item Step of of $\lambda$: stepsize of the searching space of $\lambda$.
-\item Tuning parameter for sparsity: Tuning parameter for sparsity that will be used for sparse metaPCA.
+\item Tuning parameter for sparsity: Tuning parameter for sparsity that will be used for sparse MetaPCA.
 \end{itemize}
 
 
@@ -68,15 +68,14 @@ the dimension size of each study's eigenvector matrix (SSC) is determined  by th
 
 
 \subsubsection{Results}
-The input dataset is same as the input for MetaDE module.
-We used multi-study leukemia gene expression data as example.
-After performing merging of the three datasets and filter 50\% genes by mean and 50\% by variance, 1283 genes remained.
+The input dataset is the same as the input for MetaDE module.
+%After performing merging of the three datasets and filter 50\% genes by mean and 50\% by variance, 1283 genes remained.
 Detailed descriptions of these studies can be found in Table~\ref{tab:realDataLeukemia}. 
 
-The result of metaPCA is shown in Figure~\ref{fig:metaPCAresult}.
+The result of MetaPCA is shown in Figure~\ref{fig:metaPCAresult}.
 For each study, only first two studies are visualized.
 The results show nice separations between three groups.
-These figures and eigenvectors from metaPCA are saved.
+These figures and eigenvectors are saved to the MetaPCA folder.
 
 \begin{figure}[H]
 \begin{center}

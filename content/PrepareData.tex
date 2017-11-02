@@ -1,15 +1,14 @@
 
 \section{Prepare data}
 \label{sec:dataPrepare}
-In this section, we will introduce how to prepare gene expression data matrix as well as the clinical file so that they are acceptable by the metaOmics software suite.
+In this section, we will introduce how to prepare gene expression data matrix as well as the clinical data files for the MetaOmics software suite.
 
 \subsection{Raw data}
 
-Gene expression matrix should be prepared as the example in Figure~\ref{fig:dataMicroarray}.
-First column should be feature ID (e.g. gene symbol) and the rest of the columns are samples.
-Note that the first column can also be other feature type (i.e. probe id, entrez ID).
-The first row is sample ID.
-Valid data type includes continuous data and count data.
+Gene expression matrix should be prepared as the example in Figure~\ref{fig:dataMicroarray}, saved in tab-delimited ``.txt" or comma-separated ``.csv" files.
+The first column corresponds to the feature ID (e.g. gene symbol, probe id or entrez ID) and the rest of columns are the expression data from all the samples.
+The first row contains the sample ID.
+Valid data types include continuous data (e.g. those from microarray or FPKM data from RNA-seq) and count data (e.g. those from RNA-seq).
 
 \begin{figure}[H]
 \begin{center}
@@ -22,8 +21,7 @@ Valid data type includes continuous data and count data.
 \subsection{Clinical data}
 
 Clinical data should be prepared as the example in Figure~\ref{fig:clinical}.
-First column should be sample ID and each row represents a sample.
-The rest of the columns are clinical information (e.g. case/control labels).
+The first column corresponds to the sample ID and the rest of columns contain the clinical information of the samples (e.g. case/control labels). Sample IDs of the clinical data (on rows) should be ordered in the same way as the gene expression data (on columns) to avoid any mismatch issues.  
 
 \begin{figure}[H]
 \begin{center}
@@ -33,15 +31,15 @@ The rest of the columns are clinical information (e.g. case/control labels).
 \end{center}
 \end{figure}
 
-\subsection{Example data with the MetaOmics software}
+\subsection{Example data in the MetaOmics software}
 
 
-We collected three multi-study examples as testing datasets for the MetaOmics software.
-Table~\ref{tab:realDataLeukemia} shows three gene expression profiles of acute myeloid leukemia (AML).
-Table~\ref{tab:realDataBreastCancer} shows four breast cancer gene expression profiles, in which the first study contains both count data and FPKM data.
-Table~\ref{tab:realDataProstate} shows gene expression profiles from eight prostate cancer datasets.
-The leukemia datasets are used to demonstrate MetaProcess, MetaDE, MetaPath, MetaNetwork, MetaPredict, MetaClust and MetaPCA.
-The prostate cancer datasets are used to demonstrate MetaQC.
+We collected three multi-study data as the example datasets for the MetaOmics software.
+Table~\ref{tab:realDataLeukemia} summarizes the first example dataset including three studies on acute myeloid leukemia (AML).
+Table~\ref{tab:realDataBreastCancer} summarizes the second example dataset including four studies on breast cancer, where the first study contains both count data and FPKM data (continuous).
+Table~\ref{tab:realDataProstate} summarizes the example dataset including eight studies on prostate cancer.
+The leukemia data is used to demonstrate MetaPreprocess, MetaDE, MetaPath, MetaNetwork, MetaPredict, MetaClust and MetaPCA.
+The prostate cancer data is used to demonstrate MetaQC.
 
 
 			\begin{table}[H]
