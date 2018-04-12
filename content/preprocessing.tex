@@ -37,7 +37,7 @@ For preprocessing,
 click on ``Annotate/Impute/Replicate" to 
 \begin{enumerate}
 \item annotate the probe ID/reference sequence ID/Entrez ID of individual dataset (choose Gene Symbol if the input data rows are already annotated).
-\item impute missing value using knn method.
+\item impute missing value using k-nearest neighbors (KNN) algorithm.
 \item handle the multiple probes matching to the same gene issue.
 \end{enumerate}
 
@@ -55,7 +55,7 @@ There is a search box where users can search for their genes of interest.
 
 \item \textbf{Save single study:}
 In the next step,
-specify the data type (``microarray" or ``RNA-seq", continuous or discrete) and study name,
+specify the data type (microarray data; RNA-seq FPKM/RPKM data; RNA-seq count data) and study name,
 click ``save single study".
 To upload RNA-seq data, the count data and FPKM/TPM
  data should be uploaded separately and saved using different names.
@@ -87,7 +87,7 @@ All saved datasets from the previous step will be found in  Figure~\ref{fig:GUIm
 Users should select multiple datasets for further meta-analysis purpose.
 Users can filter out genes with low expression level (by default, mean expression lower than $30^{th}$ percentile)
 or low variance (by default, variance lower than $30^{th}$ percentile).
-Low expression genes can be non-expressed genes and low variance genes can be non-informative genes thus including them may contribute to false positives.
+% a project with stringent filtering criteria keeps  500-1000 genes after the filtering step.
 After specifying filtering criteria, enter Project Name and click on the ``Merge from Selected Datasets" {\color{red} (1)}.
 A merged dataset (study type = ``multiple") will appear on the ``List of saved data" panel {\color{red} (3)}.
 Creating multiple projects with varying preprocessing criteria is useful.
@@ -134,7 +134,7 @@ The active dataset serves as the input for all the analytical modules in MetaOmi
 \item Annotation/impute/Replicate:
 \begin{itemize}
 \item Annotation: possible ID type can be Gene Symbol (default), Probe ID, reference sequence ID, entrez ID.
-\item Impute: if selected, missing value imputation will be performed by k-nearest neighbor algorithm.
+\item Impute: if selected, missing value imputation will be performed by k-nearest neighbor (KNN) algorithm.
 \item Replicate Handling: if selected and if the same gene symbol maps to multiple probes, the probe with the largest interquartile range (IQR) will be selected
 as a representative for this gene.
 \end{itemize}

@@ -8,7 +8,7 @@ In this section, we will introduce how to prepare gene expression data matrix as
 Gene expression matrix should be prepared as the example in Figure~\ref{fig:dataMicroarray}, saved in tab-delimited ``.txt" or comma-separated ``.csv" files.
 The first column corresponds to the feature ID (e.g. gene symbol, probe id or entrez ID) and the rest of columns are the expression data from all the samples.
 The first row contains the sample ID.
-Valid data types include continuous data (e.g. those from microarray or FPKM data from RNA-seq) and count data (e.g. those from RNA-seq).
+Valid data types include microarray data, RNA-seq FPKM/RPKM data, RNA-seq count data.
 
 \begin{figure}[H]
 \begin{center}
@@ -38,8 +38,8 @@ We collected three multi-study data as the example datasets for the MetaOmics so
 Table~\ref{tab:realDataLeukemia} summarizes the first example dataset including three studies on acute myeloid leukemia (AML).
 Table~\ref{tab:realDataBreastCancer} summarizes the second example dataset including four studies on breast cancer, where the first study contains both count data and FPKM data (continuous).
 Table~\ref{tab:realDataProstate} summarizes the example dataset including eight studies on prostate cancer.
-The leukemia data is used to demonstrate MetaPreprocess, MetaDE, MetaPath, MetaNetwork, MetaPredict, MetaClust and MetaPCA.
-The prostate cancer data is used to demonstrate MetaQC.
+The leukemia data is used to demonstrate MetaPreprocess and all the seven analytical modules (MetaQC, MetaDE, MetaPath, MetaNetwork, MetaPredict, MetaClust and MetaPCA). 
+Considering that all the three studies in leukemia data are of high quality, we further run MetaQC on the prostate cancer data with eight studies to show its capability to identify low quality studies. 
 
 
 			\begin{table}[H]
@@ -91,20 +91,20 @@ Study 4 & \cite{ivshina2006genetic} & continuous & 245 & 211/34\\
 			\begin{table}[H]
 			\caption{Multi-study prostate cancer dataset information. Eight prostate cancer gene expression profiles were measured by different microarray platforms.}						
 			\centering
-	\begin{tabular}{c c c c c}
+	\begin{tabular}{c c c c c c }
 	\hline
 	\hline
-\multirow{2}*{Study}   & \multirow{2}*{source}   & \multirow{2}*{\# samples}  & \# samples by label  & \multirow{2}*{\# genes}\\
-& & & Normal/Primary& \\
+\multirow{2}*{study}   & \multirow{2}*{source}  &  \multirow{2}*{\# platform} & \multirow{2}*{\# samples}  & \# samples by label  & \multirow{2}*{\# genes}\\
+& & & &  Normal/Primary& \\
 	\hline
-	Study 1 & \cite{welsh2001analysis} &  34 & 9/25 & 8798 \\
-	Study 2 & \cite{yu2004gene} &  146 & 81/65 & 8799 \\
-	Study 3 & \cite{lapointe2004gene} &  103 & 41/62 & 13579 \\
-	Study 4 & \cite{varambally2005integrative} &  13 & 6/7 & 19738 \\
-	Study 5 & \cite{singh2002gene}  &  102 & 50/52  & 8799 \\
-	Study 6 & \cite{wallace2008tumor} &  89 & 20/69 & 12689  \\
-	Study 7 & \cite{nanni2006epithelial} &  30 & 7/23  & 12689 \\
-	Study 8 & \cite{tomlins2006tmprss2} &  57 & 27/30 & 9703   \\
+	Study 1 & \cite{welsh2001analysis} &  HG-U95A & 34 & 9/25 & 8798 \\
+	Study 2 & \cite{yu2004gene} & HG-U95Av2 & 146 & 81/65 & 8799 \\
+	Study 3 & \cite{lapointe2004gene} & cDNA & 103 & 41/62 & 13579 \\
+	Study 4 & \cite{varambally2005integrative} & HG-U133 Plus 2  &  13 & 6/7 & 19738 \\
+	Study 5 & \cite{singh2002gene}  & HG-U95Av2 & 102 & 50/52  & 8799 \\
+	Study 6 & \cite{wallace2008tumor} & HG-U133A2 & 89 & 20/69 & 12689  \\
+	Study 7 & \cite{nanni2006epithelial} & HG-U133A & 30 & 7/23  & 12689 \\
+	Study 8 & \cite{tomlins2006tmprss2} & cDNA &  57 & 27/30 & 9703   \\
 	\hline
 	\hline
 	\label{tab:prostate}

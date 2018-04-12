@@ -5,6 +5,8 @@ The R package for MetaDE module can be found at \url{https://github.com/metaOmic
 After obtaining DE genes from the differential expression analysis, 
 users can further perform post-hoc pathway enrichment analysis using the declared DE genes.
 In the two subsections below we will go over how to perform (1) differential expression analysis and (2) pathway enrichment analysis based on (1).
+Note that 
+MetaDE involves many sophisticated meta-analysis methods, please refer to the MetaOmics paper (Supplementary information: Box S3) for a detailed description of each method. 
 
 \subsubsection{Procedure of differential expression analysis}
 
@@ -79,7 +81,7 @@ Once all the above options are specified, users can click on ``Run" button to pe
 
 \begin{enumerate}
   \item Meta Method Type: Combining p-value, Combining effect size, Others.
-  \item Meta Method: Fisher, AW-Fisher, FEM, REM, Sum of Rank, Produce of Rank, multi-class correlation, Rank product. 
+  \item Meta Method: Fisher, AW-Fisher, FEM, REM, Sum of Rank, Product of Rank, multi-class correlation 
   \item Mixed data type: selected if both count data and continuous data exist.
   \item Response Type:
    \begin{itemize}
