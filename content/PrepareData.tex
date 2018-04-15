@@ -12,7 +12,7 @@ Valid data types include microarray data, RNA-seq FPKM/RPKM data, RNA-seq count 
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=0.5]{./figure/dataPreparation/dataMicroarray}
+\includegraphics[scale=0.5]{./figure/dataPreparation/dataMicroarray_wide}
 \caption{A example input data format}
 \label{fig:dataMicroarray}
 \end{center}
@@ -20,21 +20,22 @@ Valid data types include microarray data, RNA-seq FPKM/RPKM data, RNA-seq count 
 
 \subsection{Clinical data}
 
-Clinical data should be prepared as the example in Figure~\ref{fig:clinical}.
-The first column corresponds to the sample ID and the rest of columns contain the clinical information of the samples (e.g. case/control labels). Sample IDs of the clinical data (on rows) should be ordered in the same way as the gene expression data (on columns) to avoid any mismatch issues.  
-
-\begin{figure}[H]
-\begin{center}
+\begin{wrapfigure}{r}{0.5\textwidth}
 \includegraphics[scale=0.5]{./figure/dataPreparation/clinicalData}
 \caption{A example clinical data format}
 \label{fig:clinical}
-\end{center}
-\end{figure}
+\end{wrapfigure}
+
+Clinical data should be prepared as the example in Figure~\ref{fig:clinical}.
+The first column corresponds to the sample ID and the rest of columns contain the clinical information of the samples (e.g. case/control labels). Sample IDs of the clinical data (on rows) should be ordered in the same way as the gene expression data (on columns) to avoid any mismatch issues.  
+
 
 \subsection{Example data in the MetaOmics software}
 
 
-We collected three multi-study data as the example datasets for the MetaOmics software.
+We collected three multi-cohort example datasets for the MetaOmics software, 
+including an acute myeloid leukemia (AML) example,
+a breast cancer (BRCA) example and a prostate cancer example.
 Table~\ref{tab:realDataLeukemia} summarizes the first example dataset including three studies on acute myeloid leukemia (AML).
 Table~\ref{tab:realDataBreastCancer} summarizes the second example dataset including four studies on breast cancer, where the first study contains both count data and FPKM data (continuous).
 Table~\ref{tab:realDataProstate} summarizes the example dataset including eight studies on prostate cancer.

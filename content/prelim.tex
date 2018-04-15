@@ -113,31 +113,54 @@ or type in the following in command line:
 
 \subsubsection{How to start the software}
 \begin{itemize}
-\item In R (suppose the application directory is metaOmics),
+\item Run from docker image.
+
+\begin{enumerate}
+\item Install docker (if not installed).
+\item In terminal
+
+\textit{docker pull metaomics/app}
+
+\textit{docker run --rm --name metaOmics -p 3838:3838 metaomics/app}
+
+\end{enumerate}
+
+
+\item Run from R.
+
+\begin{enumerate}
+\item Open R 
+\item Set the working directory such that metaOmics folder included. 
 
 \textit{install.packages(\textquotesingle shiny\textquotesingle)}
 
 \textit{shiny::runApp(\textquotesingle metaOmics\textquotesingle, port=9987, launch.browser=T)}
+\end{enumerate}
+
+
+
 \end{itemize}
 
 \subsection{MetaOmics setting page}
 \label{sec:setting}
 After starting MetaOmics, 
 the first page is the MetaOmics setting page as shown in Figure~\ref{fig:GUIsetting}.  
-There are four tabs on the top of the page {\color{red} (1)} that will direct users to different pages of the software: Setting, Preprocessing, Saved Data and Toolsets.
-Below the tabs, there is a brief introduction of the software with additional information about the authors and maintainers.
-Further below, there are two headers: Session Information and Directory for Saving Output Files {\color{red} (2)}.
+There are four tabs on the top of the page (See Figure~\ref{fig:GUIsetting} {\color{red} (1)}), 
+which will direct users to specific functional modules of the software including Setting, Preprocessing, Saved Data and Toolsets.
+Below these tabs is a {\bf Welcome to MetaOmics} section, which briefly introduce the software and other information about the authors and maintainers.
+Further below, there are two sections: Session Information and Directory for Saving Output Files (See Figure~\ref{fig:GUIsetting} {\color{red} (2)}).
 By clicking ``$\ldots$",
-users can set default working directory, in which all the meta-analysis results will be saved.
-Users can view their current working directory on the top right corner {\color{red} (3)}.
-There is one more section with the header Toolsets {\color{red} (4)},
+users can set working directory, in which all the meta-analysis results will be saved.
+The current working directory is displayed on the top right corner (See Figure~\ref{fig:GUIsetting} {\color{red} (3)}).
+There is one more section with the header Toolsets (See Figure~\ref{fig:GUIsetting} {\color{red} (4)}),
 where users can click the blue button to install the desired modules if the ``Status" shows ``not installed".
 If the packages are already installed, an icon of ``checked installed" will show up in ``Status".
 %Otherwise, users can install individual package by clicking install blue button.
 The installation progress may take up to a few minutes for each module.
-There will be a notification icon at the bottom right corner after the installation. 
-After the modules are installed, restart the MetaOmics software suite so that the Shiny application interface is updated with installed modules.
-{\color{red} (5)} shows the current active dataset, which will be introduced in Section~\ref{sec:procedure}~\ref{sec:active}. 
+A notification icon will pop up at the bottom right corner upon finishing the installation process. 
+After the modules are installed, restart the MetaOmics software suite so that the Shiny application interface is updated with the installed modules.
+(See Figure~\ref{fig:GUIsetting} {\color{red} (5)}) shows the current active dataset, 
+which is introduced in Section~\ref{sec:procedure}~\ref{sec:active}. 
  
 \begin{figure}[H]
 \begin{center}

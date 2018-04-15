@@ -13,32 +13,36 @@ The R package for MetaPreprocess module can be found at \url{https://github.com/
 
 \begin{figure}[!htbp]
 \begin{center}
-\includegraphics[scale=0.7]{./figure/preprocessing/GUIpreprocessing}
+\includegraphics[scale=1]{./figure/preprocessing/GUIpreprocessing}
 \caption{GUI Preprocessing page}
 \label{fig:GUIpreprocessing}
 \end{center}
 \end{figure}
 
 In the Preprocessing page,
-users can click on ``Choosing/Upload Expression Data" tab to upload individual expression data file (i.e. data file from each study) or choose the existing saved data file as in Figure~\ref{fig:GUIpreprocessing} {\color{red} (1)}.
+by clicking on``Choosing/Upload Expression Data" tab,
+users can upload individual expression data file (i.e. data file from each study) 
+or choose the existing saved data file as in Figure~\ref{fig:GUIpreprocessing} {\color{red} (1)}.
 The data should be prepared according to Section~\ref{sec:dataPrepare}.
-Users may optionally upload Clinical Data {\color{red} (2)}, depending on their biological purposes.
-All MetaOmics modules except for MetaClust require external clinical labels.
-The three example datasets are available under MetaOmics folder ``metaOmics/data/example/",
-and we will mainly focus on the leukemia dataset (``metaOmics/data/example/") throughout this tutorial.
+Users may optionally upload Clinical Data (See Figure~\ref{fig:GUIpreprocessing} {\color{red} (2)}), 
+depending on their biological purposes.
+Note that all MetaOmics modules require external clinical labels except for MetaClust module.
+The three example datasets are available under MetaOmics folder ``/metaOmics/data/example/",
+and we will mainly focus on the leukemia dataset (``/metaOmics/data/example/") throughout this tutorial.
 
 \item \textbf{Preprocessing:}
 
-The MetaOmics software suite also provides handlers {\color{red} (3)} for feature annotation, missing value imputation and multiple probe same genes.
+The MetaOmics software suite also provides handlers (See Figure~\ref{fig:GUIpreprocessing} {\color{red} (3)}) for feature annotation, 
+missing value imputation and multiple probes reduction for the same gene.
 After the csv file for gene expression profile is specified, 
 users can preview their data on the right side of the page.
 Several expression data parsing options (e.g. header, column separator, etc) are available on the left panel of Figure~\ref{fig:GUIpreview}.
 For preprocessing, 
 click on ``Annotate/Impute/Replicate" to 
 \begin{enumerate}
-\item annotate the probe ID/reference sequence ID/Entrez ID of individual dataset (choose Gene Symbol if the input data rows are already annotated).
-\item impute missing value using k-nearest neighbors (KNN) algorithm.
-\item handle the multiple probes matching to the same gene issue.
+\item Annotate the probe ID/reference sequence ID/Entrez ID of individual dataset (choose Gene Symbol if the input data rows are already annotated).
+\item Impute missing value using k-nearest neighbors (KNN) algorithm.
+\item Handle the multiple probes matching to the same gene issue.
 \end{enumerate}
 
 A complete introduction of these options is available at the end of this subsection.
