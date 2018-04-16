@@ -5,13 +5,18 @@ The R package for MetaNetwork module can be found \url{https://github.com/metaOm
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=0.9]{./figure/MetaNetwork/MetaNetworkHome}
+\includegraphics[scale=0.5]{./figure/MetaNetwork/MetaNetworkHome}
 \caption{MetaNetwork homepage}
 \label{fig:MetaNetworkHome}
 \end{center}
 \end{figure}
 
-MetaNetwork includes three steps to get differentially co-expressed networks: generate network, search for basic modules, and assemble supermodules. The left side is the control panel of step 1. The control panel for next step will show up after the previous step is done.
+MetaNetwork includes three steps to get differentially co-expressed networks,
+including (1) generate network, (2) search for basic modules, and (3) assemble super-modules. 
+The left side of Figure~\ref{fig:MetaNetworkHome} is the control panel of step 1. 
+The control panel for step 2 and step 3 will show up after the previous step is done.
+The explanation of the complete list of all options are in Section~\ref{sec:completeList_MetaNetwork}
+
 
 \subsubsection{Procedure}
 
@@ -22,24 +27,19 @@ In this step, the network for permuted data will also be generated.
 Users need to select case and control names, the number of permutations, and edge cut-off which determines the proportion of edges to be kept in the network. 
 After clicking \textbf{Generate Network} button, screen will show message indicating the algorithm is running to generate network.
 
-
 \item \textbf{Search for basic modules}
 
 The next step is to search basic modules.
 Advanced options (recommended not to change) include the number of repeats used for each initial seed modules (``Number of repeat"),
 the maximim Monte Carlo steps for simulated annealing algorithm (MC Steps),
 and the maximum pairwise Jaccard index allowed for basic modules (Jaccard Cutoff), as shown in Figure~\ref{fig:MetaNetworkstep2}.
-After clicking \textbf{Search for basic modules} button, screen will show message indicating the algorithm is running to search for basic modules.
-This step is computationally demanding depending on gene size.
+Explanation of these technical terms are omitted in this tutorial,
+but readers can refer to \cite{zhu2016metadcn} for details.
+After clicking \textbf{Search for basic modules} button in Figure~\ref{fig:MetaNetworkstep2}, 
+screen will show message indicating the algorithm is running to search for basic modules.
+This step is computationally demanding depending the on gene size.
 After this step is done,
 the screen will show a table of basic modules highly connected in cases but lose connections in control and vice versa.
-
-{\color{red}
-To do:
-
-Probably need to explain the term such as "maximim Monte Carlo
-steps for simulated annealing algorithm (MC Steps)", "Jaccard index" (see General comments below), or we can say sth like please refer to Li et al. for more detailed interpretation.
-}
 
 
 \begin{figure}[H]
@@ -82,30 +82,6 @@ MetaNetwork automatically creates files of top supermodules designed to input to
 
 \end{steps}
 
-\textbf{Complete List of Options:} 
-\begin{enumerate}
-\item Generate Network:
-\begin{itemize}
-\item Case Name: specify case group label.
-\item Control Name: specify control group label.
-\item Number of Permutations: the number of permutations used for generating network.
-\item Edge Cutoff: edge cut-off  determines the proportion of edges to be kept in the network.
-\end{itemize}
-
-\item Search for basic modules:
-\begin{itemize}
-\item Number to repeat:  the number of repeats used for each initial seed modules.
-\item MC steps:  the maximum Monte Carlo steps for simulated annealing algorithm.
-\item Jaccard cutoff: maximum pairwise Jaccard index allowed for basic modules.
-\end{itemize}
-\item Assemble supermodules:
-
-\begin{itemize}
-\item FDR cutoff:  FDR cut-off to select basic modules for supermodule assembly.
-\end{itemize}
-
-\end{enumerate}
-
 \subsubsection{Results}
 
 We used the leukemia data to demonstrate the MetaNetwork module.
@@ -117,41 +93,17 @@ We generally suggest users to carefully restrict the number of genes (e.g. less 
 By default, all outputs and several interim RData files will be automatically saved to the folder named ``MetaNetwork" under the working directory specified in Section~\ref{sec:setting}.
 
 
-\textbf{Generate Network}
-
-After the generate network step is done, no output will show up in the screen. Instead, a message box will show up indicating several Rdata files are saved in the MetaNetwork folder, including:
-
-\begin{itemize}
-\item AdjacencyMatrices.Rdata is a list of adjacency matrices for case and control subjects in each study. The order is study1 case, study2 case, \dots, studyS case, study1 control, study2 control, \dots, studyS control.
-\item CorrelationMatrices.Rdata is a list of correlation matrices for case and control subjects in each study.
-\item AdjacencyMatricesPermutationP.Rdata is a list of adjacency matrices for permuted datasets in permutation P.
-\end{itemize}
-
-\textbf{Search for basic modules}
-
-{\color{red}
-Suggested to shorten (or just summarize into one to two sentences) the description of RData and csv files, which involve too many terms. 
-}
-
-After this step is done, the screen will show a table of basic modules higher correlated in case and a table of basic modules higher correlated in control as Figure~\ref{fig:MetaNetworkBM}. Meanwhile, several files will be saved in the MetaNetwork folder:
-
-\begin{itemize}
- \item basic\_modules\_summary\_forward\_weight\_w1.csv is a summary table of basic modules that are higher correlated in case, detected using w1.
- \item basic\_modules\_summary\_backward\_weight\_w1.csv is a summary table of basic modules that are higher correlated in control, detected using w1.
-\item threshold\_forward.csv is a table of number of basic modules higher correlated in case, detected under different w1 values and FDR cut-offs.
-\item threshold\_backward.csv is a table of number of basic modules higher correlated in control, detected under different w1 values and FDR cut-offs.
- \item permutation\_energy\_forward\_P.Rdata is a list of energies for basic modules that higher correlated in case, detected from permutation P.
-  \item permutation\_energy\_backward\_P.Rdata is a list of energies for basic modules that higher correlated in control, detected from permutation P.
-\end{itemize}
 
 
-\textbf{Assemble supermodules}
-
-After supermodule assembly is done, screen will show a table of supermodules (Figure~\ref{fig:MetaNetworksuper}). Users can also select basic modules to plot (Figure~\ref{fig:MetaNetworkBMplot}). Meanwhile several files will be saved in the folder MetaNetwork:
-\begin{itemize}
-\item module\_assembly\_summary\_weight\_w1.csv is summary table of supermodules using w1 weight.
-\item CytoscapeFiles folder contains the input files for Cytoscape to visualize supermodules.
-\end{itemize}
+After the  \textbf{Generate Network} step is done, 
+no output will show up in the screen. Instead, a message box will show up indicating several Rdata files are saved in the MetaNetwork folder. 
+After \textbf{Search for basic modules} step is done, the screen will show a table of basic modules higher correlated in case or control, 
+as in Figure~\ref{fig:MetaNetworkBM}. 
+After \textbf{Assemble supermodules} assembly is done, screen will show a table of supermodules (Figure~\ref{fig:MetaNetworksuper}). 
+Users can also select basic modules to plot (Figure~\ref{fig:MetaNetworkBMplot}). 
+Meanwhile several files will be saved in the folder MetaNetwork
+Detailed explanation of all these intermediate files are described in Section~\ref{sec:completeList_MetaNetwork}.
+Note that because the module searching procedure is a random process, users may not be able to repeat the exact same results each time.
 
 \begin{figure}[H]
 \begin{center}
@@ -164,7 +116,9 @@ After supermodule assembly is done, screen will show a table of supermodules (Fi
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=0.7]{./figure/MetaNetwork/MetaNetworkBMplot.png}
-\caption{MetaNetwork select basic modules to plot}
+\caption{MetaNetwork select basic modules to plot.
+Each dot represents a gene.
+An edge represents the two genes are highly correlated.}
 \label{fig:MetaNetworkBMplot}
 \end{center}
 \end{figure}

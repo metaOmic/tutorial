@@ -31,6 +31,7 @@ About tab {\color{red} (2)} which includes basic introduction of MetaClust, Two 
 Starting with multiple studies, 
 we could run MetaSparseKmeans {\color{red} (5)} with pre-specified number of clusters ($K$) and gene selection tuning parameter (Wbounds).
 If you are not sure about what are good $K$ and Wbounds, please try Tune $K$ {\color{red} (3)} and Tune Wbounds {\color{red} (4)} panel.
+A complete list of options is available in Section~\ref{sec:completeList_MetaClust}.
 
 \begin{steps}
 
@@ -47,6 +48,7 @@ If you are not sure about what are good $K$ and Wbounds, please try Tune $K$ {\c
 If the users are not sure what is the number of clusters,
 they can start to use the Tune $K$ panel as in Figure~\ref{fig:metaClusttuneK}.
 Gap statistics will be used to get optimal $K$ for each individual study.
+Detailed description about Gap statistics can be found \cite{tibshirani2001estimating}.
 Users need to specify maximum number of $K$ {\color{red} (1)}, which the algorithm will search number of studies from 1 to $K$.
 Studies to be tuned can be selected {\color{red} (4)}.
 In advanced options, users can further specify number of top variance genes to be included and number of permutations.
@@ -60,11 +62,6 @@ A good $K$ is selected such that the $\mbox{Gap}_k$ is maximized or stabilized a
 From the figure, $K=3$ is preferred since the gap statistics from all three studies become flat {\color{red} (5)}.
 
 \item \textbf{Tune Wbounds:} 
-
-{
-\color{red}
-Again, probably need to use a table to briefly introduce e.g. "Gap statistics"
-}
 
 Wbounds directly control number of features selected by metaClust.
 A larger number of Wbounds will result in more number of selected genes.
@@ -104,47 +101,11 @@ as in Figure~\ref{fig:mskmRes}.
 In advanced options (for which users are not suggested to change if they are not familiar with the algorithm), 
 There are three clustering matching methods {\color{red} (3)}: Exhaustive, linear, MCMC.
 Exhaustive is suggested if the data is not large.
-Linear will perform smart search and get solution much faster than Exhaustive, 
-but it may yield less accurate results with very low probability.
-MCMC is suitable if many studies and clusters are provided.
+Currently, only Exhaustive search method is implemented.
 Adjust sample size checkbox (at position {\color{red} (5)}) allows users to adjust sample size effect.
 After number of clusters and Wbounds are specified,
 users can click on Run meta sparse $K$ means and obtain results as Figure~\ref{fig:mskmRes}.
-
 \end{steps}
-
-\textbf{Complete List of Options:} 
-\begin{enumerate}
-\item Tune $K$ (** optional)
-\begin{itemize}
-\item Maximum of $K$: the maximum number of $K$ that gap statistics will step through.
-\item Top percentage by larger variance: Top percentage p\% by larger variance means that we will use top p\% larger variance genes to perform gap statistics.
-\item Number of permutaitons: Number of permutation is number of bootstrap samples for gap statistics.
-\item Select studies to be tuned: Studies to be tuned.
-\item Tune $K$: start tuning $K$.
-\end{itemize}
-\item Tune Wbounds (** optional)
-\begin{itemize}
-\item Number of clusters for tuning wbounds: number of clusters for tuning Wbounds.
-\item Iterations: Iterations are number of bootstrap samples for gap statistics.
-\item Minimum of wbounds: lower bound of the searching space of Wbounds.
-\item Maximum of wbounds: upper bound of the searching space of Wbounds.
-\item Step of of wbounds: stepsize of the searching space of Wbounds.
-\item Tune wbounds: start tuning wbounds.
-\end{itemize}
-\item Run Meta Sparse $K$-means: 
-\begin{itemize}
-\item Number of clusters: number of clusters. Can be tuned from Tune $K$ option.
-\item Wbounds: control numbers of selected features. Can be tuned from Tune Wbounds option.
-\item Methods for MetaClust: Exhaustive is suggested if the data is not large.
-Linear will perform smart search and get solution much faster than Exhaustive, 
-but it may yield less accuracy.
-MCMC might by very time consuming.
-\item Adjust sample size: adjust sample size effect.
-\item Run meta sparse Kmeans: start tuning wbounds.
-\end{itemize}
-
-\end{enumerate}
 
 
 \subsubsection{Results}

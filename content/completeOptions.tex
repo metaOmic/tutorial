@@ -1,0 +1,281 @@
+\section{Complete list of options}
+\label{sec:completeList}
+
+\subsection*{MetaPreprocess}
+\label{sec:completeList_MetaPreprocess}
+
+
+\textbf{Complete List of Options:} 
+\begin{enumerate}
+\item Upload expression data:
+\begin{itemize}
+\item Header: should be checked if the input file includes a header.
+\item Separator: indicates what type of separator is used for the data matrix.
+\item Quote for String: how is the data matrix quoted.
+\item Log transforming data: if you want to perform log transformation of your data, check yes.
+\item Use existing datasets: if you want to load a dataset previously uploaded, you can choose from the checklist.
+\end{itemize}
+\item Annotation/impute/Replicate:
+\begin{itemize}
+\item Annotation: possible ID type can be Gene Symbol (default), Probe ID, reference sequence ID, entrez ID.
+\item Impute: if selected, missing value imputation will be performed by k-nearest neighbor (KNN) algorithm.
+\item Replicate Handling: if selected and if the same gene symbol maps to multiple probes, the probe with the largest interquartile range (IQR) will be selected
+as a representative for this gene.
+\end{itemize}
+\item Saved Data, Merging and Filtering Datasets:
+\begin{itemize}
+\item Mean: the percentage of genes being filtered out based on the mean expression levels (e.g. 0.3 represent 30\%).
+\item Variance: the percentage of genes being filtered out based on the variance of expression (e.g. 0.3 represent 30\%).
+\item Study Name: dataset name after merging. This name will appear in the list of saved data table.
+\item Merge from Selected Datasets: perform filtering and merging.
+\end{itemize}
+\item Danger zone:
+\begin{itemize}
+\item Delete Selected Data: the selected data will be deleted permanently if clicked, so please be cautious.
+\end{itemize}
+
+\end{enumerate}
+
+\subsection{MetaQC}
+\label{sec:completeList_MetaQC}
+
+\textbf{Complete List of Options:} 
+
+\begin{enumerate}
+  \item Options
+  \begin{itemize}
+     \item Perform gene filtering: If yes: cut lowest percentile by mean, cut lowest percentile by variance. 
+     \item Use adjusted p-value for selecting DE genes
+     \item p-value cutoff for selecting DE genes
+     \item Use adjusted p-value for selecting pathways
+     \item p-value cutoff for selecting pathways
+    \end{itemize}
+   \item Advanced Option (**Optional): 
+        \begin{itemize}
+      \item Pathway min gene size
+      \item Pathway max gene size
+      \item Number of permutations
+    \end{itemize} 
+  \item Run MetaQC Analysis
+\end{enumerate}
+   
+\subsection{MetaDE}
+\label{sec:completeList_MetaDE}
+
+\textbf{Complete List of Options:} 
+
+\begin{enumerate}
+  \item Meta Method Type: Combining p-value, Combining effect size, Others.
+  \item Meta Method: Fisher, AW-Fisher, FEM, REM, Sum of Rank, Product of Rank, multi-class correlation 
+  \item Mixed data type: selected if both count data and continuous data exist.
+  \item Response Type:
+   \begin{itemize}
+     \item Two class comparison, Multi-class comparison, Continuous outcome, Survival outcome.
+     \item Label Attribute: select the label name of the outcome.
+     \item Control Label \& Experimental Label: specify the case/control label for two-class comparison.
+    \end{itemize}
+   \item Individual Study Option:
+     \begin{itemize}
+     \item Setting individual study method
+     \item Setting individual study paired option
+    \end{itemize} 
+   \item Advanced Option (**Optional):
+     \begin{itemize}
+      \item Use complete options
+      \item Parametric
+      \item Covariate
+      \item Alternative hypothesis
+    \end{itemize} 
+    \item Run
+    \item Pathway Databases
+    \item Pathway Analysis Option:
+         \begin{itemize}
+      \item Pathway enrichment method
+      \item Pathway min gene size
+      \item Pathway max gene size
+    \end{itemize} 
+    \item Run Pathway Analysis
+\end{enumerate}
+
+
+
+\subsection{MetaPath}
+\label{sec:completeList_MetaPath}
+
+
+\textbf{Complete List of Options:} 
+
+\begin{enumerate}
+  \item mixed data types: whether the input data is a mixture of count data and continuous data.
+  \item Response Type:
+   \begin{itemize}
+     \item Two class comparison, Multi-class comparison, Continuous outcome, Survival outcome.
+     \item Label Attribute: select the label name of the outcome.
+     \item Control Label \& Experimental Label: specify the case/control label for two-class comparison.
+    \end{itemize}
+   \item Individual Study Option:
+     \begin{itemize}
+     \item Setting individual study method
+     \item Setting individual study paired option
+    \end{itemize} 
+   \item Advanced Option (**Optional):
+     \begin{itemize}
+      \item Covariate
+      \item Alternative hypothesis
+    \end{itemize} 
+    \item Pathway Databases
+    \item Pathway Analysis Option:
+         \begin{itemize}
+       \item Software
+      \item Pathway enrichment method
+      \item Pathway min gene size
+      \item Pathway max gene size
+    \end{itemize} 
+    \item Run Pathway Analysis
+    \item Pathway Clustering Diagnostics
+    \item Get Clustering Result
+\end{enumerate}
+
+
+\subsection{MetaNetwork}
+\label{sec:completeList_MetaNetwork}
+
+\textbf{Complete List of Options:} 
+\begin{enumerate}
+\item Generate Network:
+\begin{itemize}
+\item Case Name: specify case group label.
+\item Control Name: specify control group label.
+\item Number of Permutations: the number of permutations used for generating network.
+\item Edge Cutoff: edge cut-off  determines the proportion of edges to be kept in the network.
+\end{itemize}
+
+\item Search for basic modules:
+\begin{itemize}
+\item Number to repeat:  the number of repeats used for each initial seed modules.
+\item MC steps:  the maximum Monte Carlo steps for simulated annealing algorithm.
+\item Jaccard cutoff: maximum pairwise Jaccard index allowed for basic modules.
+\end{itemize}
+\item Assemble supermodules:
+
+\begin{itemize}
+\item FDR cutoff:  FDR cut-off to select basic modules for supermodule assembly.
+\end{itemize}
+\end{enumerate}
+
+\textbf{Intermediate results}
+ 
+\begin{enumerate}
+\item Generate Network
+\begin{itemize}
+\item AdjacencyMatrices.Rdata is a list of adjacency matrices for case and control subjects in each study. The order is study1 case, study2 case, \dots, studyS case, study1 control, study2 control, \dots, studyS control.
+\item CorrelationMatrices.Rdata is a list of correlation matrices for case and control subjects in each study.
+\item AdjacencyMatricesPermutationP.Rdata is a list of adjacency matrices for permuted datasets in permutation P.
+\end{itemize}
+
+\item Search for basic modules
+
+\begin{itemize}
+ \item basic\_modules\_summary\_forward\_weight\_w1.csv is a summary table of basic modules that are higher correlated in case, detected using w1.
+ \item basic\_modules\_summary\_backward\_weight\_w1.csv is a summary table of basic modules that are higher correlated in control, detected using w1.
+\item threshold\_forward.csv is a table of number of basic modules higher correlated in case, detected under different w1 values and FDR cut-offs.
+\item threshold\_backward.csv is a table of number of basic modules higher correlated in control, detected under different w1 values and FDR cut-offs.
+ \item permutation\_energy\_forward\_P.Rdata is a list of energies for basic modules that higher correlated in case, detected from permutation P.
+  \item permutation\_energy\_backward\_P.Rdata is a list of energies for basic modules that higher correlated in control, detected from permutation P.
+\end{itemize}
+
+\item Assemble supermodules
+ \begin{itemize}
+\item module\_assembly\_summary\_weight\_w1.csv is summary table of supermodules using w1 weight.
+\item CytoscapeFiles folder contains the input files for Cytoscape to visualize supermodules.
+\end{itemize}
+
+\end{enumerate}
+ 
+
+\subsection{MetaPredict}
+\label{sec:completeList_MetaPredict}
+
+
+
+\textbf{Complete List of Options:} 
+\begin{enumerate}
+\item Model trainings: 
+\begin{itemize}
+\item Methods for MetaPredict: include Mean score, Fisher, Stouffer.
+\item Max number of top scoring pairs (K)
+\item Number of cores for parallel computing
+\item TWO labels to cluster: labels for MetaPredict
+\item Please select studies for training
+\item Please select studies for testing
+\item Number of top scoring pairs (K): Number of top scoring pairs (K) for prediction.
+\end{itemize}
+
+\end{enumerate}
+
+
+\subsection{MetaClust}
+\label{sec:completeList_MetaClust}
+
+
+\textbf{Complete List of Options:} 
+\begin{enumerate}
+\item Tune $K$ (** optional)
+\begin{itemize}
+\item Maximum of $K$: the maximum number of $K$ that gap statistics will step through.
+\item Top percentage by larger variance: Top percentage p\% by larger variance means that we will use top p\% larger variance genes to perform gap statistics.
+\item Number of permutaitons: Number of permutation is number of bootstrap samples for gap statistics.
+\item Select studies to be tuned: Studies to be tuned.
+\item Tune $K$: start tuning $K$.
+\end{itemize}
+\item Tune Wbounds (** optional)
+\begin{itemize}
+\item Number of clusters for tuning wbounds: number of clusters for tuning Wbounds.
+\item Iterations: Iterations are number of bootstrap samples for gap statistics.
+\item Minimum of wbounds: lower bound of the searching space of Wbounds.
+\item Maximum of wbounds: upper bound of the searching space of Wbounds.
+\item Step of of wbounds: stepsize of the searching space of Wbounds.
+\item Tune wbounds: start tuning wbounds.
+\end{itemize}
+\item Run Meta Sparse $K$-means: 
+\begin{itemize}
+\item Number of clusters: number of clusters. Can be tuned from Tune $K$ option.
+\item Wbounds: control numbers of selected features. Can be tuned from Tune Wbounds option.
+\item Methods for MetaClust: Exhaustive is suggested if the data is not large.
+Linear will perform smart search and get solution much faster than Exhaustive, 
+but it may yield less accuracy.
+MCMC might by very time consuming.
+\item Adjust sample size: adjust sample size effect.
+\item Run meta sparse Kmeans: start tuning wbounds.
+\end{itemize}
+
+\end{enumerate}
+
+\subsection{MetaPCA}
+\label{sec:completeList_MetaPCA}
+
+\textbf{Complete List of Options:} 
+\begin{enumerate}
+\item Common MetaPCA parameters: 
+
+\begin{itemize}
+\item Methods for MetaPCA:
+SSC represent MetaPCA via sum of squared cosine (SSC) maximization.
+SV represent MetaPCA via sum of variance decomposition (SV).
+\item Dimension of meta-eigenvector matrix: dimension of the output meta-eigenvector matrix.
+\item Dimension determined by variance quantile:
+the dimension size of each study's eigenvector matrix (SSC) is determined  by the pre-defined level of variance quantile 80\%.
+\end{itemize}
+
+\item If sparsity encouraged is selected, there are extra tuning parameter ($\lambda$) that may need to be tuned.
+
+\begin{itemize}
+\item  Min $\lambda$: lower bound of the searching space of $\lambda$.
+\item Max $\lambda$: upper bound of the searching space of $\lambda$.
+\item Step of of $\lambda$: stepsize of the searching space of $\lambda$.
+\item Tuning parameter for sparsity: Tuning parameter for sparsity that will be used for sparse MetaPCA.
+\end{itemize}
+
+
+\end{enumerate}
+

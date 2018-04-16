@@ -16,6 +16,9 @@ The R package for MetaPCA module can be found at \url{https://github.com/metaOmi
 
 \subsubsection{Procedure}
 
+The procedure how to use metaPCA is described below.
+A complete list of options is available in Section~\ref{sec:completeList_MetaPCA}.
+
 \begin{steps}
 
 \item \textbf{Specify parameters} 
@@ -40,31 +43,6 @@ By clicking the ``Run meta PCA" button, the MetaPCA module will be performed.
 
 
 \end{steps}
-
-\textbf{Complete List of Options:} 
-\begin{enumerate}
-\item Common MetaPCA parameters: 
-
-\begin{itemize}
-\item Methods for MetaPCA:
-SSC represent MetaPCA via sum of squared cosine (SSC) maximization.
-SV represent MetaPCA via sum of variance decomposition (SV).
-\item Dimension of meta-eigenvector matrix: dimension of the output meta-eigenvector matrix.
-\item Dimension determined by variance quantile:
-the dimension size of each study's eigenvector matrix (SSC) is determined  by the pre-defined level of variance quantile 80\%.
-\end{itemize}
-
-\item If sparsity encouraged is selected, there are extra tuning parameter ($\lambda$) that may need to be tuned.
-
-\begin{itemize}
-\item  Min $\lambda$: lower bound of the searching space of $\lambda$.
-\item Max $\lambda$: upper bound of the searching space of $\lambda$.
-\item Step of of $\lambda$: stepsize of the searching space of $\lambda$.
-\item Tuning parameter for sparsity: Tuning parameter for sparsity that will be used for sparse MetaPCA.
-\end{itemize}
-
-
-\end{enumerate}
 
 
 \subsubsection{Results}

@@ -9,7 +9,7 @@ The R package for MetaPredict module can be found at \url{https://github.com/met
 The homepage for MetaPredict is shown in Figure \ref{fig:MetaPredictmainpage}.
 Under advanced options,  there are 1 drop-down menu (``Methods for MetaPredict") {\color{red} (1)}, three number entries (``Max number of top scoring pairs (K)" {\color{red} (2)}, ``Number of cores for parallel computing" {\color{red} (3)}.
 These will be introduced shortly but the users are not suggested to change them unless they know about the algorithm.
-The necessay parameters include ``Number of top scoring pairs (K)" {\color{red} (7)}), three character entries (``Please select TWO labels to cluster" {\color{red} (4)}, ``Please select studies for training" {\color{red} (5)}, and ``Please select studies for testing") {\color{red} (6)} , and two excuting tabs ("Train model" and "Predict"). 
+The necessay parameters include ``Number of top scoring pairs (K)" {\color{red} (7)}), three character entries (``Please select TWO labels to cluster" {\color{red} (4)}, ``Please select studies for training" {\color{red} (5)}, and ``Please select studies for testing") {\color{red} (6)} , and two excuting tabs (``Train model" and ``Predict"). 
 
 \subsubsection{Procedure}
 
@@ -26,7 +26,7 @@ The necessay parameters include ``Number of top scoring pairs (K)" {\color{red} 
 
 First, we need to decide a method to select $K$ top scoring gene pairs from multiple studies (Figure \ref{fig:MetaPredictmainpage}). 
 Second, we need to provide the maximum number of top scoring pairs $K$ (algorithm will search from 1 up to $K$ with default $K = 29$) and the number of cores for parallel computing. 
-Next, we need to select only TWO labels to build the classification model. 
+Next, we need to select only two labels to build the classification model. 
 In other words, if there exists more than two kinds of labels, we need to choose two from them. 
 If you click on {\color{red} (4)}, all available labels will pop up.
 Then, select the dataset as training data and testing respectively, 
@@ -35,37 +35,41 @@ It may take a while to run the model.
 
 \item \textbf{MetaPredict prediction}
 
-After the model training is finished, on the top right it will show up a ``Gene pair table" ({\color{red} (1)} in Figure \ref{fig:MetaPredictresult}) which present the top $K$ gene pairs statistics. 
-A diagnostic plot ({\color{red} (2)} in Figure \ref{fig:MetaPredictresult}) is outputted to assist users decide which $K$ to use in the final prediction model. 
+After the model training is finished, on the top right it will show up a ``Gene pair table" (Figure \ref{fig:MetaPredictresult1}) which present the top $K$ gene pairs statistics. 
+A diagnostic plot (Figure \ref{fig:MetaPredictresult2}) is outputted to assist users decide which $K$ to use in the final prediction model. 
 The suggested value is shown in the plot as green line, which is decided by VO method we introduced in the original paper. Users may also decide $K$ on their own to predict the class label of testing data. 
-After deciding $K$, then hit the button ``Predict'' (Figure \ref{fig:MetaPredictresult}). 
-Finally, a confusion matrix is output to show the prediction results ({\color{red} (1)} in Figure \ref{fig:MetaPredictresult}).
+After deciding $K$, then hit the button ``Predict'' (Figure \ref{fig:MetaPredictmainpage}). 
+Finally, a confusion matrix is output to show the prediction results (Figure \ref{fig:MetaPredictresult3}).
 The prediction results are also saved in the working directory.
-
-\begin{figure}[H]
-\begin{center}
-\includegraphics[scale=0.5]{./figure/MetaPredict/MetaPredictresult.pdf}
-\caption{Results for MetaPredict.}
-\label{fig:MetaPredictresult}
-\end{center}
-\end{figure}
+A complete list of options is available in Section~\ref{sec:completeList_MetaPredict}.
 
 \end{steps}
 
-\textbf{Complete List of Options:} 
-\begin{enumerate}
-\item Model trainings: 
-\begin{itemize}
-\item Methods for MetaPredict: include Mean score, Fisher, Stouffer.
-\item Max number of top scoring pairs (K)
-\item Number of cores for parallel computing
-\item TWO labels to cluster: labels for MetaPredict
-\item Please select studies for training
-\item Please select studies for testing
-\item Number of top scoring pairs (K): Number of top scoring pairs (K) for prediction.
-\end{itemize}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.5]{./figure/MetaPredict/MetaPredictresult1.png}
+\caption{Results for MetaPredict, top predictive pairs of genes.}
+\label{fig:MetaPredictresult1}
+\end{center}
+\end{figure}
 
-\end{enumerate}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.5]{./figure/MetaPredict/MetaPredictresult2.png}
+\caption{Results for MetaPredict, select $K$ by maximizing variance optimizaiton (VO) t statistics.}
+\label{fig:MetaPredictresult2}
+\end{center}
+\end{figure}
+
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.5]{./figure/MetaPredict/MetaPredictresult3.png}
+\caption{Confusion table for MetaPredict testing cohort.}
+\label{fig:MetaPredictresult3}
+\end{center}
+\end{figure}
 
 \subsubsection{Results}
 
@@ -73,6 +77,8 @@ We used the leukemia data to demonstrate the MetaNetwork module.
 After merging the three datasets by filtering 50\% of genes by mean and 50\% by variance, 1283 genes remained.
 In this example we only compare two phenotypes: inv(16) and t(8;21). 
 Detailed descriptions of these studies can be found in Table~\ref{tab:realDataLeukemia}. 
-A confusion matrix is output to show the prediction results ({\color{red} (1)} in Figure \ref{fig:MetaPredictresult}).
+The top predictive pairs of genes are available in Figure~\ref{fig:MetaPredictresult1}.
+The diagnostic plot showing the optimum $K$ is shown in Figure~\ref{fig:MetaPredictresult2}.
+A confusion matrix is output  showing the prediction results is in Figure \ref{fig:MetaPredictresult3}).
 The prediction results are also saved in the working directory.
 
