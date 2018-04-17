@@ -33,6 +33,9 @@ The next step is to search basic modules.
 Advanced options (recommended not to change) include the number of repeats used for each initial seed modules (``Number of repeat"),
 the maximim Monte Carlo steps for simulated annealing algorithm (MC Steps),
 and the maximum pairwise Jaccard index allowed for basic modules (Jaccard Cutoff), as shown in Figure~\ref{fig:MetaNetworkstep2}.
+If two repeats from Monte Carlo simulation are very similar (with Jaccard index greater than the cutoff),
+only one repeat with stable configuration (low energy) will be kept in the analysis.
+Users are suggested to use the default options.
 Explanation of these technical terms are omitted in this tutorial,
 but readers can refer to \cite{zhu2016metadcn} for details.
 After clicking \textbf{Search for basic modules} button in Figure~\ref{fig:MetaNetworkstep2}, 
@@ -57,7 +60,12 @@ After this step is done, the screen will show a table of basic modules higher co
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=0.9]{./figure/MetaNetwork/MetaNetworkBM}
-\caption{MetaNetwork output from search for basic modules step}
+\caption{MetaNetwork output from search for basic modules step.
+These modules higher correlated in case are labeled as H1, $\ldots$, H6,
+and the modules higher correlated in control are labeled as L1, $\ldots$, L6.
+The component number and repeat index are for intermediate indexes.
+The actual gene sets are listed for each basic module.
+}
 \label{fig:MetaNetworkBM}
 \end{center}
 \end{figure}
@@ -101,14 +109,17 @@ After \textbf{Search for basic modules} step is done, the screen will show a tab
 as in Figure~\ref{fig:MetaNetworkBM}. 
 After \textbf{Assemble supermodules} assembly is done, screen will show a table of supermodules (Figure~\ref{fig:MetaNetworksuper}). 
 Users can also select basic modules to plot (Figure~\ref{fig:MetaNetworkBMplot}). 
-Meanwhile several files will be saved in the folder MetaNetwork
+Meanwhile several files will be saved in the MetaNetwork folder.
 Detailed explanation of all these intermediate files are described in Section~\ref{sec:completeList_MetaNetwork}.
-Note that because the module searching procedure is a random process, users may not be able to repeat the exact same results each time.
 
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=0.7]{./figure/MetaNetwork/MetaNetworksuper.png}
-\caption{MetaNetwork supermodules table}
+\caption{MetaNetwork supermodules table.
+The second column shows the pathway size.
+The third and fourth column show the p-value and q-value of detected supermodule.
+The last column is the size of the super module.
+}
 \label{fig:MetaNetworksuper}
 \end{center}
 \end{figure}
@@ -118,7 +129,10 @@ Note that because the module searching procedure is a random process, users may 
 \includegraphics[scale=0.7]{./figure/MetaNetwork/MetaNetworkBMplot.png}
 \caption{MetaNetwork select basic modules to plot.
 Each dot represents a gene.
-An edge represents the two genes are highly correlated.}
+An edge represents the two genes are highly correlated.
+The network density is marked on top of each network.
+The top three modules show higher correlation in inv(16) and the bottom three modules show lower correlation in t(8:21).
+}
 \label{fig:MetaNetworkBMplot}
 \end{center}
 \end{figure}

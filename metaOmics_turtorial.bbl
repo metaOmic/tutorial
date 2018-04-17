@@ -170,6 +170,12 @@ Tomlins, S.~A., Mehra, R., Rhodes, D.~R., Smith, L.~R., Roulston, D., Helgeson,
   prostate cancer.
 \newblock {\em Cancer research}, 66(7):3396--3400.
 
+\bibitem[Troyanskaya et~al., 2001]{troyanskaya2001missing}
+Troyanskaya, O., Cantor, M., Sherlock, G., Brown, P., Hastie, T., Tibshirani,
+  R., Botstein, D., and Altman, R.~B. (2001).
+\newblock Missing value estimation methods for dna microarrays.
+\newblock {\em Bioinformatics}, 17(6):520--525.
+
 \bibitem[Tseng et~al., 2012]{tseng2012comprehensive}
 Tseng, G.~C., Ghosh, D., and Feingold, E. (2012).
 \newblock Comprehensive literature review and statistical considerations for

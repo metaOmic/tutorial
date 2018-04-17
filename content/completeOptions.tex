@@ -155,6 +155,8 @@ as a representative for this gene.
 \item Number to repeat:  the number of repeats used for each initial seed modules.
 \item MC steps:  the maximum Monte Carlo steps for simulated annealing algorithm.
 \item Jaccard cutoff: maximum pairwise Jaccard index allowed for basic modules.
+If two repeats from Monte Carlo simulation are very similar (with Jaccard index greater than the cutoff),
+only one repeat with stable configuration (low energy) will be kept in the analysis.
 \end{itemize}
 \item Assemble supermodules:
 

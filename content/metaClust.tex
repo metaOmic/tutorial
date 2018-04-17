@@ -19,15 +19,11 @@ The R package for MetaClust module can be found at \url{https://github.com/metaO
 
 \subsubsection{Procedure}
 
-{
-\color{red}
-Again, probably need to use a table to briefly introduce e.g. "Gap statistics"
-}
 
 Figure~\ref{fig:metaClustHome} shows the home page of MetaClust.
 On the top left panel users can see the data summary Table {\color{red} (1)}.
 Below there are four tabs. 
-About tab {\color{red} (2)} which includes basic introduction of MetaClust, Two tabs for Tune K as well as Wbounds, and the Run Meta Sparse K-Means tab.
+About tab {\color{red} (2)} which includes basic introduction of MetaClust, Two tabs for Tune K as well as Wbounds, and the Run Meta Sparse $K$-Means tab.
 Starting with multiple studies, 
 we could run MetaSparseKmeans {\color{red} (5)} with pre-specified number of clusters ($K$) and gene selection tuning parameter (Wbounds).
 If you are not sure about what are good $K$ and Wbounds, please try Tune $K$ {\color{red} (3)} and Tune Wbounds {\color{red} (4)} panel.
@@ -40,7 +36,9 @@ A complete list of options is available in Section~\ref{sec:completeList_MetaClu
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=0.5]{./figure/metaClust/tuneK.pdf}
-\caption{Tuning parameter selection for number of clusters}
+\caption{Tuning parameter selection for number of clusters.
+A good $K$ is selected such that the $\mbox{Gap}_k$ is maximized or stabilized across all studies.
+}
 \label{fig:metaClusttuneK}
 \end{center}
 \end{figure}
@@ -70,7 +68,11 @@ they can start to use the Tune Wbounds panel as in Figure~\ref{fig:metaClusttune
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=0.5]{./figure/metaClust/tuneW.pdf}
-\caption{Wbound selection}
+\caption{Wbound selection.
+The Wbound controls the number of selected features.
+A larger Wbound will yield a larger number of selected genes.
+The optimum Wbound is selected when the gap statistics is maximized.
+}
 \label{fig:metaClusttuneW}
 \end{center}
 \end{figure}
@@ -94,7 +96,14 @@ as in Figure~\ref{fig:mskmRes}.
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=0.5]{./figure/metaClust/mskmRes.pdf}
-\caption{Result for MetaClust}
+\caption{Result for MetaClust.
+The heatmap on top show the gene expression profiles of the three studies with selected features.
+Each row represents a gene and each column represents a sample.
+Note that the three studies share a common set of genes.
+The color bar on top of the heatmap represent the subtype labels.
+For instance, the black bar on top of each studies represents subtype one for all studies.
+Clearly, we could see distinct subtype patterns and these patterns are consistent across studies.
+}
 \label{fig:mskmRes}
 \end{center}
 \end{figure}

@@ -7,9 +7,15 @@ prediction accuracy as compared to single study analysis.
 The R package for MetaPredict module can be found at \url{https://github.com/metaOmics/MetaPredict}.
 
 The homepage for MetaPredict is shown in Figure \ref{fig:MetaPredictmainpage}.
-Under advanced options,  there are 1 drop-down menu (``Methods for MetaPredict") {\color{red} (1)}, three number entries (``Max number of top scoring pairs (K)" {\color{red} (2)}, ``Number of cores for parallel computing" {\color{red} (3)}.
+Under advanced options,  there are one drop-down menu (``Methods for MetaPredict") {\color{red} (1)}, 
+``Max number of top scoring pairs (K)" {\color{red} (2)}, 
+``Number of cores for parallel computing" {\color{red} (3)}.
 These will be introduced shortly but the users are not suggested to change them unless they know about the algorithm.
-The necessay parameters include ``Number of top scoring pairs (K)" {\color{red} (7)}), three character entries (``Please select TWO labels to cluster" {\color{red} (4)}, ``Please select studies for training" {\color{red} (5)}, and ``Please select studies for testing") {\color{red} (6)} , and two excuting tabs (``Train model" and ``Predict"). 
+The necessary parameters include ``Number of top scoring pairs (K)" {\color{red} (7)}), 
+three character entries (``Please select TWO labels to cluster" {\color{red} (4)}, 
+``Please select studies for training" {\color{red} (5)}, 
+and ``Please select studies for testing") {\color{red} (6)} , 
+and two executing tabs (``Train model" and ``Predict"). 
 
 \subsubsection{Procedure}
 
@@ -48,7 +54,9 @@ A complete list of options is available in Section~\ref{sec:completeList_MetaPre
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=0.5]{./figure/MetaPredict/MetaPredictresult1.png}
-\caption{Results for MetaPredict, top predictive pairs of genes.}
+\caption{Results for MetaPredict, top predictive pairs of genes.
+A score measures the correlation between the pair of genes.
+}
 \label{fig:MetaPredictresult1}
 \end{center}
 \end{figure}
@@ -57,7 +65,9 @@ A complete list of options is available in Section~\ref{sec:completeList_MetaPre
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=0.5]{./figure/MetaPredict/MetaPredictresult2.png}
-\caption{Results for MetaPredict, select $K$ by maximizing variance optimizaiton (VO) t statistics.}
+\caption{Results for MetaPredict, select $K$ by maximizing variance optimizaiton (VO) t statistics.
+x-axis is number of top scoring pairs $K$ and y axis is the variance optimization (VO) t-statistics.
+}
 \label{fig:MetaPredictresult2}
 \end{center}
 \end{figure}

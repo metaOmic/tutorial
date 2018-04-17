@@ -27,7 +27,7 @@ or choose the existing saved data files as in Figure~\ref{fig:GUIpreprocessing} 
 The data should be prepared according to Section~\ref{sec:dataPrepare}.
 Users may optionally upload Clinical Data (See Figure~\ref{fig:GUIpreprocessing} {\color{red} (2)}), 
 depending on their biological purposes.
-Note that all MetaOmics modules require external clinical labels except for MetaClust module.
+Note that all MetaOmics modules require external clinical labels except for the MetaClust module.
 The three example datasets are available under MetaOmics folder ``/metaOmics/data/example/",
 and we will mainly focus on the AML dataset (``/metaOmics/data/example/leukemia") throughout this tutorial.
 By clicking ``save single study", the gene expression profile will be uploaded and the data can be previewed on the right side of the page.
@@ -41,16 +41,19 @@ For preprocessing,
 click on ``Annotate/Impute/Replicate" to 
 \begin{enumerate}
 \item Annotate the probe ID/reference sequence ID/Entrez ID of individual dataset (choose Gene Symbol if the input data rows are already annotated).
-\item Impute missing value using k-nearest neighbors (KNN) algorithm.
+\item Impute missing value using K-Nearest Neighbors (KNN) algorithm.
+The algorithm has been described in \cite{troyanskaya2001missing}.
 Note that missing value will be automatically detected. 
 If there is no missing value, this function will be disabled.
 
 \item Handle the multiple probes matching to the same gene issue.
+For the meta-analysis purpose, 
+if multiple probes match to the same gene symbol, only one represented gene will be selected.
 If each input feature represents a unique gene symbol, this function will be disabled.
 
 \end{enumerate}
 
-A complete introduction of these options is available at the end of this subsection.
+A complete introduction of these options is available in Section~\ref{sec:completeList_MetaPreprocess}.
 The right side of Figure~\ref{fig:GUIpreview} will show the summary statistics of uploaded data and preview of the data matrix.
 There is a search box where users can search for their genes of interest.
 
@@ -66,8 +69,9 @@ There is a search box where users can search for their genes of interest.
 In the next step,
 specify the data type (microarray data; RNA-seq FPKM/RPKM data; RNA-seq count data) and study name,
 click ``save single study".
-To upload RNA-seq data, the count data and FPKM/TPM
+To upload RNA-seq data, the count data and FPKM/RPKM
  data should be uploaded separately and saved using different names.
+Abbreviation terms for FPKM and RPKM, are explained in Section~\ref{AbbreviationTerms}.
 
 \item \textbf{Upload datasets for all studies:}
 Repeat the steps above for all studies in the meta-analysis.

@@ -1,18 +1,20 @@
 \subsection{MetaPath}
 
-In MetaDE package,
-following the detection of biomarkers, pathway analysis (a.k.a. gene set enrichment analysis) is usually performed for functional annotation and biological interpretation. 
-Beyond that, the MetaPath module provides two advanced meta-analytic pathway analysis tools: 
+In the previous MetaDE package,
+pathway analysis is performed using the declared DE genes from MetaDE analysis.
+While  the MetaPath module  perform pathway analysis by two advanced meta-analytic pathway analysis tools: 
 Meta-Analysis for Pathway Enrichment (MAPE) and Comparative Pathway Integrator (CPI) (Shen et al., 2010; Fang et al., 2017). 
+Instead of directly using the declared DE genes from MetaDE analysis as input, 
+MAPE algorithm will also consider perform pathway analysis in each study and perform meta-analysis on pathway level.
 %Pathway clustering with statistically valid text mining is included in the package to reduce pathway redundancy to condense knowledge and increase interpretability of clustering results. 
-It also includes advanced pathway clustering diagnostics and pathway clustering with text mining to circumvent abundant pathway redundancy in the databases and improve interpretation. 
+In addition, CPI also includes advanced pathway clustering diagnostics and pathway clustering with text mining to circumvent abundant pathway redundancy in the databases and improve interpretation. 
 The R package for MetaPath module can be found at \url{https://github.com/metaOmics/MetaPath}.
 
 \subsubsection{Procedure}
 The MetaPath package requires the input of raw expression data as in MetaDE. 
 There are three major steps to implement the package: pathway analysis, pathway clustering diagnostics and pathway clustering with text mining. 
 As shown in Figure \ref{fig:MetaPathoption}, there are nine major options that need to be specified to implement the package.
-Detailed list of all options available for the package can be found in Section~\ref{sec:completeList_MetaPath} 
+Detailed list of all options for the package can be found in Section~\ref{sec:completeList_MetaPath} 
 
 
 \begin{figure}[H]
@@ -41,15 +43,20 @@ Once the above options are specified, users can click on {\color{red}(7)} to ``R
 
 \item \textbf{Pathway clustering diagnostics:} 
 \label{step:metaPath2}
-From the previous step (\ref{step:metaPath1}), users can choose the top enriched pathways for further clustering. 
-One can expand the drop-down menu and use FDR cutoff to choose top pathways and click on {\color{red}(8)} ``Pathway Clustering Diagnostics" to implement the second step.
+Since these pathway may contain redundant information, 
+we want to cluster these pathways into certain groups. 
+The first thing is to determine number of clusters $K$.
+Following the previous step (\ref{step:metaPath1}), 
+users can specify the top enriched pathways for further clustering. 
+The top enriched pathways can be specified by choosing FDR cutoff by expand the drop-down menu in {\color{red}(8)}.
+They, by clicking on ``Pathway Clustering Diagnostics" (Figure~\ref{fig:MetaPathoption} {\color{red}(8)}),
+MetaPath module will perform consensus clustering analysis to determine the optimum number of clusters $K$.
+
 
 \item \textbf{Pathway clustering with text mining:} 
 \label{step:metaPath3}
 From the previous step (\ref{step:metaPath2}), users can determine the optimal number of clusters in the pool of pathways selected. 
 Now, one can specify the number of clusters and click on {\color{red}(9)} to get pathway ``Clustering" results. 
-Note that you may not want to select too large $K$ since you wish to have a certain amount of pathways in each cluster for the validity of text mining algorithm. 
-We generally suggest users to specify $K$ no larger than 7 for fewer than 100 pathways. 
 \end{steps}
 
 
@@ -60,10 +67,10 @@ We generally suggest users to specify $K$ no larger than 7 for fewer than 100 pa
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=0.4]{./figure/metaPath/metaPathresult1.png}
-\caption{``MetaPath" Results (1), 
+\caption{``MetaPath" analysis summary, 
 this table shows analysis results of all pathways, 
 including individual study association analysis p-value, meta pathway analysis p-value/FDR, etc. 
-Users can sort these pathways by clicking the p\_value\_meta up arrow button.
+Users can sort these pathways by clicking the p\_value\_meta ``up arrow button".
 In addition, users can search the pathway  name in the ``Search" bar.
 }
 \label{fig:MetaPathresult1}
@@ -81,7 +88,7 @@ The full table is automatically saved in the working directory specified before.
 \includegraphics[scale=0.5]{./figure/metaPath/metaPathresult2.png}
 \caption{``MetaPath" Results (2):
 both plots assist users in finding the optimal number of clusters $K$ and users may refer to \cite{monti2003consensus} for detailed interpretation of the two plots. 
-To be brief, the CDF of the consensus matrix for each $K$ (indicated by colors) is estimated by a histogram of 100 bins. 
+To be brief, the cumulative density function (CDF) of the consensus matrix for each $K$ (indicated by colors) is estimated by a histogram of 100 bins. 
 The CDF reaches an approximate maximum implying consensus and cluster confidence is at a maximum at this $K$. 
 The delta area shows the relative change in area under the CDF curve comparing $K$ and $K - 1$, thus allows users to determine $K$ at which there is no appreciable increase in CDF (which drops as the number of cluster increases).
 In the example, $K=5$ is chosen since it locates at the elbow turning point (i.e. where the magnitude of incremental decrease in delta area diminishes).
@@ -94,7 +101,8 @@ In order to perform pathway clustering analysis, we need to determine the number
 By clicking ``Pathway Cluster Diagnostics" (\ref{step:metaPath2}), 
 two plots are generated on the right panel (Figure \ref{fig:MetaPathresult2}): 
 including a consensus CDF plot and a Delta area plot (both from the ``ConsensusClusterPlus" package). 
-Note that in this specific example, we set FDR cutoff value in \ref{step:metaPath2} as 0.5, and 28 pathways left under this cutoff.
+Note that in this specific example, we set FDR cutoff value in \ref{step:metaPath2} as 0.4, 
+and 28 pathways left under this cutoff.
 Both plots assist users in finding the optimal number of clusters $K$ and users may refer to \cite{monti2003consensus} for detailed interpretation of the two plots. 
 To be brief, the CDF of the consensus matrix for each $K$ (indicated by colors) is estimated by a histogram of 100 bins. 
 The CDF reaches an approximate maximum implying consensus and cluster confidence is at a maximum at this $K$. 

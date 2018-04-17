@@ -21,13 +21,13 @@
 \contentsline {subsubsection}{\numberline {5.1.1}Procedure}{13}{subsubsection.5.1.1}
 \contentsline {subsubsection}{\numberline {5.1.2}Results for MetaQC on AML example}{14}{subsubsection.5.1.2}
 \contentsline {subsubsection}{\numberline {5.1.3}Results for MetaQC on prostate cancer example}{15}{subsubsection.5.1.3}
-\contentsline {subsection}{\numberline {5.2}MetaDE}{15}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.2}MetaDE}{16}{subsection.5.2}
 \contentsline {subsubsection}{\numberline {5.2.1}Procedure of differential expression analysis}{16}{subsubsection.5.2.1}
 \contentsline {subsubsection}{\numberline {5.2.2}Results of differential expression analysis}{17}{subsubsection.5.2.2}
-\contentsline {subsubsection}{\numberline {5.2.3}Procedure of downstream pathway analysis}{18}{subsubsection.5.2.3}
+\contentsline {subsubsection}{\numberline {5.2.3}Procedure of downstream pathway analysis}{19}{subsubsection.5.2.3}
 \contentsline {subsubsection}{\numberline {5.2.4}Result of downstream pathway analysis}{19}{subsubsection.5.2.4}
 \contentsline {subsection}{\numberline {5.3}MetaPath}{19}{subsection.5.3}
-\contentsline {subsubsection}{\numberline {5.3.1}Procedure}{19}{subsubsection.5.3.1}
+\contentsline {subsubsection}{\numberline {5.3.1}Procedure}{20}{subsubsection.5.3.1}
 \contentsline {subsubsection}{\numberline {5.3.2}Results}{21}{subsubsection.5.3.2}
 \contentsline {subsection}{\numberline {5.4}MetaNetwork}{23}{subsection.5.4}
 \contentsline {subsubsection}{\numberline {5.4.1}Procedure}{24}{subsubsection.5.4.1}
@@ -36,16 +36,16 @@
 \contentsline {subsubsection}{\numberline {5.5.1}Procedure}{30}{subsubsection.5.5.1}
 \contentsline {subsubsection}{\numberline {5.5.2}Results}{32}{subsubsection.5.5.2}
 \contentsline {subsection}{\numberline {5.6}MetaClust}{32}{subsection.5.6}
-\contentsline {subsubsection}{\numberline {5.6.1}Procedure}{32}{subsubsection.5.6.1}
+\contentsline {subsubsection}{\numberline {5.6.1}Procedure}{33}{subsubsection.5.6.1}
 \contentsline {subsubsection}{\numberline {5.6.2}Results}{35}{subsubsection.5.6.2}
 \contentsline {subsection}{\numberline {5.7}MetaPCA}{35}{subsection.5.7}
-\contentsline {subsubsection}{\numberline {5.7.1}Procedure}{35}{subsubsection.5.7.1}
+\contentsline {subsubsection}{\numberline {5.7.1}Procedure}{36}{subsubsection.5.7.1}
 \contentsline {subsubsection}{\numberline {5.7.2}Results}{36}{subsubsection.5.7.2}
-\contentsline {section}{\numberline {6}Complete list of options}{36}{section.6}
-\contentsline {subsection}{\numberline {6.1}MetaQC}{37}{subsection.6.1}
-\contentsline {subsection}{\numberline {6.2}MetaDE}{37}{subsection.6.2}
-\contentsline {subsection}{\numberline {6.3}MetaPath}{38}{subsection.6.3}
-\contentsline {subsection}{\numberline {6.4}MetaNetwork}{38}{subsection.6.4}
-\contentsline {subsection}{\numberline {6.5}MetaPredict}{39}{subsection.6.5}
-\contentsline {subsection}{\numberline {6.6}MetaClust}{39}{subsection.6.6}
-\contentsline {subsection}{\numberline {6.7}MetaPCA}{40}{subsection.6.7}
+\contentsline {section}{\numberline {6}Complete list of options}{37}{section.6}
+\contentsline {subsection}{\numberline {6.1}MetaQC}{38}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}MetaDE}{38}{subsection.6.2}
+\contentsline {subsection}{\numberline {6.3}MetaPath}{39}{subsection.6.3}
+\contentsline {subsection}{\numberline {6.4}MetaNetwork}{39}{subsection.6.4}
+\contentsline {subsection}{\numberline {6.5}MetaPredict}{40}{subsection.6.5}
+\contentsline {subsection}{\numberline {6.6}MetaClust}{40}{subsection.6.6}
+\contentsline {subsection}{\numberline {6.7}MetaPCA}{41}{subsection.6.7}
