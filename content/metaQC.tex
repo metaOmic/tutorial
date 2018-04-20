@@ -36,12 +36,13 @@ The default parameters are suggested for the purpose of MetaQC.
 
 Under the drop-down menu ``Advanced Options" ({\color{red}(3)} in Figure~\ref{fig:MetaQCoption}), users are allowed to tune other parameters of MetaQC.
 In particular, it includes the selection of pathways by pathway size and the number of permutations to run to obtain the six measures. 
-A detailed list of all options available for the package can be found in Section~\ref{sec:completeList_MetaQC}. 
+A complete list of all options available for the package can be found in Section~\ref{sec:completeList_MetaQC}. 
 However, this is advanced options and users are suggested not to modify the option setting in this section without knowing the method. 
 
 \item \textbf{Run MetaQC Analysis:}
 
-Once all the above options are specified, users can click on ``Run MetaQC Analysis" (Figure~\ref{fig:MetaQCoption}  {\color{red}(4)}  ) to implement the tool. 
+Once all the above options are specified, users can click on ``Run MetaQC Analysis" (Figure~\ref{fig:MetaQCoption}  {\color{red}(4)}) to 
+perform MetaQC. 
 
 \end{steps}
 
@@ -58,9 +59,10 @@ with the first six columns corresponding to the six quantitative quality control
 Users can download the full table as a csv file by clicking on ``Download Csv File". 
 In addition to the tabular results, ``MetaQC" also generated a PCA biplot based on the six quality control measures, 
 where the circled number is the study index and arrows indicate different measures. 
-If a study (a circled number) is along the direction of majorities of the six QC direction, then the study has higher quality and consistent with other studies.
-In generally, studies with larger SMR values, and studies more off from the other studies and a majority of the measures are considered lower quality.
-In this specific example, since the six QC direction are quite heterogeneous, 
+If a study (a circled number) is along the direction of majorities of the six QC directions, then the study has higher quality and consistent with other studies.
+In generally, if a study has larger standard mean rank (SMR) values, 
+it is considered to have lower quality and inconsistent with other studies.
+In this specific example, since the six QC directions are quite heterogeneous, 
 we cannot exclude any study because of quality issue.
 }
 \label{fig:MetaQCresult_AML}
@@ -71,8 +73,13 @@ we cannot exclude any study because of quality issue.
 The performance of ``MetaQC" in the AML example is shown in Figure~\ref{fig:MetaQCresult_AML}.
 Detailed descriptions of these studies can be found in Table~\ref{tab:realDataLeukemia}. 
 As shown in Figure \ref{fig:MetaQCresult_AML}, 
-MetaQC module generates a summary table of MetaQC results (\ref{fig:MetaQCresult_AML} {\color{red} (1)} ) 
-as well as a PCA biplot (\ref{fig:MetaQCresult_AML} {\color{red} (2)}). 
+MetaQC module generates a summary table of MetaQC results (Figure~\ref{fig:MetaQCresult_AML} {\color{red} (1)}) 
+as well as a PCA biplot (Figure~\ref{fig:MetaQCresult_AML} {\color{red} (2)}). 
+In Figure~\ref{fig:MetaQCresult_AML} {\color{red} (1)},
+if a study has larger standard mean rank (SMR) values, 
+it is considered to have lower quality and inconsistent with other studies.
+In Figure~\ref{fig:MetaQCresult_AML} {\color{red} (2)},
+if a study (a circled number) is along the direction of majorities of the six QC directions, then the study has higher quality and consistent with other studies.
 Since the AML example has very good data quality,
 we won't be able to demonstrate how to use MetaQC to identify studies of low quality.
 Thus, in order to demonstrate how to give suggestions on excluding studies with low quality or incompatibility with other studies,
@@ -92,8 +99,9 @@ with the first six columns corresponding to the six quantitative quality control
 Users can download the full table as a csv file by clicking on ``Download Csv File". 
 In addition to the tabular results, ``MetaQC" also generated a PCA biplot based on the six quality control measures, 
 where the circled number is the study index and arrows indicate different measures. 
-If a study (a circled number) is along the direction of majorities of the six QC direction, then the study has higher quality and consistent with other studies.
-In generally, studies with larger SMR values, and studies more off from the other studies and a majority of the measures are considered lower quality.
+If a study (a circled number) is along the direction of majorities of the six QC directions, then the study has higher quality and consistent with other studies.
+In generally, if a study has larger standard mean rank (SMR) values, 
+it is considered to have lower quality and inconsistent with other studies.
 In this specific example, since the six QC directions all direct to left, 
 and study 8 and study 7 are discordant with this direction.
 As a consequence, study 8 and study 7 are inconsistent with other studies and suggested to be removed from the meta-analysis.
@@ -109,7 +117,7 @@ As shown in Figure~\ref{fig:MetaQCresult},
 MetaQC module generates a summary table (Figure~\ref{fig:MetaQCresult} {\color{red} (1)}) of MetaQC results 
 as well as a PCA biplot (Figure~\ref{fig:MetaQCresult}  {\color{red} (2)}). 
 In this specific example, the 7th and the 8th studies have larger SMR values than the other studies.
-In addition, in the biplot,  the 7th and the 8th studies are inconsistent with the six QC direction.
+In addition, in the biplot,  the 7th and the 8th studies are inconsistent with the six QC directions.
 Therefore, both the 7th and the 8th studies have relatively poorer quality, and they are inconsistent with other studies.
 Users should pay attention to these potential outlier-studies.
 

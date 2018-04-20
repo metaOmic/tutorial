@@ -2,19 +2,23 @@
 
 In the previous MetaDE package,
 pathway analysis is performed using the declared DE genes from MetaDE analysis.
-While  the MetaPath module  perform pathway analysis by two advanced meta-analytic pathway analysis tools: 
+While  the MetaPath module  performs pathway analysis by two advanced meta-analytic pathway analysis tools: 
 Meta-Analysis for Pathway Enrichment (MAPE) and Comparative Pathway Integrator (CPI) (Shen et al., 2010; Fang et al., 2017). 
 Instead of directly using the declared DE genes from MetaDE analysis as input, 
-MAPE algorithm will also consider perform pathway analysis in each study and perform meta-analysis on pathway level.
+MAPE algorithm performs pathway analysis in each study and perform meta-analysis on the pathway level.
 %Pathway clustering with statistically valid text mining is included in the package to reduce pathway redundancy to condense knowledge and increase interpretability of clustering results. 
 In addition, CPI also includes advanced pathway clustering diagnostics and pathway clustering with text mining to circumvent abundant pathway redundancy in the databases and improve interpretation. 
 The R package for MetaPath module can be found at \url{https://github.com/metaOmics/MetaPath}.
+
+Note that both MetaDE and MetaPath could perform pathway enrichment analysis.
+Below are their differences.
+MetaDE only provides more traditional downstream pathway analysis for the functional annotation of detected DE genes from meta-analysis. On the other hand, MetaPath uses more comprehensive and sophisticated methods to jointly perform DE analysis and pathway analysis, and provides stronger statistical power and more extensive and intuitive biological insights. For example, MAPE\_G is more similar to MetaDE in a sense since both of them combine gene level p-values first and then perform pathway analysis, while MAPE\_P is different since it performs single study DE and pathway analysis first and then combines pathway level p-values; MAPE\_I takes the advantage of both and CPI is more advanced algorithm to further perform meta-analysis on studies with known heterogeneities. In addition, MetaPath performs additional pathway clustering to reduce pathway redundancy and extracts the key words from each cluster via text mining algorithm to assist with the interpretation. 
 
 \subsubsection{Procedure}
 The MetaPath package requires the input of raw expression data as in MetaDE. 
 There are three major steps to implement the package: pathway analysis, pathway clustering diagnostics and pathway clustering with text mining. 
 As shown in Figure \ref{fig:MetaPathoption}, there are nine major options that need to be specified to implement the package.
-Detailed list of all options for the package can be found in Section~\ref{sec:completeList_MetaPath} 
+A complete list of all options for the package can be found in Section~\ref{sec:completeList_MetaPath} 
 
 
 \begin{figure}[H]
@@ -49,7 +53,7 @@ The first thing is to determine number of clusters $K$.
 Following the previous step (\ref{step:metaPath1}), 
 users can specify the top enriched pathways for further clustering. 
 The top enriched pathways can be specified by choosing FDR cutoff by expand the drop-down menu in {\color{red}(8)}.
-They, by clicking on ``Pathway Clustering Diagnostics" (Figure~\ref{fig:MetaPathoption} {\color{red}(8)}),
+Then, by clicking on ``Pathway Clustering Diagnostics" (Figure~\ref{fig:MetaPathoption} {\color{red}(8)}),
 MetaPath module will perform consensus clustering analysis to determine the optimum number of clusters $K$.
 
 
@@ -97,31 +101,33 @@ In the example, $K=5$ is chosen since it locates at the elbow turning point (i.e
 \end{center}
 \end{figure}
 
-In order to perform pathway clustering analysis, we need to determine the number of clusters $K$.
+In order to perform pathway clustering analysis. 
+The number of clusters $K$ needs to be determined. 
 By clicking ``Pathway Cluster Diagnostics" (\ref{step:metaPath2}), 
 two plots are generated on the right panel (Figure \ref{fig:MetaPathresult2}): 
 including a consensus CDF plot and a Delta area plot (both from the ``ConsensusClusterPlus" package). 
 Note that in this specific example, we set FDR cutoff value in \ref{step:metaPath2} as 0.4, 
-and 28 pathways left under this cutoff.
-Both plots assist users in finding the optimal number of clusters $K$ and users may refer to \cite{monti2003consensus} for detailed interpretation of the two plots. 
-To be brief, the CDF of the consensus matrix for each $K$ (indicated by colors) is estimated by a histogram of 100 bins. 
-The CDF reaches an approximate maximum implying consensus and cluster confidence is at a maximum at this $K$. 
-The delta area shows the relative change in area under the CDF curve comparing $K$ and $K - 1$, thus allows users to determine $K$ at which there is no appreciable increase in CDF (which drops as the number of cluster increases).
-In the example, $K=5$ is chosen since it locates at the elbow turning point (i.e. where the magnitude of incremental decrease in delta area diminishes).
+and 27 pathways left under this cutoff.
+Both plots assist users in finding the optimal number of clusters $K$ and 
+a brief explanation of described in Figure~\ref{fig:MetaPathresult2}.
+Users may refer to \cite{monti2003consensus} for detailed interpretation of the two plots. 
+
 
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=0.6]{./figure/metaPath/Heatmap_clusters_all.pdf}
 \caption{``MetaPath" Results (3):
-The heatmap in Figure~\ref{fig:MetaPathresult3} shows the -log10 transformed p-value of enrichment analysis in each study from \ref{step:metaPath1}. 
-Studies are on columns and the selected pathways are on rows, red means more enriched. The pathways are sorted by the pathway clusters as indicated by the colors on the left side of the heatmap.}
+The heatmap in Figure~\ref{fig:MetaPathresult3} shows the -log10 transformed p-value of enrichment analysis in each study from \ref{step:metaPath3}. 
+Studies are on columns and the selected pathways are on rows. 
+The color bar on left indicates group of pathways.
+In the heatmap, red indicates more enriched and yellow color indicates not significantly enriched with color Key on the top left corner. 
+The pathways are sorted by the pathway clusters as indicated by the colors on the left side of the heatmap.}
 \label{fig:MetaPathresult3}
 \end{center}
 \end{figure}
 
 
-The heatmap in Figure~\ref{fig:MetaPathresult3} shows the -log10 transformed p-value of enrichment analysis in each study from \ref{step:metaPath1}. 
-Studies are on columns and the selected pathways are on rows, red means more enriched. The pathways are sorted by the pathway clusters as indicated by the colors on the left side of the heatmap. 
+The heatmap in Figure~\ref{fig:MetaPathresult3} shows the -log10 transformed p-value of enrichment analysis in each study from \ref{step:metaPath3}. 
 In addition, 
 key words of each cluster of pathways are extracted and analyzed by a built-in text mining algorithm and one file named ``Clustering\textunderscore Summary.csv" is saved to the working directory which shows a summary of the text mining results. 
 

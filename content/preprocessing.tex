@@ -2,7 +2,7 @@
 
 \section{MetaPreprocess}
 
-In this section, we introduce how to upload the datasets into the MetaOmics software suite,
+In this section, we introduce how to upload the datasets into the metaOmics software suite,
 which is the first step in order to run any of the seven analytical modules.
 The R package for MetaPreprocess module can be found at \url{https://github.com/metaOmics/preproc}.
 
@@ -22,20 +22,20 @@ The R package for MetaPreprocess module can be found at \url{https://github.com/
 
 In the Preprocessing page,
 by clicking on the ``Choosing/Upload Expression Data" tab,
-users can upload individual expression data files (i.e., data file from each study) 
+users can upload expression data files (i.e., data file from each study) 
 or choose the existing saved data files as in Figure~\ref{fig:GUIpreprocessing} {\color{red} (1)}.
 The data should be prepared according to Section~\ref{sec:dataPrepare}.
 Users may optionally upload Clinical Data (See Figure~\ref{fig:GUIpreprocessing} {\color{red} (2)}), 
 depending on their biological purposes.
-Note that all MetaOmics modules require external clinical labels except for the MetaClust module.
-The three example datasets are available under MetaOmics folder ``/metaOmics/data/example/",
+Note that all metaOmics modules require external clinical labels except for the MetaClust module.
+The three example datasets are available under metaOmics folder ``/metaOmics/data/example/",
 and we will mainly focus on the AML dataset (``/metaOmics/data/example/leukemia") throughout this tutorial.
 By clicking ``save single study", the gene expression profile will be uploaded and the data can be previewed on the right side of the page.
 
 
 \item \textbf{Preprocessing:}
 
-The MetaOmics software suite also provides handlers (See Figure~\ref{fig:GUIpreprocessing} {\color{red} (3)}) for feature annotation, 
+The metaOmics software suite also provides handlers (See Figure~\ref{fig:GUIpreprocessing} {\color{red} (3)}) for feature annotation, 
 missing value imputation and multiple probes reduction for the same gene.
 For preprocessing, 
 click on ``Annotate/Impute/Replicate" to 
@@ -68,7 +68,7 @@ There is a search box where users can search for their genes of interest.
 \item \textbf{Save single study:}
 In the next step,
 specify the data type (microarray data; RNA-seq FPKM/RPKM data; RNA-seq count data) and study name,
-click ``save single study".
+and click ``save single study".
 To upload RNA-seq data, the count data and FPKM/RPKM
  data should be uploaded separately and saved using different names.
 Abbreviation terms for FPKM and RPKM, are explained in Section~\ref{AbbreviationTerms}.
@@ -82,7 +82,7 @@ All uploaded studies are now available in the ``Saved Data" page.
 \subsection{Saved Data page}
 \label{sec:saved}
 
-After uploading multiple studies with or without clinical data,
+After uploading multiple studies w/o clinical data,
 users can turn to the Saved Data page.
 
 \begin{figure}[H]
@@ -113,7 +113,7 @@ If users want to delete any dataset, they can click on the red ``danger zone" bu
 The last thing to do before using any of the meta-analytic modules is to select the merged data and click on 
 ``Make your dataset Active Dataset" -- a big green button in Figure~\ref{fig:active}.
 Then the merged data will become the active study that shows up on the top right corner of the page.
-The active dataset serves as the input for all the analytical modules in MetaOmics.
+The active dataset serves as the input for all the analytical modules in metaOmics.
 
 \end{steps}
 

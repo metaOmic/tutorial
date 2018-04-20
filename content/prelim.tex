@@ -70,17 +70,20 @@ by which the authors will receive professional credits for their work.
 \subsection{How to start MetaOmics}
 
 The full instruction of how to install and start MetaOmics software suite is also available at \url{https://github.com/metaOmics/metaOmics}.
+There are two ways to start the metaOmics software:
+via R software, or via docker.
 
 
-\subsubsection{Requirement}
+\subsubsection{Start from R}
+
+\textbf{Requirement:}
 \begin{itemize}
 \item R $>=$ 3.3.1
 \item Shiny $>=$ 0.13.2
 \end{itemize}
 
+\noindent\textbf{Note:}
 
-
-{\bf Note:}
 \begin{itemize}
 \item We recommend users to use R 3.3 to implement our tool. If you are using R 3.4 (released on 4/24/2017), you may encounter errors in installing dependencies of the modules. You can manually install the dependencies by running the following commands in R:
 
@@ -102,7 +105,7 @@ The full instruction of how to install and start MetaOmics software suite is als
 
  
 
-\subsubsection{How to install the software}
+\noindent\textbf{How to install the software:}
 \begin{itemize}
 \item At MetaOmics home page \url{https://github.com/metaOmics/metaOmics}, clone the project by
 clicking on ``Clone or download" and extract to a working directory, 
@@ -111,22 +114,7 @@ or type in the following in command line:
 \textit{git clone} \url{https://github.com/metaOmic/metaOmics}
 \end{itemize}
 
-\subsubsection{How to start the software}
-\begin{itemize}
-\item Run from docker image.
-
-\begin{enumerate}
-\item Install docker (if not installed).
-\item In terminal
-
-\textit{docker pull metaomics/app}
-
-\textit{docker run --rm --name metaOmics -p 3838:3838 metaomics/app}
-
-\end{enumerate}
-
-
-\item Run from R.
+\noindent\textbf{How to start the software:}
 
 \begin{enumerate}
 \item Open R 
@@ -138,27 +126,37 @@ or type in the following in command line:
 \end{enumerate}
 
 
+\subsubsection{Run from docker image:}
 
-\end{itemize}
+\begin{enumerate}
+\item Install docker (\url{https://www.docker.com}).
+\item In terminal
+
+\textit{docker pull metaomics/app}
+
+\textit{docker run --rm --name metaOmics -p 3838:3838 metaomics/app}
+
+\end{enumerate}
+
 
 \subsection{MetaOmics setting page}
 \label{sec:setting}
 After starting MetaOmics, 
 the first page is the MetaOmics setting page as shown in Figure~\ref{fig:GUIsetting}.  
 There are four tabs on the top of this page (See Figure~\ref{fig:GUIsetting} {\color{red} (1)}), 
-which will direct users to specific functional modules of the software including Setting, Preprocessing, Saved Data and Toolsets.
+which will direct users to specific functional modules of the software including ``Setting", ``Preprocessing", ``Saved Data" and ``Toolsets".
 Below these tabs is a {\bf Welcome to MetaOmics} section, which briefly introduces the software and other information about the authors and maintainers.
-Further below, there are two sections: Session Information and Directory for Saving Output Files (See Figure~\ref{fig:GUIsetting} {\color{red} (2)}).
+Further below, there are two sections: {\bf Session Information} and {\bf Directory for Saving Output Files} (See Figure~\ref{fig:GUIsetting} {\color{red} (2)}).
 By clicking ``$\ldots$",
 users can set working directory, in which all the meta-analysis results will be saved.
 The current working directory is displayed on the top right corner (See Figure~\ref{fig:GUIsetting} {\color{red} (3)}).
-There is one more section with the header Toolsets (See Figure~\ref{fig:GUIsetting} {\color{red} (4)}),
+There is one more section with the header {\bf Toolsets} (See Figure~\ref{fig:GUIsetting} {\color{red} (4)}),
 where users can click the blue button to install the desired modules if the ``Status" shows ``not installed".
 If the packages are already installed, an icon of ``checked installed" will show up in ``Status".
 %Otherwise, users can install individual package by clicking install blue button.
 The installation progress may take up to a few minutes for each module.
 A notification icon will pop up at the bottom right corner upon finishing the installation process. 
-After the modules are installed, restart the MetaOmics software suite so that the Shiny application interface is updated with the installed modules.
+After the modules are installed, users need to restart the MetaOmics software suite so that the Shiny application interface is updated with the installed modules.
 (See Figure~\ref{fig:GUIsetting} {\color{red} (5)}) shows the current active dataset, 
 which is introduced in Section~\ref{sec:procedure}~\ref{sec:active}. 
  
@@ -173,7 +171,7 @@ which is introduced in Section~\ref{sec:procedure}~\ref{sec:active}.
 
 \subsection{Question and bug report}
 
-If you encounter errors or bugs, please report to maintainer Tianzhou Ma $<$\url{tim28@pitt.edu}$>$.
+If you encounter errors or bugs, please report to the maintainer Tianzhou Ma $<$\url{tim28@pitt.edu}$>$.
 
 
  

@@ -42,7 +42,7 @@ It may take a while to run the model.
 \item \textbf{MetaPredict prediction}
 
 After the model training is finished, on the top right it will show up a ``Gene pair table" (Figure \ref{fig:MetaPredictresult1}) which present the top $K$ gene pairs statistics. 
-A diagnostic plot (Figure \ref{fig:MetaPredictresult2}) is outputted to assist users decide which $K$ to use in the final prediction model. 
+A diagnostic plot (Figure \ref{fig:MetaPredictresult2}) is generated to assist users decide which $K$ to use in the final prediction model. 
 The suggested value is shown in the plot as green line, which is decided by VO method we introduced in the original paper. Users may also decide $K$ on their own to predict the class label of testing data. 
 After deciding $K$, then hit the button ``Predict'' (Figure \ref{fig:MetaPredictmainpage}). 
 Finally, a confusion matrix is output to show the prediction results (Figure \ref{fig:MetaPredictresult3}).
@@ -85,7 +85,7 @@ x-axis is number of top scoring pairs $K$ and y axis is the variance optimizatio
 
 We used the leukemia data to demonstrate the MetaNetwork module.
 After merging the three datasets by filtering 50\% of genes by mean and 50\% by variance, 1283 genes remained.
-In this example we only compare two phenotypes: inv(16) and t(8;21). 
+In this example we only compare two phenotypes: inv(16) and t(15;17). 
 Detailed descriptions of these studies can be found in Table~\ref{tab:realDataLeukemia}. 
 The top predictive pairs of genes are available in Figure~\ref{fig:MetaPredictresult1}.
 The diagnostic plot showing the optimum $K$ is shown in Figure~\ref{fig:MetaPredictresult2}.
