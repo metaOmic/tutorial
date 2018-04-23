@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  23 APR 2018 13:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  23 APR 2018 14:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -734,7 +734,11 @@ Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
 \c@stepsi=\count111
 \enitdp@steps=\count112
 
-(./metaOmics_turtorial.bbl) (./metaOmics_turtorial.aux)
+(./metaOmics_turtorial.bbl) (./metaOmics_turtorial.aux
+
+LaTeX Warning: Label `step:MetaDCN2' multiply defined.
+
+)
 \openout1 = `metaOmics_turtorial.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
@@ -753,8 +757,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 35.
 LaTeX Font Info:    ... okay on input line 35.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 35.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 35.
-
-(/usr/local/texlive/2017/texmf-dist/tex/latex/base/ts1cmr.fd
+ (/usr/local/texlive/2017/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 35.
@@ -1087,21 +1090,21 @@ dentifier (name{figure.13}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.16 
+l.20 
       <./figure/metaDE/MetaDE_pathway.pdf>]
 <./figure/metaPath/metaPathoption.pdf, id=758, 436.63126pt x 542.025pt>
 File: ./figure/metaPath/metaPathoption.pdf Graphic file (type pdf)
 
 <use ./figure/metaPath/metaPathoption.pdf>
 Package pdftex.def Info: ./figure/metaPath/metaPathoption.pdf used on input lin
-e 26.
+e 31.
 (pdftex.def)             Requested size: 218.3151pt x 271.01183pt.
  [20pdfTeX warning (ext4): destination with the same identifier (name{figure.14
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.48 \item \textbf
+l.55 \item \textbf
                   {Pathway clustering diagnostics:} <./figure/metaPath/metaPath
 option.pdf>]
 <./figure/metaPath/metaPathresult1.png, id=788, 1209.51875pt x 465.74pt>
@@ -1109,10 +1112,10 @@ File: ./figure/metaPath/metaPathresult1.png Graphic file (type png)
 
 <use ./figure/metaPath/metaPathresult1.png>
 Package pdftex.def Info: ./figure/metaPath/metaPathresult1.png used on input li
-ne 73.
+ne 80.
 (pdftex.def)             Requested size: 483.79893pt x 186.2927pt.
 
-Overfull \hbox (12.32645pt too wide) in paragraph at lines 73--79
+Overfull \hbox (12.32645pt too wide) in paragraph at lines 80--86
  [] 
  []
 
@@ -1121,10 +1124,10 @@ File: ./figure/metaPath/metaPathresult2.png Graphic file (type png)
 
 <use ./figure/metaPath/metaPathresult2.png>
 Package pdftex.def Info: ./figure/metaPath/metaPathresult2.png used on input li
-ne 92.
+ne 100.
 (pdftex.def)             Requested size: 488.32318pt x 236.38254pt.
 
-Overfull \hbox (16.8507pt too wide) in paragraph at lines 92--99
+Overfull \hbox (16.8507pt too wide) in paragraph at lines 100--109
  [] 
  []
 
@@ -1133,61 +1136,60 @@ Overfull \hbox (16.8507pt too wide) in paragraph at lines 92--99
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.103 
+l.113 
        <./figure/metaPath/metaPathresult1.png>]
 <./figure/metaPath/Heatmap_clusters_all.pdf, id=812, 686.565pt x 614.295pt>
 File: ./figure/metaPath/Heatmap_clusters_all.pdf Graphic file (type pdf)
 
 <use ./figure/metaPath/Heatmap_clusters_all.pdf>
 Package pdftex.def Info: ./figure/metaPath/Heatmap_clusters_all.pdf used on inp
-ut line 118.
+ut line 128.
 (pdftex.def)             Requested size: 411.94218pt x 368.57983pt.
  [22pdfTeX warning (ext4): destination with the same identifier (name{figure.16
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.128 
+l.142 
        <./figure/metaPath/metaPathresult2.png>]) (./content/metaDCN.tex
 <./figure/MetaNetwork/MetaNetworkHome.png, id=829, 381.425pt x 830.10126pt>
 File: ./figure/MetaNetwork/MetaNetworkHome.png Graphic file (type png)
 
 <use ./figure/MetaNetwork/MetaNetworkHome.png>
 Package pdftex.def Info: ./figure/MetaNetwork/MetaNetworkHome.png used on input
- line 12.
+ line 13.
 (pdftex.def)             Requested size: 190.71202pt x 415.04962pt.
  [23pdfTeX warning (ext4): destination with the same identifier (name{figure.17
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.17 
+l.18 
       <./figure/metaPath/Heatmap_clusters_all.pdf>] [24pdfTeX warning (ext4): d
 estination with the same identifier (name{figure.18}) has been already used, du
 plicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.43 \item \textbf
-                  {Search for basic modules} <./figure/MetaNetwork/MetaNetworkH
-ome.png>]
-<./figure/MetaNetwork/MetaNetworkstep2.png, id=855, 595.22375pt x 819.06pt>
+l.45 
+      <./figure/MetaNetwork/MetaNetworkHome.png>]
+<./figure/MetaNetwork/MetaNetworkstep2.png, id=859, 595.22375pt x 819.06pt>
 File: ./figure/MetaNetwork/MetaNetworkstep2.png Graphic file (type png)
 
 <use ./figure/MetaNetwork/MetaNetworkstep2.png>
 Package pdftex.def Info: ./figure/MetaNetwork/MetaNetworkstep2.png used on inpu
-t line 68.
+t line 73.
 (pdftex.def)             Requested size: 208.33144pt x 286.6753pt.
 
-<./figure/MetaNetwork/MetaNetworkBM.pdf, id=857, 550.055pt x 542.025pt>
+<./figure/MetaNetwork/MetaNetworkBM.pdf, id=861, 550.055pt x 542.025pt>
 File: ./figure/MetaNetwork/MetaNetworkBM.pdf Graphic file (type pdf)
 
 <use ./figure/MetaNetwork/MetaNetworkBM.pdf>
 Package pdftex.def Info: ./figure/MetaNetwork/MetaNetworkBM.pdf used on input l
-ine 80.
+ine 85.
 (pdftex.def)             Requested size: 495.04492pt x 487.81798pt.
 
-Overfull \hbox (23.57243pt too wide) in paragraph at lines 80--86
+Overfull \hbox (23.57243pt too wide) in paragraph at lines 85--91
  [] 
  []
 
@@ -1196,42 +1198,42 @@ Overfull \hbox (23.57243pt too wide) in paragraph at lines 80--86
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.90 
+l.95 
       <./figure/MetaNetwork/MetaNetworkstep2.png>] [26pdfTeX warning (ext4): de
 stination with the same identifier (name{figure.20}) has been already used, dup
 licate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.103 
+l.111 
        <./figure/MetaNetwork/MetaNetworkBM.pdf>]
-<./figure/MetaNetwork/MetaNetworkstep3.png, id=897, 323.2878pt x 544.434pt>
+<./figure/MetaNetwork/MetaNetworkstep3.png, id=900, 323.2878pt x 544.434pt>
 File: ./figure/MetaNetwork/MetaNetworkstep3.png Graphic file (type png)
 
 <use ./figure/MetaNetwork/MetaNetworkstep3.png>
 Package pdftex.def Info: ./figure/MetaNetwork/MetaNetworkstep3.png used on inpu
-t line 106.
+t line 114.
 (pdftex.def)             Requested size: 161.6435pt x 272.21632pt.
 
-<./figure/MetaNetwork/MetaNetworksuper.png, id=904, 1101.11375pt x 539.01375pt>
+<./figure/MetaNetwork/MetaNetworksuper.png, id=907, 1101.11375pt x 539.01375pt>
 File: ./figure/MetaNetwork/MetaNetworksuper.png Graphic file (type png)
 <use ./figure/MetaNetwork/MetaNetworksuper.png>
 Package pdftex.def Info: ./figure/MetaNetwork/MetaNetworksuper.png used on inpu
-t line 140.
+t line 150.
 (pdftex.def)             Requested size: 330.33669pt x 161.70537pt.
  [27pdfTeX warning (ext4): destination with the same identifier (name{figure.21
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.149 
+l.159 
        <./figure/MetaNetwork/MetaNetworkstep3.png>]
-<./figure/MetaNetwork/MetaNetworkBMplot.pdf, id=912, 475.7775pt x 542.025pt>
+<./figure/MetaNetwork/MetaNetworkBMplot.pdf, id=915, 475.7775pt x 542.025pt>
 File: ./figure/MetaNetwork/MetaNetworkBMplot.pdf Graphic file (type pdf)
 
 <use ./figure/MetaNetwork/MetaNetworkBMplot.pdf>
 Package pdftex.def Info: ./figure/MetaNetwork/MetaNetworkBMplot.pdf used on inp
-ut line 152.
+ut line 162.
 (pdftex.def)             Requested size: 333.04196pt x 379.4149pt.
 ) (./content/metaKTSP.tex
 [28pdfTeX warning (ext4): destination with the same identifier (name{figure.22}
@@ -1241,56 +1243,56 @@ ut line 152.
                                                   \fi \fi 
 l.1 \subsection
                {MetaPredict} <./figure/MetaNetwork/MetaNetworksuper.png>]
-<./figure/MetaPredict/MetaPredictprocedure.pdf, id=920, 399.4925pt x 542.025pt>
+<./figure/MetaPredict/MetaPredictprocedure.pdf, id=923, 399.4925pt x 542.025pt>
 File: ./figure/MetaPredict/MetaPredictprocedure.pdf Graphic file (type pdf)
 <use ./figure/MetaPredict/MetaPredictprocedure.pdf>
 Package pdftex.def Info: ./figure/MetaPredict/MetaPredictprocedure.pdf used on 
-input line 24.
+input line 25.
 (pdftex.def)             Requested size: 199.74576pt x 271.01183pt.
  [29pdfTeX warning (ext4): destination with the same identifier (name{figure.23
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.29 
+l.30 
       <./figure/MetaNetwork/MetaNetworkBMplot.pdf>]
-<./figure/MetaPredict/MetaPredictresult1.png, id=953, 781.92125pt x 685.56125pt
+<./figure/MetaPredict/MetaPredictresult1.png, id=956, 781.92125pt x 685.56125pt
 >
 File: ./figure/MetaPredict/MetaPredictresult1.png Graphic file (type png)
  <use ./figure/MetaPredict/MetaPredictresult1.png>
 Package pdftex.def Info: ./figure/MetaPredict/MetaPredictresult1.png used on in
-put line 56.
+put line 61.
 (pdftex.def)             Requested size: 390.95967pt x 342.77979pt.
  [30pdfTeX warning (ext4): destination with the same identifier (name{figure.24
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.63 
+l.68 
       <./figure/MetaPredict/MetaPredictprocedure.pdf>]
-<./figure/MetaPredict/MetaPredictresult2.png, id=984, 804.00375pt x 460.72125pt
+<./figure/MetaPredict/MetaPredictresult2.png, id=987, 804.00375pt x 460.72125pt
 >
 File: ./figure/MetaPredict/MetaPredictresult2.png Graphic file (type png)
  <use ./figure/MetaPredict/MetaPredictresult2.png>
 Package pdftex.def Info: ./figure/MetaPredict/MetaPredictresult2.png used on in
-put line 67.
+put line 72.
 (pdftex.def)             Requested size: 402.0009pt x 230.36006pt.
  [31pdfTeX warning (ext4): destination with the same identifier (name{figure.25
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.74 
+l.81 
       <./figure/MetaPredict/MetaPredictresult1.png>]
-<./figure/MetaPredict/MetaPredictresult3.png, id=991, 342.27875pt x 239.89626pt
+<./figure/MetaPredict/MetaPredictresult3.png, id=994, 342.27875pt x 239.89626pt
 >
 File: ./figure/MetaPredict/MetaPredictresult3.png Graphic file (type png)
  <use ./figure/MetaPredict/MetaPredictresult3.png>
 Package pdftex.def Info: ./figure/MetaPredict/MetaPredictresult3.png used on in
-put line 78.
+put line 85.
 (pdftex.def)             Requested size: 171.13895pt x 119.94783pt.
 ) (./content/metaClust.tex
-<./figure/metaClust/metaClustHome.pdf, id=1000, 628.3475pt x 454.69875pt>
+<./figure/metaClust/metaClustHome.pdf, id=1003, 628.3475pt x 454.69875pt>
 File: ./figure/metaClust/metaClustHome.pdf Graphic file (type pdf)
 
 <use ./figure/metaClust/metaClustHome.pdf>
@@ -1311,14 +1313,14 @@ ame{figure.27}) has been already used, duplicate ignored
 l.18 \end{figure}
                   <./figure/MetaPredict/MetaPredictresult2.png> <./figure/MetaP
 redict/MetaPredictresult3.png>]
-<./figure/metaClust/tuneK.pdf, id=1010, 975.645pt x 468.75125pt>
+<./figure/metaClust/tuneK.pdf, id=1013, 975.645pt x 468.75125pt>
 File: ./figure/metaClust/tuneK.pdf Graphic file (type pdf)
 
 <use ./figure/metaClust/tuneK.pdf>
-Package pdftex.def Info: ./figure/metaClust/tuneK.pdf used on input line 42.
+Package pdftex.def Info: ./figure/metaClust/tuneK.pdf used on input line 43.
 (pdftex.def)             Requested size: 487.8213pt x 234.37505pt.
 
-Overfull \hbox (16.34882pt too wide) in paragraph at lines 42--45
+Overfull \hbox (16.34882pt too wide) in paragraph at lines 43--46
  [] 
  []
 
@@ -1327,16 +1329,16 @@ Overfull \hbox (16.34882pt too wide) in paragraph at lines 42--45
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.49 
+l.50 
       <./figure/metaClust/metaClustHome.pdf>]
-<./figure/metaClust/tuneW.pdf, id=1042, 975.645pt x 300.12125pt>
+<./figure/metaClust/tuneW.pdf, id=1045, 975.645pt x 300.12125pt>
 File: ./figure/metaClust/tuneW.pdf Graphic file (type pdf)
 
 <use ./figure/metaClust/tuneW.pdf>
-Package pdftex.def Info: ./figure/metaClust/tuneW.pdf used on input line 74.
+Package pdftex.def Info: ./figure/metaClust/tuneW.pdf used on input line 78.
 (pdftex.def)             Requested size: 487.8213pt x 150.06026pt.
 
-Overfull \hbox (16.34882pt too wide) in paragraph at lines 74--79
+Overfull \hbox (16.34882pt too wide) in paragraph at lines 78--83
  [] 
  []
 
@@ -1345,17 +1347,17 @@ Overfull \hbox (16.34882pt too wide) in paragraph at lines 74--79
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.83 A
+l.87 A
       gain, <./figure/metaClust/tuneK.pdf>]
-<./figure/metaClust/mskmRes.pdf, id=1073, 974.64125pt x 382.42876pt>
+<./figure/metaClust/mskmRes.pdf, id=1076, 974.64125pt x 382.42876pt>
 File: ./figure/metaClust/mskmRes.pdf Graphic file (type pdf)
 
 <use ./figure/metaClust/mskmRes.pdf>
-Package pdftex.def Info: ./figure/metaClust/mskmRes.pdf used on input line 102.
+Package pdftex.def Info: ./figure/metaClust/mskmRes.pdf used on input line 106.
 
 (pdftex.def)             Requested size: 487.31943pt x 191.2139pt.
 
-Overfull \hbox (15.84694pt too wide) in paragraph at lines 102--110
+Overfull \hbox (15.84694pt too wide) in paragraph at lines 106--114
  [] 
  []
 
@@ -1364,16 +1366,16 @@ Overfull \hbox (15.84694pt too wide) in paragraph at lines 102--110
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.121 \end{steps}
+l.126 \end{steps}
                  pdfTeX warning (ext4): destination with the same identifier (n
 ame{figure.31}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.121 \end{steps}
+l.126 \end{steps}
                   <./figure/metaClust/tuneW.pdf> <./figure/metaClust/mskmRes.pd
 f>]) (./content/metaPCA.tex
-<./figure/metaPCA/metaPCAHome.pdf, id=1126, 633.36626pt x 482.80376pt>
+<./figure/metaPCA/metaPCAHome.pdf, id=1129, 633.36626pt x 482.80376pt>
 File: ./figure/metaPCA/metaPCAHome.pdf Graphic file (type pdf)
 
 <use ./figure/metaPCA/metaPCAHome.pdf>
@@ -1387,7 +1389,7 @@ Package pdftex.def Info: ./figure/metaPCA/metaPCAHome.pdf used on input line 11
                                                   \fi \fi 
 l.39 
       <./figure/metaPCA/metaPCAHome.pdf>]
-<./figure/metaPCA/metaPCA.png, id=1160, 1401.235pt x 501.875pt>
+<./figure/metaPCA/metaPCA.png, id=1162, 1401.235pt x 501.875pt>
 File: ./figure/metaPCA/metaPCA.png Graphic file (type png)
 
 <use ./figure/metaPCA/metaPCA.png>
@@ -1398,9 +1400,8 @@ Package pdftex.def Info: ./figure/metaPCA/metaPCA.png used on input line 59.
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.27 \item M
-            ean: the percentage of genes being filtered out based on the mea...
- <./figure/metaPCA/metaPCA.png>] [38] [39] [40] [41]
+l.24 \end{itemize}
+                   <./figure/metaPCA/metaPCA.png>] [38] [39] [40] [41]
 Overfull \hbox (3.0005pt too wide) in paragraph at lines 278--279
 []\OT1/cmr/m/n/10 Tuning pa-ram-e-ter for spar-sity: Tun-ing pa-ram-e-ter for s
 par-sity that will be used for sparse MetaPCA. 
@@ -1523,13 +1524,17 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 63.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 63.
 Package rerunfilecheck Info: File `metaOmics_turtorial.out' has not changed.
 (rerunfilecheck)             Checksum: 5018592D5F31C3910FE5A924019E82C6;3305.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 63.
  ) 
 Here is how much of TeX's memory you used:
- 9171 strings out of 492995
- 136350 string characters out of 6132704
- 243064 words of memory out of 5000000
- 12305 multiletter control sequences out of 15000+600000
+ 9173 strings out of 492995
+ 136380 string characters out of 6132704
+ 243217 words of memory out of 5000000
+ 12307 multiletter control sequences out of 15000+600000
  9121 words of font info for 32 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  28i,10n,35p,1401b,569s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1546,10 +1551,10 @@ al/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local
 texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/t
 exlive/2017/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/tex
 live/2017/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb>
-Output written on metaOmics_turtorial.pdf (44 pages, 3938523 bytes).
+Output written on metaOmics_turtorial.pdf (44 pages, 3938848 bytes).
 PDF statistics:
- 1334 PDF objects out of 1440 (max. 8388607)
- 1093 compressed objects within 11 object streams
+ 1336 PDF objects out of 1440 (max. 8388607)
+ 1095 compressed objects within 11 object streams
  246 named destinations out of 1000 (max. 500000)
  558 words of extra memory for PDF output out of 10000 (max. 10000000)
 

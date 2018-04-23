@@ -1,10 +1,10 @@
 \subsection{MetaPCA}
-Dimension reduction is a popular data mining approach for transcriptomic analysis.
+Dimension reduction is a popular data-mining approach for transcriptomic analysis.
 MetaPCA aims to combine multiple omics datasets of identical or similar biological hypothesis and perform simultaneous dimensional reduction in all studies.
-The results show improved accuracy, robustness and better interpretation among all studies.
-By clicking on Toolsets tab and then choose MetaPCA,
-users are directed to MetaPCA home page as Figure~\ref{fig:metaPCAHome}.
-The R package for MetaPCA module can be found at \url{https://github.com/metaOmics/metaPCA}.
+The results show improved accuracy, robustness, and better interpretation among all studies.
+By clicking the ``Toolsets" tab and then choosing MetaPCA,
+users are directed to the MetaPCA homepage, as shown in Figure~\ref{fig:metaPCAHome}.
+The R package for the MetaPCA module can be found at \url{https://github.com/metaOmics/metaPCA}.
 
 \begin{figure}[H]
 \begin{center}
@@ -16,30 +16,30 @@ The R package for MetaPCA module can be found at \url{https://github.com/metaOmi
 
 \subsubsection{Procedure}
 
-The procedure how to use metaPCA is described below.
+The procedure describing how to use metaPCA is described below.
 A complete list of options is available in Section~\ref{sec:completeList_MetaPCA}.
 
 \begin{steps}
 
 \item \textbf{Specify parameters} 
 
-There are very few parameters need to be specified for MetaPCA, as in Figure~\ref{fig:metaPCAHome}.
+There are very few parameters that need to be specified for MetaPCA, as in Figure~\ref{fig:metaPCAHome}.
 Advanced options are not suggested to be changed unless the users are familiar with the algorithm.
 There are two methods for MetaPCA (at position {\color{red} (1)}). 
 SSC represents MetaPCA via sum of squared cosine (SSC) maximization.
 SV represents MetaPCA via sum of variance decomposition (SV).
-Details of SSC and SV can be found in metaPCA manuscript \citep{kim2017meta}.
+Details of SSC and SV can be found in MetaPCA manuscript \citep{kim2017meta}.
 SSC has better performance and is suggested.
-Dimension of meta-eigenvector matrix option {\color{red} (2)} allows users to specify dimension of the output meta-eigenvector matrix.
+The dimension of meta-eigenvector matrix option {\color{red} (2)} allows users to specify the dimension of the output meta-eigenvector matrix.
 The checkbox of ``dimension determined by variance quantile" is suggested to be checked {\color{red} (3)}.
 When checked, the dimension size of each study's eigenvector matrix (SSC) is determined  by the pre-defined level of variance quantile 80\%.
 If the checkbox of ``sparsity encouraged" is checked (at position {\color{red} (4)}), users can perform MetaPCA.
-After clicking on search for optimal tuning parameter button, the optimum tuning parameter will be returned to the box ``tuning parameter for sparsity", 
+After clicking on the ``search for optimal tuning parameter" button, the optimum tuning parameter will be returned to the box ``tuning parameter for sparsity," 
 which may be time consuming.
 
-\item \textbf{Perform metaPCA} 
+\item \textbf{Perform MetaPCA} 
 
-By clicking the ``Run meta PCA" button, the MetaPCA module will be performed.
+By clicking the ``Run Meta PCA" button, the MetaPCA module will be performed.
 
 
 \end{steps}
@@ -58,9 +58,9 @@ These figures and eigenvectors are saved to the MetaPCA folder.
 \begin{center}
 \includegraphics[scale=0.3]{./figure/metaPCA/metaPCA}
 \caption{MetaPCA result.
-The X-axis (horizontal) is the first principal component and 
-The Y-axis (vertical) is the second principal component.
-Each dot represent a sample in a study with the sample label marked to top right of the figure.
+The x-axis (horizontal) is the first principal component, 
+and the y-axis (vertical) is the second principal component.
+Each dot represents a sample in a study with the sample label marked to the top right of the figure.
 }
 \label{fig:metaPCAresult}
 \end{center}
