@@ -70,8 +70,8 @@ by which the authors will receive professional credits for their work.
 \subsection{How to start MetaOmics}
 
 The full instruction of how to install and start MetaOmics software suite is also available at \url{https://github.com/metaOmics/metaOmics}.
-There are two ways to start the metaOmics software:
-via R software, or via docker.
+There are two ways to start the MetaOmics software:
+via R software or via docker.
 
 
 \subsubsection{Start from R}
@@ -107,9 +107,9 @@ via R software, or via docker.
 
 \noindent\textbf{How to install the software:}
 \begin{itemize}
-\item At MetaOmics home page \url{https://github.com/metaOmics/metaOmics}, clone the project by
-clicking on ``Clone or download" and extract to a working directory, 
-or type in the following in command line:
+\item At the MetaOmics home page \url{https://github.com/metaOmics/metaOmics}, clone the project by
+clicking on ``Clone or download," and extract to a working directory, 
+or type in the following in the command line:
 
 \textit{git clone} \url{https://github.com/metaOmic/metaOmics}
 \end{itemize}
@@ -117,8 +117,8 @@ or type in the following in command line:
 \noindent\textbf{How to start the software:}
 
 \begin{enumerate}
-\item Open R 
-\item Set the working directory such that metaOmics folder included. 
+\item Open R. 
+\item Set the working directory such that the MetaOmics folder is included. 
 
 \textit{install.packages(\textquotesingle shiny\textquotesingle)}
 
@@ -130,7 +130,7 @@ or type in the following in command line:
 
 \begin{enumerate}
 \item Install docker (\url{https://www.docker.com}).
-\item In terminal
+\item In terminal:
 
 \textit{docker pull metaomics/app}
 
@@ -143,21 +143,21 @@ or type in the following in command line:
 \label{sec:setting}
 After starting MetaOmics, 
 the first page is the MetaOmics setting page as shown in Figure~\ref{fig:GUIsetting}.  
-There are four tabs on the top of this page (See Figure~\ref{fig:GUIsetting} {\color{red} (1)}), 
-which will direct users to specific functional modules of the software including ``Setting", ``Preprocessing", ``Saved Data" and ``Toolsets".
+There are four tabs on the top of this page (see Figure~\ref{fig:GUIsetting} {\color{red} (1)}), 
+which will direct users to specific functional modules of the software including ``Setting," ``Preprocessing," ``Saved Data," and ``Toolsets."
 Below these tabs is a {\bf Welcome to MetaOmics} section, which briefly introduces the software and other information about the authors and maintainers.
-Further below, there are two sections: {\bf Session Information} and {\bf Directory for Saving Output Files} (See Figure~\ref{fig:GUIsetting} {\color{red} (2)}).
-By clicking ``$\ldots$",
-users can set working directory, in which all the meta-analysis results will be saved.
-The current working directory is displayed on the top right corner (See Figure~\ref{fig:GUIsetting} {\color{red} (3)}).
-There is one more section with the header {\bf Toolsets} (See Figure~\ref{fig:GUIsetting} {\color{red} (4)}),
-where users can click the blue button to install the desired modules if the ``Status" shows ``not installed".
-If the packages are already installed, an icon of ``checked installed" will show up in ``Status".
+Further below, there are two sections: {\bf Session Information} and {\bf Directory for Saving Output Files} (see Figure~\ref{fig:GUIsetting} {\color{red} (2)}).
+By clicking the ``$\ldots$" button,
+users can set the working directory, in which all the meta-analysis results will be saved.
+The current working directory is displayed on the top-right corner (see Figure~\ref{fig:GUIsetting} {\color{red} (3)}).
+There is one more section with the header {\bf Toolsets} (see Figure~\ref{fig:GUIsetting} {\color{red} (4)}),
+where users can click the blue button to install the desired modules if the ``Status" shows ``not installed."
+If the packages are already installed, an icon of ``checked installed" will show up in ``Status."
 %Otherwise, users can install individual package by clicking install blue button.
 The installation progress may take up to a few minutes for each module.
-A notification icon will pop up at the bottom right corner upon finishing the installation process. 
+A notification icon will pop up at the bottom-right corner upon finishing the installation process. 
 After the modules are installed, users need to restart the MetaOmics software suite so that the Shiny application interface is updated with the installed modules.
-(See Figure~\ref{fig:GUIsetting} {\color{red} (5)}) shows the current active dataset, 
+The current active dataset is shown in Figure~\ref{fig:GUIsetting} {\color{red} (5)},
 which is introduced in Section~\ref{sec:procedure}~\ref{sec:active}. 
  
 \begin{figure}[H]
@@ -171,7 +171,8 @@ which is introduced in Section~\ref{sec:procedure}~\ref{sec:active}.
 
 \subsection{Question and bug report}
 
-If you encounter errors or bugs, please report to the maintainer Tianzhou Ma $<$\url{tim28@pitt.edu}$>$.
+If you encounter errors or bugs, please report to the maintainer, 
+Tianzhou Ma $<$\url{tim28@pitt.edu}$>$.
 
 
  

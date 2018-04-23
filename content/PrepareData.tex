@@ -1,20 +1,21 @@
 
 \section{Prepare data}
 \label{sec:dataPrepare}
-In this section, we will introduce how to prepare gene expression data matrix as well as the clinical data files for the MetaOmics software suite.
+In this section, we will introduce how to prepare a gene-expression data matrix as well as the clinical-data files for the MetaOmics software suite.
 
 \subsection{Raw data}
 
-Gene expression matrix should be prepared as tab-delimited ``.txt" or comma-separated ``.csv" files, (see an example in Figure~\ref{fig:dataMicroarray}).
-The first column corresponds to the feature ID (e.g. gene symbol, probe id or entrez ID) and the rest of columns are the expression data from samples.
+The gene-expression matrix should be prepared as tab-delimited ``.txt" or comma-separated ``.csv" files (see an example in Figure~\ref{fig:dataMicroarray}).
+The first column corresponds to the feature ID (e.g., gene symbol, probe ID, or entrez ID) and the rest of columns are the expression data from samples.
 The first row contains the sample ID.
-Valid data types include microarray data, RNA-seq FPKM/RPKM data, RNA-seq count data.
-Abbreviation terms for FPKM and RPKM, are explained in Section~\ref{AbbreviationTerms}.
+Valid data types include microarray data, RNA-seq FPKM/RPKM data,
+and RNA-seq count data.
+Abbreviation terms for FPKM and RPKM are explained in Section~\ref{AbbreviationTerms}.
 
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=0.5]{./figure/dataPreparation/dataMicroarray_wide}
-\caption{A example input data format}
+\caption{An example input data format}
 \label{fig:dataMicroarray}
 \end{center}
 \end{figure}
@@ -27,8 +28,8 @@ Abbreviation terms for FPKM and RPKM, are explained in Section~\ref{Abbreviation
 \label{fig:clinical}
 \end{wrapfigure}
 
-Clinical data should be prepared as the example in Figure~\ref{fig:clinical}.
-The first column corresponds to the sample ID and the rest of columns contain the clinical information of the samples (e.g. case/control labels). Sample IDs of the clinical data (on rows) should be ordered in the same way as the gene expression data (on columns) to avoid any mismatch issues.  
+Clinical data should be prepared as in the example in Figure~\ref{fig:clinical}.
+The first column corresponds to the sample ID, and the rest of columns contain the clinical information of the samples (e.g., case/control labels). Sample IDs of the clinical data (on rows) should be ordered in the same way as the gene-expression data (on columns) to avoid any mismatch issues.  
 
 
 \subsection{Example data in the MetaOmics software}
@@ -36,16 +37,17 @@ The first column corresponds to the sample ID and the rest of columns contain th
 
 We collected three multi-cohort example datasets for the MetaOmics software, 
 including an acute myeloid leukemia (AML) example,
-a breast cancer (BRCA) example and a prostate cancer example.
+a breast cancer (BRCA) example, 
+and a prostate cancer example.
 Table~\ref{tab:realDataLeukemia} summarizes the first example dataset of three studies on acute myeloid leukemia (AML).
-Table~\ref{tab:realDataBreastCancer} summarizes the second example dataset of four studies on breast cancer, where the first study contains both count data and FPKM data (continuous).
-Table~\ref{tab:realDataProstate} summarizes the example dataset of eight studies on prostate cancer.
-The leukemia data is used to demonstrate MetaPreprocess and all the seven analytical modules (MetaQC, MetaDE, MetaPath, MetaNetwork, MetaPredict, MetaClust and MetaPCA). 
-Considering that all the three studies in leukemia data are of high quality, we further run MetaQC on the prostate cancer data with eight studies to show its capability to identify low quality studies. 
+Table~\ref{tab:realDataBreastCancer} summarizes the second example dataset of four studies on breast cancer, whereas the first study contains both count data and FPKM data (continuous).
+Table~\ref{tab:realDataProstate} summarizes the third example dataset of eight studies on prostate cancer.
+The leukemia data is used to demonstrate MetaPreprocess and all  seven analytical modules (MetaQC, MetaDE, MetaPath, MetaNetwork, MetaPredict, MetaClust, and MetaPCA). 
+Considering that all three studies in leukemia data are of high quality, we further run MetaQC on the prostate cancer data with eight studies to show its capability to identify low-quality studies. 
 
 
 			\begin{table}[H]
-			\caption{Multi-study acute myeloid leukemia (AML) gene expression profiles. All three studies are from Affymetrix Human Genome U133plus2 with 5,135 genes.
+			\caption{Multi-study acute myeloid leukemia (AML) gene-expression profiles. All three studies are from Affymetrix Human Genome U133plus2 with 5,135 genes.
 		Three subtypes of leukemia are defined as the chromosomal translocation,
 		including inversion of chromosome 16 - inv(16), translocation of chromosome 15 and 17 - t(15:17) and 
 		translocation of chromosome 8 and 21 - t(8:21).}						
@@ -53,7 +55,7 @@ Considering that all the three studies in leukemia data are of high quality, we 
 \begin{tabular}{c  c  c   c   }
   \hline 
   \hline 
-\multirow{2}*{Study}   & \multirow{2}*{source}   & \multirow{2}*{\# samples}  & \# samples by subtypes \\
+\multirow{2}*{Study}   & \multirow{2}*{Source}   & \multirow{2}*{\# Samples}  & \# Samples by subtypes \\
  & & & inv(16)/t(15:17)/t(8,21)  \\
   \hline 
 Study 1 & \cite{verhaak2009prediction} & 89 & 33/21/35\\
@@ -66,16 +68,17 @@ Study 3 & \cite{kohlmann2008international} & 105 & 28/37/40\\
 		\end{table}
 		
 			\begin{table}[H]
-			\caption{Multi-study breast cancer gene expression profiles. 
-			Each gene expression profiles of all four studies contain 10,330 genes.
-			Study 1 contains both count data and FPKM (continuous) data so user should {\bf select only one of them}. 
+			\caption{Multi-study breast cancer gene-expression profiles. 
+			All gene-expression profiles of all four studies contain 10,330 genes.
+			Study 1 contains both count data and FPKM (continuous) data, 
+			so user should {\bf select only one of them}. 
 			The other three studies contain only continuous data.
-			The phenotype of interest is estrogen-receptor (comparing ER+ vs ER-).}						
+			The phenotype of interest is the estrogen-receptor (comparing ER+ vs ER-).}						
 			\centering
 			\begin{tabular}{c  c  c   c  c  }
 			  \hline 
 			  \hline 
-			\multirow{2}*{Study}   & \multirow{2}*{source}   & \multirow{2}*{scale}  & \multirow{2}*{\# samples}  & \# samples by ER \\
+			\multirow{2}*{Study}   & \multirow{2}*{Source}   & \multirow{2}*{Scale}  & \multirow{2}*{\# Samples}  & \# Samples by ER \\
  & & & & ER+/ER-  \\
   \hline 
 \multirow{2}*{Study 1}  & \multirow{2}*{\cite{weinstein2013cancer}}  & count & \multirow{2}*{406} & \multirow{2}*{319/87}\\
@@ -91,12 +94,12 @@ Study 4 & \cite{ivshina2006genetic} & continuous & 245 & 211/34\\
 
 
 			\begin{table}[H]
-			\caption{Multi-study prostate cancer dataset information. Eight prostate cancer gene expression profiles were measured by different microarray platforms.}						
+			\caption{Multi-study prostate cancer dataset information. Eight prostate cancer gene-expression profiles were measured by different microarray platforms.}						
 			\centering
 	\begin{tabular}{c c c c c c }
 	\hline
 	\hline
-\multirow{2}*{study}   & \multirow{2}*{source}  &  \multirow{2}*{\# platform} & \multirow{2}*{\# samples}  & \# samples by label  & \multirow{2}*{\# genes}\\
+\multirow{2}*{Study}   & \multirow{2}*{Source}  &  \multirow{2}*{\# Platform} & \multirow{2}*{\# Samples}  & \# Samples by label  & \multirow{2}*{\# Genes}\\
 & & & &  Normal/Primary& \\
 	\hline
 	Study 1 & \cite{welsh2001analysis} &  HG-U95A & 34 & 9/25 & 8798 \\
