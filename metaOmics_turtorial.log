@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  23 APR 2018 14:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  2 JUN 2018 22:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -994,8 +994,8 @@ Package pdftex.def Info: ./figure/metaQC/metaQCoption.pdf used on input line 8.
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.13 T
-      here are three main options available for the MetaQ package, <./figure/pr
-eprocessing/GUImarkActive.pdf>]
+      here are three main options available for the MetaQC package, <./figure/p
+reprocessing/GUImarkActive.pdf>]
 <./figure/metaQC/metaQCresult_AML.pdf, id=558, 797.98125pt x 544.0325pt>
 File: ./figure/metaQC/metaQCresult_AML.pdf Graphic file (type pdf)
 
@@ -1178,7 +1178,7 @@ File: ./figure/MetaNetwork/MetaNetworkstep2.png Graphic file (type png)
 
 <use ./figure/MetaNetwork/MetaNetworkstep2.png>
 Package pdftex.def Info: ./figure/MetaNetwork/MetaNetworkstep2.png used on inpu
-t line 73.
+t line 72.
 (pdftex.def)             Requested size: 208.33144pt x 286.6753pt.
 
 <./figure/MetaNetwork/MetaNetworkBM.pdf, id=861, 550.055pt x 542.025pt>
@@ -1186,10 +1186,10 @@ File: ./figure/MetaNetwork/MetaNetworkBM.pdf Graphic file (type pdf)
 
 <use ./figure/MetaNetwork/MetaNetworkBM.pdf>
 Package pdftex.def Info: ./figure/MetaNetwork/MetaNetworkBM.pdf used on input l
-ine 85.
+ine 84.
 (pdftex.def)             Requested size: 495.04492pt x 487.81798pt.
 
-Overfull \hbox (23.57243pt too wide) in paragraph at lines 85--91
+Overfull \hbox (23.57243pt too wide) in paragraph at lines 84--90
  [] 
  []
 
@@ -1198,42 +1198,42 @@ Overfull \hbox (23.57243pt too wide) in paragraph at lines 85--91
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.95 
+l.94 
       <./figure/MetaNetwork/MetaNetworkstep2.png>] [26pdfTeX warning (ext4): de
 stination with the same identifier (name{figure.20}) has been already used, dup
 licate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.111 
+l.110 
        <./figure/MetaNetwork/MetaNetworkBM.pdf>]
 <./figure/MetaNetwork/MetaNetworkstep3.png, id=900, 323.2878pt x 544.434pt>
 File: ./figure/MetaNetwork/MetaNetworkstep3.png Graphic file (type png)
 
 <use ./figure/MetaNetwork/MetaNetworkstep3.png>
 Package pdftex.def Info: ./figure/MetaNetwork/MetaNetworkstep3.png used on inpu
-t line 114.
+t line 113.
 (pdftex.def)             Requested size: 161.6435pt x 272.21632pt.
 
 <./figure/MetaNetwork/MetaNetworksuper.png, id=907, 1101.11375pt x 539.01375pt>
 File: ./figure/MetaNetwork/MetaNetworksuper.png Graphic file (type png)
 <use ./figure/MetaNetwork/MetaNetworksuper.png>
 Package pdftex.def Info: ./figure/MetaNetwork/MetaNetworksuper.png used on inpu
-t line 150.
+t line 149.
 (pdftex.def)             Requested size: 330.33669pt x 161.70537pt.
  [27pdfTeX warning (ext4): destination with the same identifier (name{figure.21
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.159 
+l.158 
        <./figure/MetaNetwork/MetaNetworkstep3.png>]
 <./figure/MetaNetwork/MetaNetworkBMplot.pdf, id=915, 475.7775pt x 542.025pt>
 File: ./figure/MetaNetwork/MetaNetworkBMplot.pdf Graphic file (type pdf)
 
 <use ./figure/MetaNetwork/MetaNetworkBMplot.pdf>
 Package pdftex.def Info: ./figure/MetaNetwork/MetaNetworkBMplot.pdf used on inp
-ut line 162.
+ut line 161.
 (pdftex.def)             Requested size: 333.04196pt x 379.4149pt.
 ) (./content/metaKTSP.tex
 [28pdfTeX warning (ext4): destination with the same identifier (name{figure.22}
@@ -1533,11 +1533,11 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 63.
 Here is how much of TeX's memory you used:
  9173 strings out of 492995
  136380 string characters out of 6132704
- 243217 words of memory out of 5000000
+ 244845 words of memory out of 5000000
  12307 multiletter control sequences out of 15000+600000
  9121 words of font info for 32 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 28i,10n,35p,1401b,569s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 28i,10n,35p,1458b,569s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 }</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
@@ -1551,7 +1551,7 @@ al/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local
 texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/t
 exlive/2017/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/tex
 live/2017/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb>
-Output written on metaOmics_turtorial.pdf (44 pages, 3938848 bytes).
+Output written on metaOmics_turtorial.pdf (44 pages, 3938890 bytes).
 PDF statistics:
  1336 PDF objects out of 1440 (max. 8388607)
  1095 compressed objects within 11 object streams

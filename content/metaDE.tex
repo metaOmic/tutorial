@@ -1,7 +1,7 @@
 \subsection{MetaDE}
 
 The MetaDE package implements 12 major meta-analysis methods with 22 variations for differential expression analysis that fall into three main categories: combining p-values, combining effect sizes, 
-and others (e.g., combining ranks, etc.). Depending on the type of outcome, the package can perform two-classes comparison, multi-class comparison, and association with continuous or survival outcomes. The package allows the input of either microarray (continuous intensity) and/or RNA-seq data (count) for individual study analysis. 
+and others (e.g., combining ranks, etc.). Depending on the type of outcome, the package can perform two-classes comparison, multi-class comparison, and association with continuous or survival outcomes. The package allows the input of either microarray (continuous intensity) and/or RNA-seq data (count or FPKM/RPKM) for individual study analysis. 
 The R package for the MetaDE module can be found at \url{https://github.com/metaOmics/MetaDE}.
 After obtaining differentially expressed (DE) genes from the differential expression analysis, 
 users can further perform post-hoc pathway enrichment analysis using the declared DE genes.
@@ -115,7 +115,7 @@ including information of individual test statistics, individual study p-value, m
 
 \subsubsection{Procedure of downstream pathway analysis}
 Users can then perform pathway enrichment analysis on the declared DE genes from the previous step, 
-the options and steps of which are shown in {\color{red} eed boxes (8) - (10)} in Figure~\ref{fig:MetaDEoption}.
+the options and steps of which are shown in {\color{red} red boxes (8) - (10)} in Figure~\ref{fig:MetaDEoption}.
 The procedure is outlined as below.
 
 \begin{steps}
