@@ -81,6 +81,28 @@ All uploaded studies are now available on the ``Saved Data" page.
  
 \end{steps}
 
+\textbf{Download GEO datasets (optional):} \\
+
+In the newest revision of our software (2018/09), we have added the ``Download GEO dataset (optional)" feature to our preprocessing page to give users convenient options to directly download datasets from GEO via GEOquery. Users can type in the GSE ID they are looking for and click on the green button ``Download GEO data" to download the data (Figure~\ref{fig:GEO_1}). The data will be saved under the folder "GEO" in the working directory with file names in the form of ``GSExxx\_expr.csv" (corresponding to the expression data) and  ``GSExxx\_pheno.csv" (corresponding to the phenotype data).
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.5]{./figure/preprocessing/geo_1}
+\caption{Download GEO dataset}
+\label{fig:GEO_1}
+\end{center}
+\end{figure}
+
+Once retrieved, users can either choose to upload the csv file of the GEO dataset (either GSExxx\_expr.csv or the file after processing by users), or directly use the downloaded GEO dataset (choose ``Yes") with log transforming option. On the right side of Figure~\ref{fig:GEO_2}, we will see the preview of both expression data and clinical data (by default, the clinical data will be the phenotype data downloaded). Users can then do the standard preprocessing as above and save the study for the next steps.
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.5]{./figure/preprocessing/geo_2}
+\caption{Download GEO dataset}
+\label{fig:GEO_2}
+\end{center}
+\end{figure}
+
 \subsection{Saved Data page}
 \label{sec:saved}
 
