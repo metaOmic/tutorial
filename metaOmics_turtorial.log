@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  6 SEP 2018 14:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  6 SEP 2018 17:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -912,14 +912,15 @@ l.121 \newpage
                                                   \fi \fi 
 l.121 \newpage
               ]) (./content/preprocessing.tex
-<./figure/preprocessing/GUIpreprocessing.pdf, id=429, 496.85625pt x 271.0125pt>
+<./figure/preprocessing/GUIpreprocessing.pdf, id=429, 913.4125pt x 540.0175pt>
 File: ./figure/preprocessing/GUIpreprocessing.pdf Graphic file (type pdf)
+
 <use ./figure/preprocessing/GUIpreprocessing.pdf>
 Package pdftex.def Info: ./figure/preprocessing/GUIpreprocessing.pdf used on in
 put line 17.
-(pdftex.def)             Requested size: 496.85503pt x 271.01183pt.
+(pdftex.def)             Requested size: 484.10632pt x 286.2079pt.
 
-Overfull \hbox (25.38254pt too wide) in paragraph at lines 17--18
+Overfull \hbox (12.63383pt too wide) in paragraph at lines 17--18
  [] 
  []
 
@@ -928,17 +929,18 @@ has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.55 
-      <./figure/preprocessing/GUIpreprocessing.pdf>]
-<./figure/preprocessing/GUIpreview.pdf, id=469, 491.8375pt x 332.24126pt>
-File: ./figure/preprocessing/GUIpreview.pdf Graphic file (type pdf)
+l.51 \item H
+            andle the multiple probes matching the same gene issue. <./figure/p
+reprocessing/GUIpreprocessing.pdf>]
+<./figure/preprocessing/GUIpreview.png, id=463, 1433.355pt x 740.7675pt>
+File: ./figure/preprocessing/GUIpreview.png Graphic file (type png)
 
-<use ./figure/preprocessing/GUIpreview.pdf>
-Package pdftex.def Info: ./figure/preprocessing/GUIpreview.pdf used on input li
+<use ./figure/preprocessing/GUIpreview.png>
+Package pdftex.def Info: ./figure/preprocessing/GUIpreview.png used on input li
 ne 64.
-(pdftex.def)             Requested size: 491.83629pt x 332.24043pt.
+(pdftex.def)             Requested size: 501.68178pt x 259.2725pt.
 
-Overfull \hbox (20.3638pt too wide) in paragraph at lines 64--65
+Overfull \hbox (30.20929pt too wide) in paragraph at lines 64--65
  [] 
  []
 
@@ -947,7 +949,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 84--85
 
  []
 
-<./figure/preprocessing/geo_1.png, id=472, 954.4458pt x 534.798pt>
+<./figure/preprocessing/geo_1.png, id=466, 954.4458pt x 534.798pt>
 File: ./figure/preprocessing/geo_1.png Graphic file (type png)
 
 <use ./figure/preprocessing/geo_1.png>
@@ -965,8 +967,8 @@ Overfull \hbox (5.74924pt too wide) in paragraph at lines 90--91
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.95 
-      <./figure/preprocessing/GUIpreview.pdf>]
-<./figure/preprocessing/geo_2.png, id=498, 963.1182pt x 509.7444pt>
+      <./figure/preprocessing/GUIpreview.png>]
+<./figure/preprocessing/geo_2.png, id=481, 963.1182pt x 509.7444pt>
 File: ./figure/preprocessing/geo_2.png Graphic file (type png)
 
 <use ./figure/preprocessing/geo_2.png>
@@ -985,7 +987,7 @@ Overfull \hbox (10.08543pt too wide) in paragraph at lines 100--101
                                                   \fi \fi 
 l.105 
        <./figure/preprocessing/geo_1.png>]
-<./figure/preprocessing/GUImerge.pdf, id=505, 491.8375pt x 215.80624pt>
+<./figure/preprocessing/GUImerge.pdf, id=488, 491.8375pt x 215.80624pt>
 File: ./figure/preprocessing/GUImerge.pdf Graphic file (type pdf)
 
 <use ./figure/preprocessing/GUImerge.pdf>
@@ -1010,7 +1012,7 @@ l.134
                                                   \fi \fi 
 l.134 
        <./figure/preprocessing/geo_2.png> <./figure/preprocessing/GUImerge.pdf>
-] <./figure/preprocessing/GUImarkActive.pdf, id=538, 491.8375pt x 195.73125pt>
+] <./figure/preprocessing/GUImarkActive.pdf, id=521, 491.8375pt x 195.73125pt>
 File: ./figure/preprocessing/GUImarkActive.pdf Graphic file (type pdf)
 
 <use ./figure/preprocessing/GUImarkActive.pdf>
@@ -1023,7 +1025,7 @@ Overfull \hbox (20.3638pt too wide) in paragraph at lines 152--153
  []
 
 ) (./content/toolSets.tex) (./content/metaQC.tex
-<./figure/metaQC/metaQCoption.pdf, id=543, 451.6875pt x 542.025pt>
+<./figure/metaQC/metaQCoption.pdf, id=526, 451.6875pt x 542.025pt>
 File: ./figure/metaQC/metaQCoption.pdf Graphic file (type pdf)
 
 <use ./figure/metaQC/metaQCoption.pdf>
@@ -1038,7 +1040,7 @@ Package pdftex.def Info: ./figure/metaQC/metaQCoption.pdf used on input line 8.
 l.13 T
       here are three main options available for the MetaQC package, <./figure/p
 reprocessing/GUImarkActive.pdf>]
-<./figure/metaQC/metaQCresult_AML.pdf, id=571, 797.98125pt x 544.0325pt>
+<./figure/metaQC/metaQCresult_AML.pdf, id=554, 797.98125pt x 544.0325pt>
 File: ./figure/metaQC/metaQCresult_AML.pdf Graphic file (type pdf)
 
 <use ./figure/metaQC/metaQCresult_AML.pdf>
@@ -1057,7 +1059,7 @@ Overfull \hbox (47.20917pt too wide) in paragraph at lines 56--70
                                                   \fi \fi 
 l.74 
       <./figure/metaQC/metaQCoption.pdf>]
-<./figure/metaQC/metaQCresult_Prostate.pdf, id=610, 700.6175pt x 544.0325pt>
+<./figure/metaQC/metaQCresult_Prostate.pdf, id=593, 700.6175pt x 544.0325pt>
 File: ./figure/metaQC/metaQCresult_Prostate.pdf Graphic file (type pdf)
 
 <use ./figure/metaQC/metaQCresult_Prostate.pdf>
@@ -1078,7 +1080,7 @@ n already used, duplicate ignored
                                                   \fi \fi 
 l.12 
       <./figure/metaQC/metaQCresult_Prostate.pdf>]
-<./figure/metaDE/metaDEoption.pdf, id=668, 404.51125pt x 542.025pt>
+<./figure/metaDE/metaDEoption.pdf, id=651, 404.51125pt x 542.025pt>
 File: ./figure/metaDE/metaDEoption.pdf Graphic file (type pdf)
 
 <use ./figure/metaDE/metaDEoption.pdf>
@@ -1092,7 +1094,7 @@ Package pdftex.def Info: ./figure/metaDE/metaDEoption.pdf used on input line 17
                                                   \fi \fi 
 l.41 \item F
             or the ``combining effect size" category, <./figure/metaDE/metaDEop
-tion.pdf>] <./figure/metaDE/metaDEresult.pdf, id=703, 483.8075pt x 542.025pt>
+tion.pdf>] <./figure/metaDE/metaDEresult.pdf, id=686, 483.8075pt x 542.025pt>
 File: ./figure/metaDE/metaDEresult.pdf Graphic file (type pdf)
 
 <use ./figure/metaDE/metaDEresult.pdf>
@@ -1115,7 +1117,7 @@ Overfull \vbox (8.49562pt too high) has occurred while \output is active []
                                                   \fi \fi 
 l.115 
        <./figure/metaDE/metaDEresult.pdf>]
-<./figure/metaDE/MetaDE_pathway.pdf, id=744, 963.6pt x 336.25626pt>
+<./figure/metaDE/MetaDE_pathway.pdf, id=727, 963.6pt x 336.25626pt>
 File: ./figure/metaDE/MetaDE_pathway.pdf Graphic file (type pdf)
 
 <use ./figure/metaDE/MetaDE_pathway.pdf>
@@ -1134,7 +1136,7 @@ dentifier (name{figure.15}) has been already used, duplicate ignored
                                                   \fi \fi 
 l.20 
       <./figure/metaDE/MetaDE_pathway.pdf>]
-<./figure/metaPath/metaPathoption.pdf, id=770, 436.63126pt x 542.025pt>
+<./figure/metaPath/metaPathoption.pdf, id=753, 436.63126pt x 542.025pt>
 File: ./figure/metaPath/metaPathoption.pdf Graphic file (type pdf)
 
 <use ./figure/metaPath/metaPathoption.pdf>
@@ -1149,7 +1151,7 @@ e 31.
 l.55 \item \textbf
                   {Pathway clustering diagnostics:} <./figure/metaPath/metaPath
 option.pdf>]
-<./figure/metaPath/metaPathresult1.png, id=800, 1209.51875pt x 465.74pt>
+<./figure/metaPath/metaPathresult1.png, id=783, 1209.51875pt x 465.74pt>
 File: ./figure/metaPath/metaPathresult1.png Graphic file (type png)
 
 <use ./figure/metaPath/metaPathresult1.png>
@@ -1161,7 +1163,7 @@ Overfull \hbox (12.32645pt too wide) in paragraph at lines 80--86
  [] 
  []
 
-<./figure/metaPath/metaPathresult2.png, id=804, 976.64874pt x 472.76625pt>
+<./figure/metaPath/metaPathresult2.png, id=787, 976.64874pt x 472.76625pt>
 File: ./figure/metaPath/metaPathresult2.png Graphic file (type png)
 
 <use ./figure/metaPath/metaPathresult2.png>
@@ -1180,7 +1182,7 @@ Overfull \hbox (16.8507pt too wide) in paragraph at lines 100--109
                                                   \fi \fi 
 l.113 
        <./figure/metaPath/metaPathresult1.png>]
-<./figure/metaPath/Heatmap_clusters_all.pdf, id=824, 686.565pt x 614.295pt>
+<./figure/metaPath/Heatmap_clusters_all.pdf, id=807, 686.565pt x 614.295pt>
 File: ./figure/metaPath/Heatmap_clusters_all.pdf Graphic file (type pdf)
 
 <use ./figure/metaPath/Heatmap_clusters_all.pdf>
@@ -1194,7 +1196,7 @@ ut line 128.
                                                   \fi \fi 
 l.142 
        <./figure/metaPath/metaPathresult2.png>]) (./content/metaDCN.tex
-<./figure/MetaNetwork/MetaNetworkHome.png, id=842, 381.425pt x 830.10126pt>
+<./figure/MetaNetwork/MetaNetworkHome.png, id=824, 381.425pt x 830.10126pt>
 File: ./figure/MetaNetwork/MetaNetworkHome.png Graphic file (type png)
 
 <use ./figure/MetaNetwork/MetaNetworkHome.png>
@@ -1215,7 +1217,7 @@ plicate ignored
                                                   \fi \fi 
 l.45 
       <./figure/MetaNetwork/MetaNetworkHome.png>]
-<./figure/MetaNetwork/MetaNetworkstep2.png, id=872, 595.22375pt x 819.06pt>
+<./figure/MetaNetwork/MetaNetworkstep2.png, id=855, 595.22375pt x 819.06pt>
 File: ./figure/MetaNetwork/MetaNetworkstep2.png Graphic file (type png)
 
 <use ./figure/MetaNetwork/MetaNetworkstep2.png>
@@ -1223,7 +1225,7 @@ Package pdftex.def Info: ./figure/MetaNetwork/MetaNetworkstep2.png used on inpu
 t line 72.
 (pdftex.def)             Requested size: 208.33144pt x 286.6753pt.
 
-<./figure/MetaNetwork/MetaNetworkBM.pdf, id=874, 550.055pt x 542.025pt>
+<./figure/MetaNetwork/MetaNetworkBM.pdf, id=857, 550.055pt x 542.025pt>
 File: ./figure/MetaNetwork/MetaNetworkBM.pdf Graphic file (type pdf)
 
 <use ./figure/MetaNetwork/MetaNetworkBM.pdf>
@@ -1249,7 +1251,7 @@ licate ignored
                                                   \fi \fi 
 l.110 
        <./figure/MetaNetwork/MetaNetworkBM.pdf>]
-<./figure/MetaNetwork/MetaNetworkstep3.png, id=912, 323.2878pt x 544.434pt>
+<./figure/MetaNetwork/MetaNetworkstep3.png, id=895, 323.2878pt x 544.434pt>
 File: ./figure/MetaNetwork/MetaNetworkstep3.png Graphic file (type png)
 
 <use ./figure/MetaNetwork/MetaNetworkstep3.png>
@@ -1257,7 +1259,7 @@ Package pdftex.def Info: ./figure/MetaNetwork/MetaNetworkstep3.png used on inpu
 t line 113.
 (pdftex.def)             Requested size: 161.6435pt x 272.21632pt.
 
-<./figure/MetaNetwork/MetaNetworksuper.png, id=919, 1101.11375pt x 539.01375pt>
+<./figure/MetaNetwork/MetaNetworksuper.png, id=902, 1101.11375pt x 539.01375pt>
 File: ./figure/MetaNetwork/MetaNetworksuper.png Graphic file (type png)
 <use ./figure/MetaNetwork/MetaNetworksuper.png>
 Package pdftex.def Info: ./figure/MetaNetwork/MetaNetworksuper.png used on inpu
@@ -1270,7 +1272,7 @@ t line 149.
                                                   \fi \fi 
 l.158 
        <./figure/MetaNetwork/MetaNetworkstep3.png>]
-<./figure/MetaNetwork/MetaNetworkBMplot.pdf, id=927, 475.7775pt x 542.025pt>
+<./figure/MetaNetwork/MetaNetworkBMplot.pdf, id=910, 475.7775pt x 542.025pt>
 File: ./figure/MetaNetwork/MetaNetworkBMplot.pdf Graphic file (type pdf)
 
 <use ./figure/MetaNetwork/MetaNetworkBMplot.pdf>
@@ -1285,7 +1287,7 @@ ut line 161.
                                                   \fi \fi 
 l.1 \subsection
                {MetaPredict} <./figure/MetaNetwork/MetaNetworksuper.png>]
-<./figure/MetaPredict/MetaPredictprocedure.pdf, id=935, 399.4925pt x 542.025pt>
+<./figure/MetaPredict/MetaPredictprocedure.pdf, id=918, 399.4925pt x 542.025pt>
 File: ./figure/MetaPredict/MetaPredictprocedure.pdf Graphic file (type pdf)
 <use ./figure/MetaPredict/MetaPredictprocedure.pdf>
 Package pdftex.def Info: ./figure/MetaPredict/MetaPredictprocedure.pdf used on 
@@ -1298,7 +1300,7 @@ input line 25.
                                                   \fi \fi 
 l.30 
       <./figure/MetaNetwork/MetaNetworkBMplot.pdf>]
-<./figure/MetaPredict/MetaPredictresult1.png, id=968, 781.92125pt x 685.56125pt
+<./figure/MetaPredict/MetaPredictresult1.png, id=951, 781.92125pt x 685.56125pt
 >
 File: ./figure/MetaPredict/MetaPredictresult1.png Graphic file (type png)
  <use ./figure/MetaPredict/MetaPredictresult1.png>
@@ -1312,8 +1314,8 @@ put line 61.
                                                   \fi \fi 
 l.68 
       <./figure/MetaPredict/MetaPredictprocedure.pdf>]
-<./figure/MetaPredict/MetaPredictresult2.png, id=1000, 804.00375pt x 460.72125p
-t>
+<./figure/MetaPredict/MetaPredictresult2.png, id=983, 804.00375pt x 460.72125pt
+>
 File: ./figure/MetaPredict/MetaPredictresult2.png Graphic file (type png)
  <use ./figure/MetaPredict/MetaPredictresult2.png>
 Package pdftex.def Info: ./figure/MetaPredict/MetaPredictresult2.png used on in
@@ -1326,15 +1328,15 @@ put line 72.
                                                   \fi \fi 
 l.81 
       <./figure/MetaPredict/MetaPredictresult1.png>]
-<./figure/MetaPredict/MetaPredictresult3.png, id=1006, 342.27875pt x 239.89626p
-t>
+<./figure/MetaPredict/MetaPredictresult3.png, id=989, 342.27875pt x 239.89626pt
+>
 File: ./figure/MetaPredict/MetaPredictresult3.png Graphic file (type png)
  <use ./figure/MetaPredict/MetaPredictresult3.png>
 Package pdftex.def Info: ./figure/MetaPredict/MetaPredictresult3.png used on in
 put line 85.
 (pdftex.def)             Requested size: 171.13895pt x 119.94783pt.
 ) (./content/metaClust.tex
-<./figure/metaClust/metaClustHome.pdf, id=1015, 628.3475pt x 454.69875pt>
+<./figure/metaClust/metaClustHome.pdf, id=998, 628.3475pt x 454.69875pt>
 File: ./figure/metaClust/metaClustHome.pdf Graphic file (type pdf)
 
 <use ./figure/metaClust/metaClustHome.pdf>
@@ -1355,7 +1357,7 @@ ame{figure.29}) has been already used, duplicate ignored
 l.18 \end{figure}
                   <./figure/MetaPredict/MetaPredictresult2.png> <./figure/MetaP
 redict/MetaPredictresult3.png>]
-<./figure/metaClust/tuneK.pdf, id=1025, 975.645pt x 468.75125pt>
+<./figure/metaClust/tuneK.pdf, id=1008, 975.645pt x 468.75125pt>
 File: ./figure/metaClust/tuneK.pdf Graphic file (type pdf)
 
 <use ./figure/metaClust/tuneK.pdf>
@@ -1373,7 +1375,7 @@ Overfull \hbox (16.34882pt too wide) in paragraph at lines 43--46
                                                   \fi \fi 
 l.50 
       <./figure/metaClust/metaClustHome.pdf>]
-<./figure/metaClust/tuneW.pdf, id=1057, 975.645pt x 300.12125pt>
+<./figure/metaClust/tuneW.pdf, id=1040, 975.645pt x 300.12125pt>
 File: ./figure/metaClust/tuneW.pdf Graphic file (type pdf)
 
 <use ./figure/metaClust/tuneW.pdf>
@@ -1391,7 +1393,7 @@ Overfull \hbox (16.34882pt too wide) in paragraph at lines 78--83
                                                   \fi \fi 
 l.87 A
       gain, <./figure/metaClust/tuneK.pdf>]
-<./figure/metaClust/mskmRes.pdf, id=1088, 974.64125pt x 382.42876pt>
+<./figure/metaClust/mskmRes.pdf, id=1071, 974.64125pt x 382.42876pt>
 File: ./figure/metaClust/mskmRes.pdf Graphic file (type pdf)
 
 <use ./figure/metaClust/mskmRes.pdf>
@@ -1417,7 +1419,7 @@ ame{figure.33}) has been already used, duplicate ignored
 l.126 \end{steps}
                   <./figure/metaClust/tuneW.pdf> <./figure/metaClust/mskmRes.pd
 f>]) (./content/metaPCA.tex
-<./figure/metaPCA/metaPCAHome.pdf, id=1141, 633.36626pt x 482.80376pt>
+<./figure/metaPCA/metaPCAHome.pdf, id=1124, 633.36626pt x 482.80376pt>
 File: ./figure/metaPCA/metaPCAHome.pdf Graphic file (type pdf)
 
 <use ./figure/metaPCA/metaPCAHome.pdf>
@@ -1431,7 +1433,7 @@ Package pdftex.def Info: ./figure/metaPCA/metaPCAHome.pdf used on input line 11
                                                   \fi \fi 
 l.39 
       <./figure/metaPCA/metaPCAHome.pdf>]
-<./figure/metaPCA/metaPCA.png, id=1175, 1401.235pt x 501.875pt>
+<./figure/metaPCA/metaPCA.png, id=1158, 1401.235pt x 501.875pt>
 File: ./figure/metaPCA/metaPCA.png Graphic file (type png)
 
 <use ./figure/metaPCA/metaPCA.png>
@@ -1575,11 +1577,11 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 63.
 Here is how much of TeX's memory you used:
  9188 strings out of 492995
  136739 string characters out of 6132704
- 244065 words of memory out of 5000000
+ 245064 words of memory out of 5000000
  12317 multiletter control sequences out of 15000+600000
  9121 words of font info for 32 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 28i,10n,35p,1458b,569s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 28i,10n,35p,1458b,567s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 }</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
@@ -1593,10 +1595,10 @@ al/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local
 texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/t
 exlive/2017/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/tex
 live/2017/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb>
-Output written on metaOmics_turtorial.pdf (45 pages, 4900863 bytes).
+Output written on metaOmics_turtorial.pdf (45 pages, 4816745 bytes).
 PDF statistics:
- 1350 PDF objects out of 1440 (max. 8388607)
- 1103 compressed objects within 12 object streams
+ 1332 PDF objects out of 1440 (max. 8388607)
+ 1090 compressed objects within 11 object streams
  249 named destinations out of 1000 (max. 500000)
  568 words of extra memory for PDF output out of 10000 (max. 10000000)
 
