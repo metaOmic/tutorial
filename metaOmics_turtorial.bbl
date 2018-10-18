@@ -118,6 +118,13 @@ Lu, S., Li, J., Song, C., Shen, K., and Tseng, G.~C. (2009).
   genomic studies.
 \newblock {\em Bioinformatics}, 26(3):333--340.
 
+\bibitem[Ma et~al., 2018]{ma2018metaomics}
+Ma, T., Huo, Z., Kuo, A., Zhu, L., Fang, Z., Zeng, X., Lin, C.-W., Liu, S.,
+  Wang, L., Liu, P., et~al. (2018).
+\newblock Metaomics: Analysis pipeline and browser-based software suite for
+  transcriptomic meta-analysis.
+\newblock {\em Bioinformatics}.
+
 \bibitem[Monti et~al., 2003]{monti2003consensus}
 Monti, S., Tamayo, P., Mesirov, J., and Golub, T. (2003).
 \newblock Consensus clustering: a resampling-based method for class discovery
